@@ -728,13 +728,26 @@ th, td {
    
    
    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-   <script type="text/javascript">
+   <!-- Function ignore case
+   script type="text/javascript">
      var $rows = $('#table tr');
      $('#search').keyup(function() {
          var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
 		
 		$rows.show().filter(function() {
              var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+             return !~text.indexOf(val);
+         }).hide();
+     });
+    </script>
+	-->
+	<script type="text/javascript">
+     var $rows = $('#table tr');
+     $('#search').keyup(function() {
+         var val = $.trim($(this).val()).replace(/ +/g, ' ');
+		
+		$rows.show().filter(function() {
+             var text = $(this).text().replace(/\s+/g, ' ');
              return !~text.indexOf(val);
          }).hide();
      });
