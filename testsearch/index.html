@@ -23,10 +23,10 @@
    <script type="text/javascript">
      var $rows = $('#table tr');
      $('#search').keyup(function() {
-         var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+         var val = $.trim($(this).val()).replace(/ +/g, ' ');
 		
 		$rows.show().filter(function() {
-             var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+             var text = $(this).text().replace(/\s+/g, ' ');
              return !~text.indexOf(val);
          }).hide();
      });
