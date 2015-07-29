@@ -7,8 +7,8 @@
      </style>    
     </head>
    <body>
-    <input type="text" name="Query" placeholder="Type to search" />
-	<input type="button" name="Search" value="Do it now" onclick="doSearch(this.form.Query);" />
+    <input type="text" id="query" placeholder="Type to search" />
+	<input type="button" name="Search" value="Do it now" onclick="doSearch(this.form.query);" />
 	<input type="button" name="Alert" value="Show me it" onclick="showIt()" />
       <table id="table">
       <tr> <td>Apple</td>
@@ -44,7 +44,8 @@
 	
 	<script>
 function showIt() {
-    alert("Alert");
+    val str = document.getElementBYId("query").value;
+	alert("value:" + str);
 }
 </script>
     </body>   
