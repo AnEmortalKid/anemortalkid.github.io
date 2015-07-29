@@ -741,17 +741,9 @@ th, td {
      });
     </script>
 	-->
-	
-	<script>
-function onLoad() {
-    var rows = document.getElementById(tableId).getElementsByTagName("tr").length;
-	alert("RowsCount:" + rows);
-}
-</script>
 
 	<script type="text/javascript">
-     var $rows = $('#table tr').not('#table th');
-	 
+     var $rows = $('#table tr');
      $('#search').keyup(function() {
          var val = $.trim($(this).val()).replace(/ +/g, ' ');
 		
