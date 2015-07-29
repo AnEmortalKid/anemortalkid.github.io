@@ -7,7 +7,14 @@
    padding:0;
   }
        input {margin-bottom: 5px; padding: 2px 3px; width: 209px;}
-       td {padding: 4px; border: 1px #CCC solid;}
+       table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
      </style>    
     </head>
    <body>
@@ -16,6 +23,13 @@
     <input type="text" id="search" placeholder="Type to search" />
     
 	<table id="table">
+	<!-- HEADER DON't ERASE -->
+	<tr>
+    <th>Mystery Name</th>
+    <th>Mystery Description</th>
+    </tr>
+	<!-- END HEADER -->
+	
      <tr>
 	<td>The case of the Baker</td>
 	<td> Every morn' before the sun is risen. Fresh, warm bread appears in the village. This impoverished village has no baker, nor a proper oven. Too far from the city to maintain its warmth, the masterwork bread that appears... Only where none are looking.</td>

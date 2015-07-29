@@ -1,35 +1,6 @@
 <html>
  <head>
-     <style type="text/css">
-       body {padding: 20px;}
-       input {margin-bottom: 5px; padding: 2px 3px; width: 209px;}
-       td {padding: 4px; border: 1px #CCC solid; width: 100px;}
-     </style>    
-    </head>
-   <body>
-    <input type="text" id="search" placeholder="Type to search" />
-      <table id="table">
-      <tr> <td>Apple</td>
-           <td>Green</td>
-      </tr>
-      <tr> <td>Grapes</td>
-           <td>Green</td>
-      </tr>
-      <tr> <td>Orange</td>
-           <td>Orange</td>
-      </tr>
-   </table>
-   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-   <script type="text/javascript">
-     var $rows = $('#table tr');
-     $('#search').keyup(function() {
-         var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-		
-		$rows.show().filter(function() {
-             var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-             return !~text.indexOf(val);
-         }).hide();
-     });
-    </script>
+     <a href="https://anemortalkid.github.io/bts/tenk/npcs/">Behind the Screen - 10K NPCs </a>
+	 <a href="https://anemortalkid.github.io/bts/tenk/mysteries/">Behind the Screen - 10K Mysteries </a>
 	</body>   
 </html>
