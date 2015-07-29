@@ -23,11 +23,12 @@
    <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
    <script type="text/javascript">
      var $rows = $('#table tr');
+	 
      $('#search').keyup(function() {
+		 alert("Alert");
          var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-		alert("val:"+val);
-
-         $rows.show().filter(function() {
+		
+		$rows.show().filter(function() {
              var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
              return !~text.indexOf(val);
          }).hide();
