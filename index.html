@@ -8,7 +8,8 @@
      </style>    
     </head>
    <body>
-    <input type="text" id="search" placeholder="Type to search">
+    <input type="text" id="Query" placeholder="Type to search">
+	<input type="button" name="Search" value="GO!!" onclick="doSearch(this.form.Query);"/>
       <table id="table">
       <tr> <td>Apple</td>
            <td>Green</td>
@@ -21,7 +22,7 @@
       </tr>
    </table>
    <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
-   <script type="text/javascript">
+   <!-- <script type="text/javascript">
      var $rows = $('#table tr');
 	 
      $('#search').keyup(function() {
@@ -33,6 +34,16 @@
              return !~text.indexOf(val);
          }).hide();
      });
-    </script>
-    </body>    
+    </script> -->
+	<script type="text/javascript">
+	doSearch(s)
+	{ 
+		alert(s);
+	}
+	</script>
+	function doSearch(s)
+	{
+		alert(s);
+	}
+    </body>   
 </html>
