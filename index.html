@@ -7,9 +7,8 @@
      </style>    
     </head>
    <body>
-    <input type="text" id="query" placeholder="Type to search" />
-	<input type="button" name="Search" value="Do it now" onclick="doSearch(this.form.query);" />
-	<input type="button" name="Alert" value="Show me it" onclick="searchIt()" />
+    <input type="text" id="search" placeholder="Type to search" />
+	<input type="button" name="QueryIt" value="Show me it" onclick="searchIt()" />
       <table id="table">
       <tr> <td>Apple</td>
            <td>Green</td>
@@ -22,7 +21,7 @@
       </tr>
    </table>
    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-   <!-- <script type="text/javascript">
+   <script type="text/javascript">
      var $rows = $('#table tr');
 	 
      $('#search').keyup(function() {
@@ -34,7 +33,7 @@
              return !~text.indexOf(val);
          }).hide();
      });
-    </script> -->
+    </script>
 	
 	<script type="text/javascript">
 	function searchIt()
@@ -50,19 +49,5 @@
          }).hide();
 	}
 	</script>
-	
-	<script type="text/javascript">
-	function doSearch(s)
-	{ 
-		alert(s);
-	}
-	</script>
-	
-	<script>
-	function showIt() {
-    var str = document.getElementById("query").value;
-	alert("value:" + str);
-}
-</script>
     </body>   
 </html>
