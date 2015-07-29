@@ -1,37 +1,24 @@
 <html>
- <head>
-  <title>10K Mysteries</title>
-     <style type="text/css">
-         body {
-   margin:0;
-   padding:0;
-  }
-       input {margin-bottom: 5px; padding: 2px 3px; width: 209px;}
-       table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-    text-align: left;
-}
-     </style>    
-    </head>
-   <body>
-   <h1>From: https://www.reddit.com/r/DnDBehindTheScreen/comments/3evxgl/lets_make_10000_mysteries/</h1>
-	<h2>Road to 10,000 (currently at 188)</h2>
-   
-    <input type="text" id="search" placeholder="Type to search" />
-    
-	<table id="table">
-	<!-- HEADER DON't ERASE -->
-	<tr>
-    <th>Mystery Name</th>
-    <th>Mystery Description</th>
-    </tr>
-	<!-- END HEADER -->
-	
-    <!-- START DATA -->
+  <head>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>10K Mysteries</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <br/>
+      <br/>
+      <br/>
+      <div class="row">
+        <h1>10K Mysteries</h1>
+        <p>This page is a compilation of the locations from <a href="http://www.reddit.com/r/DnDBehindTheScreen/comments/3evxgl/lets_make_10000_mysteries/">/rDnDBehindTheScreen's 10K Mysteries thread</a>. Be sure to visit and contribute!</p>
+        <hr class="featurette-divider">
+        <input type="text" id="search" placeholder="Type to search" />
+        <hr class="featurette-divider">
+	<table class="table table-striped" id="table">
+        <tr><th>Mystery Name</th><th>Mystery Description</th></tr>
+        <!-- START DATA -->
 	<tr>
 	<td>The case of the Baker</td>
 	<td> Every morn' before the sun is risen. Fresh, warm bread appears in the village. This impoverished village has no baker, nor a proper oven. Too far from the city to maintain its warmth, the masterwork bread that appears... Only where none are looking.</td>
@@ -785,36 +772,35 @@ th, td {
 	<td> In a small village, a mother has just given birth to her 7th, but only child; the first died at 1-month, the 2nd at 2 months, the 3rd at 4 months, the 4th at 8 months and the 5th after a year and a half & the 6th after 3 years. The 7th child is now 5 years old and looks identical to all the others. It also seems to remember the lives of its lost siblings.</td>
 </tr>
 	<!-- END DATA -->
-
-   </table>
+        </table>
+      </div><!-- ./row -->
+    </div><!-- /.container -->
+    <!-- JavaScript
+    ================================================== -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>   
    
-   
-   
-   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-   <!-- Function ignore case
-   script type="text/javascript">
-     var $rows = $('#table tr');
-     $('#search').keyup(function() {
-         var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-		
-		$rows.show().filter(function() {
-             var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-             return !~text.indexOf(val);
-         }).hide();
-     });
+    <!-- Function ignore case
+    script type="text/javascript">
+      var $rows = $('#table tr');
+      $('#search').keyup(function() {
+        var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();		
+        $rows.show().filter(function() {
+          var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+          return !~text.indexOf(val);
+        }).hide();
+      });
     </script>
-	-->
-
-	<script type="text/javascript">
-     var $rows = $('#table tr');
-     $('#search').keyup(function() {
-         var val = $.trim($(this).val()).replace(/ +/g, ' ');
-		
-		$rows.show().filter(function() {
-             var text = $(this).text().replace(/\s+/g, ' ');
-             return !~text.indexOf(val);
-         }).hide();
-     });
+    -->
+    <script type="text/javascript">
+      var $rows = $('#table tr');
+      $('#search').keyup(function() {
+        var val = $.trim($(this).val()).replace(/ +/g, ' ');
+        $rows.show().filter(function() {
+          var text = $(this).text().replace(/\s+/g, ' ');
+          return !~text.indexOf(val);
+        }).hide();
+      });
     </script>
-	</body>   
+  </body>   
 </html>
