@@ -1,0 +1,124 @@
+<html>
+ <head>
+  <title>10K Locations</title>
+     <style type="text/css">
+         body {
+   margin:0;
+   padding:0;
+  }
+       input {margin-bottom: 5px; padding: 2px 3px; width: 209px;}
+       table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+     </style>   
+    </head>
+   <body>
+   <h1>From: http://www.reddit.com/r/DnDBehindTheScreen/comments/3f0lzl/lets_make_10_000_locations/</h1>
+   
+    <input type="text" id="search" placeholder="Type to search" />
+    
+	<table id="table">
+    <!-- HEADER DON't ERASE -->
+	<tr>
+    <th>Name</th>
+    <th>Type</th>
+	<th>Description</th>
+    </tr>
+	<!-- END HEADER -->
+	
+	<!-- START DATA -->
+	<tr>
+	<td>The Common Inn</td>
+	<td>Tavern</td>
+	<td> Welcome to the Common Inn. Everything is quite ordinary, you see, there's nothing special about us. In fact, we make a point of it. If you speak anything but Common, we'll kick you out. But don't worry - that rarely happens. Come on in!</td>
+</tr>
+<tr>
+	<td>Aunty Agatha's Apothecary</td>
+	<td>Creepy building in the woods</td>
+	<td> There's no one here. So how did we know it was Aunty Agatha's? And what's that's scratching noise - there, hear it? No? It's like it's in my head - very strange. Oh well - I'm sure it's nothing.</td>
+</tr>
+<tr>
+	<td>Garnack's Greenhouse</td>
+	<td>Orcish Herbalist</td>
+	<td> Dis my green house. Not all things green here. Not make much sense. It all pretty. And useful. Can't remember how. I try one. I get sick? I try new one. My little flowers.</td>
+</tr>
+<tr>
+	<td>Nimbuss</td>
+	<td>Monestary</td>
+	<td> If you travel high enough up the mountains, there is a place were the clouds are so dense that you can walk on them as if they were solid ground. It is here that the monks have built their home, meditating with the wind and conversing with the breeze. News travels most quickly through the wind and the monks have heard it all.</td>
+</tr>
+<tr>
+	<td>Shimmerpeak Castle</td>
+	<td>Castle on a mountain peak</td>
+	<td> Shimmerpeak stands proud at the tallest peak of a mountain range. It is always summer when you're near the castle. Years after it has been used, it remains pristine and almost glowing. They say that the last king who ruled over it still walks its halls with his wife and kids. They say it because its true. He's very nice, you can go talk to him. Just don't mention orcs.</td>
+</tr>
+<tr>
+	<td>The Feytouched Vale</td>
+	<td>Large enchanted forest</td>
+	<td> They say that the barrier between the Feywild and the mortal plane is thin in the forest, and has given the Vale a mind of its own. The Vale is not cruel, any who wish to live and hunt within its borders is welcome to, as long as they are not greedy. You may build lone homes, but attempts to settle towns or build infrastructure are met with mysterious disappearances. The Vale protects itself, mind yourself while you're there.</td>
+</tr>
+<tr>
+	<td>Zanlamin</td>
+	<td>Dwarven stronghold</td>
+	<td> Zanlamin is a dwarven city deep within the mountain that bears the same name. Its namesake was a Goliath hero that saved the city from destruction from an army of orcs alone by defending a passageway into the city for hours, before finally collapsing the pass when he tired, killing himself and all the orcs. His axe, Earthsplitter, was recovered and now rests over the throne of the dwarven king.</td>
+</tr>
+<tr>
+	<td>Mysteries and More</td>
+	<td>Arcaneum and Trinket shop</td>
+	<td> Mysteries and More is a store run by a mysterious figure, that few have ever seen. The wonders you can find inside are unlike any others in the world. That's what the company line is. In reality, it is a store with a darkness spell cast on it, where the owner, a shrimpy elf named Taranius used magic to make his voice seem mysterious as he reveals simple items one at a time. He wears a sign on his neck that says "If you can see me, please don't spoil the mystery"</td>
+</tr>
+<tr>
+	<td>Kadosi Falls</td>
+	<td>Waterfall vacation destination</td>
+	<td> Kadosi Falls is a beautiful and idyllic beach and waterfall tucked away in a secluded grove. Beyond its legendary scenery, the falls are a popular vacation point because time seems to go slower while you are there. A simple vacation of a day can seem like weeks to those near it. There are whispered rumors that on rare occasions, the magic doesn't seem to work right and those who enter the grove disappear for months or years, only to suddenly reappear as if they had never left.</td>
+</tr>
+<tr>
+	<td>Xaranth</td>
+	<td>City</td>
+	<td> Built around the eggs of Tiamat and Bahamut, the city is concentric, with a clear plan and design to each segment.</td>
+</tr>
+<tr>
+	<td>Chichester's Tavern</td>
+	<td>Tavern</td>
+	<td> This tavern is apprarently perfectly ordinary, until after everyone has gone home, and the barkeep Chitchester pulls on the elk's antler, opening a secret door leading to his underground base, built with the riches from, and to defend against enemies made during his extensive adventuring career.</td>
+</tr>
+
+	<!-- END DATA -->
+   </table>
+   
+   
+   
+   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+   
+   <!-- Function ignore case
+   script type="text/javascript">
+     var $rows = $('#table tr');
+     $('#search').keyup(function() {
+         var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+		
+		$rows.show().filter(function() {
+             var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+             return !~text.indexOf(val);
+         }).hide();
+     });
+    </script>
+	-->
+	<script type="text/javascript">
+     var $rows = $('#table tr');
+     $('#search').keyup(function() {
+         var val = $.trim($(this).val()).replace(/ +/g, ' ');
+		
+		$rows.show().filter(function() {
+             var text = $(this).text().replace(/\s+/g, ' ');
+             return !~text.indexOf(val);
+         }).hide();
+     });
+    </script>
+	
+	</body>   
+</html>
