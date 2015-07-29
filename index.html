@@ -9,7 +9,7 @@
    <body>
     <input type="text" id="query" placeholder="Type to search" />
 	<input type="button" name="Search" value="Do it now" onclick="doSearch(this.form.query);" />
-	<input type="button" name="Alert" value="Show me it" onclick="showIt()" />
+	<input type="button" name="Alert" value="Show me it" onclick="searchIt()" />
       <table id="table">
       <tr> <td>Apple</td>
            <td>Green</td>
@@ -35,6 +35,22 @@
          }).hide();
      });
     </script> -->
+	
+	<script type="text/javascript">
+	function searchIt()
+	{
+	var $rows = $('#table tr');
+	var search = document.getElementById("query").value;
+	
+	var searchVal = $.trim(search).replace(/ +/g, ' ').toLowerCase();
+	
+	$rows.show().filter(function() {
+             var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+             return !~text.indexOf(val);
+         }).hide();
+	}
+	</script>
+	
 	<script type="text/javascript">
 	function doSearch(s)
 	{ 
@@ -43,7 +59,7 @@
 	</script>
 	
 	<script>
-function showIt() {
+	function showIt() {
     var str = document.getElementById("query").value;
 	alert("value:" + str);
 }
