@@ -7,7 +7,7 @@
      </style>    
     </head>
    <body>
-    <input type="text" id="Query" placeholder="Type to search" />
+    <input type="text" name="Query" placeholder="Type to search" />
 	<input type="button" name="Search" value="Do it now" onclick="doSearch(this.form.Query);" />
 	<input type="button" name="Alert" value="Show me it" onclick="showIt()" />
       <table id="table">
@@ -43,7 +43,7 @@
 	</script>
 	
 	<script>
-function myFunction() {
+function showIt() {
     alert("Alert");
 }
 </script>
