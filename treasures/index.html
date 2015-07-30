@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>10K Treasures</title>
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="../assets/css/bootswatch.slate.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<br/>
+<br/>
+<br/>
+<div class="row">
+<div class="col-md-4 col-md-push-8">
+<img class="img-circle" src="../assets/images/treasures.jpg" width="200" height="200">
+</div><!-- ./col-md-4 -->
+<div class="col-md-8 col-md-pull-4">
+<h1><a href="..">10K // </a> Treasures</h1>
+<p>This page is a compilation of the non-player characters from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/3f633m/lets_make_10000_treasures/">/rDnDBehindTheScreen's 10K Treasures thread</a>. 
+<br/>Be sure to visit and contribute!</p>
+<h2>Currently at 0/10000</h2><h3>Last updated: Thu Jul 30 16:58:06 EST 2015</h3>
+</div><!-- ./col-md-8 -->
+</div><!-- ./row -->
+<div class="row">
+<div class="progress"><div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10000" style="width: 0%"><span class="sr-only">0% Complete</span></div></div>
+<input type="text" id="search" placeholder="Type to search" />
+<hr class"featurette-divider">
+</div><!-- ./row -->
+<div class="row">
+<table class="table table-striped" id="table">
+</table>
+
+</div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script type="text/javascript">
+	var $rows = $('#table tr');
+	$('#search').keyup(function() {
+	var val = $.trim($(this).val()).replace(/ +/g, ' ');
+
+	$rows.show().filter(function() {
+		var text = $(this).text().replace(/\s+/g, ' ');
+		return !~text.indexOf(val);}).hide();});
+</script>
+</body>
+</html>
