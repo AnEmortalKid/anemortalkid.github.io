@@ -17,13 +17,15 @@
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Plot Hooks</h1>
 <p>This page is a compilation of the locations from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/3fe4x1/lets_make_10000_plot_hooks/">/rDnDBehindTheScreen's 10K Plot Hooks thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 43/10000</h2><h3>Last updated: Sat Aug 01 16:14:59 CDT 2015</h3>
+<h2>Currently at 71/10000</h2><h3>Last updated: Sun Aug 02 13:10:02 CDT 2015</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
+<input type="text" id="search" placeholder="Type to search" />
+<label><input type="checkbox" id="casesensitive" onClick="checkFilter()" checked>Case Sensitive Search</label>
 <div class="row">
 <div class="progress">
-<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="10000" style="width: 0.43%">
-<span class="sr-only">0.43% Complete</span>
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="71" aria-valuemin="0" aria-valuemax="10000" style="width: 0.71%">
+<span class="sr-only">0.71% Complete</span>
 </div>
 </div>
 <div class="row">
@@ -63,6 +65,20 @@
 	<td>Can't Stop the Roc</td>
 	<td> A Roc steals the caravan you are travelling with.</td>
 </tr><tr>
+	<td>Summons (1d10)</td>
+	<td> <ol>
+ <li>Summons by a King</li>
+ <li>Summons by a Queen</li>
+ <li>Summons by a Jester?</li>
+ <li>Summons from a prominent adventurers guild.</li>
+ <li>Summons from a rich corporation asking for mercenary support</li>
+ <li>Summons from an old man.</li>
+ <li>Summons from a high priest</li>
+ <li>Summons from a legitimate heir to a throne</li>
+ <li>Summons from an old and experienced adventurer</li>
+ <li>Summons from a suspicious hag or witch.</li>
+</td>
+</tr><tr>
 	<td>God-King</td>
 	<td> An aspect of a god takes the throne of a small kingdom near the one you are currently in.</td>
 </tr><tr>
@@ -74,6 +90,70 @@
 </tr><tr>
 	<td>Sickness in the court</td>
 	<td> A king or other ruling figure grows mortally ill.</td>
+</tr><tr>
+	<td>Werewolf Chronicles (1d12)</td>
+	<td> <ol>
+ <li>The circus is coming to town!</li>
+ <li>The circus performers are all werewolves.</li>
+ <li>The town guard is sent to investigate odd reports at the circus</li>
+ <li>The town guard are werewolves.</li>
+ <li>An adventuring party investigates the town guard</li>
+ <li>An adventuring party becomes werewolves</li>
+ <li>Talk of Several individual werewolf groups have formed a cult.</li>
+ <li>A cult of werewolves gain power over a local government system</li>
+ <li>An influential cult of werewolves start turning citizens at random, to incite panic.</li>
+ <li>On a full moon a disproportionate amount of people become werewolves.</li>
+ <li>The King offers rewards for a cure to the werewolf curse.</li>
+ <li>All hits of the werewolf curse are despised, people are being hung in the streets.</li>
+</td>
+</tr><tr>
+	<td>Hunters Request (1d10)</td>
+	<td> <ol>
+ <li>A hunter is looking for assistance hunt many small prey</li>
+ <li>A hunter is looking for assistance with a rare creature</li>
+ <li>A hunter is looking for assistance with a dangerous creature</li>
+ <li>A hunter is looking for assistance hunting a unique creature</li>
+ <li>A hunter is looking for assistance obtaining a rare creatures egg/offspring.</li>
+ <li>A dragon-slayer would like information on local dragons.</li>
+ <li>A jolly man invites you fishing.</li>
+ <li>A talking snake wishes for you to bring him several moon rats to eat.</li>
+ <li>A creature that is undocumented has been spotted to the west.</li>
+ <li>An extremely rare creature was spotted just outside town.</li>
+</td>
+</tr><tr>
+	<td>Shifts in Power (1d8)</td>
+	<td> <ol>
+ <li>A child is born to a powerful family.</li>
+ <li>A child is born to a powerful family with a notable irregularity.</li>
+ <li>A new god is born.</li>
+ <li>An old god dies.</li>
+ <li>A gods power hierarchy shifts.</li>
+ <li>A known NPC is assassinated, the party receives word of this.</li>
+ <li>An impoverished NPC has been appointed as a baron, and wishes to throw a party for the party.</li>
+ <li>Questionable individuals of the town guard are unhappy with its management and want a reform.</li>
+</td>
+</tr><tr>
+	<td>Magical Mischief (1d8)</td>
+	<td> <ol>
+ <li>A wizard has been casting powerful magic as training. Causing havoc on local wildlife.</li>
+ <li>Druids have been growing trees near a large city, damaging its walls.</li>
+ <li>A prince is attempting to learn magic. Is incredibly inept.</li>
+ <li>The King has been decreeing odd orders after a voodoo obsessed adviser is appointed.</li>
+ <li>A lich has been raising zombies to do menial labor, locals are uneasy.</li>
+ <li>Local acolytes want to perform rituals on the locals, the process is very painful.</li>
+ <li>A wizard wants help convincing the townsfolk that his spell is actually a natural phenomena.</li>
+ <li>The party is called to investigate a mystery.</li>
+</td>
+</tr><tr>
+	<td>Authoritarian Revolution (1d6)</td>
+	<td> <ol>
+ <li>A brothel is hosting a competition for the best lover.</li>
+ <li>Sexual relations are outlawed in the city, the people are upset.</li>
+ <li>Alcohol is prohibited in the city. The people are upset.</li>
+ <li>Swearing in public is illegal. The people are upset.</li>
+ <li>Many are murmuring of revolution, any talking about it are quickly quelled.</li>
+ <li>A revolutionary group is meeting in secret, the party is invited.</li>
+</td>
 </tr><tr>
 	<td>Magnum Opus</td>
 	<td> An artist would like help creating their masterpiece, requiring a party of adventures to pose with a killed monster.</td>
@@ -110,6 +190,14 @@
 </tr><tr>
 	<td>Gon' Fishin'</td>
 	<td> The price of fish is up, now is the time to buy a rod.</td>
+</tr><tr>
+	<td>Don't tell anyone (1d4)</td>
+	<td> <ol>
+ <li>A rich man is offering a reward on a “personal” item</li>
+ <li>A rich woman is offering a reward on a “personal” letter.</li>
+ <li>A brothel is offering anyone that can “surprise” on of their workers a reward.</li>
+ <li>A competition for "best Lover" is being held.</li>
+</td>
 </tr><tr>
 	<td>Itemfinder</td>
 	<td> A specific treasure is desired, a local wizard is willing to help discern its location.</td>
@@ -157,7 +245,70 @@
 	<td> One of the members of the party stubs his/her toe. When he or she looks down, they see that they stubbed their toe on another toe! Protruding from the ground is the hard gray foot of a corpse, buried just below the surface.</td>
 </tr><tr>
 	<td>Ghost Busters</td>
-	<td> There's something weird in the neighborhood, and it don't look good. Ghosts have recently been frightening the residents of the neighborhood where the party has been recuperating after your last grand adventure.</td>
+	<td> There's something weird in the neighborhood, and it don't look good. Ghosts have recently been frightening the residents of the neighborhood where the party has been recuperating after their last grand adventure.</td>
+</tr><tr>
+	<td>My Name Is Jonas</td>
+	<td> While at sea, the PCs ship is attacked by a leviathan. The great beast swallows them whole. There is a large bubble of air in the beast's belly, but it smells foul, and it won't last long.</td>
+</tr><tr>
+	<td>Dude, where's my wagon?</td>
+	<td> While partying with the PCs at a festival, a wizard and traveling salesman (of potions, wands, scrolls, and more!) can't figure out what happened to his wagonload of goodies. Will the party help him find it?</td>
+</tr><tr>
+	<td>What's in a name?</td>
+	<td> Mid level PC's arrive in a village/city that's part of a kingdom they've spent significant time in only to find that instead of a warm welcome they're wanted for a crime they didn't commit. Imposters? Simulacra?!</td>
+</tr><tr>
+	<td>I stepped on what?!</td>
+	<td> While travelling through a forest the players are accosted by druids (or elves?) who accuse them of trampling through a sacred grove and destroying it. As restitution they must plant the seed for a new holy tree in a difficult to reach location.</td>
+</tr><tr>
+	<td>Aren't we supposed to be heroes?</td>
+	<td> After defeating a group of <insert marauding villainous types> have a very angry dragon (too powerful for the PC's to defeat) swoop in on the PC's and demand that they replace the <marauding villainous types> and send them on missions to raid caravans/villages/ships etc. Have a riot forcing them into uncomfortable moral, political, and legal situations in service of their dragon overlord.</td>
+</tr><tr>
+	<td>Have at thee!</td>
+	<td> During a social encounter (ball/banquet/etc) a minor noble approaches one of the PC's and begins loudly demanding recompense for some perceived slight. He challenges the player to a competition (combat/poetry/song/dance).</td>
+</tr><tr>
+	<td>Stalker</td>
+	<td> The PCs get in a fight with a group of bandits who prove to be a little more than the PCs can handle. During the encounter a PC of the DM’s choice is about to be hit by a bandits attack when out of nowhere a masked figure comes out of nowhere to protect him/her. This figure helps the PCs defeat the bandits and then disappears as suddenly as she/he appears. Over the next few weeks the party must occasionally make a DC 15 perception check to notice the figure watching the PC in question from bushes, through tavern windows, etc. This player then starts receiving love letters signed by “Your Secret Admirer.”</td>
+</tr><tr>
+	<td>”Your Lost Pet”</td>
+	<td> The PCs wake up in the tavern they were sleeping in to find a very disgruntled displacer beast in their room with a note around its neck that reads “I found your lost pet on my doorstep. It’s been awhile since I’ve studied undercommon but I think he belongs to you. - Grimley the Hill Wizard.” On the displacer beast’s collar is written in undercommon: “This displacer beast is the pet of the drow priestess Melina. His name is fluffy and his favorite food is disobedient dwarven slaves. If found please return to the temple at 132, Arachnid Street in the drow metropolis of Rock Gloom.”</td>
+</tr><tr>
+	<td>The Prowler</td>
+	<td> While in a city the PCs notice a number of wanted posters saying “Warning: Masked prowler slaying loyal citizens and raising them as undead.” The posters also have a sketch depicting a figure in a hood and a mask. Various town criers throughout the city can be seen shouting news about him while waving one of these posters. Every 1d10 days the criers will report 1d4 more victims of the the Prowler</td>
+</tr><tr>
+	<td>Family Reunion</td>
+	<td> The party runs into a family member of one of the PCs who tells them that a family reunion is being planned.</td>
+</tr><tr>
+	<td>Slash a Mole</td>
+	<td> The PCs come across a farmer who asks them to get rid of a rabbit infestation that’s running the lettuce crop in exchange for some gold and free lodging. He notes that he has had other adventurers do the same thing but the rabbits keep coming back. If the players help the farmer they eventually find out that the rabbits are undead because the farmer’s daughter is learning necromancy.</td>
+</tr><tr>
+	<td>Stampede</td>
+	<td> A stampede of carnivorous dinosaurs literally appears out of thin air in a rural area that the PCs are going through and starts devouring wild animals, livestock, and their farmers.</td>
+</tr><tr>
+	<td>Witch Trial</td>
+	<td> The players come to a small town on a lake. When they enter a local tavern they find a group of townspeople discussing the recent spike in illness, the recent poisoning of a well, along with strange lights on the lake, and other occurrences that make them think there's a witch in the town. The general topic of conversation is whether or not to try the reclusive herbalist who lives on the other side of the lake as a witch because of it.</td>
+</tr><tr>
+	<td>Cormo’s Elixir</td>
+	<td> While in a town or city the PCs come pass by a halfling named Cormo selling a miracle elixir that he claims can cure any illness. Turns out that the elixir is simply a weak healing potion cut with brandy. But Cormo claims that he isn’t the one to blame.</td>
+</tr><tr>
+	<td>Larcenous Lycanthrope Lunacy</td>
+	<td> The city the PCs are currently in has been dealing with a gang of lycanthropes who have been pulling off surprisingly complex heists including bank robbery, stealing exotic spices off of ships, and even stealing the jewelry out of a noblewoman’s bedroom while she was sleeping.</td>
+</tr><tr>
+	<td>Who wants to be a Lycanthrope?</td>
+	<td> (On a similar note) One morning in a town or village a poster is nailed to the door of the town hall that reads “ever want to be a lycanthrope? Ever want to release the beast inside? Well now you can! Simply leave your bedroom window open and leave 150 gold on your nightstand tonight.”</td>
+</tr><tr>
+	<td>Crash Landing</td>
+	<td> A burning airship is seen wobbling unsteadily through the air on a collision course with the ground. Shortly after it disappears over a nearby hill, a crashing noise is heard and a cloud of smoke can be seen off in the distance.</td>
+</tr><tr>
+	<td>The Sudden Spring</td>
+	<td> A small village in a desert celebrates as a spring has miraculously welled up in the middle of the town square, however now local barons and raiders have begun to take a much bigger interest in this suddenly incredibly valuable town. THE OPTIONAL TWIST: The spring is a portal to the Elemental Plane of Water not far underground, and wild water elementals and sea creatures will begin to cause problems.</td>
+</tr><tr>
+	<td>Mysterious Egg</td>
+	<td> The party has just stumbled on a group of bandits. After beating them, they realize they are poachers, and have an a mysterious egg in their posession. If the party takes the egg, they soon find themselves followed by monsters and poachers alike. What is this thing?</td>
+</tr><tr>
+	<td>The Fiendish Well</td>
+	<td> An well was just dug in the middle of a small town after the old one collapsed. The water smells of brimstone, so the people have refused to drink it... this has not stopped farm animals from drinking it, and transforming into demonic beasts. To save the town, the well has to be purified and the demonic creatures defeated.</td>
+</tr><tr>
+	<td>Cultist Kidnappers</td>
+	<td> A local jeweler and a local blacksmith have been kidnapped (From their homes, whilst on the road to a trade center etc.) and someone wants the PCs to find them. The sinister story behind it all is that a cult of some form needs their expertise to create some form of magic item/summoning circle/planar gate/mystical_evil_object of some description. The PCs should stop them. This would make a great introduction to a large story arc for low level PCs.</td>
 </tr>
 </table>
 
@@ -167,7 +318,17 @@
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
 	var $rows = $('#table tr');
-	$('#search').keyup(checkFilter());
+	$('#search').keyup(function(){
+	var checked = document.getElementById("casesensitive").checked;
+	
+	if(checked===true)
+	{
+		caseSensitive();
+	}
+	else{
+		caseInsensitive();
+	}
+	});
 </script>
 <script type="text/javascript">
 function caseSensitive()

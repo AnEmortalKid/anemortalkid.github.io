@@ -17,9 +17,11 @@
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Mysteries</h1>
 <p>This page is a compilation of the locations from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/3evxgl/lets_make_10000_mysteries/">/rDnDBehindTheScreen's 10K Mysteries thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 204/10000</h2><h3>Last updated: Sat Aug 01 16:14:55 CDT 2015</h3>
+<h2>Currently at 204/10000</h2><h3>Last updated: Sun Aug 02 13:10:01 CDT 2015</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
+<input type="text" id="search" placeholder="Type to search" />
+<label><input type="checkbox" id="casesensitive" onClick="checkFilter()" checked>Case Sensitive Search</label>
 <div class="row">
 <div class="progress">
 <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="204" aria-valuemin="0" aria-valuemax="10000" style="width: 2.04%">
@@ -650,7 +652,17 @@
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
 	var $rows = $('#table tr');
-	$('#search').keyup(checkFilter());
+	$('#search').keyup(function(){
+	var checked = document.getElementById("casesensitive").checked;
+	
+	if(checked===true)
+	{
+		caseSensitive();
+	}
+	else{
+		caseInsensitive();
+	}
+	});
 </script>
 <script type="text/javascript">
 function caseSensitive()

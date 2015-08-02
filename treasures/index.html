@@ -17,9 +17,11 @@
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Treasures</h1>
 <p>This page is a compilation of the locations from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/3f633m/lets_make_10000_treasures/">/rDnDBehindTheScreen's 10K Treasures thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 172/10000</h2><h3>Last updated: Sat Aug 01 16:14:58 CDT 2015</h3>
+<h2>Currently at 172/10000</h2><h3>Last updated: Sun Aug 02 13:10:02 CDT 2015</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
+<input type="text" id="search" placeholder="Type to search" />
+<label><input type="checkbox" id="casesensitive" onClick="checkFilter()" checked>Case Sensitive Search</label>
 <div class="row">
 <div class="progress">
 <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="172" aria-valuemin="0" aria-valuemax="10000" style="width: 1.72%">
@@ -418,6 +420,82 @@
 	<td>Magical Decor</td>
 	<td> A bluish-tinted platter and a small, white cloth. On observing the platter is blue ceramic, but any divining done upon it will reveal that it's actually a rare form of silver that is tinted blue. Whenever the single seed of any single fruit or vegetable are placed on the plate, covered by the cloth, and left alone over night, the next morning, the actual fruit or vegetable will have taken the seed's place.</td>
 </tr><tr>
+	<td>The Little Tome of Serenity (nonmagical)</td>
+	<td>calm emotions</td>
+	<td> The Little Tome of Serenity appears to be a small paper-bound book with ornate scrollery with the name "Little Tome of Serenity" written in slow sweeping strokes. Looking at the Little Tome of Serenity instantly causes a subtle feeling of calmness to come over the observer. The book can be opened and a passage read from its list of calming wisdom causing all who hear the words to make a DC 5 wisdom save of stop what they are doing and smile gently for 1d6 rounds.</td>
+</tr><tr>
+	<td>The History of Screaming (nonmagical)</td>
+	<td>Book/Information</td>
+	<td> This truly dull sounding book is an in-depth book on the history of screaming as researched by little-known half-orc linguist Grimf Thurd. It is a truly dry read and takes 40 hours to complete regardless of intelligence level. When/if the reader does complete the book, they are imbued with the knowledge and understanding of the raised voice, giving them a +1 to all vocal-based checks involving yelling or whispering.</td>
+</tr><tr>
+	<td>This Thing (magical)</td>
+	<td>Trash/Tool</td>
+	<td> This Thing appears to be two purple hemispheres with a copper colored pipe coming out at an angle from off-center of one hemisphere. Nothing is initially known about This Thing, but on a DC 25 inteligence check, it can be determined that when the two purple hemispheres are rotated against each other, a small flame suitable for lighting smoking apparatuses springs out of the copper pipe until the hemispheres are rotated back. This Thing never runs out of fuel.</td>
+</tr><tr>
+	<td>Very Special Bottle of Wine (nonmagical)</td>
+	<td>Treasure/Alcohol</td>
+	<td> This is a very special bottle of wine which the owner originally intended to deliver to a very important person. This bottle of wine looks completely ordinary and nondescript. It is easily mistaken for a not very special bottle of wine. Those who consume this bottle must make a DC 15 wisdom check in order to avoid trying to refill this bottle with other ingredients in an attempt to placate the bottle's original owner by replacing what they drank.</td>
+</tr><tr>
+	<td>Good Summer Reading Material (nonmagical)</td>
+	<td>Book</td>
+	<td> This book is perfect reading material for a vacation. It has trash, but different kinds of trash. It has social themes, believable characters, suspense, and thrills. It's about a temporary worker who is 29 and who can't get a boyfriend, and has only 12 days to stop a war with The Elder Dragons.</td>
+</tr><tr>
+	<td>Chunky Soup (nonmagical)</td>
+	<td>Food</td>
+	<td> A bowl of chunky chunks. This hearty meal sustains for an entire day in just one cup of soup!</td>
+</tr><tr>
+	<td>A Numbered Tea Kettle (nonmagical)</td>
+	<td>Trash</td>
+	<td> This looks like an ordinary tea kettle save for a large number on the side.</td>
+</tr><tr>
+	<td>Leather Breastplate (magical) (cursed)</td>
+	<td>Armor</td>
+	<td> This breastplate appears to be a normal leather breastplate except for the fact that it is extremely comfortable. It feels like a pair of comforting hands across your chest. After 6 hours of continual wearing, this breastplate mysteriously catches on fire, dealing 1d10 fire damage to the wearer.</td>
+</tr><tr>
+	<td>The Orb of Longevity (magical)</td>
+	<td>Orb</td>
+	<td> This orb, when told about a person's life and dietary habits predicts that persons age of death. The orb knows if the user is lying and will only speak about someone to that someone.</td>
+</tr><tr>
+	<td>Cloak of Masculine Facade (nonmagical)</td>
+	<td>Cloak</td>
+	<td> This very masculine cloak provides the wearer advantage on all non-lethal team based competition checks while worn. However, it also imposes disadvantage on all other interactions. This item requires attunement/disattunement periods of 2 hours.</td>
+</tr><tr>
+	<td>Moss's Everfilling Bag of Popcorn (magical)</td>
+	<td>Food</td>
+	<td> Prior to interesting events, this bag mysteriously fills with fresh popcorn for all to enjoy!</td>
+</tr><tr>
+	<td>Stress Detector (magical)</td>
+	<td>Tool</td>
+	<td> This compass-like device has a red needle inside of a glass case which, when held in the palm of the hand, points to numbers 1-20 to indicate the stress level of the holder.</td>
+</tr><tr>
+	<td>A Racist Torch (magical)</td>
+	<td>Tool</td>
+	<td> This torch can only be lit by Humans.</td>
+</tr><tr>
+	<td>Indestructible Dinnerware</td>
+	<td>Tool</td>
+	<td> This collection of porcelain plates is indestructible unless dropped or otherwise brought into contact with the ground at which point they catch fire and burn as a piece of wood of that same size.</td>
+</tr><tr>
+	<td>Jaberwocky (nonmagical)</td>
+	<td>Trash</td>
+	<td> Win. Innovate. Redefine. New Definition. Faster than a Swallow. More powerful than... another swallow! More magnificent then a fish, or a whale. Have you heard about this? Everyone is talking about it. It's the next biggest thing. It will revolutionize the way you live. What is it? Jaberwocky.</td>
+</tr><tr>
+	<td>Healing Kit (nonmagical)(cursed)</td>
+	<td>Tool</td>
+	<td> This bandage, when applied to the wearer gives a +5 foot bonus to movement speed, and advantage on all dexterity checks for a duration of 12 hours. Afterward, the character takes three levels of exhaustion.</td>
+</tr><tr>
+	<td>Rune Stones of Tempus</td>
+	<td>Twelve large standing stones</td>
+	<td> These stones when gather together on a mountain, and embiddened with the right incantation, will summon a wraith of the old God of Storms. This God was powerful during the reign of the Giant Empires, and is not a mere shadow of himself. Once they are gathered one of three things will happen: 1) The God Spirit will tell you your future, or grant you a Wish. 2) The God Spirit will go forth and destroy your enemies. 3) The God Spirit will turn on you in an attempt to destroy you. (It will be a Greater Lightning Elemental or the like) Once whatever conclusion has happened, a great thunderclap will sound with a bolt of lightning striking each standing stone. They will then disappear to be scattered across the earth again.</td>
+</tr><tr>
+	<td>Misses Miggins Healing Hot Pies</td>
+	<td>Food/Potion</td>
+	<td> Misses Miggins is a very old and very skilled baker and alchemist. She many years ago combined her hot cherry or meat pies with her excellently brewed healing potions. Its perfect for the hungry hero, looking more then to guzzle a viscous liquid.</td>
+</tr><tr>
+	<td>The Humble Blade</td>
+	<td>Paladin Greatsword</td>
+	<td> The Humble Blade appears to be a very old, rusted, pitted and nicked greatsword, with a hilt of tattered dry leather. Upon picking up the blade any equipment or clothes you have on your person will also appear ragged and old, and your appearance will also begin to slowly become more tattered. It is however a +2 Greatsword that when used by a Paladin deals 1d12 Radiant damage with every hit. This only works for a paladin who does not care for their appearance, only for the work they must do for their god.</td>
+</tr><tr>
 	<td>Eldwizor's Special Pan Flute</td>
 	<td>Musical Instrument</td>
 	<td> Once per day, the pan flute's bearer may play a special, short melody on the pan flute. Doing so summons a quartet of imps that appear in a puff of smoke within ten feet, standing on an assortment of small wooden crates. They begin to play groovy (though slightly creaky) music using their instruments: a pan flute, two lutes and a hand drum. The music lasts for five minutes, after which the imps disappear with their crates in a puff of smoke.</td>
@@ -546,82 +624,6 @@
 	<td>Poison</td>
 	<td> This odd herb has a bothersome effect on magic users. When ingested, generally through an infusion in a drink, it prevents spellcasting for the next 3d10 minutes, or until the target succeeds a Constitution (or equivalent) saving throw.</td>
 </tr><tr>
-	<td>The Little Tome of Serenity (nonmagical)</td>
-	<td>calm emotions</td>
-	<td> The Little Tome of Serenity appears to be a small paper-bound book with ornate scrollery with the name "Little Tome of Serenity" written in slow sweeping strokes. Looking at the Little Tome of Serenity instantly causes a subtle feeling of calmness to come over the observer. The book can be opened and a passage read from its list of calming wisdom causing all who hear the words to make a DC 5 wisdom save of stop what they are doing and smile gently for 1d6 rounds.</td>
-</tr><tr>
-	<td>The History of Screaming (nonmagical)</td>
-	<td>Book/Information</td>
-	<td> This truly dull sounding book is an in-depth book on the history of screaming as researched by little-known half-orc linguist Grimf Thurd. It is a truly dry read and takes 40 hours to complete regardless of intelligence level. When/if the reader does complete the book, they are imbued with the knowledge and understanding of the raised voice, giving them a +1 to all vocal-based checks involving yelling or whispering.</td>
-</tr><tr>
-	<td>This Thing (magical)</td>
-	<td>Trash/Tool</td>
-	<td> This Thing appears to be two purple hemispheres with a copper colored pipe coming out at an angle from off-center of one hemisphere. Nothing is initially known about This Thing, but on a DC 25 inteligence check, it can be determined that when the two purple hemispheres are rotated against each other, a small flame suitable for lighting smoking apparatuses springs out of the copper pipe until the hemispheres are rotated back. This Thing never runs out of fuel.</td>
-</tr><tr>
-	<td>Very Special Bottle of Wine (nonmagical)</td>
-	<td>Treasure/Alcohol</td>
-	<td> This is a very special bottle of wine which the owner originally intended to deliver to a very important person. This bottle of wine looks completely ordinary and nondescript. It is easily mistaken for a not very special bottle of wine. Those who consume this bottle must make a DC 15 wisdom check in order to avoid trying to refill this bottle with other ingredients in an attempt to placate the bottle's original owner by replacing what they drank.</td>
-</tr><tr>
-	<td>Good Summer Reading Material (nonmagical)</td>
-	<td>Book</td>
-	<td> This book is perfect reading material for a vacation. It has trash, but different kinds of trash. It has social themes, believable characters, suspense, and thrills. It's about a temporary worker who is 29 and who can't get a boyfriend, and has only 12 days to stop a war with The Elder Dragons.</td>
-</tr><tr>
-	<td>Chunky Soup (nonmagical)</td>
-	<td>Food</td>
-	<td> A bowl of chunky chunks. This hearty meal sustains for an entire day in just one cup of soup!</td>
-</tr><tr>
-	<td>A Numbered Tea Kettle (nonmagical)</td>
-	<td>Trash</td>
-	<td> This looks like an ordinary tea kettle save for a large number on the side.</td>
-</tr><tr>
-	<td>Leather Breastplate (magical) (cursed)</td>
-	<td>Armor</td>
-	<td> This breastplate appears to be a normal leather breastplate except for the fact that it is extremely comfortable. It feels like a pair of comforting hands across your chest. After 6 hours of continual wearing, this breastplate mysteriously catches on fire, dealing 1d10 fire damage to the wearer.</td>
-</tr><tr>
-	<td>The Orb of Longevity (magical)</td>
-	<td>Orb</td>
-	<td> This orb, when told about a person's life and dietary habits predicts that persons age of death. The orb knows if the user is lying and will only speak about someone to that someone.</td>
-</tr><tr>
-	<td>Cloak of Masculine Facade (nonmagical)</td>
-	<td>Cloak</td>
-	<td> This very masculine cloak provides the wearer advantage on all non-lethal team based competition checks while worn. However, it also imposes disadvantage on all other interactions. This item requires attunement/disattunement periods of 2 hours.</td>
-</tr><tr>
-	<td>Moss's Everfilling Bag of Popcorn (magical)</td>
-	<td>Food</td>
-	<td> Prior to interesting events, this bag mysteriously fills with fresh popcorn for all to enjoy!</td>
-</tr><tr>
-	<td>Stress Detector (magical)</td>
-	<td>Tool</td>
-	<td> This compass-like device has a red needle inside of a glass case which, when held in the palm of the hand, points to numbers 1-20 to indicate the stress level of the holder.</td>
-</tr><tr>
-	<td>A Racist Torch (magical)</td>
-	<td>Tool</td>
-	<td> This torch can only be lit by Humans.</td>
-</tr><tr>
-	<td>Indestructible Dinnerware</td>
-	<td>Tool</td>
-	<td> This collection of porcelain plates is indestructible unless dropped or otherwise brought into contact with the ground at which point they catch fire and burn as a piece of wood of that same size.</td>
-</tr><tr>
-	<td>Jaberwocky (nonmagical)</td>
-	<td>Trash</td>
-	<td> Win. Innovate. Redefine. New Definition. Faster than a Swallow. More powerful than... another swallow! More magnificent then a fish, or a whale. Have you heard about this? Everyone is talking about it. It's the next biggest thing. It will revolutionize the way you live. What is it? Jaberwocky.</td>
-</tr><tr>
-	<td>Healing Kit (nonmagical)(cursed)</td>
-	<td>Tool</td>
-	<td> This bandage, when applied to the wearer gives a +5 foot bonus to movement speed, and advantage on all dexterity checks for a duration of 12 hours. Afterward, the character takes three levels of exhaustion.</td>
-</tr><tr>
-	<td>Rune Stones of Tempus</td>
-	<td>Twelve large standing stones</td>
-	<td> These stones when gather together on a mountain, and embiddened with the right incantation, will summon a wraith of the old God of Storms. This God was powerful during the reign of the Giant Empires, and is not a mere shadow of himself. Once they are gathered one of three things will happen: 1) The God Spirit will tell you your future, or grant you a Wish. 2) The God Spirit will go forth and destroy your enemies. 3) The God Spirit will turn on you in an attempt to destroy you. (It will be a Greater Lightning Elemental or the like) Once whatever conclusion has happened, a great thunderclap will sound with a bolt of lightning striking each standing stone. They will then disappear to be scattered across the earth again.</td>
-</tr><tr>
-	<td>Misses Miggins Healing Hot Pies</td>
-	<td>Food/Potion</td>
-	<td> Misses Miggins is a very old and very skilled baker and alchemist. She many years ago combined her hot cherry or meat pies with her excellently brewed healing potions. Its perfect for the hungry hero, looking more then to guzzle a viscous liquid.</td>
-</tr><tr>
-	<td>The Humble Blade</td>
-	<td>Paladin Greatsword</td>
-	<td> The Humble Blade appears to be a very old, rusted, pitted and nicked greatsword, with a hilt of tattered dry leather. Upon picking up the blade any equipment or clothes you have on your person will also appear ragged and old, and your appearance will also begin to slowly become more tattered. It is however a +2 Greatsword that when used by a Paladin deals 1d12 Radiant damage with every hit. This only works for a paladin who does not care for their appearance, only for the work they must do for their god.</td>
-</tr><tr>
 	<td>Rust Monster Powder</td>
 	<td>Creature Bits</td>
 	<td> This powder comes from the crushed exoskeleton of the rust monster. It can be applied to non-metallic weapons to corrode the armor or weapons of the wielder's enemies.</td>
@@ -726,7 +728,17 @@
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
 	var $rows = $('#table tr');
-	$('#search').keyup(checkFilter());
+	$('#search').keyup(function(){
+	var checked = document.getElementById("casesensitive").checked;
+	
+	if(checked===true)
+	{
+		caseSensitive();
+	}
+	else{
+		caseInsensitive();
+	}
+	});
 </script>
 <script type="text/javascript">
 function caseSensitive()
