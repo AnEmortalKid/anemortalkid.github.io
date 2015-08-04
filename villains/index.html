@@ -12,34 +12,30 @@
 <br/>
 <div class="row">
 <div class="col-md-4 col-md-push-8">
-<img class="img-circle" src="../assets/images/null" width="200" height="200">
+<img class="img-circle" src="../assets/images/villains.jpg" width="200" height="200">
 </div><!-- ./col-md-4 -->
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Villains</h1>
-<p>This page is a compilation of the locations from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/3fmnhb/10000_villains/">/rDnDBehindTheScreen's 10K Villains thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 53/10000</h2><h3>Last updated: Mon Aug 03 20:59:56 CDT 2015</h3>
+<p>This page is a compilation of the villains from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/3fmnhb/10000_villains/">/rDnDBehindTheScreen's 10K Villains thread</a>. Be sure to visit and contribute!</p>
+<h2>Currently at 51/10000</h2><h3>Last updated: Mon Aug 03 21:57:54 CDT 2015</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
 <input type="text" id="search" placeholder="Type to search" />
 <label><input type="checkbox" id="casesensitive" onClick="checkFilter()" checked>Case Sensitive Search</label>
+<button type="button" onClick="randomRow()">Random Villain</button>
 <div class="row">
 <div class="progress">
-<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="53" aria-valuemin="0" aria-valuemax="10000" style="width: 0.53%">
-<span class="sr-only">0.53% Complete</span>
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="51" aria-valuemin="0" aria-valuemax="10000" style="width: 0.51%">
+<span class="sr-only">0.51% Complete</span>
 </div>
 </div>
 <div class="row">
+<div id="randomTable"></div>
 <table class="table table-striped" id="table">
 <tr><th>Villain Name</th><th>Description</th></tr>
 <tr>
-	<td>Welcome to our last day of the 10,000 Celebration!</td>
-	<td> Officially, this party was supposed to be yesterday, but it just didn't feel right to invite these guys to a party on Pelor's holy day, not that they'd care of course. But, today, we'd like to invite you to bring out your best villains! To keep an orderly template for our good friend /u/AnEmortalKid, please use the following template: *** **Villain Name** Short Description about 3-4 lines. *** **Next name** Next short description. *** I'm leaving the race and class out so that people can modify as needed from the list. For Example:</td>
-</tr><tr>
 	<td>Euryndas</td>
 	<td> This guy is one of the sneakiest pieces of scum to ever hit the streets. But, the thing is, the guy didn't just win the streets, he's the puppet master that controls the king too. With a hand in the empire, he makes sure that his little gang can do whatever they want making him the wealthiest person in the city.</td>
-</tr><tr>
-	<td>The goal is to have 10,000 responses</td>
-	<td> Let the compiling begin!</td>
 </tr><tr>
 	<td>Ludik Russell Vansar</td>
 	<td> A genius, blue-blooded human artificer and serial killer driven by only two desires: firstly, to create artificial, intelligent life. Secondly, a need to prove himself to an uncaring father. He is totally absorbed in his own problems and unfeeling; he sees other people as insignificant, and resources to be harvested. He suffers feverish nightmares that on the completion of his work, its first act will be to kill him. Yet these fatalistic dreams don't stop him - if anything, they seem to drive him on. More details available: https://www.reddit.com/r/DnDBehindTheScreen/comments/2xrrpm/its_terrible_tuesday/cp3yfha</td>
@@ -195,12 +191,15 @@
 
 </div>
 </div>
-</div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
 	var $rows = $('#table tr');
+	var $randomRowTable = document.getElementById("randomTable");
 	$('#search').keyup(function(){
 	var checked = document.getElementById("casesensitive").checked;
+	hideRandomTable();
 	
 	if(checked===true)
 	{
@@ -209,6 +208,9 @@
 	else{
 		caseInsensitive();
 	}
+	
+	//unhide the header
+	$rows.get(0).style.display="";
 	});
 </script>
 <script type="text/javascript">
@@ -239,6 +241,7 @@ function caseInsensitive()
 function checkFilter()
 {
 	var checked = document.getElementById("casesensitive").checked;
+	hideRandomTable();
 	
 	if(checked===true)
 	{
@@ -247,6 +250,35 @@ function checkFilter()
 	else{
 		caseInsensitive();
 	}
+	
+	//unhide the header
+	$rows.get(0).style.display="";
+}
+</script>
+<script type="text/javascript">
+function randomRow()
+{
+var random = Math.floor((Math.random() * $rows.length) + 1);
+var header = $rows.get(0).innerHTML;
+var rowValue = $rows.get(random).innerHTML;
+document.getElementById("randomTable").innerHTML="<table><tr>"+header+"</tr><tr>"+rowValue+"</tr></table>"; 
+showRandomTable();
+}
+</script>
+<script type="text/javascript">
+function hideRandomTable()
+{	
+	//show the rows and hide rando element
+	$rows.each(function() {$(this).show()})
+	$randomRowTable.style.display = 'none';
+}
+
+function showRandomTable()
+{
+	//hide the rows and show our element
+	$rows.each(function() {$(this).hide()})
+	$randomRowTable.style.display = 'block';
+	document.getElementById('search').value=""
 }
 </script>
 </body>
