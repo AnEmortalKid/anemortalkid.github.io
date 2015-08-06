@@ -17,7 +17,7 @@
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Plot Hooks</h1>
 <p>This page is a compilation of the plot hooks from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/3fe4x1/lets_make_10000_plot_hooks/">/rDnDBehindTheScreen's 10K Plot Hooks thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 85/10000</h2><h3>Last updated: Wed Aug 05 21:09:14 CDT 2015</h3>
+<h2>Currently at 85/10000</h2><h3>Last updated: Wed Aug 05 21:24:26 CDT 2015</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
 <input type="text" id="search" placeholder="Type to search" />
@@ -428,7 +428,7 @@ function randomRow()
 var random = Math.floor((Math.random() * $rows.length) + 1);
 var header = $rows.get(0).innerHTML;
 var rowValue = $rows.get(random).innerHTML;
-document.getElementById("randomTable").innerHTML="<table><tr>"+header+"</tr><tr>"+rowValue+"</tr></table>"; 
+document.getElementById("randomTable").innerHTML="<table class=&quot;table table-striped&quot;><tr>"+header+"</tr><tr>"+rowValue+"</tr></table>"; 
 showRandomTable();
 }
 </script>
