@@ -1,0 +1,951 @@
+<table class="table table-striped" id="coastal">
+<tr><th>Number</th><th align="center">Name</th><th align="center">X Location</th><th align="center">Y Location</th><th align="center">Item Needed</th></tr>
+<tr><td>001</td><td>Diglett</td><td>Breed from Dugtrio</td><td>Breed from Dugtrio</td><td></td></tr>
+<tr><td>002</td><td>Dugtrio</td><td>Route 13 - Dust
+Friend Safari </td><td>Route 13 - Dust
+Friend Safari </td><td></td></tr>
+<tr><td>003</td><td>Trapinch</td><td>Route 13 - Dust
+Friend Safari </td><td>Route 13 - Dust
+Friend Safari </td><td></td></tr>
+<tr><td>004</td><td>Vibrava</td><td>Evolves from Trapinch at 35</td><td>Evolves from Trapinch at 35</td><td></td></tr>
+<tr><td>005</td><td>Flygon</td><td>Evolves from Vibrava at 45</td><td>Evolves from Vibrava at 45</td><td></td></tr>
+<tr><td>006</td><td>Gible</td><td>Route 13 - Dust
+ </td><td>Route 13 - Dust
+ </td><td></td></tr>
+<tr><td>007</td><td>Gabite</td><td>Evolves from Gible at 24</td><td>Evolves from Gible at 24</td><td></td></tr>
+<tr><td>008</td><td>Garchomp</td><td>Evolves from Garbite at 48</td><td>Evolves from Garbite at 48</td><td></td></tr>
+<tr><td>009</td><td>Geodude</td><td>Route 18 - Horde
+Terminus Cave - 1F - Horde
+Terminus Cave - 2F Left - Horde
+Terminus Cave - 2F Right - Horde
+Terminus Cave - B1F - Horde
+Terminus Cave - B2F - Horde
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Horde
+ </td><td>Route 18 - Horde
+Terminus Cave - 1F - Horde
+Terminus Cave - 2F Left - Horde
+Terminus Cave - 2F Right - Horde
+Terminus Cave - B1F - Horde
+Terminus Cave - B2F - Horde
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Horde
+ </td><td></td></tr>
+<tr><td>010</td><td>Graveler</td><td>Route 13 - Rock Smash
+Route 18 - Grass
+Route 18 - Red Flowers
+Route 18 - Rock Smash
+Terminus Cave - 1F - Grass
+Terminus Cave - 1F - Rock Smash
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Right - Grass
+Terminus Cave - B1F - Grass
+Terminus Cave - B1F - Rock Smash
+Terminus Cave - B2F - Grass
+Terminus Cave - B2F - Rock Smash
+Victory Road - Room 1 - Grass
+Victory Road - Room 1 - Rock Smash
+Victory Road - Room 2 - Grass
+Victory Road - Room 2 - Rock Smash
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+ </td><td>Route 13 - Rock Smash
+Route 18 - Grass
+Route 18 - Red Flowers
+Route 18 - Rock Smash
+Terminus Cave - 1F - Grass
+Terminus Cave - 1F - Rock Smash
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Right - Grass
+Terminus Cave - B1F - Grass
+Terminus Cave - B1F - Rock Smash
+Terminus Cave - B2F - Grass
+Terminus Cave - B2F - Rock Smash
+Victory Road - Room 1 - Grass
+Victory Road - Room 1 - Rock Smash
+Victory Road - Room 2 - Grass
+Victory Road - Room 2 - Rock Smash
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+ </td><td></td></tr>
+<tr><td>011</td><td>Golem</td><td>evolves from Graveler when traded</td><td>evolves from Graveler when traded</td><td></td></tr>
+<tr><td>012</td><td>Slugma</td><td>Route 13 - Rock Smash
+Friend Safari </td><td>Route 13 - Rock Smash
+Friend Safari </td><td></td></tr>
+<tr><td>013</td><td>Magcargo</td><td>Evolves from Slugma at 38</td><td>Evolves from Slugma at 38</td><td></td></tr>
+<tr><td>014</td><td>Shuckle</td><td>Route 18 - Rock Smash
+Terminus Cave - 1F - Rock Smash
+Terminus Cave - B1F - Rock Smash
+Terminus Cave - B2F - Rock Smash
+Victory Road - Room 1 - Rock Smash
+Victory Road - Room 2 - Rock Smash
+Friend Safari </td><td>Route 18 - Rock Smash
+Terminus Cave - 1F - Rock Smash
+Terminus Cave - B1F - Rock Smash
+Terminus Cave - B2F - Rock Smash
+Victory Road - Room 1 - Rock Smash
+Victory Road - Room 2 - Rock Smash
+Friend Safari </td><td></td></tr>
+<tr><td>015</td><td>Skorupi</td><td>Route 14 - Grass
+Route 14 - Horde
+Route 15 - Grass
+Route 15 - Red Flowers
+Route 16 - Yellow Flowers
+Route 19 - Horde
+ </td><td>Route 14 - Grass
+Route 14 - Horde
+Route 15 - Grass
+Route 15 - Red Flowers
+Route 16 - Yellow Flowers
+Route 19 - Horde
+ </td><td></td></tr>
+<tr><td>016</td><td>Drapion</td><td>Route 19 - Purple Flowers
+Route 19 - Yellow Flowers
+Friend Safari </td><td>Route 19 - Purple Flowers
+Route 19 - Yellow Flowers
+Friend Safari </td><td></td></tr>
+<tr><td>017</td><td>Wooper</td><td>Breed from Quagsire</td><td>Breed from Quagsire</td><td></td></tr>
+<tr><td>018</td><td>Quagsire</td><td>Route 14 - Grass
+Route 14 - Water
+Route 14 - Surf
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Surf
+Route 19 - Yellow Flowers
+Friend Safari </td><td>Route 14 - Grass
+Route 14 - Water
+Route 14 - Surf
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Surf
+Route 19 - Yellow Flowers
+Friend Safari </td><td></td></tr>
+<tr><td>019</td><td>Goomy</td><td>Route 14 - Grass
+Route 14 - Water
+Route 14 - Surf
+ </td><td>Route 14 - Grass
+Route 14 - Water
+Route 14 - Surf
+ </td><td></td></tr>
+<tr><td>020</td><td>Sliggoo</td><td>Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Surf
+Route 19 - Yellow Flowers
+Friend Safari </td><td>Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Surf
+Route 19 - Yellow Flowers
+Friend Safari </td><td></td></tr>
+<tr><td>021</td><td>Goodra</td><td>Evolves from Sliggoo at 50 during the rain</td><td>Evolves from Sliggoo at 50 during the rain</td><td></td></tr>
+<tr><td>022</td><td>Karrablast</td><td>Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+ </td><td>Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+ </td><td></td></tr>
+<tr><td>023</td><td>Escavalier</td><td>Evolves from Karrablast when traded for a Shelmet</td><td>Evolves from Karrablast when traded for a Shelmet</td><td></td></tr>
+<tr><td>024</td><td>Shelmet</td><td>Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+ </td><td>Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+ </td><td></td></tr>
+<tr><td>025</td><td>Accelgor</td><td>Evolves from Shelmet when traded for a Karrablast</td><td>Evolves from Shelmet when traded for a Karrablast</td><td></td></tr>
+<tr><td>026</td><td>Bellsprout</td><td>Route 14 - Horde
+ </td><td>Route 14 - Horde
+ </td><td></td></tr>
+<tr><td>027</td><td>Weepinbell</td><td>Route 14 - Grass
+Route 16 - Yellow Flowers
+Route 19 - Horde
+Route 19 - Purple Flowers
+Route 19 - Yellow Flowers
+ </td><td>Route 14 - Grass
+Route 16 - Yellow Flowers
+Route 19 - Horde
+Route 19 - Purple Flowers
+Route 19 - Yellow Flowers
+ </td><td></td></tr>
+<tr><td>028</td><td>Victreebel</td><td>Evolves from Weepinbell when exposed to Leaf Stone</td><td>Evolves from Weepinbell when exposed to Leaf Stone</td><td>Leaf Stone</td></tr>
+<tr><td>029</td><td>Carnivine</td><td>Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+ </td><td>Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+ </td><td></td></tr>
+<tr><td>030</td><td>Gastly</td><td>Breed fromm Haunter or Gengar</td><td>Breed fromm Haunter or Gengar</td><td></td></tr>
+<tr><td>031</td><td>Haunter</td><td>Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Frost Cavern - 3F - Hoorde
+Victory Road - Room 1 - Grass
+Victory Road - Room 2 - Grass
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+ </td><td>Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Graass
+Frost Cavern - 3F - Grass
+Victory Road - Room 1 - Grass
+Victory Road - Room 2 - Grass
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+ </td><td></td></tr>
+<tr><td>032</td><td>Gengar</td><td>Evolves from Haunter when traded</td><td>Evolves from Haunter when traded</td><td></td></tr>
+<tr><td>033</td><td>Poliwag</td><td>Route 14 - Old Rod
+Route 15 - Old Rod
+Route 16 - Old Rod
+Route 19 - Old Rod
+Route 21 - Old Rod
+Laverre City - Old Rod
+Frost Cavern - 2F - Old Rod
+Frost Cavern - Outside - Old Rod
+Couriway Town - Old Rod
+Pokemon Village - Horde
+Pokemon Village - Old Rod
+Victory Road - Outside Far East - Old Rod
+Victory Road - Room 4 - Old Rod
+Victory Road - Room 1 - Old Rod
+ </td><td>Route 14 - Old Rod
+Route 15 - Old Rod
+Route 16 - Old Rod
+Route 19 - Old Rod
+Route 21 - Old Rod
+Laverre City - Old Rod
+Frost Cavern - 2F - Old Rod
+Frost Cavern - Outside - Old Rod
+Couriway Town - Old Rod
+Pokemon Village - Horde
+Pokemon Village - Old Rod
+Victory Road - Outside Far East - Old Rod
+Victory Road - Room 4 - Old Rod
+Victory Road - Room 1 - Old Rod
+ </td><td></td></tr>
+<tr><td>034</td><td>Poliwhirl</td><td>Route 14 - Good Rod
+Route 14 - Super Rod
+Route 15 - Good Rod
+Route 15 - Super Rod
+Route 16 - Good Rod
+Route 16 - Super Rod
+Route 19 - Good Rod
+Route 19 - Super Rod
+Route 21 - Good Rod
+Route 21 - Super Rod
+Laverre City - Good Rod
+Laverre City - Super Rod
+Frost Cavern - 2F - Good Rod
+Frost Cavern - 2F - Super Rod
+Frost Cavern - 2F - Surf
+Frost Cavern - Outside - Good Rod
+Frost Cavern - Outside - Super Rod
+Frost Cavern - Outside - Surf
+Couriway Town - Good Rod
+Couriway Town - Super Rod
+Pokemon Village - Good Rod
+Pokemon Village - Super Rod
+Pokemon Village - Surf
+Victory Road - Outside Far East - Good Rod
+Victory Road - Outside Far East - Super Rod
+Victory Road - Room 4 - Good Rod
+Victory Road - Room 4 - Super Rod
+Victory Road - Room 4 - Surf
+Victory Road - Room 1 - Super Rod
+Victory Road - Room 1 - Surf
+Victory Road - Room 1 - Good Rod
+Friend Safari </td><td>Route 14 - Good Rod
+Route 14 - Super Rod
+Route 15 - Good Rod
+Route 15 - Super Rod
+Route 16 - Good Rod
+Route 16 - Super Rod
+Route 19 - Good Rod
+Route 19 - Super Rod
+Route 21 - Good Rod
+Route 21 - Super Rod
+Laverre City - Good Rod
+Laverre City - Super Rod
+Frost Cavern - 2F - Good Rod
+Frost Cavern - 2F - Super Rod
+Frost Cavern - 2F - Surf
+Frost Cavern - Outside - Good Rod
+Frost Cavern - Outside - Super Rod
+Frost Cavern - Outside - Surf
+Couriway Town - Good Rod
+Couriway Town - Super Rod
+Pokemon Village - Good Rod
+Pokemon Village - Super Rod
+Pokemon Village - Surf
+Victory Road - Outside Far East - Good Rod
+Victory Road - Outside Far East - Super Rod
+Victory Road - Room 4 - Good Rod
+Victory Road - Room 4 - Super Rod
+Victory Road - Room 4 - Surf
+Victory Road - Room 1 - Super Rod
+Victory Road - Room 1 - Surf
+Victory Road - Room 1 - Good Rod
+Friend Safari </td><td></td></tr>
+<tr><td>035</td><td>Poliwrath</td><td>Victory Road - Room 4 - Super Rod
+Victory Road - Outside Far East - Super Rod
+ </td><td>Victory Road - Room 4 - Super Rod
+Victory Road - Outside Far East - Super Rod
+ </td><td></td></tr>
+<tr><td>036</td><td>Politoed</td><td>Route 19 - Super Rod
+ </td><td>Route 19 - Super Rod
+ </td><td></td></tr>
+<tr><td>037</td><td>Ekans</td><td>Route 14 - Horde
+ </td><td>Route 14 - Horde
+ </td><td></td></tr>
+<tr><td>038</td><td>Arbok</td><td>Route 19 - Horde
+ </td><td>Route 19 - Horde
+ </td><td></td></tr>
+<tr><td>039</td><td>Stunfisk</td><td>Route 14 - Water
+Route 14 - Surf
+Route 19 - Water
+Route 19 - Surf
+Friend Safari </td><td>Route 14 - Water
+Route 14 - Surf
+Route 19 - Water
+Route 19 - Surf
+Friend Safari </td><td></td></tr>
+<tr><td>040</td><td>Barboach</td><td>Route 14 - Good Rod
+Route 19 - Good Rod
+ </td><td>Route 14 - Good Rod
+Route 19 - Good Rod
+ </td><td></td></tr>
+<tr><td>041</td><td>Whiscash</td><td>Route 14 - Super Rod
+Route 19 - Super Rod
+ </td><td>Route 14 - Super Rod
+Route 19 - Super Rod
+ </td><td></td></tr>
+<tr><td>042</td><td>Purrloin</td><td>Breed from Liepard</td><td>Breed from Liepard</td><td></td></tr>
+<tr><td>043</td><td>Liepard</td><td>Friend Safari </td><td>Route 15 - Grass
+Route 15 - Red Flowers
+Friend Safari </td><td></td></tr>
+<tr><td>044</td><td>Poochyena</td><td>Breed Mightyena</td><td>Breed Mightyena</td><td></td></tr>
+<tr><td>045</td><td>Mightyena</td><td>Route 15 - Grass
+Route 15 - Red Flowers
+Friend Safari </td><td>Friend Safari </td><td></td></tr>
+<tr><td>046</td><td>Patrat</td><td>Breed from Watchdog</td><td>Breed from Watchdog</td><td></td></tr>
+<tr><td>047</td><td>Watchog</td><td>Route 15 - Grass
+Route 15 - Red Flowers
+ </td><td>Route 15 - Grass
+Route 15 - Red Flowers
+ </td><td></td></tr>
+<tr><td>048</td><td>Pawniard</td><td>Route 15 - Grass
+Route 15 - Red Flowers
+Lost Hotel - Grass
+Friend Safari </td><td>Route 15 - Grass
+Route 15 - Red Flowers
+Lost Hotel - Grass
+Friend Safari </td><td></td></tr>
+<tr><td>049</td><td>Bisharp</td><td>Evolves from Pawniard at 52</td><td>Evolves from Pawniard at 52</td><td></td></tr>
+<tr><td>050</td><td>Klefki</td><td>Route 15 - Grass
+Route 15 - Horde
+Route 15 - Red Flowers
+Route 16 - Horde
+Route 16 - Tall Grass
+Route 16 - Yellow Flowers
+Lost Hotel - Grass
+Friend Safari </td><td>Route 15 - Grass
+Route 15 - Horde
+Route 15 - Red Flowers
+Route 16 - Horde
+Route 16 - Tall Grass
+Route 16 - Yellow Flowers
+Lost Hotel - Grass
+Friend Safari </td><td></td></tr>
+<tr><td>051</td><td>Murkrow</td><td>Route 15 - Horde
+Route 16 - Horde
+ </td><td>Route 15 - Horde
+Route 16 - Horde
+ </td><td></td></tr>
+<tr><td>052</td><td>Honchkrow</td><td>Evolves from Murkrow when you use a Dusk Stone
+</td><td>Evolves from Murkrow when you use a Dusk Stone</td><td>Dusk Stone</td></tr>
+<tr><td>053</td><td>Foongus</td><td>Route 15 - Grass
+Route 15 - Horde
+Route 15 - Red Flowers
+Route 16 - Horde
+Route 16 - Tall Grass
+Route 16 - Yellow Flowers
+Route 20 - Horde
+Pokemon Village - Horde
+ </td><td>Route 15 - Grass
+Route 15 - Horde
+Route 15 - Red Flowers
+Route 16 - Horde
+Route 16 - Tall Grass
+Route 16 - Yellow Flowers
+Route 20 - Horde
+Pokemon Village - Horde
+ </td><td></td></tr>
+<tr><td>054</td><td>Amoonguss</td><td>Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+ </td><td>Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+ </td><td></td></tr>
+<tr><td>055</td><td>Lotad</td><td>Breed Lombre or Ludicolo</td><td>Breed Lombre or Ludicolo</td><td></td></tr>
+<tr><td>056</td><td>Lombre</td><td>Route 15 - Surf
+Route 16 - Surf
+Route 21 - Surf
+Couriway Town - Surf
+Pokemon Village - Surf
+Pokemon Village - Horde
+Victory Road - Outside Far East - Surf
+ </td><td>Route 15 - Surf
+Route 16 - Surf
+Route 21 - Surf
+Couriway Town - Surf
+Pokemon Village - Surf
+Pokemon Village - Horde
+Victory Road - Outside Far East - Surf
+ </td><td></td></tr>
+<tr><td>057</td><td>Ludicolo</td><td>Evolves from Lombre when you use Water Stone on it</td><td>Evolves from Lombre when you use Water Stone on it</td><td>Water Stone</td></tr>
+<tr><td>058</td><td>Buizel</td><td>Breed from Floatzel</td><td>Breed from Floatzel</td><td></td></tr>
+<tr><td>059</td><td>Floatzel</td><td>Route 15 - Surf
+Route 16 - Surf
+Route 16 - Yellow Flowers
+Route 21 - Purple Flowers
+Route 21 - Red Flowers
+Route 21 - Surf
+Frost Cavern - 2F - Surf
+Frost Cavern - Outside - Surf
+Couriway Town - Surf
+Victory Road - Outside Far East - Surf
+Victory Road - Room 4 - Surf
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Horde
+Victory Road - Room 1 - Surf
+Friend Safari </td><td>Route 15 - Surf
+Route 16 - Surf
+Route 16 - Yellow Flowers
+Route 21 - Purple Flowers
+Route 21 - Red Flowers
+Route 21 - Surf
+Frost Cavern - 2F - Surf
+Frost Cavern - Outside - Surf
+Couriway Town - Surf
+Victory Road - Outside Far East - Surf
+Victory Road - Room 4 - Surf
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Horde
+Victory Road - Room 1 - Surf
+Friend Safari </td><td></td></tr>
+<tr><td>060</td><td>Basculin</td><td>Route 15 - Good Rod
+Route 15 - Super Rod
+Route 16 - Good Rod
+Route 16 - Super Rod
+Route 21 - Good Rod
+Route 21 - Super Rod
+Laverre City - Good Rod
+Laverre City - Super Rod
+Frost Cavern - 2F - Good Rod
+Frost Cavern - 2F - Super Rod
+Frost Cavern - Outside - Good Rod
+Frost Cavern - Outside - Super Rod
+Couriway Town - Good Rod
+Couriway Town - Super Rod
+Pokemon Village - Good Rod
+Pokemon Village - Super Rod
+Victory Road - Outside Far East - Good Rod
+Victory Road - Outside Far East - Super Rod
+Victory Road - Room 4 - Good Rod
+Victory Road - Room 4 - Super Rod
+Victory Road - Room 1 - Super Rod
+Victory Road - Room 1 - Good Rod
+ </td><td>Route 15 - Good Rod
+Route 15 - Super Rod
+Route 16 - Good Rod
+Route 16 - Super Rod
+Route 21 - Good Rod
+Route 21 - Super Rod
+Laverre City - Good Rod
+Laverre City - Super Rod
+Frost Cavern - 2F - Good Rod
+Frost Cavern - 2F - Super Rod
+Frost Cavern - Outside - Good Rod
+Frost Cavern - Outside - Super Rod
+Couriway Town - Good Rod
+Couriway Town - Super Rod
+Pokemon Village - Good Rod
+Pokemon Village - Super Rod
+Victory Road - Outside Far East - Good Rod
+Victory Road - Outside Far East - Super Rod
+Victory Road - Room 4 - Good Rod
+Victory Road - Room 4 - Super Rod
+Victory Road - Room 1 - Super Rod
+Victory Road - Room 1 - Good Rod
+ </td><td></td></tr>
+<tr><td>061</td><td>Phantump</td><td>Route 16 - Tall Grass
+Route 16 - Yellow Flowers
+Friend Safari </td><td>Route 16 - Tall Grass
+Route 16 - Yellow Flowers
+Friend Safari </td><td></td></tr>
+<tr><td>062</td><td>Trevenant</td><td>Route 20 - Grass
+Route 20 - Horde
+Route 20 - Red Flowers
+ </td><td>Route 20 - Grass
+Route 20 - Horde
+Route 20 - Red Flowers
+ </td><td></td></tr>
+<tr><td>063</td><td>Pumpkaboo</td><td>Route 16 - Tall Grass
+Route 16 - Tall Grass
+Route 16 - Tall Grass
+Route 16 - Tall Grass
+Friend Safari </td><td>Route 16 - Tall Grass
+Route 16 - Tall Grass
+Route 16 - Tall Grass
+Route 16 - Tall Grass
+Friend Safari </td><td></td></tr>
+<tr><td>064</td><td>Gourgeist</td><td>Evolves from Pumpkaboo when traded</td><td>Evolves from Pumpkaboo when traded</td><td></td></tr>
+<tr><td>065</td><td>Litwick</td><td>Lost Hotel - Grass
+ </td><td>Lost Hotel - Grass
+ </td><td></td></tr>
+<tr><td>066</td><td>Lampent</td><td>Evolves from Litwick at 41</td><td>Evolves from Litwick at 41</td><td></td></tr>
+<tr><td>067</td><td>Chandelure</td><td>Evolves from Lampent when you use Dusk Stone on it</td><td>Evolves from Lampent when you use Dusk Stone on it</td><td>Dusk Stone</td></tr>
+<tr><td>068</td><td>Rotom</td><td>Lost Hotel - Special
+ </td><td>Lost Hotel - Special
+ </td><td></td></tr>
+<tr><td>069</td><td>Magnemite</td><td>Breed Magneton or Magnezone</td><td>Breed Magneton or Magnezone</td><td></td></tr>
+<tr><td>070</td><td>Magneton</td><td>Lost Hotel - Grass
+Friend Safari </td><td>Lost Hotel - Grass
+Friend Safari </td><td></td></tr>
+<tr><td>071</td><td>Magnezone</td><td>Evolves from Magneton when evolved on Route 13</td><td>Evolves from Magneton when evolved on Route 13</td><td></td></tr>
+<tr><td>072</td><td>Voltorb</td><td>Breed Electrode</td><td>Breed Electrode</td><td></td></tr>
+<tr><td>073</td><td>Electrode</td><td>Lost Hotel - Grass
+Friend Safari </td><td>Lost Hotel - Grass
+Friend Safari </td><td></td></tr>
+<tr><td>074</td><td>Trubbish</td><td>Lost Hotel - Special
+ </td><td>Lost Hotel - Special
+ </td><td></td></tr>
+<tr><td>075</td><td>Garbodor</td><td>Lost Hotel - Special
+Pokemon Village - Special
+Friend Safari </td><td>Lost Hotel - Special
+Pokemon Village - Special
+Friend Safari </td><td></td></tr>
+<tr><td>076</td><td>Swinub</td><td>Breed Piloswine or Mamoswine</td><td> </td><td></td></tr>
+<tr><td>077</td><td>Piloswine</td><td>Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Friend Safari </td><td>Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Friend Safari </td><td></td></tr>
+<tr><td>078</td><td>Mamoswine</td><td>Evolves from Piloswine when leveled while knowing Ancient Power</td><td>Evolves from Piloswine when leveled while knowing Ancient Power</td><td></td></tr>
+<tr><td>079</td><td>Bergmite</td><td>Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Friend Safari </td><td>Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Friend Safari </td><td></td></tr>
+<tr><td>080</td><td>Avalugg</td><td>Evolves from Bergmite at 37</td><td>Evolves from Bergmite at 37</td><td></td></tr>
+<tr><td>081</td><td>Cubchoo</td><td>Frost Cavern - 1F - Horde
+Frost Cavern - 2F - Horde
+Frost Cavern - 3F - Horde
+ </td><td>Frost Cavern - 1F - Horde
+Frost Cavern - 2F - Horde
+Frost Cavern - 3F - Horde
+ </td><td></td></tr>
+<tr><td>082</td><td>Beartic</td><td>Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Friend Safari </td><td>Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Friend Safari </td><td></td></tr>
+<tr><td>083</td><td>Smoochum</td><td>Frost Cavern - 1F - Horde
+Frost Cavern - 2F - Horde
+Frost Cavern - 3F - Horde
+ </td><td>Frost Cavern - 1F - Horde
+Frost Cavern - 2F - Horde
+Frost Cavern - 3F - Horde
+ </td><td></td></tr>
+<tr><td>084</td><td>Jynx</td><td>Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Hoorde
+ </td><td>Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+ </td><td></td></tr>
+<tr><td>085</td><td>Vanillite</td><td>Frost Cavern - 1F - Horde
+Frost Cavern - 2F - Horde
+Frost Cavern - 3F - Horde
+ </td><td>Frost Cavern - 1F - Horde
+Frost Cavern - 2F - Horde
+Frost Cavern - 3F - Horde
+ </td><td></td></tr>
+<tr><td>086</td><td>Vanillish</td><td>Evolves from Vanillite at 35</td><td>Evolves from Vanillite at 35</td><td></td></tr>
+<tr><td>087</td><td>Vanilluxe</td><td>Evolves from Vanillish at 47</td><td>Evolves from Vanillish at 47</td><td></td></tr>
+<tr><td>088</td><td>Snover</td><td>Route 17 - Snow
+Friend Safari </td><td>Route 17 - Snow
+Friend Safari </td><td></td></tr>
+<tr><td>089</td><td>Abomasnow</td><td>Route 17 - Snow
+ </td><td>Route 17 - Snow
+ </td><td></td></tr>
+<tr><td>090</td><td>Delibird</td><td>Route 17 - Snow
+Friend Safari </td><td>Route 17 - Snow
+Friend Safari </td><td></td></tr>
+<tr><td>091</td><td>Sneasel</td><td>Route 17 - Snow
+Friend Safari </td><td>Route 17 - Snow
+Friend Safari </td><td></td></tr>
+<tr><td>092</td><td>Weavile</td><td>Evolves from Sneasel when leveled at night while holding Razor Claw
+Claw found at Battle Maison</td><td>Evolves from Sneasel when leveled at night while holding Razor Claw
+Claw found at Battle Maison</td><td>Razor Claw</td></tr>
+<tr><td>093</td><td>Timburr</td><td>Breed Gurdurr or Conkeldurr</td><td>Breed Gurdurr or Conkeldurr</td><td></td></tr>
+<tr><td>094</td><td>Gurdurr</td><td>Route 18 - Grass
+Route 18 - Red Flowers
+Victory Road - Room 1 - Grass
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Grass
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Grass
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Grass
+Victory Road - Room 4 - Horde
+ </td><td>Route 18 - Grass
+Route 18 - Red Flowers
+Victory Road - Room 1 - Grass
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Grass
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Grass
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Grass
+Victory Road - Room 4 - Horde
+ </td><td></td></tr>
+<tr><td>095</td><td>Conkeldurr</td><td>Evolves from Gurdurr when traded</td><td>Evolves from Gurdurr when traded</td><td></td></tr>
+<tr><td>096</td><td>Torkoal</td><td>Route 18 - Grass
+Route 18 - Red Flowers
+ </td><td>Route 18 - Grass
+Route 18 - Red Flowers
+ </td><td></td></tr>
+<tr><td>097</td><td>Sandshrew</td><td>Breed from Sandslash</td><td>Breed from Sandslash</td><td></td></tr>
+<tr><td>098</td><td>Sandslash</td><td>Route 18 - Grass
+Route 18 - Red Flowers
+Terminus Cave - 1F - Grass
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Right - Grass
+Terminus Cave - B1F - Grass
+Terminus Cave - B2F - Grass
+ </td><td>Route 18 - Grass
+Route 18 - Red Flowers
+Terminus Cave - 1F - Grass
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Right - Grass
+Terminus Cave - B1F - Grass
+Terminus Cave - B2F - Grass
+ </td><td></td></tr>
+<tr><td>099</td><td>Aron</td><td>Terminus Cave - 1F - Horde
+Terminus Cave - 2F Left - Horde
+Terminus Cave - 2F Right - Horde
+Terminus Cave - B1F - Horde
+Terminus Cave - B2F - Horde
+ </td><td> </td><td></td></tr>
+<tr><td>100</td><td>Lairon</td><td>Route 18 - Grass
+Route 18 - Red Flowers
+Terminus Cave - 1F - Grass
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Right - Grass
+Terminus Cave - B1F - Grass
+Terminus Cave - B2F - Grass
+ </td><td> </td><td></td></tr>
+<tr><td>101</td><td>Aggron</td><td>Evolves from Lairon at 42</td><td> </td><td></td></tr>
+<tr><td>102</td><td>Larvitar</td><td> </td><td>Terminus Cave - 1F - Horde
+Terminus Cave - 2F Left - Horde
+Terminus Cave - 2F Right - Horde
+Terminus Cave - B1F - Horde
+Terminus Cave - B2F - Horde
+ </td><td></td></tr>
+<tr><td>103</td><td>Pupitar</td><td></td><td>Route 18 - Grass
+Route 18 - Red Flowers
+Terminus Cave - 1F - Grass
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Right - Grass
+Terminus Cave - B1F - Grass
+Terminus Cave - B2F - Grass
+Friend Safari </td><td></td></tr>
+<tr><td>104</td><td>Tyranitar</td><td> </td><td>Evolves from Pupitar at 55</td><td></td></tr>
+<tr><td>105</td><td>Heatmor</td><td>Route 18 - Grass
+Route 18 - Horde
+Route 18 - Red Flowers
+Route 18 - Special
+ </td><td>Route 18 - Grass
+Route 18 - Horde
+Route 18 - Red Flowers
+Route 18 - Special
+ </td><td></td></tr>
+<tr><td>106</td><td>Durant</td><td>Route 18 - Grass
+Route 18 - Horde
+Route 18 - Red Flowers
+Route 18 - Special
+Terminus Cave - 1F - Grass
+Terminus Cave - 1F - Horde
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Left - Horde
+Terminus Cave - 2F Right - Grass
+Terminus Cave - 2F Right - Horde
+Terminus Cave - B1F - Grass
+Terminus Cave - B1F - Horde
+Terminus Cave - B2F - Grass
+Terminus Cave - B2F - Horde
+ </td><td>Route 18 - Grass
+Route 18 - Horde
+Route 18 - Red Flowers
+Route 18 - Special
+Terminus Cave - 1F - Grass
+Terminus Cave - 1F - Horde
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Left - Horde
+Terminus Cave - 2F Right - Grass
+Terminus Cave - 2F Right - Horde
+Terminus Cave - B1F - Grass
+Terminus Cave - B1F - Horde
+Terminus Cave - B2F - Grass
+Terminus Cave - B2F - Horde
+ </td><td></td></tr>
+<tr><td>107</td><td>Spinarak</td><td>Breed from Ariados</td><td>Breed from Ariados</td><td></td></tr>
+<tr><td>108</td><td>Ariados</td><td>Terminus Cave - 1F - Special
+Terminus Cave - B1F - Special
+Terminus Cave - B2F - Special
+Terminus Cave - B3F - Special
+Terminus Cave - 2F Left - Special
+Terminus Cave - 2F Right - Special
+Victory Road - Room 3 - Special
+Friend Safari </td><td>Terminus Cave - 1F - Special
+Terminus Cave - B1F - Special
+Terminus Cave - B2F - Special
+Terminus Cave - B3F - Special
+Terminus Cave - 2F Left - Special
+Terminus Cave - 2F Right - Special
+Victory Road - Room 3 - Special
+Friend Safari </td><td></td></tr>
+<tr><td>109</td><td>Spearow</td><td>Frost Cavern - Outside - Speecial
+Friend Safari </td><td>Frost Cavern - Outside - Special
+Friend Safari </td><td></td></tr>
+<tr><td>110</td><td>Fearow</td><td>Victory Road - Outside East - Special
+Victory Road - Outside West - Special
+Victory Road - Outside Far East - Special
+ </td><td>Victory Road - Outside East - Special
+Victory Road - Outside West - Special
+Victory Road - Outside Far East - Special
+ </td><td></td></tr>
+<tr><td>111</td><td>Cryogonal</td><td>Frost Cavern - 2F - Grass
+Frost Cavern - 1F - Grass
+Frost Cavern - 3F - Grass
+ </td><td>Frost Cavern - 2F - Grass
+Frost Cavern - 1F - Grass
+Frost Cavern - 3F - Grass
+ </td><td></td></tr>
+<tr><td>112</td><td>Skarmory</td><td>Victory Road - Outside East - Special
+Victory Road - Outside West - Special
+Victory Road - Outside Far East - Special
+Friend Safari </td><td>Victory Road - Outside East - Special
+Victory Road - Outside West - Special
+Victory Road - Outside Far East - Special
+Friend Safari </td><td></td></tr>
+<tr><td>113</td><td>Noibat</td><td>Terminus Cave - 1F - Special
+Terminus Cave - B1F - Special
+Terminus Cave - B2F - Special
+Terminus Cave - B3F - Special
+Terminus Cave - 2F Left - Special
+Terminus Cave - 2F Right - Special
+Friend Safari </td><td>Terminus Cave - 1F - Special
+Terminus Cave - B1F - Special
+Terminus Cave - B2F - Special
+Terminus Cave - B3F - Special
+Terminus Cave - 2F Left - Special
+Terminus Cave - 2F Right - Special
+Friend Safari </td><td></td></tr>
+<tr><td>114</td><td>Noivern</td><td>Evolves from Noibat at 48</td><td>Evolves from Noibat at 48</td><td></td></tr>
+<tr><td>115</td><td>Gligar</td><td>Route 19 - Horde
+ </td><td>Route 19 - Horde
+ </td><td></td></tr>
+<tr><td>116</td><td>Gliscor</td><td>Evolves from Gilgar when leveled at night while holding Razor Fang.
+Found at Battle Maison</td><td>Evolves from Gilgar when leveled at night while holding Razor Fang.
+Found at Battle Maison</td><td>Battle Fang</td></tr>
+<tr><td>117</td><td>Hoothoot</td><td>Breed from Noctowl</td><td>Breed from Noctowl</td><td></td></tr>
+<tr><td>118</td><td>Noctowl</td><td>Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Horde
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+ </td><td>Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Horde
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+ </td><td></td></tr>
+<tr><td>119</td><td>Igglybuff</td><td>Breed from Jigglypuff otr Wigglytuff</td><td>Breed from Jigglypuff otr Wigglytuff</td><td></td></tr>
+<tr><td>120</td><td>Jigglypuff</td><td>Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+Friend Safari </td><td>Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+Friend Safari </td><td></td></tr>
+<tr><td>121</td><td>Wigglytuff</td><td> Evolves from Jigglypuff when expoosed to Moon Stone</td><td> Evolves from Jigglypuff when expoosed to Moon Stone</td><td>Moon Stone</td></tr>
+<tr><td>122</td><td>Shuppet</td><td>Breed Banette</td><td>Breed Banette</td><td></td></tr>
+<tr><td>123</td><td>Banette</td><td>Pokemon Village - Special
+ </td><td>Pokemon Village - Special
+ </td><td></td></tr>
+<tr><td>124</td><td>Zorua</td><td>Breed Zoroark</td><td>Breed Zoroark</td><td></td></tr>
+<tr><td>125</td><td>Zoroark</td><td>Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+ </td><td>Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+ </td><td></td></tr>
+<tr><td>126</td><td>Gothita</td><td>Breed Gothorita or Gothitelle</td><td>Breed Gothorita or Gothitelle</td><td></td></tr>
+<tr><td>127</td><td>Gothorita</td><td>Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+Friend Safari </td><td>Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+Friend Safari </td><td></td></tr>
+<tr><td>128</td><td>Gothitelle</td><td>Evolves from Gothorita at 41</td><td>Evolves from Gothorita at 41</td><td></td></tr>
+<tr><td>129</td><td>Bonsly</td><td>Breed Sudowoodo while holding Rock Incense</td><td>Breed Sudowoodo while holding Rock Incense</td><td></td></tr>
+<tr><td>130</td><td>Sudowoodo</td><td>Route 20 - Horde
+ </td><td>Route 20 - Horde
+ </td><td></td></tr>
+<tr><td>131</td><td>Spinda</td><td>Route 21 - Horde
+Route 21 - Purple Flowers
+Route 21 - Red Flowers
+Friend Safari </td><td>Route 21 - Horde
+Route 21 - Purple Flowers
+Route 21 - Red Flowers
+Friend Safari </td><td></td></tr>
+<tr><td>132</td><td>Teddiursa</td><td>Breed from Usaring</td><td>Breed from Usaring</td><td></td></tr>
+<tr><td>133</td><td>Ursaring</td><td>Route 21 - Purple Flowers
+Route 21 - Red Flowers
+ </td><td>Route 21 - Purple Flowers
+Route 21 - Red Flowers
+ </td><td></td></tr>
+<tr><td>134</td><td>Lickitung</td><td>Victory Road - Room 1 - Grass
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Grass
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Grass
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Grass
+Victory Road - Room 4 - Horde
+ </td><td>Victory Road - Room 1 - Grass
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Grass
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Grass
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Grass
+Victory Road - Room 4 - Horde
+ </td><td></td></tr>
+<tr><td>135</td><td>Lickilicky</td><td>Evolves from Lickitung while knowing Rollout (Learned at 33)</td><td>Evolves from Lickitung while knowing Rollout (Learned at 33)</td><td></td></tr>
+<tr><td>136</td><td>Scyther</td><td>Route 21 - Horde
+Route 21 - Purple Flowers
+Route 21 - Red Flowers
+ </td><td>Route 21 - Horde
+Route 21 - Purple Flowers
+Route 21 - Red Flowers
+ </td><td></td></tr>
+<tr><td>137</td><td>Scizor</td><td>Evolves from Scyther when traded while holding Metal Coat.
+Coat fount in Pokeball Factory</td><td>Evolves from Scyther when traded while holding Metal Coat.
+Coat fount in Pokeball Factory</td><td>Metal Coat</td></tr>
+<tr><td>138</td><td>Ditto</td><td>Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+Friend Safari </td><td>Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+Friend Safari </td><td></td></tr>
+<tr><td>139</td><td>Swablu</td><td>Route 21 - Horde
+ </td><td>Route 21 - Horde
+ </td><td></td></tr>
+<tr><td>140</td><td>Altaria</td><td>Route 21 - Purple Flowers
+Route 21 - Red Flowers
+ </td><td>Route 21 - Purple Flowers
+Route 21 - Red Flowers
+ </td><td></td></tr>
+<tr><td>141</td><td>Druddigon</td><td>Victory Road - Room 1 - Grass
+Victory Road - Room 2 - Grass
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+Friend Safari </td><td>Victory Road - Room 1 - Grass
+Victory Road - Room 2 - Grass
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+Friend Safari </td><td></td></tr>
+<tr><td>142</td><td>Deino</td><td>Breed Zweilous or Hydreigon</td><td>Breed Zweilous or Hydreigon</td><td></td></tr>
+<tr><td>143</td><td>Zweilous</td><td>Victory Road - Room 1 - Grass
+Victory Road - Room 2 - Grass
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+ </td><td>Victory Road - Room 1 - Grass
+Victory Road - Room 2 - Grass
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+ </td><td></td></tr>
+<tr><td>144</td><td>Hydreigon</td><td>Victory Road - Outside Far East - Special
+Victory Road - Outside East - Special
+Victory Road - Outside West - Special
+ </td><td>Victory Road - Outside Far East - Special
+Victory Road - Outside East - Special
+Victory Road - Outside West - Special
+ </td><td></td></tr>
+<tr><td>145</td><td>Dratini</td><td>Route 21 - Good Rod
+ </td><td>Route 21 - Good Rod
+ </td><td></td></tr>
+<tr><td>146</td><td>Dragonair</td><td>Route 21 - Super Rod
+Friend Safari </td><td>Route 21 - Super Rod
+Friend Safari </td><td></td></tr>
+<tr><td>147</td><td>Dragonite</td><td>Evolves from Dragonair at 55</td><td>Evolves from Dragonair at 55</td><td></td></tr>
+<tr><td>148</td><td>Xerneas</td><td>Team Flare Secret HQ - Basement - Interact
+ </td><td> </td><td></td></tr>
+<tr><td>149</td><td>Yveltal</td><td> </td><td>Team Flare Secret HQ - Basement - Interact
+ </td><td></td></tr>
+<tr><td>150</td><td>Zygarde</td><td>Terminus Cave - B3F - Interact
+ </td><td>Terminus Cave - B3F - Interact
+ </td><td></td></tr>
+<tr><td>151</td><td>Mewtwo</td><td>Pokemon Village - Unknown Dungeon - Interact
+ </td><td>Pokemon Village - Unknown Dungeon - Interact
+ </td><td></td></tr>
+</table>
