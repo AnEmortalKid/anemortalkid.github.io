@@ -2024,6 +2024,8 @@ function showHeader()
 <script type="text/javascript">
 	var $rows = $('#table tr');
 	
+	showHeader();
+	
 	$('#search').keyup(function(){
 	var checked = document.getElementById("casesensitive").checked;
 	
@@ -2034,9 +2036,9 @@ function showHeader()
 	else{
 		caseInsensitive();
 	}
-	});
 	
 	showHeader();
+	});
 </script>
 <script type="text/javascript">
 function caseSensitive()
@@ -2065,6 +2067,7 @@ function caseInsensitive()
 <script type="text/javascript">
 function checkFilter()
 {
+	showHeader();
 	var checked = document.getElementById("casesensitive").checked;
 	
 	if(checked===true)
