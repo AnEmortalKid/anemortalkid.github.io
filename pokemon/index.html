@@ -24,9 +24,9 @@
 <label><input type="checkbox" id="casesensitive" onClick="checkFilter()">Case Sensitive Search</label>
 </div>
 <div class="row">
-<table class="table table-striped" id="table-header">
+<!-- <table class="table table-striped" id="table-header">
 <tr><th>Number</th><th align="center">Name</th><th align="center">X Location</th><th align="center">Y Location</th><th align="center">Item Needed</th></tr>
-</table>
+</table> -->
 
 <h3>Central</h3>
 <table class="table table-striped" id="central">
@@ -2031,10 +2031,6 @@ Friend Safari </td><td></td></tr>
 	var $coastal = $('#coastal tr');
 	var $mountain = $('#mountain tr');
 	
-	$central.get(0).style.display="none";
-	$coastal.get(0).style.display="none";
-	$mountain.get(0).style.display="none";
-	
 	$('#search').keyup(function(){
 	var checked = document.getElementById("casesensitive").checked;
 	
@@ -2046,9 +2042,6 @@ Friend Safari </td><td></td></tr>
 		caseInsensitive();
 	}
 	
-	$central.get(0).style.display="none";
-	$coastal.get(0).style.display="none";
-	$mountain.get(0).style.display="none";
 	
 	});
 </script>
@@ -2104,7 +2097,11 @@ function checkFilter()
 	else{
 		caseInsensitive();
 	}
-	
+}
+</script>
+<script type="text/javascript">
+function hideTableHeaders()
+{
 	$central.get(0).style.display="none";
 	$coastal.get(0).style.display="none";
 	$mountain.get(0).style.display="none";
