@@ -12,6 +12,7 @@
     max-width: 80%;
     margin-bottom: 20px;
 	}
+	
 </style>
 </head>
 <body>
@@ -24,11 +25,11 @@
 <label><input type="checkbox" id="casesensitive" onClick="checkFilter()">Case Sensitive Search</label>
 </div>
 <div class="row">
-<!-- <table class="table table-striped" id="table-header">
+<table class="table table-striped" id="table-header">
 <tr><th>Number</th><th align="center">Name</th><th align="center">X Location</th><th align="center">Y Location</th><th align="center">Item Needed</th></tr>
-</table> -->
+</table> 
 
-<h3>Central</h3>
+<h1>Central</h1>
 <table class="table table-striped" id="central">
 <tr><th>Number</th><th align="center">Name</th><th align="center">X Location</th><th align="center">Y Location</th><th align="center">Item Needed</th></tr>
 <tr><td>001</td><td>Chespin</td><td>Starter</td><td>Starter</td><td></td></tr>
@@ -503,7 +504,7 @@ Connecting Cave - Horde
 <tr><td>150</td><td>Haxorus</td><td>Evolves from Fraxure at 48</td><td>Evolves from Fraxure at 48</td><td></td></tr>
 
 </table>
-<h3>Coastal</h3>
+<h1>Coastal</h1>
 <table class="table table-striped" id="coastal">
 <tr><th>Number</th><th align="center">Name</th><th align="center">X Location</th><th align="center">Y Location</th><th align="center">Item Needed</th></tr>
 <tr><td>001</td><td>Drifloon</td><td>Route 8 - Grass
@@ -1070,7 +1071,7 @@ Friend Safari </td><td></td></tr>
  </td><td></td></tr>
 
 </table>
-<h3>Mountain</h3>
+<h1>Mountain</h1>
 <table class="table table-striped" id="mountain">
 <tr><th>Number</th><th align="center">Name</th><th align="center">X Location</th><th align="center">Y Location</th><th align="center">Item Needed</th></tr>
 <tr><td>001</td><td>Diglett</td><td>Breed from Dugtrio</td><td>Breed from Dugtrio</td><td></td></tr>
@@ -2031,6 +2032,8 @@ Friend Safari </td><td></td></tr>
 	var $coastal = $('#coastal tr');
 	var $mountain = $('#mountain tr');
 	
+	hideTableHeaders();
+	
 	$('#search').keyup(function(){
 	var checked = document.getElementById("casesensitive").checked;
 	
@@ -2041,6 +2044,8 @@ Friend Safari </td><td></td></tr>
 	else{
 		caseInsensitive();
 	}
+	
+	hideTableHeaders();
 	
 	
 	});
@@ -2097,6 +2102,8 @@ function checkFilter()
 	else{
 		caseInsensitive();
 	}
+	
+	hideTableHeaders();
 }
 </script>
 <script type="text/javascript">
