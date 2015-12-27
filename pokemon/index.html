@@ -2028,6 +2028,14 @@ Friend Safari </td><td></td></tr>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
+function hideTableHeaders()
+{
+	$central.get(0).style.display="none";
+	$coastal.get(0).style.display="none";
+	$mountain.get(0).style.display="none";
+}
+</script>
+<script type="text/javascript">
 	var $central = $('#central tr');
 	var $coastal = $('#coastal tr');
 	var $mountain = $('#mountain tr');
@@ -2044,11 +2052,9 @@ Friend Safari </td><td></td></tr>
 	else{
 		caseInsensitive();
 	}
+	});
 	
 	hideTableHeaders();
-	
-	
-	});
 </script>
 <script type="text/javascript">
 function caseSensitive()
@@ -2104,14 +2110,6 @@ function checkFilter()
 	}
 	
 	hideTableHeaders();
-}
-</script>
-<script type="text/javascript">
-function hideTableHeaders()
-{
-	$central.get(0).style.display="none";
-	$coastal.get(0).style.display="none";
-	$mountain.get(0).style.display="none";
 }
 </script>
 
