@@ -1,366 +1,266 @@
 #001,Drifloon,"Route 8 - Grass
 Route 8 - Yellow Flowers
- ","Route 8 - Grass
-Route 8 - Yellow Flowers
- ",
-#002,Drifblim,Evolves from Drifloon at 28,Evolves from Drifloon at 28,
+ ",Drifblim @ 28
+#002,Drifblim,Evolves from Drifloon at 28,
 #003,Mienfoo,"Route 8 - Grass
 Route 8 - Yellow Flowers
-Friend Safari ","Route 8 - Grass
-Route 8 - Yellow Flowers
-Friend Safari ",
-#004,Mienshao,Evolves from Mienfoo at 50,Evolves from Mienfoo at 50,
+Friend Safari ",Mienshao @ 50
+#004,Mienshao,Evolves from Mienfoo at 50,
 #005,Zangoose,"Route 8 - Grass
 Route 8 - Horde
 Route 8 - Yellow Flowers
- ","Route 8 - Horde
  ",
 #006,Seviper,"Route 8 - Horde
-Friend Safari ","Route 8 - Grass
-Route 8 - Horde
-Route 8 - Yellow Flowers
 Friend Safari ",
 #007,Spoink,"Route 8 - Grass
 Route 8 - Yellow Flowers
- ","Route 8 - Grass
-Route 8 - Yellow Flowers
- ",
-#008,Grumpig,Evolves from Sproink at 32,Evolves from Sproink at 32,
+ ",Grumpig @ 32
+#008,Grumpig,Evolves from Sproink at 32,
 #009,Absol,"Route 8 - Grass
-Route 8 - Yellow Flowers
-Friend Safari ","Route 8 - Grass
 Route 8 - Yellow Flowers
 Friend Safari ",
 #010,Inkay,"Route 8 - Grass
 Route 8 - Yellow Flowers
 Azure Bay - Grass
-Friend Safari ","Route 8 - Grass
-Route 8 - Yellow Flowers
-Azure Bay - Grass
-Friend Safari ",
-#011,Malamar,Evolves from Inkay at 30 if you hold 3ds upsidedown,Evolves from Inkay at 30 if you hold 3ds upsidedown,
+Friend Safari ",Malimar @ 30 with 3ds upside down
+#011,Malamar,Evolves from Inkay at 30 if you hold 3ds upsidedown,
 #012,Lunatone,"Glittering Cave - 3D Area - Special
- ","Glittering Cave - 3D Area - Special
  ",
 #013,Solrock,"Glittering Cave - 3D Area - Special
- ","Glittering Cave - 3D Area - Special
  ",
 #014,Bagon,"Route 8 - Grass
 Route 8 - Yellow Flowers
- ","Route 8 - Grass
-Route 8 - Yellow Flowers
- ",
-#015,Shelgon,Evolves from Bagon at 30,Evolves from Bagon at 30,
-#016,Salamence,Evolves from Shelgon at 50,Evolves from Shelgon at 50,
+ ",Shelgon @ 30
+#015,Shelgon,Evolves from Bagon at 30,Salamence @ 50
+#016,Salamence,Evolves from Shelgon at 50,
 #017,Wingull,"Route 8 - Horde
 Route 12 - Horde
 Azure Bay - Horde
- ","Route 8 - Horde
-Route 12 - Horde
-Azure Bay - Horde
- ",
-#018,Pelipper,Evolves from Wingull at 25,Evolves from Wingull at 25,
+ ",Pelipper @ 25
+#018,Pelipper,Evolves from Wingull at 25,
 #019,Taillow,"Route 8 - Horde
- ","Route 8 - Horde
- ",
-#020,Swellow,Evolves from Taillow at 22,Evolves from Taillow at 22,
+ ",Swellow @ 22
+#020,Swellow,Evolves from Taillow at 22,
 #021,Binacle,"Route 8 - Rock Smash
 Route 12 - Rock Smash
 Ambrette Town - Rock Smash
 Azure Bay - Rock Smash
- ","Route 8 - Rock Smash
-Route 12 - Rock Smash
-Cyllage City - Rock Smash
-Ambrette Town - Rock Smash
-Azure Bay - Rock Smash
- ",
-#022,Barbaracle,Evolves from Binacle at 38,Evolves from Binacle at 38,
+ ",Barbaracle @ 38
+#022,Barbaracle,Evolves from Binacle at 38,
 #023,Dwebble,"Route 8 - Rock Smash
 Route 12 - Rock Smash
 Cyllage City - Rock Smash
 Ambrette Town - Rock Smash
 Glittering Cave - 1F - Rock Smash
 Azure Bay - Rock Smash
-Friend Safari ","Route 8 - Rock Smash
-Route 12 - Rock Smash
-Cyllage City - Rock Smash
-Ambrette Town - Rock Smash
-Glittering Cave - 1F - Rock Smash
-Azure Bay - Rock Smash
-Friend Safari ",
-#024,Crustle,Evolves from Dwebble at 34,Evolves from Dwebble at 34,
+Friend Safari ",Crustle @ 34
+#024,Crustle,Evolves from Dwebble at 34,
 #025,Tentacool,"Route 8 - Surf
 Route 12 - Surf
 Cyllage City - Surf
 Ambrette Town - Surf
 Shalour City - Surf
 Azure Bay - Surf
- ","Route 8 - Surf
-Route 12 - Surf
-Cyllage City - Surf
-Ambrette Town - Surf
-Shalour City - Surf
-Azure Bay - Surf
- ",
-#026,Tentacruel,Evolves from Tentacool at 30,Evolves from Tentacool at 30,
+ ",Tentacruel @ 30
+#026,Tentacruel,Evolves from Tentacool at 30,
 #027,Wailmer,"Route 8 - Surf
 Cyllage City - Surf
 Ambrette Town - Surf
- ","Route 8 - Surf
-Cyllage City - Surf
-Ambrette Town - Surf
- ",
-#028,Wailord,Evolves from Wailmer at 40, ,
+ ",Wailord @ 40
+#028,Wailord,Evolves from Wailmer at 40,
 #029,Luvdisc,"Route 8 - Old Rod
 Route 12 - Old Rod
 Cyllage City - Old Rod
 Ambrette Town - Old Rod
 Shalour City - Old Rod
 Azure Bay - Old Rod
- ","Route 8 - Old Rod
-Route 12 - Old Rod
-Cyllage City - Old Rod
-Ambrette Town - Old Rod
-Shalour City - Old Rod
-Azure Bay - Old Rod
  ",
-#030,Skrelp, ,"Route 8 - Good Rod
+#030,Skrelp,"Route 8 - Good Rod
 Cyllage City - Good Rod
 Ambrette Town - Good Rod
- ",
-#031,Dragalge, ,"Route 8 - Super Rod
+Y Exclusive
+ ",Dragalge @ 48
+#031,Dragalge,"Route 8 - Super Rod
 Cyllage City - Super Rod
 Ambrette Town - Super Rod
+Y Exclusive
  ",
 #032,Clauncher,"Route 8 - Good Rod
 Cyllage City - Good Rod
 Ambrette Town - Good Rod
- ", ,
+X Exclusive
+ ",Clawitzer @ 37
 #033,Clawitzer,"Route 8 - Super Rod
 Cyllage City - Super Rod
 Ambrette Town - Super Rod
- ", ,
+X Exclusive",
 #034,Staryu,"Route 8 - Good Rod
- ", ,
-#035,Starmie,"Route 8 - Super Rod
- ", ,
-#036,Shellder, ,"Route 8 - Good Rod
- ",
-#037,Cloyster,,"Route 8 - Super Rod
-Friend Safari ",
+X Exclusive",Starmie with Water Stone
+#035,Starmie,"Route 8 - Good Rod
+ X Exclusive",
+#036,Shellder,"Route 8 - Good Rod
+ Y Exclusive",Cloyster with Water Stone
+#037,Cloyster,"Route 8 - Super Rod
+Friend Safari 
+ Y Exclusive",
 #038,Qwilfish,"Route 8 - Super Rod
- ","Route 8 - Super Rod
  ",
 #039,Horsea,"Cyllage City - Good Rod
 Ambrette Town - Good Rod
- ","Cyllage City - Good Rod
-Ambrette Town - Good Rod
- ",
+ ",Seadra @ 32
 #040,Seadra,"Cyllage City - Super Rod
 Ambrette Town - Super Rod
- ","Cyllage City - Super Rod
-Ambrette Town - Super Rod
- ",
-#041,Kingdra,Evolves from Seadra when traded while holding a Dragon Scale,Evolves from Seadra when traded while holding a Dragon Scale,
+ ",Kingdra when traded with Dragon Scale
+#041,Kingdra,Evolves from Seadra when traded while holding a Dragon Scale,
 #042,Relicanth,"Cyllage City - Super Rod
-Ambrette Town - Super Rod
- ","Cyllage City - Super Rod
 Ambrette Town - Super Rod
  ",
 #043,Sandile,"Route 9 - Grass
-Friend Safari ","Route 9 - Grass
-Friend Safari ",
-#044,Krokorok,Evolves from Sandile at 29,Evolves from Sandile at 29,
-#045,Krookodile,Evolves from Krokorok at 40,Evolves from Krokorok at 40,
+Friend Safari ",Krokorok @ 29
+#044,Krokorok,Evolves from Sandile at 29,Krookodile @ 40
+#045,Krookodile,Evolves from Krokorok at 40,
 #046,Helioptile,"Route 9 - Grass
-Friend Safari ","Route 9 - Grass
-Friend Safari ",
+Friend Safari ",Heliosk with Sun Stone
 #047,Heliolisk,"Evolves from Helioptile when you use a Sun Stone on it
-Stone on Route 13","Evolves from Helioptile when you use a Sun Stone on it
 Stone on Route 13",Sun Stone
 #048,Hippopotas,"Route 9 - Grass
- ","Route 9 - Grass
- ",
-#049,Hippowdon,Evolves from Hippopotas at 34,Evolves from Hippopotas at 34,
+ ",Hippowdown @ 34
+#049,Hippowdon,Evolves from Hippopotas at 34,
 #050,Rhyhorn,"Glittering Cave - 1F - Special
 Glittering Cave - 3D Area - Special
- ","Glittering Cave - 1F - Special
-Glittering Cave - 3D Area - Special
- ",
-#051,Rhydon,Evolves from Rhyhorn at 42,Evolves from Rhyhorn at 42,
+ ",Rhydon @ 42
+#051,Rhydon,Evolves from Rhyhorn at 42,Ryperion when traded with Protector
 #052,Rhyperior,"Evolves from Rhydon when traded while holding Protector
-Protector found at Battle Maison and Lost Hotel","Evolves from Rhydon when traded while holding Protector
 Protector found at Battle Maison and Lost Hotel",Protector
 #053,Onix,"Cyllage City - Rock Smash
 Glittering Cave - 1F - Rock Smash
 Glittering Cave - 1F - Special
 Glittering Cave - 3D Area - Special
-Friend Safari ","Glittering Cave - 1F - Rock Smash
-Glittering Cave - 1F - Special
-Glittering Cave - 3D Area - Special
-Friend Safari ",
-#054,Steelix,Trade Luvdisc in Cyllage City, ,
+Friend Safari ",Steelix when traded with Metal Coat
+#054,Steelix,Trade Luvdisc in Cyllage City,
 #055,Woobat,"Glittering Cave - 3D Area - Special
 Reflection Cave - 1F - Special
-Friend Safari ","Glittering Cave - 3D Area - Special
-Reflection Cave - 1F - Special
-Friend Safari ",
-#056,Swoobat,Evolves from Woobat when leveled with high friendship,Evolves from Woobat when leveled with high friendship,
+Friend Safari ",Swoobat with high friendship
+#056,Swoobat,Evolves from Woobat when leveled with high friendship,
 #057,Machop,"Glittering Cave - 1F - Special
 Glittering Cave - 3D Area - Special
- ","Glittering Cave - 1F - Special
-Glittering Cave - 3D Area - Special
- ",
-#058,Machoke,Evolves from Machop at 28,Evolves from Machop at 28,
-#059,Machamp,Evolves from Machoke when traded,Evolves from Machoke when traded,
+ ",Machoke @ 28
+#058,Machoke,Evolves from Machop at 28,Machamp when traded
+#059,Machamp,Evolves from Machoke when traded,
 #060,Cubone,"Glittering Cave - 1F - Special
 Glittering Cave - 3D Area - Special
-Friend Safari ","Glittering Cave - 1F - Special
-Glittering Cave - 3D Area - Special
-Friend Safari ",
-#061,Marowak,Evolves from Cubone at 28,Friend Safari ,
+Friend Safari ",Marowak @ 28
+#061,Marowak,Evolves from Cubone at 28,
 #062,Kangaskhan,"Glittering Cave - 1F - Special
-Glittering Cave - 3D Area - Special
- ","Glittering Cave - 1F - Special
 Glittering Cave - 3D Area - Special
  ",
 #063,Mawile,"Glittering Cave - 1F - Special
 Glittering Cave - 3D Area - Special
-Friend Safari ","Glittering Cave - 1F - Special
-Glittering Cave - 3D Area - Special
 Friend Safari ",
-#064,Tyrunt,Created from Jaw Fossil, ,
-#065,Tyrantrum,Evolves from Tyrunt at 39 when leveled up during the day,Evolves from Tyrunt at 39 when leveled up during the day,
-#066,Amaura,Created from Sail Fossil, ,
-#067,Aurorus,Evolves from Amaura at 39 when leveled up during the night,Evolves from Amaura at 39 when leveled up during the night,
-#068,Aerodactyl,Created from Old Amber, ,
+#064,Tyrunt,Created from Jaw Fossil,Tyrantrum @ 39 during the day
+#065,Tyrantrum,Evolves from Tyrunt at 39 when leveled up during the day,
+#066,Amaura,Created from Sail Fossil,Aurorus @ 39 during the night
+#067,Aurorus,Evolves from Amaura at 39 when leveled up during the night,
+#068,Aerodactyl,Created from Old Amber,
 #069,Ferroseed,"Glittering Cave - 3D Area - Special
 Reflection Cave - 1F - Special
-Friend Safari ","Glittering Cave - 3D Area - Special
-Reflection Cave - 1F - Special
-Friend Safari ",
-#070,Ferrothorn,Evolves from Ferroseed at 40,Evolves from Ferroseed at 40,
+Friend Safari ",Ferrothorn @ 40
+#070,Ferrothorn,Evolves from Ferroseed at 40,
 #071,Snubbull,"Route 10 - Grass
 Route 10 - Yellow Flowers
-Friend Safari ","Route 10 - Grass
-Route 10 - Yellow Flowers
-Friend Safari ",
-#072,Granbull,Evolves from Snubbull at 23,Evolves from Snubbull at 23,
-#073,Electrike, ,"Route 10 - Grass
+Friend Safari ",Granbull @ 23
+#072,Granbull,Evolves from Snubbull at 23,
+#073,Electrike,"Route 10 - Grass
 Route 10 - Horde
 Route 10 - Yellow Flowers
- ",
-#074,Manectric,Evolves from Electrike at 26,Evolves from Electrike at 26,
+Y Exclusive",Manectric @ 26
+#074,Manectric,"Evolves from Electrike at 26
+Y Exclusive",
 #075,Houndour,"Route 10 - Grass
 Route 10 - Horde
 Route 10 - Yellow Flowers
- ", ,
-#076,Houndoom,Evolves from Houndoom at 24,Evolves from Houndoom at 24,
+X Exclusive",Houndoom @ 24
+#076,Houndoom,"Evolves from Houndoom at 24
+X Exclusive",
 #077,Eevee,"Route 10 - Grass
 Route 10 - Yellow Flowers
-Friend Safari ","Route 10 - Grass
-Route 10 - Yellow Flowers
-Friend Safari ",
-#078,Vaporeon, , ,
-#079,Jolteon, , ,
-#080,Flareon, , ,
-#081,Espeon, , ,
-#082,Umbreon, , ,
+Friend Safari ","Vaporeon with Water Stone
+Jolteon with Thunder Stone
+Flareon with Water Stone
+Espeon with high friendship during day
+Umbreon with high friendship during night
+Leafeon near Moss Rock
+Glaceon near Ice Rock
+Sylveon with Fairy type move and 2 affection hearts in Pokemon Amie"
+#078,Vaporeon, ,Water Stone
+#079,Jolteon, ,Thunder Stone
+#080,Flareon, ,Fire Stone
+#081,Espeon, ,
+#082,Umbreon, ,
 #083,Leafeon,"Evolves when leveled near a Moss Rock
-Rock found on Route 20","Evolves when leveled near a Moss Rock
 Rock found on Route 20",
 #084,Glaceon,"Evolves when leveled near an Ice Rock.
-Rock found in Forest Cavern north of Dendemille Town.","Evolves when leveled near an Ice Rock.
 Rock found in Forest Cavern north of Dendemille Town.",
-#085,Sylveon, , ,
+#085,Sylveon, ,
 #086,Emolga,"Route 10 - Grass
-Route 10 - Yellow Flowers
-Friend Safari ","Route 10 - Grass
 Route 10 - Yellow Flowers
 Friend Safari ",
 #087,Yanma,"Route 10 - Horde
- ","Route 10 - Horde
- ",
-#088,Yanmega,Evolves when leveled while knowing Ancient Power,Evolves when leveled while knowing Ancient Power,
+ ",Yanmega leveled knowing Ancient Power
+#088,Yanmega,Evolves when leveled while knowing Ancient Power,
 #089,Hawlucha,"Route 10 - Grass
-Route 10 - Yellow Flowers
-Friend Safari ","Route 10 - Grass
 Route 10 - Yellow Flowers
 Friend Safari ",
 #090,Sigilyph,"Route 10 - Grass
 Route 10 - Yellow Flowers
-Friend Safari ","Route 10 - Grass
-Route 10 - Yellow Flowers
 Friend Safari ",
 #091,Golett,"Route 10 - Grass
 Route 10 - Yellow Flowers
- ","Route 10 - Grass
-Route 10 - Yellow Flowers
- ",
-#092,Golurk,Evolves from Golett at 43,Evolves from Golett at 43,
+ ",Golurk @ 43
+#092,Golurk,Evolves from Golett at 43,
 #093,Nosepass,"Route 10 - Horde
-Friend Safari ","Route 10 - Horde
-Friend Safari ",
-#094,Probopass,Evolves from Nosepass when leveled in Route 13,Evolves from Nosepass when leveled in Route 13,
-#095,Makuhita,Breed from Hariyama,Breed from Hariyama,
+Friend Safari ",Propopass when leveled in Route 13
+#094,Probopass,Evolves from Nosepass when leveled in Route 13,
+#095,Makuhita,Breed from Hariyama,
 #096,Hariyama,"Route 11 - Grass
-Friend Safari ","Route 11 - Grass
 Friend Safari ",
-#097,Throh,,"Route 11 - Grass
-Friend Safari ",
+#097,Throh,"Route 11 - Grass
+Friend Safari
+Y Exclusive",
 #098,Sawk,"Route 11 - Grass
-Friend Safari ",,
+Friend Safari 
+X Exclusive",
 #099,Starly,"Route 11 - Horde
- ","Route 11 - Horde
- ",
+ ",Staravia @ 14
 #100,Staravia,"Route 11 - Grass
- ","Route 11 - Grass
- ",
-#101,Staraptor,Evolves from Staravia at 34,Evolves from Staravia at 34,
+ ",Staraptor @ 34
+#101,Staraptor,Evolves from Staravia at 34,
 #102,Stunky,"Route 11 - Grass
 Route 11 - Horde
- ","Route 11 - Grass
-Route 11 - Horde
- ",
-#103,Skuntank,Evolves from Stunky at 34,Evolves from Stunky at 34,
+ ",Skuntank @ 34
+#103,Skuntank,Evolves from Stunky at 34,
 #104,Nidoran,"Route 11 - Horde
- ","Route 11 - Horde
- ",
+ ",Nidorina @ 16
 #105,Nidorina,"Route 11 - Grass
- ","Route 11 - Grass
- ",
+ ",Nidoqueen with Moon Stone
 #106,Nidoqueen,"Evolves when exposed to Moon Stone
-Stone found in Reflection and Terminus Cave","Evolves when exposed to Moon Stone
 Stone found in Reflection and Terminus Cave",Moon Stone
 #107,Nidoran,"Route 11 - Horde
- ","Route 11 - Horde
- ",
+ ",Nidorino @ 16
 #108,Nidorino,"Route 11 - Grass
- ","Route 11 - Grass
- ",
+ ",Nidoking with Moon Stone
 #109,Nidoking,"Evolves when exposed to Moon Stone
-Stone found in Reflection and Terminus Cave","Evolves when exposed to Moon Stone
 Stone found in Reflection and Terminus Cave",Moon Stone
 #110,Dedenne,"Route 11 - Grass
-Friend Safari ","Route 11 - Grass
 Friend Safari ",
 #111,Chingling,"Route 11 - Grass
 Reflection Cave - 1F - Grass
 Reflection Cave - B1F - Grass
 Reflection Cave - B2F - Grass
 Reflection Cave - B3F - Grass
- ","Route 11 - Grass
-Reflection Cave - 1F - Grass
-Reflection Cave - B1F - Grass
-Reflection Cave - B2F - Grass
-Reflection Cave - B3F - Grass
- ",
-#112,Chimecho,Evolves from Chingling when leveled with high friendship at night,Evolves from Chingling when leveled with high friendship at night,
+ ",Chimecho with high friendship during night
+#112,Chimecho,Evolves from Chingling when leveled with high friendship at night,
 #113,Mime Jr.,"Reflection Cave - 1F - Horde
-Reflection Cave - B1F - Horde
-Reflection Cave - B2F - Horde
-Reflection Cave - B3F - Horde
- ","Reflection Cave - 1F - Horde
 Reflection Cave - B1F - Horde
 Reflection Cave - B2F - Horde
 Reflection Cave - B3F - Horde
@@ -369,28 +269,16 @@ Reflection Cave - B3F - Horde
 Reflection Cave - B1F - Grass
 Reflection Cave - B2F - Grass
 Reflection Cave - B3F - Grass
- ","Reflection Cave - 1F - Grass
-Reflection Cave - B1F - Grass
-Reflection Cave - B2F - Grass
-Reflection Cave - B3F - Grass
  ",
 #115,Solosis,"Reflection Cave - 1F - Grass
 Reflection Cave - B1F - Grass
 Reflection Cave - B2F - Grass
 Reflection Cave - B3F - Grass
- ","Reflection Cave - 1F - Grass
-Reflection Cave - B1F - Grass
-Reflection Cave - B2F - Grass
-Reflection Cave - B3F - Grass
- ",
-#116,Duosion,Evolves from Solosis at 32,Evolves from Solosis at 32,
-#117,Reuniclus,Evolves from Duosion at 41,Evolves from Duosion at 41,
-#118,Wynaut,Breed Wobuffet while holding Lax Incense,Breed Wobuffet while holding Lax Incense,Lax Incense
+ ",Duosion @ 32
+#116,Duosion,Evolves from Solosis at 32,Reuniclus @ 41
+#117,Reuniclus,Evolves from Duosion at 41,
+#118,Wynaut,Breed Wobuffet while holding Lax Incense,Lax Incense
 #119,Wobbuffet,"Reflection Cave - 1F - Grass
-Reflection Cave - B1F - Grass
-Reflection Cave - B2F - Grass
-Reflection Cave - B3F - Grass
-Friend Safari ","Reflection Cave - 1F - Grass
 Reflection Cave - B1F - Grass
 Reflection Cave - B2F - Grass
 Reflection Cave - B3F - Grass
@@ -403,22 +291,10 @@ Reflection Cave - B2F - Grass
 Reflection Cave - B2F - Horde
 Reflection Cave - B3F - Grass
 Reflection Cave - B3F - Horde
- ","Reflection Cave - 1F - Grass
-Reflection Cave - 1F - Horde
-Reflection Cave - B1F - Grass
-Reflection Cave - B1F - Horde
-Reflection Cave - B2F - Grass
-Reflection Cave - B2F - Horde
-Reflection Cave - B3F - Grass
-Reflection Cave - B3F - Horde
- ",
-#121,Boldore,Evolves from Roggenrola at 25,Evolves from Roggenrola at 25,
-#122,Gigalith,Evolves from Boldore when traded,Evolves from Boldore when traded,
+ ",Boldore @ 25
+#121,Boldore,Evolves from Roggenrola at 25,Gigalith when traded
+#122,Gigalith,Evolves from Boldore when traded,
 #123,Sableye,"Reflection Cave - 1F - Grass
-Reflection Cave - B1F - Grass
-Reflection Cave - B2F - Grass
-Reflection Cave - B3F - Grass
-Friend Safari ","Reflection Cave - 1F - Grass
 Reflection Cave - B1F - Grass
 Reflection Cave - B2F - Grass
 Reflection Cave - B3F - Grass
@@ -431,133 +307,84 @@ Reflection Cave - B2F - Grass
 Reflection Cave - B2F - Horde
 Reflection Cave - B3F - Grass
 Reflection Cave - B3F - Horde
- ","Reflection Cave - 1F - Grass
-Reflection Cave - 1F - Horde
-Reflection Cave - B1F - Grass
-Reflection Cave - B1F - Horde
-Reflection Cave - B2F - Grass
-Reflection Cave - B2F - Horde
-Reflection Cave - B3F - Grass
-Reflection Cave - B3F - Horde
  ",
 #125,Tauros,"Route 12 - Grass
-Route 12 - Horde
-Route 12 - Yellow Flowers
- ","Route 12 - Grass
 Route 12 - Horde
 Route 12 - Yellow Flowers
  ",
 #126,Miltank,"Route 12 - Grass
 Route 12 - Horde
 Route 12 - Yellow Flowers
- ","Route 12 - Grass
-Route 12 - Horde
-Route 12 - Yellow Flowers
  ",
 #127,Mareep,"Route 12 - Horde
- ","Route 12 - Horde
- ",
-#128,Flaaffy,Evolves from Mareep at 15,Evolves from Mareep at 15,
-#129,Ampharos,Evolves from Flaafy at 30,Evolves from Flaafy at 30,
+ ",Flaffy @ 15
+#128,Flaaffy,Evolves from Mareep at 15,Ampharos @ 30
+#129,Ampharos,Evolves from Flaafy at 30,
 #130,Pinsir,"Route 12 - Grass
 Route 12 - Yellow Flowers
-Friend Safari ",,
-#131,Heracross,,"Route 12 - Grass
+Friend Safari 
+X Exclusive",
+#131,Heracross,"Route 12 - Grass
 Route 12 - Yellow Flowers
-Friend Safari ",
+Friend Safari
+Y Exclusive",
 #132,Pachirisu,"Route 12 - Grass
-Route 12 - Yellow Flowers
-Friend Safari ","Route 12 - Grass
 Route 12 - Yellow Flowers
 Friend Safari ",
 #133,Slowpoke,"Route 12 - Grass
 Route 12 - Yellow Flowers
 Azure Bay - Grass
 Azure Bay - Horde
- ","Route 12 - Grass
-Route 12 - Yellow Flowers
-Azure Bay - Grass
-Azure Bay - Horde
- ",
-#134,Slowbro,Evolves from Slowpoke at 37,Evolves from Slowpoke at 37,
+ ",Slowbro @ 37
+#134,Slowbro,Evolves from Slowpoke at 37,Slowking when traded with King's Rock
 #135,Slowking,"Evolves from Slowpoke when traded holding King's Rock
-Rock at Lysandra Café, and held by wild Polywhirl, Polywrath, Politoed, Hariyama, and Hawlucha","Evolves from Slowpoke when traded holding King's Rock
 Rock at Lysandra Café, and held by wild Polywhirl, Polywrath, Politoed, Hariyama, and Hawlucha",
 #136,Exeggcute,"Route 12 - Grass
 Route 12 - Yellow Flowers
 Azure Bay - Grass
 Azure Bay - Horde
- ","Route 12 - Grass
-Route 12 - Yellow Flowers
-Azure Bay - Grass
-Azure Bay - Horde
- ",
-#137,Exeggutor,Evolves when exposed to Leaf Stone,Evolves when exposed to Leaf Stone,
+ ",Exeggutor with Leaf Stone
+#137,Exeggutor,Evolves when exposed to Leaf Stone,
 #138,Chatot,"Route 12 - Grass
-Route 12 - Yellow Flowers
-Azure Bay - Grass
- ","Route 12 - Grass
 Route 12 - Yellow Flowers
 Azure Bay - Grass
  ",
 #139,Mantyke,"Route 12 - Surf
 Shalour City - Surf
 Azure Bay - Surf
- ","Route 12 - Surf
-Shalour City - Surf
-Azure Bay - Surf
- ",
-#140,Mantine,Evolves from Mantyke when leveled with Remoraid in party,Evolves from Mantyke when leveled with Remoraid in party,
+ ",When leveled with Remoraid in party
+#140,Mantine,Evolves from Mantyke when leveled with Remoraid in party,
 #141,Clamperl,"Route 12 - Good Rod
- ","Route 12 - Good Rod
- ",
+ ","Huntail when traded with Deep Sea Tooth
+Gorebyss when traded with Deep Sea Scale"
 #142,Huntail,"Route 12 - Super Rod
- ",Evolves from Clamperl when traded whole holding Deep Sea Tooth,Deep Sea Tooth
-#143,Gorebyss,Evolves from Clamperl when traided while holding Deep Sea Scale.,"Route 12 - Super Rod
- ",Deep Sea Scale
+ ",Deep Sea Tooth
+#143,Gorebyss,Evolves from Clamperl when traided while holding Deep Sea Scale.,Deep Sea Scale
 #144,Remoraid,"Route 12 - Good Rod
 Shalour City - Good Rod
 Azure Bay - Good Rod
- ","Route 12 - Good Rod
-Shalour City - Good Rod
-Azure Bay - Good Rod
- ",
+ ",Octillery @ 25
 #145,Octillery,"Route 12 - Super Rod
-Shalour City - Super Rod
-Azure Bay - Super Rod
-Friend Safari ","Route 12 - Super Rod
 Shalour City - Super Rod
 Azure Bay - Super Rod
 Friend Safari ",
 #146,Corsola,"Route 12 - Super Rod
-Friend Safari ","Route 12 - Super Rod
 Friend Safari ",
 #147,Chinchou,"Shalour City - Good Rod
 Azure Bay - Good Rod
- ","Shalour City - Good Rod
-Azure Bay - Good Rod
- ",
+ ",Lanturn @ 27
 #148,Lanturn,"Shalour City - Super Rod
-Azure Bay - Super Rod
- ","Shalour City - Super Rod
 Azure Bay - Super Rod
  ",
 #149,Alomomola,"Shalour City - Super Rod
 Azure Bay - Super Rod
- ","Shalour City - Super Rod
-Azure Bay - Super Rod
  ",
 #150,Lapras,"Route 12 - Surf
 Azure Bay - Surf
-Friend Safari ","Route 12 - Surf
-Azure Bay - Surf
 Friend Safari ",
 #151,Articuno,"Sea Spirit's Den - Interact
- ","Sea Spirit's Den - Interact
  ",
 #152,Zapdos,"Sea Spirit's Den - Interact
- ","Sea Spirit's Den - Interact
  ",
 #153,Moltres,"Sea Spirit's Den - Interact
- ","Sea Spirit's Den - Interact
  ",

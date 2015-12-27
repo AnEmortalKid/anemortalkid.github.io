@@ -1,205 +1,138 @@
-#001,Chespin,Starter,Starter,
-#002,Quilladin,Starter,Starter,
-#003,Chesnaught,Starter,Starter,
-#004,Fennekin,Starter,Starter,
-#005,Braixen,Starter,Starter,
-#006,Delphox,Starter,Starter,
-#007,Froakie,Starter,Starter,
-#008,Frogadier,Starter,Starter,
-#009,Greninja,Starter,Starter,
+#001,Chespin,Starter,Quilaldin @ 16
+#002,Quilladin,Starter,Chestnaught @ 36
+#003,Chesnaught,Starter,
+#004,Fennekin,Starter,Braixen @ 16
+#005,Braixen,Starter,Delphox @ 36
+#006,Delphox,Starter,
+#007,Froakie,Starter,Frogadier @ 16
+#008,Frogadier,Starter,Greninja @ 36
+#009,Greninja,Starter,
 #010,Bunnelby,"Route 2 - Grass
 Route 3 - Grass
 Route 5 - Grass
 Route 5 - Purple Flowers
-Route 22 - Grass ","Route 2 - Grass
-Route 3 - Grass
-Route 5 - Grass
-Route 5 - Purple Flowers
-Route 22 - Grass ",
+Route 22 - Grass ",Diggersby @ 20
 #011,Diggersby,"Route 22 - Yellow Flowers
-Friend Safari ","Route 22 - Yellow Flowers
 Friend Safari ",
-#012,Zigzagoon,Route 2 - Grass ,Route 2 - Grass ,
-#013,Linoone,Evolves from Zigzagoon at 20,Evolves from Zigzagoon at 20,
+#012,Zigzagoon,Route 2 - Grass ,Linoone @ 20
+#013,Linoone,Evolves from Zigzagoon at 20,
 #014,Fletchling,"Route 2 - Grass
 Route 3 - Grass
 Santalune Forest - Grass
- ","Route 2 - Grass
-Route 3 - Grass
-Santalune Forest - Grass
- ",
-#015,Fletchinder,Evolves from Flechling at 17,Evolves from Flechling at 17,
-#016,Talonflame,Evolves from Flechinder at 35,Evolves from Flechinder at 36,
+ ",Fletchinder @ 17
+#015,Fletchinder,Evolves from Flechling at 17,Talonflame @ 35
+#016,Talonflame,Evolves from Flechinder at 35,
 #017,Pidgey,"Route 2 - Grass
 Route 3 - Grass
-Friend Safari ","Route 2 - Grass
-Route 3 - Grass
-Friend Safari ",
-#018,Pidgeotto,Evolves from Pidgey at 18,Evolves from Pidgey at 19,
-#019,Pidgeot,Evolves from Pidgeotto at 36,Evolves from Pidgeotto at 37,
+Friend Safari ",Pidgeotto @ 18
+#018,Pidgeotto,Evolves from Pidgey at 18,Pidgeot @ 36
+#019,Pidgeot,Evolves from Pidgeotto at 36,
 #020,Scatterbug,"Route 2 - Grass
 Santalune Forest - Grass
- ","Route 2 - Grass
-Santalune Forest - Grass
- ",
+ ",Spewpa @ 9
 #021,Spewpa,"Route 7 - Special
- ","Route 7 - Special
- ",
-#022,Vivillon,Evolves from Spewpa at 12,Evolves from Spewpa at 12,
+ ",Vivilion @ 12
+#022,Vivillon,Evolves from Spewpa at 12,
 #023,Caterpie,"Santalune Forest - Grass
- ","Route 2 - Grass
-Santalune Forest - Grass
- ",
-#024,Metapod,Evolves from Caterpie at 7,Evolves from Caterpie at 7,
-#025,Butterfree,Evolves from Metapod at 10,Evolves from Metapod at 10,
+ ",Metapod @ 7
+#024,Metapod,Evolves from Caterpie at 7,Butterfree @ 10
+#025,Butterfree,Evolves from Metapod at 10,
 #026,Weedle,"Route 2 - Grass
 Santalune Forest - Grass
- ","Santalune Forest - Grass
- ",
-#027,Kakuna,Evolves from Weedle at 7,Evolves from Weedle at 7,
-#028,Beedrill,Evolves from Kakuna at 10,Evolves from Kakuna at 10,
+ ",Kakuna @ 7
+#027,Kakuna,Evolves from Weedle at 7,Beedrill @ 10
+#028,Beedrill,Evolves from Kakuna at 10,
 #029,Pansage,"Santalune Forest - Grass
-Friend Safari ","Santalune Forest - Grass
-Friend Safari ",
-#030,Simisage,Evolution Only,Evolution Only,
+Friend Safari ",Simisage with Leaf Stone
+#030,Simisage,Evolution Only,
 #031,Pansear,"Santalune Forest - Grass
-Friend Safari ","Santalune Forest - Grass
-Friend Safari ",
-#032,Simisear,Evolution Only,Evolution Only,
+Friend Safari ",Simisear with Fire Stone
+#032,Simisear,Evolution Only,
 #033,Panpour,"Santalune Forest - Grass
-Friend Safari ","Santalune Forest - Grass
-Friend Safari ",
-#034,Simipour,Evolution Only,Evolution Only,
-#035,Pichu,Breed Pikachu,Breed Pikachu,
+Friend Safari ",Simipour with Water Stone
+#034,Simipour,Evolution Only,
+#035,Pichu,Breed Pikachu,
 #036,Pikachu,"Route 3 - Grass
 Santalune Forest - Grass
-Friend Safari ","Route 3 - Grass
-Santalune Forest - Grass
-Friend Safari ",
+Friend Safari ",Raichu with Thunder Stone
 #037,Raichu,"Evolves when you use Thunder Stone on Pikachu
-Stone found on Routes 10 & 11","Evolves when you use Thunder Stone on Pikachu
 Stone found on Routes 10 & 11",Thunder Stone
 #038,Bidoof,"Route 3 - Grass
 Route 22 - Grass
- ","Route 3 - Grass
-Route 22 - Grass
- ",
+ ",Bibarel @ 15
 #039,Bibarel,"Route 22 - Yellow Flowers
-Friend Safari ","Route 22 - Yellow Flowers
 Friend Safari ",
 #040,Dunsparce,"Route 3 - Grass
-Route 22 - Grass
-Route 22 - Yellow Flowers
-Friend Safari ","Route 3 - Grass
 Route 22 - Grass
 Route 22 - Yellow Flowers
 Friend Safari ",
 #041,Azurill,"Route 3 - Grass
 Route 22 - Grass
- ","Route 3 - Grass
-Route 22 - Grass
- ",
+ ",Marill with Friendship
 #042,Marill,"Route 3 - Surf
- ","Route 3 - Surf
- ",
+ ",Azumarill @ 18
 #043,Azumarill,"Route 22 - Surf
-Route 22 - Yellow Flowers
-Friend Safari ","Route 22 - Surf
 Route 22 - Yellow Flowers
 Friend Safari ",
 #044,Burmy,"Route 3 - Grass
 Route 7 - Special
- ","Route 3 - Grass
-Route 7 - Special
- ",
-#045,Wormadam,Evolves from Female Burmy at 20,Evolves from Female Burmy at 20,
-#046,Mothim,Evolves from Male Burmy at 20,Evolves from Male Burmy at 20,
-#047,Surskit,Breed Masquerain,Breed Masquerain,
+ ","Wormadam @ 20
+Mothim @ 20"
+#045,Wormadam,Evolves from Female Burmy at 20,
+#046,Mothim,Evolves from Male Burmy at 20,
+#047,Surskit,Breed Masquerain,Masquerain @ 22
 #048,Masquerain,"Route 3 - Surf
-Friend Safari ","Route 3 - Surf
 Friend Safari ",
 #049,Magikarp,"Route 3 - Old Rod
 Route 22 - Old Rod
 Parfum Palace - Old Rod
- ","Route 3 - Old Rod
-Route 22 - Old Rod
-Parfum Palace - Old Rod
- ",
+ ",Gyarados @ 20
 #050,Gyarados,"Route 3 - Super Rod
-Route 22 - Super Rod
-Parfum Palace - Super Rod
-Friend Safari ","Route 3 - Super Rod
 Route 22 - Super Rod
 Parfum Palace - Super Rod
 Friend Safari ",
 #051,Corphish,"Route 3 - Good Rod
 Parfum Palace - Good Rod
- ","Route 3 - Good Rod
-Parfum Palace - Good Rod
- ",
+ ",Crawdaunt @ 30
 #052,Crawdaunt,"Route 3 - Super Rod
-Parfum Palace - Super Rod
-Friend Safari ","Route 3 - Super Rod
 Parfum Palace - Super Rod
 Friend Safari ",
 #053,Goldeen,"Route 3 - Good Rod
 Route 22 - Good Rod
 Parfum Palace - Good Rod
- ","Route 3 - Good Rod
-Route 22 - Good Rod
-Parfum Palace - Good Rod
- ",
+ ",Seaking @ 33
 #054,Seaking,"Route 3 - Super Rod
-Route 22 - Super Rod
-Parfum Palace - Super Rod
- ","Route 3 - Super Rod
 Route 22 - Super Rod
 Parfum Palace - Super Rod
  ",
 #055,Carvanha,"Route 22 - Good Rod
- ","Route 22 - Good Rod
- ",
+ ",Sharpedo @ 30
 #056,Sharpedo,"Route 22 - Super Rod
- ","Route 22 - Super Rod
  ",
 #057,Litleo,"Route 22 - Grass
 Route 22 - Yellow Flowers
- ","Route 22 - Grass
-Route 22 - Yellow Flowers
- ",
-#058,Pyroar,Evolves from Litleo at 35,Evolves from Litleo at 35,
+ ",Pyroar @ 35
+#058,Pyroar,Evolves from Litleo at 35,
 #059,Psyduck,"Route 7 - Horde
 Route 22 - Grass
 Route 22 - Surf
 Route 22 - Yellow Flowers
- ","Route 7 - Horde
-Route 22 - Grass
-Route 22 - Surf
-Route 22 - Yellow Flowers
- ",
-#060,Golduck,Evolves from Psyduck at 33,Evolves from Psyduck at 33,
+ ",Golduck @ 33
+#060,Golduck,Evolves from Psyduck at 33,
 #061,Farfetch'd,"Route 22 - Grass
-Route 22 - Yellow Flowers
-Friend Safari ","Route 22 - Grass
 Route 22 - Yellow Flowers
 Friend Safari ",
 #062,Riolu,"Route 22 - Grass
 Route 22 - Yellow Flowers
-Friend Safari ","Route 22 - Grass
-Route 22 - Yellow Flowers
-Friend Safari ",
+Friend Safari ",Lucario with high friendship during the day
 #063,Lucario,"Evolves when leveled up with friendship > 220 during the day
-Obtained from Gym Leader after winning Rumble Badge (3rd)","Evolves when leveled up with friendship > 220 during the day
 Obtained from Gym Leader after winning Rumble Badge (3rd)",
 #064,Ralts,"Route 4 - Red Flowers
 Route 4 - Yellow Flowers
- ","Route 4 - Red Flowers
-Route 4 - Yellow Flowers
- ",
-#065,Kirlia,Evolves from Ralts at 20,Evolves from Ralts at 20,
-#066,Gardevoir,Evolves from Kirlia at 30,Evolves from Kirlia at 30,
+ ",Kirlia @ 20
+#065,Kirlia,Evolves from Ralts at 20,Gardevoir @ 30
+#066,Gardevoir,Evolves from Kirlia at 30,Gallade with Dawn Stone
 #067,Gallade,"Evolves from Male Kirlia when you use a Dawn Stone on it
-Stone found on Route 3 with Surf","Evolves from Male Kirlia when you use a Dawn Stone on it
 Stone found on Route 3 with Surf",Dawn Stone
 #068,Flabébé,"Route 4 - Red Flowers
 Route 4 - Red Flowers
@@ -215,210 +148,141 @@ Route 7 - Purple Flowers
 Route 7 - Yellow Flowers
 Route 7 - Yellow Flowers
 Route 7 - Yellow Flowers
- ","Route 4 - Red Flowers
-Route 4 - Red Flowers
-Route 4 - Red Flowers
-Route 4 - Yellow Flowers
-Route 4 - Yellow Flowers
-Route 4 - Yellow Flowers
-Route 7 - Grass
-Route 7 - Grass
-Route 7 - Purple Flowers
-Route 7 - Purple Flowers
-Route 7 - Purple Flowers
-Route 7 - Yellow Flowers
-Route 7 - Yellow Flowers
-Route 7 - Yellow Flowers
- ",
-#069,Floette,Evolves rom Flabebe at 19,Evolves rom Flabebe at 20,
+ ",Floette @ 19
+#069,Floette,Evolves rom Flabebe at 19,Florges with Shiny Stone
 #070,Florges,"Evolves from Floette when you use a Shiny Stone on it
-Stone found on Route 12 while riding Skiddo","Evolves from Floette when you use a Shiny Stone on it
 Stone found on Route 12 while riding Skiddo",Shiny Stone
 #071,Budew,"Route 4 - Red Flowers
 Route 4 - Yellow Flowers
- ","Route 4 - Red Flowers
-Route 4 - Yellow Flowers
- ",
+ ",Roselia with friendship during the day
 #072,Roselia,"Route 7 - Grass
 Route 7 - Horde
 Route 7 - Purple Flowers
 Route 7 - Yellow Flowers
- ","Route 7 - Grass
-Route 7 - Horde
-Route 7 - Purple Flowers
-Route 7 - Yellow Flowers
- ",
-#073,Roserade,Evolves from Roselia when you use Shiny Stone on it,Evolves from Roselia when you use Shiny Stone on it,Shiny Stone
+ ",Roserade with Shiny Stone
+#073,Roserade,Evolves from Roselia when you use Shiny Stone on it,Shiny Stone
 #074,Ledyba,"Route 4 - Red Flowers
 Route 4 - Yellow Flowers
 Route 7 - Special
-Friend Safari ","Route 4 - Red Flowers
-Route 4 - Yellow Flowers
-Route 7 - Special
-Friend Safari ",
-#075,Ledian,Evolves from Ledyba at 18,Evolves from Ledyba at 18,
+Friend Safari ",Ledian @ 18
+#075,Ledian,Evolves from Ledyba at 18,
 #076,Combee,"Route 4 - Red Flowers
 Route 4 - Yellow Flowers
 Route 7 - Special
-Friend Safari ","Route 4 - Red Flowers
-Route 4 - Yellow Flowers
-Route 7 - Special
-Friend Safari ",
-#077,Vespiquen,Evolves from Female Combee at 18,Evolves from Female Combee at 18,
+Friend Safari ","Combee @ 21, female only"
+#077,Vespiquen,Evolves from Female Combee at 18,
 #078,Skitty,"Route 4 - Red Flowers
 Route 4 - Yellow Flowers
- ","Route 4 - Red Flowers
-Route 4 - Yellow Flowers
- ",
+ ",Delcatty with Moon Stone
 #079,Delcatty,"Evolves from Skitty when you use Moon Stone on it
 Stone held by wild Clefairy and Lunatone
-Stone found in Reflection Cave and Terminus Cave","Evolves from Skitty when you use Moon Stone on it
-Stone held by wild Clefairy and Lunatone
 Stone found in Reflection Cave and Terminus Cave",Moon Stone
-#080,Bulbasaur,Starter,Starter,
-#081,Ivysaur,Starter,Starter,
-#082,Venusaur,Starter,Starter,
-#083,Charmander,Starter,Starter,
-#084,Charmeleon,Starter,Starter,
-#085,Charizard,Starter,Starter,
-#086,Squirtle,Starter,Starter,
-#087,Wartortle,Starter,Starter,
-#088,Blastoise,Starter,Starter,
+#080,Bulbasaur,Starter,Ivysaur @ 16
+#081,Ivysaur,Starter,Venasaur @ 32
+#082,Venusaur,Starter,
+#083,Charmander,Starter,Charmeleon @ 16
+#084,Charmeleon,Starter,Charizard @ 36
+#085,Charizard,Starter,
+#086,Squirtle,Starter,Wartortle @ 16
+#087,Wartortle,Starter,Blastoise @ 36
+#088,Blastoise,Starter,
 #089,Skiddo,"Route 5 - Grass
 Route 5 - Purple Flowers
- ","Route 5 - Grass
-Route 5 - Purple Flowers
- ",
-#090,Gogoat,Evolves from Skiddo at 32,Evolves from Skiddo at 32,
+ ",Gogoat @ 32
+#090,Gogoat,Evolves from Skiddo at 32,
 #091,Pancham,"Route 5 - Grass
 Route 5 - Purple Flowers
-Friend Safari ","Route 5 - Grass
-Route 5 - Purple Flowers
-Friend Safari ",
-#092,Pangoro,Evolves from Pancham at 32 if you have a Dark pokemon in your party,Evolves from Pancham at 32 if you have a Dark pokemon in your party,
+Friend Safari ",Pangoro @ 32 with a Dark type in party
+#092,Pangoro,Evolves from Pancham at 32 if you have a Dark pokemon in your party,
 #093,Furfrou,"Route 5 - Grass
-Route 5 - Purple Flowers
- ","Route 5 - Grass
 Route 5 - Purple Flowers
  ",
 #094,Doduo,"Route 5 - Grass
 Route 5 - Purple Flowers
-Friend Safari ","Route 5 - Grass
-Route 5 - Purple Flowers
-Friend Safari ",
-#095,Dodrio,Evolves from Doduo at 31,Evolves from Doduo at 31,
+Friend Safari ",Dodrio @ 31
+#095,Dodrio,Evolves from Doduo at 31,
 #096,Plusle,"Route 5 - Grass
 Route 5 - Horde
 Route 5 - Purple Flowers
- ","Route 5 - Horde
  ",
 #097,Minun,"Route 5 - Horde
- ","Route 5 - Grass
-Route 5 - Horde
-Route 5 - Purple Flowers
  ",
 #098,Gulpin,"Route 5 - Grass
 Route 5 - Horde
 Route 5 - Purple Flowers
- ","Route 5 - Grass
-Route 5 - Horde
-Route 5 - Purple Flowers
- ",
-#099,Swalot,Evolves from Gulpin at 26,Evolves from Gulpin at 26,
+ ",Swalot @ 26
+#099,Swalot,Evolves from Gulpin at 26,
 #100,Scraggy,"Route 5 - Horde
- ","Route 5 - Horde
- ",
-#101,Scrafty,Evolves from Scraggy at 39,Evolves from Scraggy at 39,
+ ",Scraggy @ 39
+#101,Scrafty,Evolves from Scraggy at 39,
 #102,Abra,"Route 5 - Grass
 Route 5 - Purple Flowers
-Friend Safari ","Route 5 - Grass
-Route 5 - Purple Flowers
-Friend Safari ",
-#103,Kadabra,Evolves from Abra at 16,Evolves from Abra at 16,
-#104,Alakazam,Evolves from Kadabra when traded,Evolves from Kadabra when traded,
+Friend Safari ",Kadabra @ 16
+#103,Kadabra,Evolves from Abra at 16,Alakazam when traded
+#104,Alakazam,Evolves from Kadabra when traded,
 #105,Oddish,"Route 6 - Tall Grass
-Friend Safari ","Route 6 - Tall Grass
-Friend Safari ",
-#106,Gloom,Evolves from Oddish at 21,Evolves from Oddish at 21,
+Friend Safari ",Gloom @ 21
+#106,Gloom,Evolves from Oddish at 21,"Vileplume with Leaf Stone
+Bellossom with Sun Stone"
 #107,Vileplume,"Evolves when you use Leaf Stone on Gloom
-Stone found on Route 8","Evolves when you use Leaf Stone on Gloom
 Stone found on Route 8",Leaf Stone
 #108,Bellossom,"Evolves when you use Sun Stone on Gloom
-Stone found on Route 13, Anistar City","Evolves when you use Sun Stone on Gloom
 Stone found on Route 13, Anistar City",Sun Stone
 #109,Sentret,"Route 6 - Tall Grass
- ","Route 6 - Tall Grass
- ",
-#110,Furret,Evolves from Sentret at 15,Evolves from Sentret at 15,
+ ",Furret @ 15
+#110,Furret,Evolves from Sentret at 15,
 #111,Nincada,"Route 6 - Tall Grass
-Friend Safari ","Route 6 - Tall Grass
-Friend Safari ",
-#112,Ninjask,Evolves from Nincada at 20,Evolves from Nincada at 20,
-#113,Shedinja,Evolves from Nincada if you have extra party slot and extra pokeball,Evolves from Nincada if you have extra party slot and extra pokeball,
+Friend Safari ","Ninjask @ 20
+Shedinja with extra party slot and extra pokeball"
+#112,Ninjask,Evolves from Nincada at 20,
+#113,Shedinja,Evolves from Nincada if you have extra party slot and extra pokeball,
 #114,Espurr,"Route 6 - Tall Grass
-Friend Safari ","Route 6 - Tall Grass
-Friend Safari ",
-#115,Meowstic,Evolves from Espurr at 25,Evolves from Espurr at 25,
+Friend Safari ",Mewostic @ 25
+#115,Meowstic,Evolves from Espurr at 25,
 #116,Kecleon,"Route 6 - Tall Grass
-Friend Safari ","Route 6 - Tall Grass
 Friend Safari ",
 #117,Honedge,"Route 6 - Tall Grass
- ","Route 6 - Tall Grass
- ",
-#118,Doublade,Evolves from Honedge at 35,Evolves from Honedge at 35,
+ ",Doublade @ 35
+#118,Doublade,Evolves from Honedge at 35,Aegislash with Dusk Stone
 #119,Aegislash,"Evolves from Doublade when you use Dusk Stone on it
-Stone in Laverre City and Terminus Cave","Evolves from Doublade when you use Dusk Stone on it
 Stone in Laverre City and Terminus Cave",Dusk Stone
 #120,Venipede,"Route 6 - Special
- ","Route 6 - Special
- ",
-#121,Whirlipede,Evolves from Venipede at 22,Evolves from Venipede at 22,
-#122,Scolipede,Evolves from Whirlipede at 30,Evolves from Whirlipede at 30,
+ ",Whirlipede @ 22
+#121,Whirlipede,Evolves from Venipede at 22,Scolipede @ 30
+#122,Scolipede,Evolves from Whirlipede at 30,
 #123,Audino,"Route 6 - Special
-Friend Safari ","Route 6 - Special
 Friend Safari ",
 #124,Smeargle,"Route 7 - Grass
-Route 7 - Purple Flowers
-Route 7 - Yellow Flowers
-Friend Safari ","Route 7 - Grass
 Route 7 - Purple Flowers
 Route 7 - Yellow Flowers
 Friend Safari ",
 #125,Croagunk,"Route 7 - Grass
 Route 7 - Purple Flowers
 Route 7 - Yellow Flowers
- ","Route 7 - Grass
-Route 7 - Purple Flowers
-Route 7 - Yellow Flowers
- ",
-#126,Toxicroak,Evolves from Croagunk at 37,Evolves from Croagunk at 37,
+ ",Toxicroak @ 37
+#126,Toxicroak,Evolves from Croagunk at 37,
 #127,Ducklett,"Route 7 - Grass
 Route 7 - Purple Flowers
 Route 7 - Yellow Flowers
- ","Route 7 - Grass
+ ",Swanna @ 35
+#128,Swanna,Evolves from Ducklett at 35,
+#129,Spritzee,"Route 7 - Grass
 Route 7 - Purple Flowers
 Route 7 - Yellow Flowers
- ",
-#128,Swanna,Evolves from Ducklett at 35,Evolves from Ducklett at 35,
-#129,Spritzee,Friend Safari ,"Route 7 - Grass
-Route 7 - Purple Flowers
-Route 7 - Yellow Flowers
-Friend Safari ",
+Friend Safari
+Y Exclusive",Aromatisee when traded with Sachet
 #130,Aromatisse,"Evolves from Spritzee when traded while holding Sachet
-Sachet found on Route 12","Evolves from Spritzee when traded while holding Sachet
-Sachet found on Route 12",Sachet
+Sachet found on Route 12
+Y Exclusive",Sachet
 #131,Swirlix,"Route 7 - Grass
 Route 7 - Purple Flowers
 Route 7 - Yellow Flowers
-Friend Safari ",Friend Safari ,
+Friend Safari 
+X Exclusive",Slurpuff when traded with Wipped Dream
 #132,Slurpuff,"Evolves from Swirlix when traded while holding Whipped Dream
-Whipped Dream found on Route 12","Evolves from Swirlix when traded while holding Whipped Dream
-Whipped Dream found on Route 12",Whipped Dream
+Whipped Dream found on Route 12
+X Exclusive",Whipped Dream
 #133,Volbeat,"Route 7 - Grass
-Route 7 - Purple Flowers
-Route 7 - Yellow Flowers
-Route 7 - Special
-Friend Safari ","Route 7 - Grass
 Route 7 - Purple Flowers
 Route 7 - Yellow Flowers
 Route 7 - Special
@@ -427,44 +291,30 @@ Friend Safari ",
 Route 7 - Purple Flowers
 Route 7 - Yellow Flowers
 Route 7 - Special
-Friend Safari ","Route 7 - Grass
-Route 7 - Purple Flowers
-Route 7 - Yellow Flowers
-Route 7 - Special
 Friend Safari ",
 #135,Hoppip,"Route 7 - Horde
- ","Route 7 - Horde
- ",
-#136,Skiploom,Evolves from Hoppip at 18,Evolves from Hoppip at 18,
-#137,Jumpluff,Evolves from Skiploom at 27,Evolves from Skiploom at 27,
+ ",Skiploom @ 18
+#136,Skiploom,Evolves from Hoppip at 18,Jumpluff @ 27
+#137,Jumpluff,Evolves from Skiploom at 27,
 #138,Munchlax,"Breed Snorlax while she's holding Full Insence
-Insence found in Courmarine City","Breed Snorlax while she's holding Full Insence
 Insence found in Courmarine City",Incense
 #139,Snorlax,"Route 7 - Interact
- ","Route 7 - Interact
  ",
 #140,Whismur,"Connecting Cave - Grass
 Connecting Cave - Horde
- ","Connecting Cave - Grass
-Connecting Cave - Horde
- ",
-#141,Loudred,Evolves from Whimsurr at 20,Evolves from Whimsurr at 20,
-#142,Exploud,Evolves from Loudred at 40,Evolves from Loudred at 40,
+ ",Loudred @ 20
+#141,Loudred,Evolves from Whimsurr at 20,Exploud @ 40
+#142,Exploud,Evolves from Loudred at 40,
 #143,Meditite,"Connecting Cave - Grass
-Friend Safari ","Connecting Cave - Grass
-Friend Safari ",
-#144,Medicham,Evolves from Meditite at 37,Evolves from Meditite at 37,
+Friend Safari ",Medicham @ 37
+#144,Medicham,Evolves from Meditite at 37,
 #145,Zubat,"Connecting Cave - Grass
 Connecting Cave - Horde
- ","Connecting Cave - Grass
-Connecting Cave - Horde
- ",
-#146,Golbat,Evolves from Zubat at 22,Evolves from Zubat at 22,
-#147,Crobat,Evolves from Golbat when leveled with friendship > 220 ,Evolves from Golbat when leveled with friendship > 220,
+ ",Golbat @ 22
+#146,Golbat,Evolves from Zubat at 22,Crobat with high friendship 
+#147,Crobat,Evolves from Golbat when leveled with friendship > 220 ,
 #148,Axew,"Connecting Cave - Grass
 Connecting Cave - Horde
- ","Connecting Cave - Grass
-Connecting Cave - Horde
- ",
-#149,Fraxure,Evolves from Axew at 38,Evolves from Axew at 38,
-#150,Haxorus,Evolves from Fraxure at 48,Evolves from Fraxure at 48,
+ ",Fraxure @ 38
+#149,Fraxure,Evolves from Axew at 38,Haxorus @ 48
+#150,Haxorus,Evolves from Fraxure at 48,

@@ -1,0 +1,1287 @@
+﻿#001,Chespin,Starter,Quilaldin @ 16
+#002,Quilladin,Starter,Chestnaught @ 36
+#003,Chesnaught,Starter,
+#004,Fennekin,Starter,Braixen @ 16
+#005,Braixen,Starter,Delphox @ 36
+#006,Delphox,Starter,
+#007,Froakie,Starter,Frogadier @ 16
+#008,Frogadier,Starter,Greninja @ 36
+#009,Greninja,Starter,
+#010,Bunnelby,"Route 2 - Grass
+Route 3 - Grass
+Route 5 - Grass
+Route 5 - Purple Flowers
+Route 22 - Grass ",Diggersby @ 20
+#011,Diggersby,"Route 22 - Yellow Flowers
+Friend Safari ",
+#012,Zigzagoon,Route 2 - Grass ,Linoone @ 20
+#013,Linoone,Evolves from Zigzagoon at 20,
+#014,Fletchling,"Route 2 - Grass
+Route 3 - Grass
+Santalune Forest - Grass
+ ",Fletchinder @ 17
+#015,Fletchinder,Evolves from Flechling at 17,Talonflame @ 35
+#016,Talonflame,Evolves from Flechinder at 35,
+#017,Pidgey,"Route 2 - Grass
+Route 3 - Grass
+Friend Safari ",Pidgeotto @ 18
+#018,Pidgeotto,Evolves from Pidgey at 18,Pidgeot @ 36
+#019,Pidgeot,Evolves from Pidgeotto at 36,
+#020,Scatterbug,"Route 2 - Grass
+Santalune Forest - Grass
+ ",Spewpa @ 9
+#021,Spewpa,"Route 7 - Special
+ ",Vivilion @ 12
+#022,Vivillon,Evolves from Spewpa at 12,
+#023,Caterpie,"Santalune Forest - Grass
+ ",Metapod @ 7
+#024,Metapod,Evolves from Caterpie at 7,Butterfree @ 10
+#025,Butterfree,Evolves from Metapod at 10,
+#026,Weedle,"Route 2 - Grass
+Santalune Forest - Grass
+ ",Kakuna @ 7
+#027,Kakuna,Evolves from Weedle at 7,Beedrill @ 10
+#028,Beedrill,Evolves from Kakuna at 10,
+#029,Pansage,"Santalune Forest - Grass
+Friend Safari ",Simisage with Leaf Stone
+#030,Simisage,Evolution Only,
+#031,Pansear,"Santalune Forest - Grass
+Friend Safari ",Simisear with Fire Stone
+#032,Simisear,Evolution Only,
+#033,Panpour,"Santalune Forest - Grass
+Friend Safari ",Simipour with Water Stone
+#034,Simipour,Evolution Only,
+#035,Pichu,Breed Pikachu,
+#036,Pikachu,"Route 3 - Grass
+Santalune Forest - Grass
+Friend Safari ",Raichu with Thunder Stone
+#037,Raichu,"Evolves when you use Thunder Stone on Pikachu
+Stone found on Routes 10 & 11",Thunder Stone
+#038,Bidoof,"Route 3 - Grass
+Route 22 - Grass
+ ",Bibarel @ 15
+#039,Bibarel,"Route 22 - Yellow Flowers
+Friend Safari ",
+#040,Dunsparce,"Route 3 - Grass
+Route 22 - Grass
+Route 22 - Yellow Flowers
+Friend Safari ",
+#041,Azurill,"Route 3 - Grass
+Route 22 - Grass
+ ",Marill with Friendship
+#042,Marill,"Route 3 - Surf
+ ",Azumarill @ 18
+#043,Azumarill,"Route 22 - Surf
+Route 22 - Yellow Flowers
+Friend Safari ",
+#044,Burmy,"Route 3 - Grass
+Route 7 - Special
+ ","Wormadam @ 20
+Mothim @ 20"
+#045,Wormadam,Evolves from Female Burmy at 20,
+#046,Mothim,Evolves from Male Burmy at 20,
+#047,Surskit,Breed Masquerain,Masquerain @ 22
+#048,Masquerain,"Route 3 - Surf
+Friend Safari ",
+#049,Magikarp,"Route 3 - Old Rod
+Route 22 - Old Rod
+Parfum Palace - Old Rod
+ ",Gyarados @ 20
+#050,Gyarados,"Route 3 - Super Rod
+Route 22 - Super Rod
+Parfum Palace - Super Rod
+Friend Safari ",
+#051,Corphish,"Route 3 - Good Rod
+Parfum Palace - Good Rod
+ ",Crawdaunt @ 30
+#052,Crawdaunt,"Route 3 - Super Rod
+Parfum Palace - Super Rod
+Friend Safari ",
+#053,Goldeen,"Route 3 - Good Rod
+Route 22 - Good Rod
+Parfum Palace - Good Rod
+ ",Seaking @ 33
+#054,Seaking,"Route 3 - Super Rod
+Route 22 - Super Rod
+Parfum Palace - Super Rod
+ ",
+#055,Carvanha,"Route 22 - Good Rod
+ ",Sharpedo @ 30
+#056,Sharpedo,"Route 22 - Super Rod
+ ",
+#057,Litleo,"Route 22 - Grass
+Route 22 - Yellow Flowers
+ ",Pyroar @ 35
+#058,Pyroar,Evolves from Litleo at 35,
+#059,Psyduck,"Route 7 - Horde
+Route 22 - Grass
+Route 22 - Surf
+Route 22 - Yellow Flowers
+ ",Golduck @ 33
+#060,Golduck,Evolves from Psyduck at 33,
+#061,Farfetch'd,"Route 22 - Grass
+Route 22 - Yellow Flowers
+Friend Safari ",
+#062,Riolu,"Route 22 - Grass
+Route 22 - Yellow Flowers
+Friend Safari ",Lucario with high friendship during the day
+#063,Lucario,"Evolves when leveled up with friendship > 220 during the day
+Obtained from Gym Leader after winning Rumble Badge (3rd)",
+#064,Ralts,"Route 4 - Red Flowers
+Route 4 - Yellow Flowers
+ ",Kirlia @ 20
+#065,Kirlia,Evolves from Ralts at 20,Gardevoir @ 30
+#066,Gardevoir,Evolves from Kirlia at 30,Gallade with Dawn Stone
+#067,Gallade,"Evolves from Male Kirlia when you use a Dawn Stone on it
+Stone found on Route 3 with Surf",Dawn Stone
+#068,Flabébé,"Route 4 - Red Flowers
+Route 4 - Red Flowers
+Route 4 - Red Flowers
+Route 4 - Yellow Flowers
+Route 4 - Yellow Flowers
+Route 4 - Yellow Flowers
+Route 7 - Grass
+Route 7 - Grass
+Route 7 - Purple Flowers
+Route 7 - Purple Flowers
+Route 7 - Purple Flowers
+Route 7 - Yellow Flowers
+Route 7 - Yellow Flowers
+Route 7 - Yellow Flowers
+ ",Floette @ 19
+#069,Floette,Evolves rom Flabebe at 19,Florges with Shiny Stone
+#070,Florges,"Evolves from Floette when you use a Shiny Stone on it
+Stone found on Route 12 while riding Skiddo",Shiny Stone
+#071,Budew,"Route 4 - Red Flowers
+Route 4 - Yellow Flowers
+ ",Roselia with friendship during the day
+#072,Roselia,"Route 7 - Grass
+Route 7 - Horde
+Route 7 - Purple Flowers
+Route 7 - Yellow Flowers
+ ",Roserade with Shiny Stone
+#073,Roserade,Evolves from Roselia when you use Shiny Stone on it,Shiny Stone
+#074,Ledyba,"Route 4 - Red Flowers
+Route 4 - Yellow Flowers
+Route 7 - Special
+Friend Safari ",Ledian @ 18
+#075,Ledian,Evolves from Ledyba at 18,
+#076,Combee,"Route 4 - Red Flowers
+Route 4 - Yellow Flowers
+Route 7 - Special
+Friend Safari ","Combee @ 21, female only"
+#077,Vespiquen,Evolves from Female Combee at 18,
+#078,Skitty,"Route 4 - Red Flowers
+Route 4 - Yellow Flowers
+ ",Delcatty with Moon Stone
+#079,Delcatty,"Evolves from Skitty when you use Moon Stone on it
+Stone held by wild Clefairy and Lunatone
+Stone found in Reflection Cave and Terminus Cave",Moon Stone
+#080,Bulbasaur,Starter,Ivysaur @ 16
+#081,Ivysaur,Starter,Venasaur @ 32
+#082,Venusaur,Starter,
+#083,Charmander,Starter,Charmeleon @ 16
+#084,Charmeleon,Starter,Charizard @ 36
+#085,Charizard,Starter,
+#086,Squirtle,Starter,Wartortle @ 16
+#087,Wartortle,Starter,Blastoise @ 36
+#088,Blastoise,Starter,
+#089,Skiddo,"Route 5 - Grass
+Route 5 - Purple Flowers
+ ",Gogoat @ 32
+#090,Gogoat,Evolves from Skiddo at 32,
+#091,Pancham,"Route 5 - Grass
+Route 5 - Purple Flowers
+Friend Safari ",Pangoro @ 32 with a Dark type in party
+#092,Pangoro,Evolves from Pancham at 32 if you have a Dark pokemon in your party,
+#093,Furfrou,"Route 5 - Grass
+Route 5 - Purple Flowers
+ ",
+#094,Doduo,"Route 5 - Grass
+Route 5 - Purple Flowers
+Friend Safari ",Dodrio @ 31
+#095,Dodrio,Evolves from Doduo at 31,
+#096,Plusle,"Route 5 - Grass
+Route 5 - Horde
+Route 5 - Purple Flowers
+ ",
+#097,Minun,"Route 5 - Horde
+ ",
+#098,Gulpin,"Route 5 - Grass
+Route 5 - Horde
+Route 5 - Purple Flowers
+ ",Swalot @ 26
+#099,Swalot,Evolves from Gulpin at 26,
+#100,Scraggy,"Route 5 - Horde
+ ",Scraggy @ 39
+#101,Scrafty,Evolves from Scraggy at 39,
+#102,Abra,"Route 5 - Grass
+Route 5 - Purple Flowers
+Friend Safari ",Kadabra @ 16
+#103,Kadabra,Evolves from Abra at 16,Alakazam when traded
+#104,Alakazam,Evolves from Kadabra when traded,
+#105,Oddish,"Route 6 - Tall Grass
+Friend Safari ",Gloom @ 21
+#106,Gloom,Evolves from Oddish at 21,"Vileplume with Leaf Stone
+Bellossom with Sun Stone"
+#107,Vileplume,"Evolves when you use Leaf Stone on Gloom
+Stone found on Route 8",Leaf Stone
+#108,Bellossom,"Evolves when you use Sun Stone on Gloom
+Stone found on Route 13, Anistar City",Sun Stone
+#109,Sentret,"Route 6 - Tall Grass
+ ",Furret @ 15
+#110,Furret,Evolves from Sentret at 15,
+#111,Nincada,"Route 6 - Tall Grass
+Friend Safari ","Ninjask @ 20
+Shedinja with extra party slot and extra pokeball"
+#112,Ninjask,Evolves from Nincada at 20,
+#113,Shedinja,Evolves from Nincada if you have extra party slot and extra pokeball,
+#114,Espurr,"Route 6 - Tall Grass
+Friend Safari ",Mewostic @ 25
+#115,Meowstic,Evolves from Espurr at 25,
+#116,Kecleon,"Route 6 - Tall Grass
+Friend Safari ",
+#117,Honedge,"Route 6 - Tall Grass
+ ",Doublade @ 35
+#118,Doublade,Evolves from Honedge at 35,Aegislash with Dusk Stone
+#119,Aegislash,"Evolves from Doublade when you use Dusk Stone on it
+Stone in Laverre City and Terminus Cave",Dusk Stone
+#120,Venipede,"Route 6 - Special
+ ",Whirlipede @ 22
+#121,Whirlipede,Evolves from Venipede at 22,Scolipede @ 30
+#122,Scolipede,Evolves from Whirlipede at 30,
+#123,Audino,"Route 6 - Special
+Friend Safari ",
+#124,Smeargle,"Route 7 - Grass
+Route 7 - Purple Flowers
+Route 7 - Yellow Flowers
+Friend Safari ",
+#125,Croagunk,"Route 7 - Grass
+Route 7 - Purple Flowers
+Route 7 - Yellow Flowers
+ ",Toxicroak @ 37
+#126,Toxicroak,Evolves from Croagunk at 37,
+#127,Ducklett,"Route 7 - Grass
+Route 7 - Purple Flowers
+Route 7 - Yellow Flowers
+ ",Swanna @ 35
+#128,Swanna,Evolves from Ducklett at 35,
+#129,Spritzee,"Route 7 - Grass
+Route 7 - Purple Flowers
+Route 7 - Yellow Flowers
+Friend Safari
+Y Exclusive",Aromatisee when traded with Sachet
+#130,Aromatisse,"Evolves from Spritzee when traded while holding Sachet
+Sachet found on Route 12
+Y Exclusive",Sachet
+#131,Swirlix,"Route 7 - Grass
+Route 7 - Purple Flowers
+Route 7 - Yellow Flowers
+Friend Safari 
+X Exclusive",Slurpuff when traded with Wipped Dream
+#132,Slurpuff,"Evolves from Swirlix when traded while holding Whipped Dream
+Whipped Dream found on Route 12
+X Exclusive",Whipped Dream
+#133,Volbeat,"Route 7 - Grass
+Route 7 - Purple Flowers
+Route 7 - Yellow Flowers
+Route 7 - Special
+Friend Safari ",
+#134,Illumise,"Route 7 - Grass
+Route 7 - Purple Flowers
+Route 7 - Yellow Flowers
+Route 7 - Special
+Friend Safari ",
+#135,Hoppip,"Route 7 - Horde
+ ",Skiploom @ 18
+#136,Skiploom,Evolves from Hoppip at 18,Jumpluff @ 27
+#137,Jumpluff,Evolves from Skiploom at 27,
+#138,Munchlax,"Breed Snorlax while she's holding Full Insence
+Insence found in Courmarine City",Incense
+#139,Snorlax,"Route 7 - Interact
+ ",
+#140,Whismur,"Connecting Cave - Grass
+Connecting Cave - Horde
+ ",Loudred @ 20
+#141,Loudred,Evolves from Whimsurr at 20,Exploud @ 40
+#142,Exploud,Evolves from Loudred at 40,
+#143,Meditite,"Connecting Cave - Grass
+Friend Safari ",Medicham @ 37
+#144,Medicham,Evolves from Meditite at 37,
+#145,Zubat,"Connecting Cave - Grass
+Connecting Cave - Horde
+ ",Golbat @ 22
+#146,Golbat,Evolves from Zubat at 22,Crobat with high friendship 
+#147,Crobat,Evolves from Golbat when leveled with friendship > 220 ,
+#148,Axew,"Connecting Cave - Grass
+Connecting Cave - Horde
+ ",Fraxure @ 38
+#149,Fraxure,Evolves from Axew at 38,Haxorus @ 48
+#150,Haxorus,Evolves from Fraxure at 48,
+Coastal Dex,,,
+No.,Name,X,
+#001,Drifloon,"Route 8 - Grass
+Route 8 - Yellow Flowers
+ ",Drifblim @ 28
+#002,Drifblim,Evolves from Drifloon at 28,
+#003,Mienfoo,"Route 8 - Grass
+Route 8 - Yellow Flowers
+Friend Safari ",Mienshao @ 50
+#004,Mienshao,Evolves from Mienfoo at 50,
+#005,Zangoose,"Route 8 - Grass
+Route 8 - Horde
+Route 8 - Yellow Flowers
+ ",
+#006,Seviper,"Route 8 - Horde
+Friend Safari ",
+#007,Spoink,"Route 8 - Grass
+Route 8 - Yellow Flowers
+ ",Grumpig @ 32
+#008,Grumpig,Evolves from Sproink at 32,
+#009,Absol,"Route 8 - Grass
+Route 8 - Yellow Flowers
+Friend Safari ",
+#010,Inkay,"Route 8 - Grass
+Route 8 - Yellow Flowers
+Azure Bay - Grass
+Friend Safari ",Malimar @ 30 with 3ds upside down
+#011,Malamar,Evolves from Inkay at 30 if you hold 3ds upsidedown,
+#012,Lunatone,"Glittering Cave - 3D Area - Special
+ ",
+#013,Solrock,"Glittering Cave - 3D Area - Special
+ ",
+#014,Bagon,"Route 8 - Grass
+Route 8 - Yellow Flowers
+ ",Shelgon @ 30
+#015,Shelgon,Evolves from Bagon at 30,Salamence @ 50
+#016,Salamence,Evolves from Shelgon at 50,
+#017,Wingull,"Route 8 - Horde
+Route 12 - Horde
+Azure Bay - Horde
+ ",Pelipper @ 25
+#018,Pelipper,Evolves from Wingull at 25,
+#019,Taillow,"Route 8 - Horde
+ ",Swellow @ 22
+#020,Swellow,Evolves from Taillow at 22,
+#021,Binacle,"Route 8 - Rock Smash
+Route 12 - Rock Smash
+Ambrette Town - Rock Smash
+Azure Bay - Rock Smash
+ ",Barbaracle @ 38
+#022,Barbaracle,Evolves from Binacle at 38,
+#023,Dwebble,"Route 8 - Rock Smash
+Route 12 - Rock Smash
+Cyllage City - Rock Smash
+Ambrette Town - Rock Smash
+Glittering Cave - 1F - Rock Smash
+Azure Bay - Rock Smash
+Friend Safari ",Crustle @ 34
+#024,Crustle,Evolves from Dwebble at 34,
+#025,Tentacool,"Route 8 - Surf
+Route 12 - Surf
+Cyllage City - Surf
+Ambrette Town - Surf
+Shalour City - Surf
+Azure Bay - Surf
+ ",Tentacruel @ 30
+#026,Tentacruel,Evolves from Tentacool at 30,
+#027,Wailmer,"Route 8 - Surf
+Cyllage City - Surf
+Ambrette Town - Surf
+ ",Wailord @ 40
+#028,Wailord,Evolves from Wailmer at 40,
+#029,Luvdisc,"Route 8 - Old Rod
+Route 12 - Old Rod
+Cyllage City - Old Rod
+Ambrette Town - Old Rod
+Shalour City - Old Rod
+Azure Bay - Old Rod
+ ",
+#030,Skrelp,"Route 8 - Good Rod
+Cyllage City - Good Rod
+Ambrette Town - Good Rod
+Y Exclusive
+ ",Dragalge @ 48
+#031,Dragalge,"Route 8 - Super Rod
+Cyllage City - Super Rod
+Ambrette Town - Super Rod
+Y Exclusive
+ ",
+#032,Clauncher,"Route 8 - Good Rod
+Cyllage City - Good Rod
+Ambrette Town - Good Rod
+X Exclusive
+ ",Clawitzer @ 37
+#033,Clawitzer,"Route 8 - Super Rod
+Cyllage City - Super Rod
+Ambrette Town - Super Rod
+X Exclusive",
+#034,Staryu,"Route 8 - Good Rod
+X Exclusive",Starmie with Water Stone
+#035,Starmie,"Route 8 - Good Rod
+ X Exclusive",
+#036,Shellder,"Route 8 - Good Rod
+ Y Exclusive",Cloyster with Water Stone
+#037,Cloyster,"Route 8 - Super Rod
+Friend Safari 
+ Y Exclusive",
+#038,Qwilfish,"Route 8 - Super Rod
+ ",
+#039,Horsea,"Cyllage City - Good Rod
+Ambrette Town - Good Rod
+ ",Seadra @ 32
+#040,Seadra,"Cyllage City - Super Rod
+Ambrette Town - Super Rod
+ ",Kingdra when traded with Dragon Scale
+#041,Kingdra,Evolves from Seadra when traded while holding a Dragon Scale,
+#042,Relicanth,"Cyllage City - Super Rod
+Ambrette Town - Super Rod
+ ",
+#043,Sandile,"Route 9 - Grass
+Friend Safari ",Krokorok @ 29
+#044,Krokorok,Evolves from Sandile at 29,Krookodile @ 40
+#045,Krookodile,Evolves from Krokorok at 40,
+#046,Helioptile,"Route 9 - Grass
+Friend Safari ",Heliosk with Sun Stone
+#047,Heliolisk,"Evolves from Helioptile when you use a Sun Stone on it
+Stone on Route 13",Sun Stone
+#048,Hippopotas,"Route 9 - Grass
+ ",Hippowdown @ 34
+#049,Hippowdon,Evolves from Hippopotas at 34,
+#050,Rhyhorn,"Glittering Cave - 1F - Special
+Glittering Cave - 3D Area - Special
+ ",Rhydon @ 42
+#051,Rhydon,Evolves from Rhyhorn at 42,Ryperion when traded with Protector
+#052,Rhyperior,"Evolves from Rhydon when traded while holding Protector
+Protector found at Battle Maison and Lost Hotel",Protector
+#053,Onix,"Cyllage City - Rock Smash
+Glittering Cave - 1F - Rock Smash
+Glittering Cave - 1F - Special
+Glittering Cave - 3D Area - Special
+Friend Safari ",Steelix when traded with Metal Coat
+#054,Steelix,Trade Luvdisc in Cyllage City,
+#055,Woobat,"Glittering Cave - 3D Area - Special
+Reflection Cave - 1F - Special
+Friend Safari ",Swoobat with high friendship
+#056,Swoobat,Evolves from Woobat when leveled with high friendship,
+#057,Machop,"Glittering Cave - 1F - Special
+Glittering Cave - 3D Area - Special
+ ",Machoke @ 28
+#058,Machoke,Evolves from Machop at 28,Machamp when traded
+#059,Machamp,Evolves from Machoke when traded,
+#060,Cubone,"Glittering Cave - 1F - Special
+Glittering Cave - 3D Area - Special
+Friend Safari ",Marowak @ 28
+#061,Marowak,Evolves from Cubone at 28,
+#062,Kangaskhan,"Glittering Cave - 1F - Special
+Glittering Cave - 3D Area - Special
+ ",
+#063,Mawile,"Glittering Cave - 1F - Special
+Glittering Cave - 3D Area - Special
+Friend Safari ",
+#064,Tyrunt,Created from Jaw Fossil,Tyrantrum @ 39 during the day
+#065,Tyrantrum,Evolves from Tyrunt at 39 when leveled up during the day,
+#066,Amaura,Created from Sail Fossil,Aurorus @ 39 during the night
+#067,Aurorus,Evolves from Amaura at 39 when leveled up during the night,
+#068,Aerodactyl,Created from Old Amber,
+#069,Ferroseed,"Glittering Cave - 3D Area - Special
+Reflection Cave - 1F - Special
+Friend Safari ",Ferrothorn @ 40
+#070,Ferrothorn,Evolves from Ferroseed at 40,
+#071,Snubbull,"Route 10 - Grass
+Route 10 - Yellow Flowers
+Friend Safari ",Granbull @ 23
+#072,Granbull,Evolves from Snubbull at 23,
+#073,Electrike,"Route 10 - Grass
+Route 10 - Horde
+Route 10 - Yellow Flowers
+Y Exclusive",Manectric @ 26
+#074,Manectric,"Evolves from Electrike at 26
+Y Exclusive",
+#075,Houndour,"Route 10 - Grass
+Route 10 - Horde
+Route 10 - Yellow Flowers
+X Exclusive",Houndoom @ 24
+#076,Houndoom,"Evolves from Houndoom at 24
+X Exclusive",
+#077,Eevee,"Route 10 - Grass
+Route 10 - Yellow Flowers
+Friend Safari ","Vaporeon with Water Stone
+Jolteon with Thunder Stone
+Flareon with Water Stone
+Espeon with high friendship during day
+Umbreon with high friendship during night
+Leafeon near Moss Rock
+Glaceon near Ice Rock
+Sylveon with Fairy type move and 2 affection hearts in Pokemon Amie"
+#078,Vaporeon, ,Water Stone
+#079,Jolteon, ,Thunder Stone
+#080,Flareon, ,Fire Stone
+#081,Espeon, ,
+#082,Umbreon, ,
+#083,Leafeon,"Evolves when leveled near a Moss Rock
+Rock found on Route 20",
+#084,Glaceon,"Evolves when leveled near an Ice Rock.
+Rock found in Forest Cavern north of Dendemille Town.",
+#085,Sylveon, ,
+#086,Emolga,"Route 10 - Grass
+Route 10 - Yellow Flowers
+Friend Safari ",
+#087,Yanma,"Route 10 - Horde
+ ",Yanmega leveled knowing Ancient Power
+#088,Yanmega,Evolves when leveled while knowing Ancient Power,
+#089,Hawlucha,"Route 10 - Grass
+Route 10 - Yellow Flowers
+Friend Safari ",
+#090,Sigilyph,"Route 10 - Grass
+Route 10 - Yellow Flowers
+Friend Safari ",
+#091,Golett,"Route 10 - Grass
+Route 10 - Yellow Flowers
+ ",Golurk @ 43
+#092,Golurk,Evolves from Golett at 43,
+#093,Nosepass,"Route 10 - Horde
+Friend Safari ",Propopass when leveled in Route 13
+#094,Probopass,Evolves from Nosepass when leveled in Route 13,
+#095,Makuhita,Breed from Hariyama,
+#096,Hariyama,"Route 11 - Grass
+Friend Safari ",
+#097,Throh,"Route 11 - Grass
+Friend Safari
+Y Exclusive",
+#098,Sawk,"Route 11 - Grass
+Friend Safari 
+X Exclusive",
+#099,Starly,"Route 11 - Horde
+ ",Staravia @ 14
+#100,Staravia,"Route 11 - Grass
+ ",Staraptor @ 34
+#101,Staraptor,Evolves from Staravia at 34,
+#102,Stunky,"Route 11 - Grass
+Route 11 - Horde
+ ",Skuntank @ 34
+#103,Skuntank,Evolves from Stunky at 34,
+#104,Nidoran,"Route 11 - Horde
+ ",Nidorina @ 16
+#105,Nidorina,"Route 11 - Grass
+ ",Nidoqueen with Moon Stone
+#106,Nidoqueen,"Evolves when exposed to Moon Stone
+Stone found in Reflection and Terminus Cave",Moon Stone
+#107,Nidoran,"Route 11 - Horde
+ ",Nidorino @ 16
+#108,Nidorino,"Route 11 - Grass
+ ",Nidoking with Moon Stone
+#109,Nidoking,"Evolves when exposed to Moon Stone
+Stone found in Reflection and Terminus Cave",Moon Stone
+#110,Dedenne,"Route 11 - Grass
+Friend Safari ",
+#111,Chingling,"Route 11 - Grass
+Reflection Cave - 1F - Grass
+Reflection Cave - B1F - Grass
+Reflection Cave - B2F - Grass
+Reflection Cave - B3F - Grass
+ ",Chimecho with high friendship during night
+#112,Chimecho,Evolves from Chingling when leveled with high friendship at night,
+#113,Mime Jr.,"Reflection Cave - 1F - Horde
+Reflection Cave - B1F - Horde
+Reflection Cave - B2F - Horde
+Reflection Cave - B3F - Horde
+ ",
+#114,Mr. Mime,"Reflection Cave - 1F - Grass
+Reflection Cave - B1F - Grass
+Reflection Cave - B2F - Grass
+Reflection Cave - B3F - Grass
+ ",
+#115,Solosis,"Reflection Cave - 1F - Grass
+Reflection Cave - B1F - Grass
+Reflection Cave - B2F - Grass
+Reflection Cave - B3F - Grass
+ ",Duosion @ 32
+#116,Duosion,Evolves from Solosis at 32,Reuniclus @ 41
+#117,Reuniclus,Evolves from Duosion at 41,
+#118,Wynaut,Breed Wobuffet while holding Lax Incense,Lax Incense
+#119,Wobbuffet,"Reflection Cave - 1F - Grass
+Reflection Cave - B1F - Grass
+Reflection Cave - B2F - Grass
+Reflection Cave - B3F - Grass
+Friend Safari ",
+#120,Roggenrola,"Reflection Cave - 1F - Grass
+Reflection Cave - 1F - Horde
+Reflection Cave - B1F - Grass
+Reflection Cave - B1F - Horde
+Reflection Cave - B2F - Grass
+Reflection Cave - B2F - Horde
+Reflection Cave - B3F - Grass
+Reflection Cave - B3F - Horde
+ ",Boldore @ 25
+#121,Boldore,Evolves from Roggenrola at 25,Gigalith when traded
+#122,Gigalith,Evolves from Boldore when traded,
+#123,Sableye,"Reflection Cave - 1F - Grass
+Reflection Cave - B1F - Grass
+Reflection Cave - B2F - Grass
+Reflection Cave - B3F - Grass
+Friend Safari ",
+#124,Carbink,"Reflection Cave - 1F - Grass
+Reflection Cave - 1F - Horde
+Reflection Cave - B1F - Grass
+Reflection Cave - B1F - Horde
+Reflection Cave - B2F - Grass
+Reflection Cave - B2F - Horde
+Reflection Cave - B3F - Grass
+Reflection Cave - B3F - Horde
+ ",
+#125,Tauros,"Route 12 - Grass
+Route 12 - Horde
+Route 12 - Yellow Flowers
+ ",
+#126,Miltank,"Route 12 - Grass
+Route 12 - Horde
+Route 12 - Yellow Flowers
+ ",
+#127,Mareep,"Route 12 - Horde
+ ",Flaffy @ 15
+#128,Flaaffy,Evolves from Mareep at 15,Ampharos @ 30
+#129,Ampharos,Evolves from Flaafy at 30,
+#130,Pinsir,"Route 12 - Grass
+Route 12 - Yellow Flowers
+Friend Safari 
+X Exclusive",
+#131,Heracross,"Route 12 - Grass
+Route 12 - Yellow Flowers
+Friend Safari
+Y Exclusive",
+#132,Pachirisu,"Route 12 - Grass
+Route 12 - Yellow Flowers
+Friend Safari ",
+#133,Slowpoke,"Route 12 - Grass
+Route 12 - Yellow Flowers
+Azure Bay - Grass
+Azure Bay - Horde
+ ",Slowbro @ 37
+#134,Slowbro,Evolves from Slowpoke at 37,Slowking when traded with King's Rock
+#135,Slowking,"Evolves from Slowpoke when traded holding King's Rock
+Rock at Lysandra Café, and held by wild Polywhirl, Polywrath, Politoed, Hariyama, and Hawlucha",
+#136,Exeggcute,"Route 12 - Grass
+Route 12 - Yellow Flowers
+Azure Bay - Grass
+Azure Bay - Horde
+ ",Exeggutor with Leaf Stone
+#137,Exeggutor,Evolves when exposed to Leaf Stone,
+#138,Chatot,"Route 12 - Grass
+Route 12 - Yellow Flowers
+Azure Bay - Grass
+ ",
+#139,Mantyke,"Route 12 - Surf
+Shalour City - Surf
+Azure Bay - Surf
+ ",When leveled with Remoraid in party
+#140,Mantine,Evolves from Mantyke when leveled with Remoraid in party,
+#141,Clamperl,"Route 12 - Good Rod
+ ","Huntail when traded with Deep Sea Tooth
+Gorebyss when traded with Deep Sea Scale"
+#142,Huntail,"Route 12 - Super Rod
+ ",Deep Sea Tooth
+#143,Gorebyss,Evolves from Clamperl when traided while holding Deep Sea Scale.,Deep Sea Scale
+#144,Remoraid,"Route 12 - Good Rod
+Shalour City - Good Rod
+Azure Bay - Good Rod
+ ",Octillery @ 25
+#145,Octillery,"Route 12 - Super Rod
+Shalour City - Super Rod
+Azure Bay - Super Rod
+Friend Safari ",
+#146,Corsola,"Route 12 - Super Rod
+Friend Safari ",
+#147,Chinchou,"Shalour City - Good Rod
+Azure Bay - Good Rod
+ ",Lanturn @ 27
+#148,Lanturn,"Shalour City - Super Rod
+Azure Bay - Super Rod
+ ",
+#149,Alomomola,"Shalour City - Super Rod
+Azure Bay - Super Rod
+ ",
+#150,Lapras,"Route 12 - Surf
+Azure Bay - Surf
+Friend Safari ",
+#151,Articuno,"Sea Spirit's Den - Interact
+ ",
+#152,Zapdos,"Sea Spirit's Den - Interact
+ ",
+#153,Moltres,"Sea Spirit's Den - Interact
+ ",
+Mountain Dex,,,
+No.,Name,X,
+#001,Diglett,Breed from Dugtrio,Dugtrio @ 26
+#002,Dugtrio,"Route 13 - Dust
+Friend Safari ",
+#003,Trapinch,"Route 13 - Dust
+Friend Safari ",Vibrava @ 35
+#004,Vibrava,Evolves from Trapinch at 35,Flygon @ 45
+#005,Flygon,Evolves from Vibrava at 45,
+#006,Gible,"Route 13 - Dust
+ ",Gabite @ 24
+#007,Gabite,Evolves from Gible at 24,Garchomp @ 48
+#008,Garchomp,Evolves from Garbite at 48,
+#009,Geodude,"Route 18 - Horde
+Terminus Cave - 1F - Horde
+Terminus Cave - 2F Left - Horde
+Terminus Cave - 2F Right - Horde
+Terminus Cave - B1F - Horde
+Terminus Cave - B2F - Horde
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Horde
+ ",Graveler @ 25
+#010,Graveler,"Route 13 - Rock Smash
+Route 18 - Grass
+Route 18 - Red Flowers
+Route 18 - Rock Smash
+Terminus Cave - 1F - Grass
+Terminus Cave - 1F - Rock Smash
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Right - Grass
+Terminus Cave - B1F - Grass
+Terminus Cave - B1F - Rock Smash
+Terminus Cave - B2F - Grass
+Terminus Cave - B2F - Rock Smash
+Victory Road - Room 1 - Grass
+Victory Road - Room 1 - Rock Smash
+Victory Road - Room 2 - Grass
+Victory Road - Room 2 - Rock Smash
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+ ",Golem when traded
+#011,Golem,evolves from Graveler when traded,
+#012,Slugma,"Route 13 - Rock Smash
+Friend Safari ",Magcargo @ 38
+#013,Magcargo,Evolves from Slugma at 38,
+#014,Shuckle,"Route 18 - Rock Smash
+Terminus Cave - 1F - Rock Smash
+Terminus Cave - B1F - Rock Smash
+Terminus Cave - B2F - Rock Smash
+Victory Road - Room 1 - Rock Smash
+Victory Road - Room 2 - Rock Smash
+Friend Safari ",
+#015,Skorupi,"Route 14 - Grass
+Route 14 - Horde
+Route 15 - Grass
+Route 15 - Red Flowers
+Route 16 - Yellow Flowers
+Route 19 - Horde
+ ",
+#016,Drapion,"Route 19 - Purple Flowers
+Route 19 - Yellow Flowers
+Friend Safari ",
+#017,Wooper,Breed from Quagsire,Quagsire @ 20
+#018,Quagsire,"Route 14 - Grass
+Route 14 - Water
+Route 14 - Surf
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Surf
+Route 19 - Yellow Flowers
+Friend Safari ",
+#019,Goomy,"Route 14 - Grass
+Route 14 - Water
+Route 14 - Surf
+ ",Sliggoo @ 40
+#020,Sliggoo,"Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Surf
+Route 19 - Yellow Flowers
+Friend Safari ",Goodra @ 50 when rain
+#021,Goodra,Evolves from Sliggoo at 50 during the rain,
+#022,Karrablast,"Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+ ",Escavalier when traded for Shelmet
+#023,Escavalier,Evolves from Karrablast when traded for a Shelmet,
+#024,Shelmet,"Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+ ",Accelgor when traded for Karrablast
+#025,Accelgor,Evolves from Shelmet when traded for a Karrablast,
+#026,Bellsprout,"Route 14 - Horde
+ ",Weepingbell @ 21
+#027,Weepinbell,"Route 14 - Grass
+Route 16 - Yellow Flowers
+Route 19 - Horde
+Route 19 - Purple Flowers
+Route 19 - Yellow Flowers
+ ",Victreebel with Leaf Stone
+#028,Victreebel,Evolves from Weepinbell when exposed to Leaf Stone,Leaf Stone
+#029,Carnivine,"Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+ ",
+#030,Gastly,Breed fromm Haunter or Gengar,Haunter @ 25
+#031,Haunter,"Route 14 - Grass
+Route 14 - Water
+Route 19 - Purple Flowers
+Route 19 - Water
+Route 19 - Yellow Flowers
+Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Frost Cavern - 3F - Hoorde
+Victory Road - Room 1 - Grass
+Victory Road - Room 2 - Grass
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+ ",Gengar when traded
+#032,Gengar,Evolves from Haunter when traded,
+#033,Poliwag,"Route 14 - Old Rod
+Route 15 - Old Rod
+Route 16 - Old Rod
+Route 19 - Old Rod
+Route 21 - Old Rod
+Laverre City - Old Rod
+Frost Cavern - 2F - Old Rod
+Frost Cavern - Outside - Old Rod
+Couriway Town - Old Rod
+Pokemon Village - Horde
+Pokemon Village - Old Rod
+Victory Road - Outside Far East - Old Rod
+Victory Road - Room 4 - Old Rod
+Victory Road - Room 1 - Old Rod
+ ",Poliwhirl @ 25
+#034,Poliwhirl,"Route 14 - Good Rod
+Route 14 - Super Rod
+Route 15 - Good Rod
+Route 15 - Super Rod
+Route 16 - Good Rod
+Route 16 - Super Rod
+Route 19 - Good Rod
+Route 19 - Super Rod
+Route 21 - Good Rod
+Route 21 - Super Rod
+Laverre City - Good Rod
+Laverre City - Super Rod
+Frost Cavern - 2F - Good Rod
+Frost Cavern - 2F - Super Rod
+Frost Cavern - 2F - Surf
+Frost Cavern - Outside - Good Rod
+Frost Cavern - Outside - Super Rod
+Frost Cavern - Outside - Surf
+Couriway Town - Good Rod
+Couriway Town - Super Rod
+Pokemon Village - Good Rod
+Pokemon Village - Super Rod
+Pokemon Village - Surf
+Victory Road - Outside Far East - Good Rod
+Victory Road - Outside Far East - Super Rod
+Victory Road - Room 4 - Good Rod
+Victory Road - Room 4 - Super Rod
+Victory Road - Room 4 - Surf
+Victory Road - Room 1 - Super Rod
+Victory Road - Room 1 - Surf
+Victory Road - Room 1 - Good Rod
+Friend Safari ","Poliwrath with Water Stone
+Politoed when traded with King's Rock"
+#035,Poliwrath,"Victory Road - Room 4 - Super Rod
+Victory Road - Outside Far East - Super Rod
+ ",Water Stone
+#036,Politoed,"Route 19 - Super Rod
+ ",King's Rock
+#037,Ekans,"Route 14 - Horde
+ ",Arbok @ 22
+#038,Arbok,"Route 19 - Horde
+ ",
+#039,Stunfisk,"Route 14 - Water
+Route 14 - Surf
+Route 19 - Water
+Route 19 - Surf
+Friend Safari ",
+#040,Barboach,"Route 14 - Good Rod
+Route 19 - Good Rod
+ ",Whiscash @ 30
+#041,Whiscash,"Route 14 - Super Rod
+Route 19 - Super Rod
+ ",
+#042,Purrloin,"Breed from Liepard
+Y Exlusive",Liepard @ 20
+#043,Liepard,"Friend Safari
+Y Exlusive",
+#044,Poochyena,"Breed Mightyena
+X Exclusive",Mightyena @ 18
+#045,Mightyena,"Route 15 - Grass
+Route 15 - Red Flowers
+Friend Safari 
+X Exclusive",
+#046,Patrat,Breed from Watchdog,Watchdog @ 20
+#047,Watchog,"Route 15 - Grass
+Route 15 - Red Flowers
+ ",
+#048,Pawniard,"Route 15 - Grass
+Route 15 - Red Flowers
+Lost Hotel - Grass
+Friend Safari ",Bisharp @ 52
+#049,Bisharp,Evolves from Pawniard at 52,
+#050,Klefki,"Route 15 - Grass
+Route 15 - Horde
+Route 15 - Red Flowers
+Route 16 - Horde
+Route 16 - Tall Grass
+Route 16 - Yellow Flowers
+Lost Hotel - Grass
+Friend Safari ",
+#051,Murkrow,"Route 15 - Horde
+Route 16 - Horde
+ ",Honchkrow with Dusk Stone
+#052,Honchkrow,"Evolves from Murkrow when you use a Dusk Stone
+",Dusk Stone
+#053,Foongus,"Route 15 - Grass
+Route 15 - Horde
+Route 15 - Red Flowers
+Route 16 - Horde
+Route 16 - Tall Grass
+Route 16 - Yellow Flowers
+Route 20 - Horde
+Pokemon Village - Horde
+ ",Amoonguss @ 39
+#054,Amoonguss,"Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+ ",
+#055,Lotad,Breed Lombre or Ludicolo,Lombre @ 14
+#056,Lombre,"Route 15 - Surf
+Route 16 - Surf
+Route 21 - Surf
+Couriway Town - Surf
+Pokemon Village - Surf
+Pokemon Village - Horde
+Victory Road - Outside Far East - Surf
+ ",Ludicolo with Water Stone
+#057,Ludicolo,Evolves from Lombre when you use Water Stone on it,Water Stone
+#058,Buizel,Breed from Floatzel,Floatzel @ 26
+#059,Floatzel,"Route 15 - Surf
+Route 16 - Surf
+Route 16 - Yellow Flowers
+Route 21 - Purple Flowers
+Route 21 - Red Flowers
+Route 21 - Surf
+Frost Cavern - 2F - Surf
+Frost Cavern - Outside - Surf
+Couriway Town - Surf
+Victory Road - Outside Far East - Surf
+Victory Road - Room 4 - Surf
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Horde
+Victory Road - Room 1 - Surf
+Friend Safari ",
+#060,Basculin,"Route 15 - Good Rod
+Route 15 - Super Rod
+Route 16 - Good Rod
+Route 16 - Super Rod
+Route 21 - Good Rod
+Route 21 - Super Rod
+Laverre City - Good Rod
+Laverre City - Super Rod
+Frost Cavern - 2F - Good Rod
+Frost Cavern - 2F - Super Rod
+Frost Cavern - Outside - Good Rod
+Frost Cavern - Outside - Super Rod
+Couriway Town - Good Rod
+Couriway Town - Super Rod
+Pokemon Village - Good Rod
+Pokemon Village - Super Rod
+Victory Road - Outside Far East - Good Rod
+Victory Road - Outside Far East - Super Rod
+Victory Road - Room 4 - Good Rod
+Victory Road - Room 4 - Super Rod
+Victory Road - Room 1 - Super Rod
+Victory Road - Room 1 - Good Rod
+ ",
+#061,Phantump,"Route 16 - Tall Grass
+Route 16 - Yellow Flowers
+Friend Safari ",Trevenant when traded
+#062,Trevenant,"Route 20 - Grass
+Route 20 - Horde
+Route 20 - Red Flowers
+ ",
+#063,Pumpkaboo,"Route 16 - Tall Grass
+Route 16 - Tall Grass
+Route 16 - Tall Grass
+Route 16 - Tall Grass
+Friend Safari ",Gourgeist when traded
+#064,Gourgeist,Evolves from Pumpkaboo when traded,
+#065,Litwick,"Lost Hotel - Grass
+ ",Lampent @ 41
+#066,Lampent,Evolves from Litwick at 41,Chandelure with Dusk Stone
+#067,Chandelure,Evolves from Lampent when you use Dusk Stone on it,Dusk Stone
+#068,Rotom,"Lost Hotel - Special
+ ",
+#069,Magnemite,Breed Magneton or Magnezone,Magneton @ 30
+#070,Magneton,"Lost Hotel - Grass
+Friend Safari ","Magnezone when leveled in Mt. Coronet, Chargestone Cave, Kalos Route 13 or New Mauville"
+#071,Magnezone,Evolves from Magneton when evolved on Route 13,
+#072,Voltorb,Breed Electrode,Electrode @ 30
+#073,Electrode,"Lost Hotel - Grass
+Friend Safari ",
+#074,Trubbish,"Lost Hotel - Special
+ ",Garbodor @ 36
+#075,Garbodor,"Lost Hotel - Special
+Pokemon Village - Special
+Friend Safari ",
+#076,Swinub,Breed Piloswine or Mamoswine,Piloswine @ 33
+#077,Piloswine,"Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Friend Safari ",Mamoswine when leveled knowing Ancient Power
+#078,Mamoswine,Evolves from Piloswine when leveled while knowing Ancient Power,
+#079,Bergmite,"Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Friend Safari ",Avalugg @ 37
+#080,Avalugg,Evolves from Bergmite at 37,
+#081,Cubchoo,"Frost Cavern - 1F - Horde
+Frost Cavern - 2F - Horde
+Frost Cavern - 3F - Horde
+ ",Beatric @ 37
+#082,Beartic,"Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Grass
+Friend Safari ",
+#083,Smoochum,"Frost Cavern - 1F - Horde
+Frost Cavern - 2F - Horde
+Frost Cavern - 3F - Horde
+ ",Jynx @ 30
+#084,Jynx,"Frost Cavern - 1F - Grass
+Frost Cavern - 2F - Grass
+Frost Cavern - 3F - Hoorde
+ ",
+#085,Vanillite,"Frost Cavern - 1F - Horde
+Frost Cavern - 2F - Horde
+Frost Cavern - 3F - Horde
+ ",Vanillish @ 35
+#086,Vanillish,Evolves from Vanillite at 35,Vanilluxe @ 47
+#087,Vanilluxe,Evolves from Vanillish at 47,
+#088,Snover,"Route 17 - Snow
+Friend Safari ",Abomasnow @ 40
+#089,Abomasnow,"Route 17 - Snow
+ ",
+#090,Delibird,"Route 17 - Snow
+Friend Safari ",
+#091,Sneasel,"Route 17 - Snow
+Friend Safari ",Weavile when leveled holding Razor Claw during Night
+#092,Weavile,"Evolves from Sneasel when leveled at night while holding Razor Claw
+Claw found at Battle Maison",Razor Claw
+#093,Timburr,Breed Gurdurr or Conkeldurr,Gurdurr @ 25
+#094,Gurdurr,"Route 18 - Grass
+Route 18 - Red Flowers
+Victory Road - Room 1 - Grass
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Grass
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Grass
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Grass
+Victory Road - Room 4 - Horde
+ ",Conkeldurr when traded
+#095,Conkeldurr,Evolves from Gurdurr when traded,
+#096,Torkoal,"Route 18 - Grass
+Route 18 - Red Flowers
+ ",
+#097,Sandshrew,Breed from Sandslash,Sandslash @ 22
+#098,Sandslash,"Route 18 - Grass
+Route 18 - Red Flowers
+Terminus Cave - 1F - Grass
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Right - Grass
+Terminus Cave - B1F - Grass
+Terminus Cave - B2F - Grass
+ ",
+#099,Aron,"Terminus Cave - 1F - Horde
+Terminus Cave - 2F Left - Horde
+Terminus Cave - 2F Right - Horde
+Terminus Cave - B1F - Horde
+Terminus Cave - B2F - Horde
+X Exclusive
+ ",Lairon @ 32
+#100,Lairon,"Route 18 - Grass
+Route 18 - Red Flowers
+Terminus Cave - 1F - Grass
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Right - Grass
+Terminus Cave - B1F - Grass
+Terminus Cave - B2F - Grass
+X Exclusive
+ ",Aggron @ 42
+#101,Aggron,Evolves from Lairon at 42,
+#102,Larvitar,"Terminus Cave - 1F - Horde
+Terminus Cave - 2F Left - Horde
+Terminus Cave - 2F Right - Horde
+Terminus Cave - B1F - Horde
+Terminus Cave - B2F - Horde
+Y Exclusive",Pupitar @ 30
+#103,Pupitar,"Route 18 - Grass
+Route 18 - Red Flowers
+Terminus Cave - 1F - Grass
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Right - Grass
+Terminus Cave - B1F - Grass
+Terminus Cave - B2F - Grass
+Friend Safari
+Y Exclusive",Tyranitar @ 55
+#104,Tyranitar,"Evolves from Pupitar at 55
+Y Exclusive",
+#105,Heatmor,"Route 18 - Grass
+Route 18 - Horde
+Route 18 - Red Flowers
+Route 18 - Special
+ ",
+#106,Durant,"Route 18 - Grass
+Route 18 - Horde
+Route 18 - Red Flowers
+Route 18 - Special
+Terminus Cave - 1F - Grass
+Terminus Cave - 1F - Horde
+Terminus Cave - 2F Left - Grass
+Terminus Cave - 2F Left - Horde
+Terminus Cave - 2F Right - Grass
+Terminus Cave - 2F Right - Horde
+Terminus Cave - B1F - Grass
+Terminus Cave - B1F - Horde
+Terminus Cave - B2F - Grass
+Terminus Cave - B2F - Horde
+ ",
+#107,Spinarak,Breed from Ariados,Ariados @ 22
+#108,Ariados,"Terminus Cave - 1F - Special
+Terminus Cave - B1F - Special
+Terminus Cave - B2F - Special
+Terminus Cave - B3F - Special
+Terminus Cave - 2F Left - Special
+Terminus Cave - 2F Right - Special
+Victory Road - Room 3 - Special
+Friend Safari ",
+#109,Spearow,"Frost Cavern - Outside - Speecial
+Friend Safari ",Fearow @ 20
+#110,Fearow,"Victory Road - Outside East - Special
+Victory Road - Outside West - Special
+Victory Road - Outside Far East - Special
+ ",
+#111,Cryogonal,"Frost Cavern - 2F - Grass
+Frost Cavern - 1F - Grass
+Frost Cavern - 3F - Grass
+ ",
+#112,Skarmory,"Victory Road - Outside East - Special
+Victory Road - Outside West - Special
+Victory Road - Outside Far East - Special
+Friend Safari ",
+#113,Noibat,"Terminus Cave - 1F - Special
+Terminus Cave - B1F - Special
+Terminus Cave - B2F - Special
+Terminus Cave - B3F - Special
+Terminus Cave - 2F Left - Special
+Terminus Cave - 2F Right - Special
+Friend Safari ",Noivern @ 48
+#114,Noivern,Evolves from Noibat at 48,
+#115,Gligar,"Route 19 - Horde
+ ",Gliscor when leveled up holding Razor Fang during night
+#116,Gliscor,"Evolves from Gilgar when leveled at night while holding Razor Fang.
+Found at Battle Maison",Battle Fang
+#117,Hoothoot,Breed from Noctowl,Noctowl @ 20
+#118,Noctowl,"Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Horde
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+ ",
+#119,Igglybuff,Breed from Jigglypuff otr Wigglytuff,Jigglypuff with high friendship
+#120,Jigglypuff,"Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+Friend Safari ",Wigglytuff with Moon Stone
+#121,Wigglytuff, Evolves from Jigglypuff when expoosed to Moon Stone,Moon Stone
+#122,Shuppet,Breed Banette,Banette @ 37
+#123,Banette,"Pokemon Village - Special
+ ",
+#124,Zorua,Breed Zoroark,Zoroark @ 30
+#125,Zoroark,"Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+ ",
+#126,Gothita,Breed Gothorita or Gothitelle,Gothorita @ 32
+#127,Gothorita,"Route 20 - Grass
+Route 20 - Red Flowers
+Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+Friend Safari ",Gothitelle @ 41
+#128,Gothitelle,Evolves from Gothorita at 41,
+#129,Bonsly,Breed Sudowoodo while holding Rock Incense,Sudowoodo when leveled knowing Mimic
+#130,Sudowoodo,"Route 20 - Horde
+ ",
+#131,Spinda,"Route 21 - Horde
+Route 21 - Purple Flowers
+Route 21 - Red Flowers
+Friend Safari ",
+#132,Teddiursa,Breed from Usaring,Usaring @ 30
+#133,Ursaring,"Route 21 - Purple Flowers
+Route 21 - Red Flowers
+ ",
+#134,Lickitung,"Victory Road - Room 1 - Grass
+Victory Road - Room 1 - Horde
+Victory Road - Room 2 - Grass
+Victory Road - Room 2 - Horde
+Victory Road - Room 3 - Grass
+Victory Road - Room 3 - Horde
+Victory Road - Room 4 - Grass
+Victory Road - Room 4 - Horde
+ ",Lickilicky when leveled up knowing Rollout
+#135,Lickilicky,Evolves from Lickitung while knowing Rollout (Learned at 33),
+#136,Scyther,"Route 21 - Horde
+Route 21 - Purple Flowers
+Route 21 - Red Flowers
+ ",Scizor when traded holding Metal Coat
+#137,Scizor,"Evolves from Scyther when traded while holding Metal Coat.
+Coat fount in Pokeball Factory",Metal Coat
+#138,Ditto,"Pokemon Village - Purple Flowers
+Pokemon Village - Yellow Flowers
+Friend Safari ",
+#139,Swablu,"Route 21 - Horde
+ ",Altaria @ 35
+#140,Altaria,"Route 21 - Purple Flowers
+Route 21 - Red Flowers
+ ",
+#141,Druddigon,"Victory Road - Room 1 - Grass
+Victory Road - Room 2 - Grass
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+Friend Safari ",
+#142,Deino,Breed Zweilous or Hydreigon,Zweilous @ 50
+#143,Zweilous,"Victory Road - Room 1 - Grass
+Victory Road - Room 2 - Grass
+Victory Road - Room 3 - Grass
+Victory Road - Room 4 - Grass
+ ",Hydreigon @ 64
+#144,Hydreigon,"Victory Road - Outside Far East - Special
+Victory Road - Outside East - Special
+Victory Road - Outside West - Special
+ ",
+#145,Dratini,"Route 21 - Good Rod
+ ",Dragonair @ 30
+#146,Dragonair,"Route 21 - Super Rod
+Friend Safari ",Dragonite @ 55
+#147,Dragonite,Evolves from Dragonair at 55,
+#148,Xerneas,"Team Flare Secret HQ - Basement - Interact
+X Exclusive
+ ",
+#149,Yveltal,"Team Flare Secret HQ - Basement - Interact
+Y Exclusive",
+#150,Zygarde,"Terminus Cave - B3F - Interact
+ ",
+#151,Mewtwo,"Pokemon Village - Unknown Dungeon - Interact
+ ",
