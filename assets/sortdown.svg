@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="140"
+   height="140"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="sortdown.svg"
+   inkscape:export-filename="J:\Workspaces\anemortalkid.github.io\assets\images\sortdown-small.png"
+   inkscape:export-xdpi="6.2791123"
+   inkscape:export-ydpi="6.2791123">
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview9"
+     showgrid="true"
+     inkscape:zoom="2.38396"
+     inkscape:cx="-128.02548"
+     inkscape:cy="98.666999"
+     inkscape:window-x="1592"
+     inkscape:window-y="112"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4142" />
+  </sodipodi:namedview>
+  <path
+     style="fill:#007fff;fill-rule:evenodd;stroke:#010101;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4"
+     inkscape:connector-curvature="0"
+     d="M 70,136 30,81 110,81 Z"
+     id="path3409"
+     stroke-miterlimit="4"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-filename="J:\Workspaces\anemortalkid.github.io\assets\images\sortdown-small.png"
+     inkscape:export-xdpi="13.278734"
+     inkscape:export-ydpi="13.278734" />
+</svg>

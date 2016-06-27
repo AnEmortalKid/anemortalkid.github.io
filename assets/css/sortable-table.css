@@ -1,0 +1,17 @@
+table th.tablesorter-headerUnSorted {
+    background-image: url("../images/sortneutro-small.png");
+    background-repeat: no-repeat; 
+    background-position: center left; 
+}
+
+table th.tablesorter-headerAsc {
+    background-image: url("../images/sortup-small.png"); 
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+
+table th.tablesorter-headerDesc {
+    background-image: url("../images/sortdown-small.png"); 
+    background-repeat: no-repeat;
+    background-position: center left;
+}
