@@ -1,11 +1,15 @@
 <html>
 <head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.4/js/jquery.tablesorter.js"></script>
+
 <meta name=viewport content="width=device-width, initial-scale=1">
 <title>10K Villains</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet">
+
 </head>
-<body>
+<body onload="setSorter()">
 <div class="container">
 <br/>
 <br/>
@@ -16,24 +20,27 @@
 </div><!-- ./col-md-4 -->
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Villains</h1>
-<p>This page is a compilation of the villains from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4hn60f/10k_villains_demons_and_devils/">/rDnDBehindTheScreen's 10K Villains thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 162/10000</h2><h3>Last updated: Sun Jun 05 19:51:44 CDT 2016</h3>
+<p>This page is a compilation of the villains from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4knuyj/10k_villains_monstrosities/">/rDnDBehindTheScreen's 10K Villains thread</a>. Be sure to visit and contribute!</p>
+<h2>Currently at 205/10000</h2><h3>Last updated: Sun Jun 26 19:28:05 CDT 2016</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
 <input type="text" id="search" placeholder="Type to search" />
 <label><input type="checkbox" id="casesensitive" onClick="checkFilter()" checked>Case Sensitive Search</label>
 <button type="button" onClick="randomRow()">Random Villain</button>
+<button type="button" onClick="resetTable()">Reset</button>
 <div class="row">
 <div class="progress">
-<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="162" aria-valuemin="0" aria-valuemax="10000" style="width: 1.62%">
-<span class="sr-only">1.62% Complete</span>
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="205" aria-valuemin="0" aria-valuemax="10000" style="width: 2.05%">
+<span class="sr-only">2.05% Complete</span>
 </div>
 </div>
 <div class="row">
 <div id="randomTable"></div>
-<table class="table table-striped" id="table">
+<table class="table table-striped tablesorter" id="table">
+<thead>
 <tr><th align="center">Villain Name</th><th align="center">Description</th></tr>
-<tr>
+</thead>
+<tbody><tr>
 <td>Euryndas</td>
 <td> This guy is one of the sneakiest pieces of scum to ever hit the streets. But, the thing is, the guy didn't just win the streets, he's the puppet master that controls the king too. With a hand in the empire, he makes sure that his little gang can do whatever they want making him the wealthiest person in the city.</td>
 </tr><tr>
@@ -519,14 +526,141 @@
 </tr><tr>
 <td>Tenebakalo</td>
 <td> Possessing a weak deep gnome, the powerful shadow demon feigns sympathy with his cause to use him as a conduit for his powers, and allowing him to take reign of those on the surface. His ambitions will be his undoing.</td>
-</tr>
+</tr><tr>
+<td>The Monster of Salt Rock</td>
+<td> Beneath the dungeons of the seaside castle of Salt Rock, a beast of many tentacles and malevolent thought sleeps in a frigid, briny lagoon of a large cavern. The monster wakes every dozen years or so and chooses one of the castle's gaolers as a messenger. Sending the poor man to whisper to the lord of the castle, reminding him of an old promise. A bargain struck in time of need by one of the lord's forebears, "Keep me well-fed, and your kin shall e'er rule these seas. Deny me, and I shall devour all over your line. Where'er they may be, I shall find them and call them to the sea."</td>
+</tr><tr>
+<td>Old Horace</td>
+<td> The man who is called Old Horace (best just call him "Horace" in his presence) is unusual to say the least. He haunts the Docks and the alleyways of the Thieves' Quarter hobbling along, sniffing. Bent-backed and with a necrotizing wound where one eye should be, he slinks about the city nibbling on dead rats, raw fish, and recently deceased humans when he can get his bony hands on them. Horace knows a great many things about a great many people in high and low places. How he knows these things is a mystery, but he's happy to talk to anyone who can stand his foul smell and who offers him some sort of human meat on which to gnaw. But once the meat runs out, he's likely to try to take a finger or a toe to feed his constant hunger.</td>
+</tr><tr>
+<td>Gladda Grippyweed</td>
+<td> Gladda is an old night hag who delights in hunting the great white swans that nest among the lakes and ponds of the Whistlewood. She never eats the meat, preferring roots and the flesh of humans and halflings to poultry and gamebirds, but she has uses for fresh swan's blood in her spells and she delights in destroying beautiful things, especially with her long fingernails and teeth, each filed to a sharp point. There are herbs that can grow in fetid bogs that are of great use for Gladda's dreamwalking spells in which she catches glimpses of the future. The forest makes a home for creatures that eat these rare wild herbs before they can flower. Gladda aspires to burn the entire Whistlewood to cinders and then flood the region to create a vast, poisonous bog. Thus far, she's only managed that feat for a few hundred yards around the pond on which her hut leans against a dead oak.</td>
+</tr><tr>
+<td>Yonal Yoglas</td>
+<td> A towering frost giant with rotten teeth and a short temper, Yonal Yoglas gathers allies and waits. The men of the North drove his people into the high passes of the Hoary Range two centuries ago, and rather than perish, he chose to wait. The cold, grassy meadows below mountains had been the winter home of the great elk herds and the wolves that followed them that once wandered the North. After the men slaughtered the herds, the giants took to eating the men's sheep and cattle when meat north of the Hoaries became scarce in the winter months. Yonal Yoglas decided long ago that to save the giants, they would have to face near starvation for decades as they gathered their strength from the scattered caves in the high passes. Now, he has over 150 giants, trolls, and other cast-offs of the Old North poised to launch a terrific campaign to drive the men back into the sea and reclaim the lands for the giants.</td>
+</tr><tr>
+<td>Doom's Servant</td>
+<td> This agent of the Dead God often takes the form of a tall, roughly-humanoid figure cloaked in black with a hood drawn down over its face. Many sources claim the Servant favors killing by way of a huge scythe, some suggest a headsman's axe, still others by way of a poisoned dagger. Death is a mercy for all mortals who must suffer the uncomfortable pangs of life in this world. The Servant works tirelessly, wandering the lands, leaving plague, famine, and wars in its wake, striving to bring death swiftly to all so that they may find peace beyond the veil. One written account by a half-mad priest describes the visage of the Servant beneath the hood; the priest died three nights after putting the words to parchment.</td>
+</tr><tr>
+<td>Alitheal, the Gentle Light</td>
+<td> At the dawn of the current age, the God of Justice weighed the hearts of men in the world and declared them unfit to continue. He sent his angel Alitheal to walk the world, bringing sweet and gentle death to the good souls, so they may be spared suffering this existence among such wickedness. Alitheal slips into bedchambers in the pre-dawn light to gently kiss the life from innocents. Whole villages have lost most of the infants and children in a single morning at the hands of this angel of mercy. In most cases, Alitheal has moved on to deliver souls in another place at the next dawn before any can comprehend what has happened. A few dreamseers have received visions of Alitheal's work, and their nightmares have fed a growing fear and panic that has called on the bravest hunters to slay the Gentle Light.</td>
+</tr><tr>
+<td>The Archaeomagrix</td>
+<td> Prior to becoming the refuse dump for a succession of towns, cities and civilizations, the Glidden Lawns were home to one of the most prestigious universities of its time. The ruins are there still, buried under tons of offal and waste, and can be accessed via a lone smokestack that still (barely) pokes above the mounded garbage. Those who've visited - and have had the pleasure of returning - speak breathlessly of bundles of wires as thick as your thumb, spun from gold, and studded with sapphires that seem to pulse with hidden light. They describe deep, thrumming engines and incredible heat; vast machines softly whirring in the dark. In hushed whispers, they tell of distant voices that seem to crawl around in the back of your skull, and an itching desire to go far, far away and never return.</td>
+</tr><tr>
+<td>Sister Lunette</td>
+<td> The closing of the orphanage was considered by many a merciful thing. Already cool relations between the 'noble' races and their Orcish cousins had been exacerbated by the outbreak of the Patron Wars, and overnight, donating to the 'Half-Orc Orphan's Fund' went from high-profile charity to social suicide. As money ran low and the front moved closer, the working clergy found themselves in an impossible situation. Many fled from (or in some cases, to) the fighting, leaving only a handful of nuns to care for, protect and feed nearly two hundred children. With tensions fraying and food running low, Sister Lunette made the 'hard decision'; in the early morning, just after prayers, she methodically slaughtered almost sixty half-orc children with a pair of pruning shears. The other nuns, hesitant to turn their friend over to the authorities, restrained her with yards of knotted bed linens, and locked poor Lunette in the farthest corner of the cellar. A fictional Orc barbarian was named as the perpetrator of the heinous (if understandable) crime, and soon after the remaining orphans were dispersed and the orphanage shuttered. In one last, merciful act, the departing nuns unlocked the cellar, leaving Sister Lunette to the mercy of their God.</td>
+</tr><tr>
+<td>Haverplam, Chitterdale and Jormungroth, Attorneys at Law</td>
+<td> The facade is stately, the furnishings in impeccable taste. Most visitors never make it past the anteroom, where a fetchingly (if professionally) dressed succubus holds court in airy resplendence. She wields her power delicately, casting a judgemental eye on all those approach the massive double doors that lead deeper into the office, bidding them speak on what foul treachery led them there. Few can bear her scrutiny for long, and those who recant, or gibber, or collapse are led through a side door to be put out into a side alley, where they can slink away in shame. But the ones who weather her scrutiny - her litany of incisive questions and scathing analysis - are bid welcome to pass through the threshold, where an impish paralegal waits to lead them down an impossibly long, impressively ornate hallway. At the end, in a font hewn from ebony, under a fountain of putrid blood, awaits the trimulative. With a single bloated body between them, each head lolls sickly from its own withered neck, speaking in turn in singsong madness. A single voice speaks from somewhere behind them, 'We'd be delighted to take your case! Now, if you'll join us in the pool, we'll discuss our nominal fee...'</td>
+</tr><tr>
+<td>Gert, the Click-Clack Girl</td>
+<td> She taps her stick as she wanders, humming tunelessly with the beat. Where she goes, the world gives way - crowds part, alleys widen, puddles dry. Cobbles straighten as she treads on them; doors open as she raps on them; dogs lie down and die as she peers at them with her pearly, unseeing eyes. She's just a girl, they say, begging alms on the cruel streets... and yet, still. Still. You don't cross Gert. You give her your silvers as she passes (click-clack, click-clack), then move on with your life. Nevermind that in some light, you can see the cruel-looking things that gather and gambol in her wake, like snub-nosed lemurs with eyes full of glittering hate, but not at all like that also. Like sharpened shadows, perhaps. No? Like wheels, turning and turning with increasing speed? You don't think about those. You don't look backwards, and you don't think too hard about the ale your silvers would have bought you, 'cause they weren't really yours, anyhow. They were Gert's, and you were keeping them safe for her, that's right. Poor girl. Poor, sweet, precious (click-clack oh gods oh fuck oh gods click-clack), precious, lovely, sweet, wonderf...GRKKKKKKKKkkkkkkkkkkkk</td>
+</tr><tr>
+<td>Kral</td>
+<td> Kral is a kindly appearing older man, who runs an orphanage to care for the city's many poor orphans. But, in truth he's a nasty, vicious Goblin sorceror who alters his image to appear kindly and older so the cityfolk don't question his care of the children. Because the care he provides the orphans is to have them kneel and pray to their god while he puts a barrage of magic missles into the back of their heads. Then he teleports himself and the corpse to a butcher shop in a goblin town, where the butcher pays him quite handsomely for each child produced, as the meat is quite popular with the town's residents. Kral himself looks upon it as doing both places a favor. As the city doesn't care about the children, as rarely does anyone follow up to find out what happened to a child they drop off. When they do, he tells them that the child was adopted by a wandering family of caravaneers and could be anywhere by now.</td>
+</tr><tr>
+<td>Bastion the Last</td>
+<td> Having seen his entire production batch smashed to bits in whatever war they were built for, the Warforged known as Bastion decided he would not suffer the same fate. Half-mad with terror and obsessed with his quest for indestructibility, he now attacks outlying towns to abduct their blacksmiths and wizards. This serves the dual purpose of finding new craftsman who can add on to his ever-growing defenses, and putting said defenses to the test; although he is motivated by fear, Bastion constantly seeks to ascertain his invulnerability in battle. His many layers of armor and magical enhancements weigh him down so much that he prefers to go about on all fours, and Bastion's original shape is almost entirely obscured by his new, hulking form.</td>
+</tr><tr>
+<td>The Lord of Salt</td>
+<td> Not undead in the traditional sense, the dessicated body of Malchaster the Transmuter is conserved by the elemental spirit of salt he bound to himself. The century-long struggle between wizard and barely controlled spirit has driven both of them quite insane, and while nobody knows exactly what the Lord of Salt wants, sea-captains agree that the sight of his driftwood castle floating on the horizon is a bad news.</td>
+</tr><tr>
+<td>The Croaking Man</td>
+<td> Appears as a disgustingly frail old man, constantly hunched over. It wears little to no clothing, and is covered with sores and pimples. Instead of a neck, it has a large flabby sack (like a frog's) that droops all the way down to its feet. It dwells in the deepest, most abandoned forests where civilization is far away. Its origins and motivations are unknown, but it dwells on one thing: to cause terror. The large sack on its neck houses a lung of poison that it secretes into the nearby atmosphere. One whiff of the gas, and the inhaler starts hallucinating: gigantic monsters chase them, they fall down a hole to hell, or their friends betray them. The hallucinations seem longer than they actually are. No harm is done to the person during the hallucinations, but almost all victims commit suicide or go insane due to terror. In their brief moments of lucidity, when their minds resist the poison, victims report a horrific croaking, and see a frail man perched on a tree fanning a large sack before they fall into another living nightmare.</td>
+</tr><tr>
+<td>The Spindle</td>
+<td> A skeletal figure with incredibly long limbs, covered by a loose skin blotted with gasping mouths. The Spindle moves like a spider above the treeline of ancient forests, moving only at night as to not be spotted. When it finds prey (always someone camping or sleeping for the night), it perches itself at the top of the treeline and droops down its incredibly long arms above the entrance to the victims tent. From a distance, the creature blends in with the branches of the tree. Then, while the victim is inside, its many mouths begin to simulate sounds of a far away celebration or party. Once the victim moves out to investigate, the Spindle stabs the creature and absorbs its skin into its skeletal frame, adding another mouth to its collection, and another voice to tempt travelers with.</td>
+</tr><tr>
+<td>The Dredge</td>
+<td> After a powerful storm at sea, debris from the bottom of the ocean often float to the surface for sailors to claim or avoid. Most sailors can recognize a normal salvage: seaweed, wood scraps, maybe a fragment from an old ship. However, the most seasoned sailors will tell the deckhands to never claim anything from the waves in fear of the Dredge. if you ever see a locked chest, a woman screaming for help, or something that seems too good to be true, it's often the Dredge's tendrils tempting a young sailor to his death. Appearing after storms, the mess of tentacles and tendrils called the Dredge displays a tempting display of salvage that it collects: the items often are exactly what sailors want, sometimes even personal items. It's unknown where the creature gets these items, but as soon as anyone attempts to grab one, even if they use a hook or net, the tendril reels them into the deep with amazing force. None of them ever return.</td>
+</tr><tr>
+<td>The Blood Merchant</td>
+<td> Most cannot stomach the varied sacs and chambers that comprise the back of this creature, filled with the lifeblood of countless beings. While most often patronized by vampires and such bloodthirsty ilk, morally bankrupt mages also peruse the beast's services. It barters in some of its gains with those that would provide it benefit, but saves the choice liquids for itself. Its multiple needle-like proboscides twitch in anticipation of it's next meal.</td>
+</tr><tr>
+<td>The Flying Madness</td>
+<td> The Mind Flayers desire to consume the minds of the living, but there are minds so powerful even the Illithids are mad to attempt them. Whether it was a single Flayer or a group, it will never be known, but they attempted to eat the mind of an ancient Gold Dragon. The might of dragons is not that of mortals, especially those old enough to remember the making of the world. But the Illithids are in their own way beyond the world, and instead of consuming the dragon's mind or being consumed in turn, a horrid fusion resulted. The Dragon, its original name now forgotten, has misshapen tentacles sprouting from where its face once was, like fungal bodies. Where its eyes should be are suppurating pits, forever dripping corrupting slime. Its once lustrous hide is now pocked and rotted. It flies randomly across the land, shrieking a terrible silent scream that is heard in the minds of people miles away. Anyone who falls under the shadow of its wings is driven irrevocably mad.</td>
+</tr><tr>
+<td>The Cogs</td>
+<td> Long ago, a Dwarven king called for the creation of a Wonder, a mighty walking fortress that could bring war to the most distant enemy. The mightiest and most skilled artisans worked for ten generations, until the castle was complete. Taking the form of an enormous Dwarf, it could stride across rivers and smash through castle walls with ease. However, they made it too well. The complex mechanisms inside it, designed to allow it to repair itself, began to leech minerals from the rocks themselves, and eventually subsumed the Dwarves who dwelt inside it to become part of its mechanism. It is named after the tiny automata it creates, that form the first sign of its coming. Tiny things made of cogs swarm ahead of it, scouring the land of everything - animal, vegetable, or mineral. Everything is ripped apart into its component parts and conveyed back to the main fortress, now a bloated monstrosity of metal and stone. Inside, organic matter entwines around cog and wheel, forming a hideous fusion of meat and metal. Left to itself, it will scour the world clean of everything until it sits alone on the earth.</td>
+</tr><tr>
+<td>The Eating Slick</td>
+<td> Summer is often a time of relaxation and ease, at least for those few that can afford it. One of the greatest pastimes of summer, then, is swimming, often in a lake, reservoir, or similar water source. In one such lake, secluded and idyllic, lives the Eating Slick. It is difficult to see, even under the best conditions; it manifests as a silent black circle that forms seamlessly to the water of its lake, not unlike an oil slick. Appearance is where the similarities end. The Eating Slick moves under its own power, and is utterly predatorial. It allows unsuspecting swimmers to move out into deeper waters, and once there, it consumes them. Whole. Its surface is like that of an Ooze, dissolving and searing flesh on contact, and with each eaten victim it grows. We are lucky that it lives in a lake; should it ever reach the ocean, there's no telling what horrors could result.</td>
+</tr><tr>
+<td>The Unhappy Blob</td>
+<td> It was caught in the dark recesses of a cave and transported to the fortress where it was put into a deep pit. It wasn't happy about that, but then these strange creatures that caught it started throwing other such creatures down into the pit for it to eat, and that made the blob happy. It was quite happy for quite sometime, as the creatures would gather on the edge of the pit, make strange noises and then throw a usually still struggling creature much like themselves down into the pit for the blob to happily spend time digesting. But, then one day the Blob noticed that the creatures had stopped coming, and had stopped throwing him food. This made the Blob unhappy, and so the Blob decided to ooze his way up the sides of his pit and go in search of food. Which is really too bad for that nearby town.</td>
+</tr><tr>
+<td>The Lady of Justice</td>
+<td> In a small mountain town there is a bronze statue of a woman holding an olive branch in one hand and a sword in the other. Before this woman is a bronze scale. Sitting in the basin opposite this woman are four small bronze men, sitting in the basin before this woman is empty space. Whenever a man or woman commits a crime, they are brought before the Lady of Justice, and put their head on the scales to be judged. Through strange mechanisms their sins are weighed. If they are innocent, the men will fall and the Lady offers them an olive branch. If they are guilty, the Lady swings her mighty blade and slays them. The angrier the townsfolk, the more vigorous the Lady strikes. A bloodthirsty mob throws a fugitive at her feet, willing the scales to tip. The criminal's head meets the scales and the men raise in judgement. The Lady tears away her face to deliver the kind justice the people truly crave.</td>
+</tr><tr>
+<td>The Ashen Legion</td>
+<td> The Ashen Legion is a force of conquest in it's purest form. It has no king and no nation. The grey forms of men in armor from a time long since passed leave a thick cloud of choking ash wherever they march. People in their path of all races and creeds are cut-down without thought. Their mute commanders mull over the tactics to take whatever happens to be in their path, issuing commands only the grey soldiers seem to hear. They ignore any other attempts at communication, dumb to reason and curses alike. The Ashen Legion burns cities to the ground, the only resource they value the ash of things that men have built. Felled soldiers return to the cloud, where they accumulate into new recruits, just as strong as the last generation. They hold territory simply for the sake of holding it, and they expand their borders with little rhyme or reason. Cities are razed, resources are ignored. Even though they march without purpose, their commanders are wily, and will win battles without pressing the Legion's immortality. Kingdoms are eradicated, ways of life are destroyed, women and children slain without thought as the Legion marches forward. And at the heart of their holdings an angry god lays slain, bleeding a pool tepid, grey War.</td>
+</tr><tr>
+<td>Resnin the Seer</td>
+<td> Best not to make deals with the devil, of course, you don't always know it's the devil you're dealing with. Resnin the Seer is not what you'd call monstrous by first glance but if you ever see behind the veil, your mind just might come loose. He resides in the lesser part of town, living above his small shop where he grants healing, potions, and untoward favors in return for a small favor from you. Somehow the things he gives you always leaves you coming back for more and the favors he asks grow darker. Your soul is going to be his eventually, just give him time. Then you can join the others that are trapped, pushing forward beneath his gnarled olive green skin, unable to escape this horrid fate.</td>
+</tr><tr>
+<td>Ol' Clayven</td>
+<td> Clayven was once an ordinary elf like you and I, or so the stories say. But Clayven, unlike most elves, was a greedy sort. He gathered everything he could and never let a treasure leave his grasp. As his horde grew, he had to grow bigger and bigger homes to store it all. He also had to create more and more guardians to keep others out, until he was eventually alone with only this constructs. Clayven grew more and more paranoid and mad going so far as to accuse his own constructed guardians of theft, eventually destroying all of them. Left to his own devices, he slowly grew malnourished, afraid to leave his treasures unguarded. With time, his body seemed to wither away and his home did as well. Those who have gotten close to his home, have been chased off by a nearly naked, pale, hunch backed creature with one large eye and long claws on each hand. As they ran, they swore they heard it scream, "Mine!"</td>
+</tr><tr>
+<td>The Tortured Man</td>
+<td> Certainly the tales invented by mothers to keep their children inside at night, the tale of the Tortured Man is told at bedtime when the lights are low. It is said that a man, down on his luck and hungry, entered illegally, the estate of a mad wizard to steal some food. Unfortunately the man was caught and drug down into the basement laboratory. Not seen for weeks on in, the man was presumed dead and lost. Now, each night, a horrific creature roams within the walls of the mad wizard's home. Its eyes gouged out and its mouth sewn shut. Where it had hands now only two metal claws and its legs removed below the knee. Outside the wall you can hear the clank, shuffle, and scraping as it patrols.</td>
+</tr><tr>
+<td>leg</td>
+<td> but if you ever see behind the vale vale Those two aside, I loved Resnin the Seer and the Tortured Man.</td>
+</tr><tr>
+<td>The Green Caves</td>
+<td> Within the foothills of Mount Glamoral lies a cave entrance mostly obscured by shrubbery. From the entrance a sickly green light can be seen welling up from further inside. If someone goes deeper into the cave, as the tunnels bury deeper into the earth, past a glowing green barrier of sigils lies a race of misshapen abominations. The spawn of a pit fiend and whatever wildlife once lived here, and it is said that at the deepest depths lies their ruler, that same fiend, who nurses a bitter hatred for the light above and those born in it.</td>
+</tr><tr>
+<td>The Breegard Gamekeeper</td>
+<td> Hunters and poachers know to stay out of the forest between Breegard and the mountain, but careless travellers are not so lucky. Those who make it into town will be told the story of the Gamekeeper. He was once employed by the local Lord to ensure a good stock of animals were available for the hunt and did his job so diligently that a deity recognised his labours and granted him an unnaturally long life. That was centuries ago, but far from feeling blessed the Gatekeeper is now insane, wretched and wracked by the years. He defends the forest from all intruders and has spent the centuries breeding his hounds into monstrous beasts which now only passingly resemble dogs. Now he seeks to extend his dominion to all the forests of the world, capturing and twisting any travelers he can find to serve his aims.</td>
+</tr><tr>
+<td>Alumar</td>
+<td> Alumar, the beast of poisoned light, was an elemental who once shone with the gentleness of sunshine. But in seeking to enhance her powers, she became a monster of sickness and death. Her light burns living creatures, and even fleeting exposure leads to fatal illnesses. Folk who encounter her lose hair and teeth and their skin erupts with blisters. Alumar believes that she can leach away her powers by inflicting them on any creatures she encounters, and hopes that if she spreads her light among enough creatures, she can one day return to the creature of mild light she once was.</td>
+</tr><tr>
+<td>Kain</td>
+<td> Kain is as old as mankind itself, created by a handful of Gods as their would-be Assassin. Forged as a Demi God, the soul of a Dragon, and the body of a Devil. Kain is a Godslayer, accomplishing this by seeking out worshipers of his target God and slaying them in masses to weaken the God's power as Faith is the resource for a God's strength and sets their hierarchy within the heavens. Kain is genderless and uncaring for mortal wants and needs and seeks only to rid the heavens of his former masters. Kain wields a colossal Scythe that opens portals to other planes/dimensions and makes wounds near impossible to heal from. There's a laundry list of powers, abilities, and feats Kain has, but if you want to use this character you're free to do what you want (but you may PM to ask as well). With picture! http://orig12.deviantart.net/be32/f/2010/350/1/7/174a0e5e16c2f90f441ad9c0761faae6-d350x51.jpg The picture is mine, I commissioned it and it's copyrighted. Fair use applies still anyway. Have fun with it, just don't sell it. (My personal version the left has all red skin as it's supposed to)</td>
+</tr><tr>
+<td>Mercer Leon, CEO Leon Trading</td>
+<td> The brand of Leon Trading is known to most adventurers as one of just enough quality to get by. Its rise to fortune and the mainstream was extremely fast, and somewhat suspicious. It is a common joke amongst the denizens of the Capital that Leon has some sort of oracular foreknowledge that prevents him from making a bad trade. They were more right than they would ever know.</td>
+</tr><tr>
+<td>Kathera the Vengeful</td>
+<td> Once upon a time, there were two lovers, joined in heaven and earth. A star spirit and a moonfolk, their commitment to each other was known throughout the plane. Kathera knew of her imminent mortality, but wished to stay by Aquila's side for eternity. Using ancient magic, she sealed her soul into her masterwork, a silver sword of finest craft. They were together, but the star spirit found his feelings did not possess the longevity that Kathera's did, and he cast the sword aside. The spirit of the moonfolk overpowers those who wield her blade, forcing them to seek out and destroy her traitorous lover.</td>
+</tr><tr>
+<td>Malandrach of Many Devices</td>
+<td> A dark elf who's quest to shift the world's political landscape from theocracy towards democracy forced him to take drastic measures, Malandrach achieved lichdom hundreds of years ago and has been gathering power ever since. Each attempt to realize his goal has failed, simply requiring more power. His research team, headed by the ingenious Doctor Cyrilla, develops creative new uses of the world's available technology, a notable one being a revolving barrel that allows quick access to different wands. Though his actions have in the past been towards the evil end of the spectrum, he is not evil for its own sake, instead hoping that this phase is a means to an end.</td>
+</tr><tr>
+<td>Archangel Avalon</td>
+<td> The Forces (capital F) are not really gods in the same way that mayonnaise isn't an instrument. They are divine in a completely different direction than the world's pantheon, almost quantifying their strength with imaginary numbers. Most of them do not interact with the material plane, and to fight one is as much a folly as to declare war on a forest, or the sky. Avalon, one of the weakest of their number, is the only one that will even reveal itself. Its body isn't entirely contained within the three dimensions we are used to, resembling the biblical descriptions of angels. It appears to those who cross heaven and earth seeking to challenge it, almost like an immature child wanted to demonstrate its power.</td>
+</tr><tr>
+<td>The Black Helm of Sunbury Vale</td>
+<td> Usually, things such as the Black Helm take shape in a wizard's laboratory on a dark and stormy night. The Black Helm, however, was created by an unremarkable blacksmith in the small hamlet of Sunbury Vale. The blacksmith had crafted a fine suit of armour for a noble to wear in an upcoming tournament, and an apprentice of the local arm of the Mage's College had been tasked with enchanting it. Unfortunately for all involved, his spell went awry - the armour, instead of receiving a defensive charm, received a life of its own. The now-animated plate mail attacked the blacksmith for berating the apprentice mage, and killed him. The mage was put to death by the inhabitants of the village - this enraged the armour [a Helmed Horror], causing it to wipe out the village. It's twisted and damaged consciousness began to reflect the fault for the mage's death not only on the villagers, but on all it encountered. The Black Helm now wanders the countryside, gradually roaming farther and farther from Sunbury Vale in order to sate its thirst for vengeance against those who it thinks killed its creator and master.</td>
+</tr><tr>
+<td>The Reacher</td>
+<td> No one really knows what the Reacher is, or where and when it came from. Some say that its kind originate in the interstitial spaces between multiverses. To say that they exist there would be a mistake - no one knows if existence as we perceive it is possible there, even as a concept. What little is known about the Reacher is based on myth, speculation, and anecdote. Physically, it appears as a bright blue skein of energy stretched across a human skeleton - perhaps the Reacher is a parasitic organism still possessing the body of a long-dead host, or perhaps it's merely the Reacher's way of normalising itself to the Material Plane and existence as beings of this particular multiverse perceive it. The most interesting facet of the Reacher's existence is its interactions with matter. It has been hypothesised that the Reacher exists in five dimensions in this universe - the three spatial dimensions we can perceive, the temporal dimensions, and a fourth spatial dimension that is incapable of being interacted with by any being in this universe. This means the Reacher is able to pass through any form of matter directed against it, and even alter time as it pertains to individual objects. Indeed, the Reacher's name comes from a memorable incident in the 893rd year of the 4th Era, when it reached through the walls of a box that had been magically sealed by the six Archmages of the Adamantine Court, and in the process aging it into dust. Should the Reacher ever turn its azure gaze upon you, know that there is no escape - it is everywhere and nowhere, everywhen and never.</td>
+</tr><tr>
+<td>The Lupenwald Fiend</td>
+<td> Deep in the heart of the massive Lupenwald forest, the trees all bend their branches towards a central towering pillar of volcanic glass. With the correct rituals, a little magic and an unwilling sacrifice, ancient oaken branches reach down and embrace the pillar's unfortunate victim. Then the Fiend rises. Eight and a half feet tall, it holds itself upright with four enormous, jointed branches sprouting from its lower back. The victim's body sways in the wind, little more than a warm moist shell for the Fiend. Soon people in nearby villages disappear, only to be found impaled on withered pine trees. The Fiend will not abandon its grim harvest till all the Lupenwald's trees may feed on blood and bone.</td>
+</tr><tr>
+<td>Barg Greenblood AKA Pukefist</td>
+<td> Once the chieftain of several hundred goblins living under Rockbilt Mountain, Barg was content to run his little kingdom and get fat on the offerings of his kin. All that changed on the day a group of adventurers came into his cave, killing most of Barg's family and friends. The "heroes" attacked Barg in cold blood and left him for dead alongside a green ooze that had infiltrated the caves. The lingering magic from the spells unleashed in the cave reacted with Barg's hand and the dead ooze it was resting in. The reaction had a strange effect: When he awoke after the fight, Barg's arm was no longer flesh and bone, but rather had become a limb made of ooze. Fueled by fury and anger, Pukefist (as his legend is known among local goblins), ambushes humans and elves alone on the roads near Rockbilt. He uses his ooze-arm to choke his victims, and in some cases will even use it to melt the skin off their faces. All that was once Barg, happy, content and full of food has disappeared and a thin, angry, mutated mess is all that remains.</td>
+</tr><tr>
+<td>Sek'ril</td>
+<td> War is oftentimes a horrific, monstrous thing, and that's exactly what war creates. The embodiment of death and decay, Sek'ril overtakes the lifeless corpses of war-torn victims. Most often seen in piles of bodies, Sek'ril slowly feeds off of them, growing in strength. He speaks not in words, but with psychic abilities and cares for only himself. Sek'ril desires nothing more than a meal, and if that means controlling weak minded men and women then so be it. At his peak levels of strength, Sek'ril has been know to cobble together animated corpse golems to his bidding, as well imbuing conscious thought into corpses, creating horrendous zombified servants.</td>
+</tr><tr>
+<td>Fargith, The Giver of Dreams</td>
+<td> It is said that there lives a roiling mound of flesh in the sewers beneath the city which possesses a malevolent mind. It kills two kinds of people. The first are blue eyed children. Some people who has seen the monstrosity says that it is incorporating the eyes into its own form. Forming them into a facsimile of a face; multi-faceted blue eyes, blue-eye-teeth, blue-eye-freckles. However, that is not all the eyes. Some are also found hanging on strings at random spots around the sewer. The second kind of people it kills are those that touch those eyes. Those people and their entire family. So, if you see a small, child-sized blue eye, hanging on a string, seeming like it is watching you, don't touch it. Just leave it alone. Said to be perhaps the most lethal assassin in the world. A figure wrapped in a hooded cloak of darkest black, beneath which appears to be only shadow. This is held up by those who proclaim him to have such abilities as being able to pass through barred windows and underneath locked doors. When the Shadow Assassin is hired, his victim is invariably found suffocated to death a few days later. But it is the payment that the Shadow Assassin demands that sets him apart: the person you love the most, passed by your hand to his. Nobody knows what happen to these loved ones when they are whisked away by the assassin. In the middle of the desert of Yum lies the City of Dreams. Some would say that it is ruled by a demon, but the demon himself and the people who seek him would say that it is served by a demon. For those that dwell in the City of Dreams have their every desire fulfilled by the demon. The resurrection of loved ones, a life in opulent luxury, the ability to kill and torture without risk or retribution. Newcomers to the city find it a kaleidoscope of dreams from the noble to the decadent to the horrifying. But all citizen are under the protection of the demon. By the power of the demon no citizen is allowed to experience any want or hurt or discomfort. Once a newcomer has accepted the demons pact and become a citizen, they never leave. Why would they?</td>
+</tr><tr>
+<td>Unodoche</td>
+<td> Cursed by some ancient magic to live in transition between the material and inner elemental planes, Unodoche has no clear form; to see him is to see a distortion. Materially, he is a giant tentacled mass of flesh and muscle with no distinct head, rather various eyes, nostrils and mouths are cut randomly into the rubbery flesh of his body. As he moves he passes between planes so that only cross sections of his corporeal form are visible, and so to any who behold him he appears to flicker in and out of existence like flames do, only where orange and red transparencies would be, solid fragments of muscle and bone and sanguine fluid phase in and out of sight, morphing and deforming, as though being sliced apart and healing over and over again. Tortured by his horrific existence, he has grown hateful and violent. In the vast desert dunes of the Dead Empty where he is known to roam, the native wanderers say to keep your wits about you, for Unodoche is cruel and devours all who meet him.</td>
+</tr><tr>
+<td>The Bilker of the Belt</td>
+<td> Gauul, known to any who pass through the belt of fens south of Fort Gloomheart, is a giant fetid frog with a taste for wealth. His breath is so acerbic that being within 30 feet of one of Gauul's infamously nauseating belches will cause acid blisters and melt away flesh. He has a close-knit gang of troglodyte flunkies who collect for him seekers of highly appraised artifacts claiming to have them for sale. They are then liberated of their gold and fed into Gauul's giant gullet where he consumes them gleefully.</td>
+</tr></tbody>
 </table>
 
 </div>
 </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
 	var $rows = $('#table tr');
 	var $randomRowTable = document.getElementById("randomTable");
@@ -627,6 +761,20 @@ function rollTable(tableId)
  var dataId = tableId + '_data';
  var tableDataElem = document.getElementById(dataId);
  tableDataElem.innerHTML = "<b>" + choice.textContent+"</b>";
+}
+</script>
+<script type="text/javascript">
+function resetTable()
+{
+hideRandomTable()
+document.getElementById('search').value=""
+}
+</script>
+<script type="text/javascript">
+function setSorter() {
+  $(document).ready(function() {
+    $("#table").tablesorter();
+  })
 }
 </script>
 </body>

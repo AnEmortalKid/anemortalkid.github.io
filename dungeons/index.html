@@ -1,11 +1,15 @@
 <html>
 <head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.4/js/jquery.tablesorter.js"></script>
+
 <meta name=viewport content="width=device-width, initial-scale=1">
 <title>10K Dungeons</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet">
+
 </head>
-<body>
+<body onload="setSorter()">
 <div class="container">
 <br/>
 <br/>
@@ -17,23 +21,26 @@
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Dungeons</h1>
 <p>This page is a compilation of the dungeons from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4k9k33/10k_dungeons_fortresses_keeps_and_castles/">/rDnDBehindTheScreen's 10K Dungeons thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 141/10000</h2><h3>Last updated: Sun Jun 05 19:51:40 CDT 2016</h3>
+<h2>Currently at 142/10000</h2><h3>Last updated: Sun Jun 26 19:28:03 CDT 2016</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
 <input type="text" id="search" placeholder="Type to search" />
 <label><input type="checkbox" id="casesensitive" onClick="checkFilter()" checked>Case Sensitive Search</label>
 <button type="button" onClick="randomRow()">Random Dungeon</button>
+<button type="button" onClick="resetTable()">Reset</button>
 <div class="row">
 <div class="progress">
-<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="141" aria-valuemin="0" aria-valuemax="10000" style="width: 1.41%">
-<span class="sr-only">1.41% Complete</span>
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="142" aria-valuemin="0" aria-valuemax="10000" style="width: 1.42%">
+<span class="sr-only">1.42% Complete</span>
 </div>
 </div>
 <div class="row">
 <div id="randomTable"></div>
-<table class="table table-striped" id="table">
+<table class="table table-striped tablesorter" id="table">
+<thead>
 <tr><th align="center">Dungeon Name</th><th>Dungeon Type</th><th align="center">Description</th></tr>
-<tr>
+</thead>
+<tbody><tr>
 <td>Hole in the Hills</td>
 <td>Abandoned mine</td>
 <td> This abandoned copper mine has recently been occupied by a band of displaced and hungry goblins. These goblins have been making raids against the local sheepherders. They carry off sheep because the sheep don't seem to fight back as much as the sheepherders do.</td>
@@ -558,6 +565,10 @@
 <td>Astral Observatory</td>
 <td> Encompassing a perfect alabaster dome topped with a golden capstone stands a great wall, marked off at four corners with tall, elegant spires. There is no gate to the hidden chambers within. Deep inside the dome, it is said that the leaders of a cult gather to read the dreams of the world, ever staring out, never letting others see in. The cult's goals are mysterious, but townsfolk near the citadel sleep poorly, with twisted nightmares. The uninitiated who spend any time within the walls find themselves exhausted and slow, drifting slowly to an uneasy sleep. The dome travels, disappearing with the morning dew after a period of time, spending most of its time absorbing the other planes' dreams in the Astral Plane. In the perspective granted there, it becomes clear that the Dome is really the eye of a long dead deity of dreams and nightmares. Those who know this have tried to wrest the eye's power out of the cult's hands and use it for themselves.</td>
 </tr><tr>
+<td>Lookout Point</td>
+<td>tourist trap</td>
+<td> Lookout Point is a 7 story tower that stands atop a seaside cliff above Quintcyville, a quaint, seaside village. A generation ago, pirates were constantly raiding the up-and-coming trading port of Quintcyville, so the tower was constructed to defend the merchant fleets in the harbor and spot incoming raids on the town. Eventually, the pirates were defeated, but the town was decimated and most trade was routed through a rival port, leaving the local economy locked in recession. A kid named Tor started leading local kids up to tower to play pretend adventures against the long-gone pirates. When Tor was older, he expanded that practice taking wealthy nobles and their spoiled children for a thrilling taste of real adventure. Safe, but appealing to their vanity, they could claim to have done something noteworthy. Soon, the town's entire economy built around Tor's adventures, which was the invention of Torism. The town now features numerous overpriced inns, taverns, shows, and shops. The tower has a few harmless monsters and a few hidden surprises. Three weeks of each month, the Torist industry rakes in a fortune from the vanity of visiting nobles. But the week of the full moon, when the Pirates were most likely to attack, all the tower's magical defenses come alive....</td>
+</tr><tr>
 <td>The Fort of Atlas</td>
 <td>Mobile Fortress</td>
 <td> The Fort of Atlas seems, initially, much like any of the others scattered across the sweeping plains of the Western lowlands. It takes a roughly rectangular shape, with a large multi-towered central superstructure rising from within forbidding, sloped walls. There is very little in the way of internal empty space, merely some relatively narrow walkways between walls and keep. The first inkling of the fortress's unusul nature might come from these; rather than being covered in grass, they are paved in the same wide dark-grey bricks as the rest of the structure. They seem just too wide for a single man to defend effectively, but awkward for two to fight side-by-side. But the men and women who inhabit here have no intention of doing any fighting themselves. Without warning, the structure trembles for a second, and then rises up before you, and begins to move. Now the defenders of this otherwise rather quiet keep become obvious; an army of golems, each half again the size of a man and with ten times the strength. Thus does the fortress appear to 'wander' across the landscape, borne upon the backs of unshakeably loyal servitude. So too do these golems serve as its defence in the castle's time of need - the numerous access points to the understory allow them to appear from any and every direction at once, quickly surprising and surrounding any attacker who thought to simply stroll in to the apparently empty grounds. These golems are also of course the main attractant for (some of the more foolish) invaders - to wrest command of such an army away from its current owners would drastically shift the balance of power, in the cut-throat military game of the lowlands.</td>
@@ -582,10 +593,6 @@
 <td>Mountain Fortification</td>
 <td> For time immemorial the Thanes of the Golden Citadel have stood watch over the northern reaches from their council seats high in the mountains. The fortress is so named for its monumental doors, inlaid with gold and all manner of precious stone, produced by the finest smiths, engineers, and craftsman in the kingdom. The soldiers of this dwarven kingdom keep close eye on the narrow passes to protect the caravans which make the arduous journey northward to pay tribute, homage, and trade in the finest of rarities from across the world. As a result, though treacherous, many villages and towns have thrived in this frozen land. While any dwarven kingdom might be renowned for its might and wealth, the Golden Citadel is rumored to house antiquities and treasure beyond even the mundane. Pilgrims flow through its cavernous halls to pay tribute at the shrine of Moradin as they believe even godly relics lie within…</td>
 </tr><tr>
-<td>Lookout Point</td>
-<td>tourist trap</td>
-<td> Lookout Point is a 7 story tower that stands atop a seaside cliff above Quintcyville, a quaint, seaside village. A generation ago, pirates were constantly raiding the up-and-coming trading port of Quintcyville, so the tower was constructed to defend the merchant fleets in the harbor and spot incoming raids on the town. Eventually, the pirates were defeated, but the town was decimated and most trade was routed through a rival port, leaving the local economy locked in recession. A kid named Tor started leading local kids up to tower to play pretend adventures against the long-gone pirates. When Tor was older, he expanded that practice taking wealthy nobles and their spoiled children for a thrilling taste of real adventure. Safe, but appealing to their vanity, they could claim to have done something noteworthy. Soon, the town's entire economy built around Tor's adventures, which was the invention of Torism. The town now features numerous overpriced inns, taverns, shows, and shops. The tower has a few harmless monsters and a few hidden surprises. Three weeks of each month, the Torist industry rakes in a fortune from the vanity of visiting nobles. But the week of the full moon, when the Pirates were most likely to attack, all the tower's magical defenses come alive....</td>
-</tr><tr>
 <td>Castle Black Rock</td>
 <td>Floating Fortress</td>
 <td> Floating high above the land, Castle Black Rock is a marvel of magical prowess. As if pulled straight from the earth the bore it, Black Rock sits aloft a floating rock of obsidian, giving a magnificent shiny, black appearance. Black Rock was once home to a High Lord who went mad with power. After scrounging magical tomes and scrolls for years, the High Lord finally managed to lift the fortress high into the air - the ultimate defense. Legends say that the High Lord died some decades ago, leaving his untold wealth sealed within the fortress vaults. Castle Black Rock appears to have been made from obsidian, though few have been close enough to determine it's true make. The walls climb up dozens of feet with parapets and guard towers stationed along the perimeter. Were the fortress stationed on the ground, it would be a difficult siege, but floating in the air? None had dared try.</td>
@@ -597,14 +604,16 @@
 <td>The Rainbow City of Tyr</td>
 <td>Magically Reinforced City</td>
 <td> The Rainbow City of Tyr is the Capitol city of an empire, a city completely encircled by fortress walls, with streets and neighborhoods capable of being converted to defensible positions. In the center of the city, the Mage's Spire rises into the sky. At the top of this tower lies a magical crystal, which is rumored to be able to allow an Archmage to power a spell indefinitely. Denizens of the city can always see a rainbow in the sky, and friendly visitors describe the air around the city as shimmering. Enemies of the city are held back by a shield of light. It's said that no one can pass through this prismatic wall.</td>
-</tr>
+</tr><tr>
+<td>Fort Griffstone</td>
+<td>Hobgoblin Stronghold</td>
+<td> This massive slab of crude stone juts out of the vast elven forest of Fellodar, which spreads on for miles around it. Made out of the hobgoblin chief's inborn hate for the elves, this fortress was made as a hideout and base of operations for one of the most influential goblinoid tribes in Findon (World). The walls rise high between 4 square towers and above these walls lies the "keep", or the headquarters where the leaders discuss battle plans. No one has ever attempted to break in and rumors about the ominous place have spread throughout all of lower Findon.</td>
+</tr></tbody>
 </table>
 
 </div>
 </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
 	var $rows = $('#table tr');
 	var $randomRowTable = document.getElementById("randomTable");
@@ -705,6 +714,20 @@ function rollTable(tableId)
  var dataId = tableId + '_data';
  var tableDataElem = document.getElementById(dataId);
  tableDataElem.innerHTML = "<b>" + choice.textContent+"</b>";
+}
+</script>
+<script type="text/javascript">
+function resetTable()
+{
+hideRandomTable()
+document.getElementById('search').value=""
+}
+</script>
+<script type="text/javascript">
+function setSorter() {
+  $(document).ready(function() {
+    $("#table").tablesorter();
+  })
 }
 </script>
 </body>

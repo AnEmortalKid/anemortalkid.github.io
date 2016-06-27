@@ -1,11 +1,15 @@
 <html>
 <head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.4/js/jquery.tablesorter.js"></script>
+
 <meta name=viewport content="width=device-width, initial-scale=1">
 <title>10K Treasures</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet">
+
 </head>
-<body>
+<body onload="setSorter()">
 <div class="container">
 <br/>
 <br/>
@@ -16,24 +20,27 @@
 </div><!-- ./col-md-4 -->
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Treasures</h1>
-<p>This page is a compilation of the treasures from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4hzx3a/10k_treasure_trinkets_talismans_and_prayer_beads/">/rDnDBehindTheScreen's 10K Treasures thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 276/10000</h2><h3>Last updated: Sun Jun 05 19:51:38 CDT 2016</h3>
+<p>This page is a compilation of the treasures from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4paizo/10k_treasures_maritime_plunder/">/rDnDBehindTheScreen's 10K Treasures thread</a>. Be sure to visit and contribute!</p>
+<h2>Currently at 395/10000</h2><h3>Last updated: Sun Jun 26 19:28:01 CDT 2016</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
 <input type="text" id="search" placeholder="Type to search" />
 <label><input type="checkbox" id="casesensitive" onClick="checkFilter()" checked>Case Sensitive Search</label>
 <button type="button" onClick="randomRow()">Random Treasure</button>
+<button type="button" onClick="resetTable()">Reset</button>
 <div class="row">
 <div class="progress">
-<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="276" aria-valuemin="0" aria-valuemax="10000" style="width: 2.76%">
-<span class="sr-only">2.76% Complete</span>
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="395" aria-valuemin="0" aria-valuemax="10000" style="width: 3.95%">
+<span class="sr-only">3.95% Complete</span>
 </div>
 </div>
 <div class="row">
 <div id="randomTable"></div>
-<table class="table table-striped" id="table">
+<table class="table table-striped tablesorter" id="table">
+<thead>
 <tr><th align="center">Treasure Name</th><th align="center">Treasure Type</th><th align="center">Description</th></tr>
-<tr>
+</thead>
+<tbody><tr>
 <td>7 Bolts of gold embroidered fabric</td>
 <td>Trade Goods</td>
 <td> The finest linens from the Far East and fancy royal robes could be made with these.</td>
@@ -852,7 +859,7 @@
 </tr><tr>
 <td>What sorts of goodies do we find?</td>
 <td>After prying the brass ring off his finger, you rifle through the cultist's robes (he sure had a lot of pockets). You find a pocketbook of daily devotions, some prayer beads that look to be carved of teeth, and a few coins of foreign make...</td>
-<td> Between unholy dungeons, demons, devils, resurrections, and chosen ones, I seem to have stumbled into a semi-religious theme. Naturally, that has me thinking about the kind of loot that one might find in a temple or shrine, carried by a cultist, or peddled by a wandering priest or vendor on the steps of the temple. So, let's make some loot! The loot doesn't necessarily have to magical, but it should be interesting enough to appeal to some PCs—anything a PC might want to pick it up carry or purchase as an accessory to their equipment or wardrobe. These should be mostly mechanics I'll post a few examples.</td>
+<td> Between unholy dungeons, demons, devils, resurrections, and chosen ones, I seem to have stumbled into a semi-religious theme. Naturally, that has me thinking about the kind of loot that one might find in a temple or shrine, carried by a cultist, or peddled by a wandering priest or vendor on the steps of the temple. So, let's make some loot! The loot doesn't necessarily have to magical, but it should be interesting enough to appeal to some PCs—anything a PC might want to pick it up carry or purchase as an accessory to their equipment or wardrobe. These should be mostly mechanics free. I'll post a few examples.</td>
 </tr><tr>
 <td>Bracelet of Sleeplessness</td>
 <td>Meditation Beads</td>
@@ -1137,14 +1144,488 @@
 <td>Coin of Privacy</td>
 <td>Magical Coin</td>
 <td> While the coin is facing heads-up upon a surface such as a table, it causes the 'Silent Table' effect as per the spell. It has no effect while not set upon a surface, such as in a pocket, or while the coin is facing tails-up.</td>
-</tr>
+</tr><tr>
+<td>What sorts of reading material do we find?</td>
+<td>The rusty hinges that bind the book creak in protest as you open the cover. The yellowing paper is ancient and frail in your hands. The ink has faded to brown, but the words are still legible...</td>
+<td> I use books and scrolls to give pieces of lore about the world to my players. They are also a great way to throw in a healthy dose of jokes and humor without making cartoonish NPCs. Scrolls don't necessarily have to contain a stored spell, they are just single-page documents (of variable length) written on rolled parchment. So, let's write some books and scrolls! The loot doesn't necessarily have to magical, but it should be interesting enough to appeal to some PCs—anything a PC might want to pick it up carry or purchase to read now or later. These should be mostly mechanics free. If you are experiencing writer's block, roll on these books tables to generate a topic. I'll post a few examples.</td>
+</tr><tr>
+<td>The Argentine Manual Of Arms For Noble Gentlemen</td>
+<td>A Fencing Manual</td>
+<td> A handsome volume, bound in decorated leather, with an inlaid picture of two men in court dress duelling with thin rapiers. The book details a complete fencing style specifically for court duels. It is lavishly decorated with beautiful illustrations of the positions and techniques of the Argentine style. It is not particularly suited to warfare or dungeon delving, but will allow you to avenge insults to a lady's honour while retaining your courtly poise.</td>
+</tr><tr>
+<td>The God Text</td>
+<td>their</td>
+<td> On the side of a mountain is a large sheer flat section, atop a treacherous scree slope. Whether the side of the mountain fell long ago and was carved later or, as legends suggest, the rock fell revealing the already existing words underneath, is unknown. The letters are five feet hight, carved the length of a tall man's arm into the rock, and are astoundingly smooth. The nesting birds that use every crook and crevice in the rock for miles around won't go anywhere near the words. The language is unknown. The letters are regular and square, grouped into words that are only ever four, eight, or sixteen letters long. The number of letters is disputed; some scholars classify subtle differences between carvings as being entirely different letters, others simply as variations. The most common counts are eighteen and thirty-two. Half of the bottom sixteen lines of text are taken up with a single, gigantic, four-letter word, carved twice as deep into the rock as the other letters. There are scrolls of the God Text found all over. They are often kept in ornately decorated scroll-cases made of precious metals. The scrolls themselves can be written on thin gold or silver foils. The letters might be embossed, or actually punched out. The accuracy of the transcription seems to change the effect it has on readers. Reading a copy of the God Text can lead people to drop everything in their lives and head towards the site of the original. Wizards studying the God Text have created new spells of astounding power and versatility. Adventurers have decoded the Text as a treasure map several times, leading to vastly far-flung places. Strangely, each time a powerful artefact of some kind has been found. One wizard claimed he was going to use the God Text as the basis for a Golem, but nothing has been heard from him, or his city, since then.</td>
+</tr><tr>
+<td>Corin Tasslefoot's recipe book</td>
+<td>A homely book of cooking tips</td>
+<td> A simply bound book decorated with a border of green vines. The book is a set of family recipes from a humble halfling farmer. He wrote down recipes from his extended family, including his great-grandmother. The meals are generally wholesome rustic food but despite that are delicious, filling, and sustaining. There are a number of recipes for travel food, from way bread and travel rations to making a good meal from the land.</td>
+</tr><tr>
+<td>The Pillow Book of Date Momoko</td>
+<td>A beautifully illustrated scroll that you wouldn't take home to your mother</td>
+<td> I can't actually tell you much about this. Look, it's beautifully created, written on exquisitely prepared paper and the illustrations are exquisite. But let's just say that people have been known to spontaneously combust while reading it. The Hight Priest of Eros said it was "a bit much". The High Priestess ran off with her copy and hasn't been seen since. However, if there are questions about bedroom ... matters that you wish addressed, well, somewhere in this scroll I'm sure it will be. In detail. With diagrams. And, some say, maths. There's supposed to be a story running throughout, of a young bride-to-be asking her female relatives for advice on her upcoming wedding night. I wouldn't know. I've only ever handled it while wearing oven gloves and a blindfold.</td>
+</tr><tr>
+<td>The Love Poetry of Dryads</td>
+<td>New edition of an old book of poems</td>
+<td> Chock full of translations from ancient and modern Sylvan, this bark-bound book is a little rough in your hands, and according to verse #163, that's how the dryads like it. However, verse #77 suggests a gentle rustle through her leaves will set her desire ablaze. It's all more complicated than peasant girls, so be careful when trying to make a move on your prickly lady friend. This edition has a new forward written by the celebrated elvish bard Lorendel Woodswhisper.</td>
+</tr><tr>
+<td>The Ballad of Barrik and Theda</td>
+<td>New book recounting old dwarvish tales</td>
+<td> This new book from the dwarvish historian Torgrim Stonehalter recounts in vivid detail the doomed adventures of Barrik and Theda the legendary dwarvish heroes and lovers of a past age. Stonehalter presents new evidence—found in the ruins of the library at Tornikkberg—that Theda was indeed the real leader of the duo, taking initiative in slaying the dragon Baazthys, and that Barrik's devotion to Theda may not have been as unwavering as the tales and songs would have you believe.</td>
+</tr><tr>
+<td>Royal Proclamation #248</td>
+<td>Old scroll</td>
+<td> This proclamation is nearly 300 years old, and it lays out King Haroldus's case for calling to action the Fourth Hunting of the Dwarves. There was only one other known copy of this proclamation that has survived the years, and it was stolen from the library it had been held in a few years ago. The roll of parchment is still intact and would fetch a good price from the right buyer.</td>
+</tr><tr>
+<td>More Tales from Beyond the Veil</td>
+<td>Sequel to a popular religious book</td>
+<td> Brother Calymus takes us further into the Spirit Realm with a new collection of stories and essays to follow up his first. Each of these focuses on a first-hand account of the journey from life to death told to Calymus by a ghost, a resurrected individual or a soul called forth from the other realms. Critics suggest Calymus sensationalizes the tales a bit to make death sound more frightening than it is, to which he challenges them to explore death on their own and then come back to talk about it.</td>
+</tr><tr>
+<td>Scroll of Rhythm</td>
+<td>Mostly useless magical scroll</td>
+<td> When someone versed in arcane magic reads this scroll, they can't help but start speaking in rhythm, snapping their fingers, and tapping their toes. The words start rhyme as the reader marks the time, and all those who are near can't resist the beat they hear. They start to bounce and dance as if they're in a trance. It only lasts a minute til the reader reaches the end. Then the scroll disappears, and all is as before.</td>
+</tr><tr>
+<td>Unshameful Names for Your Child</td>
+<td>Parenting book</td>
+<td> After learning that his traditional Dwarven name is highly embarrassing to those who speak only Common, Shi'Teater Stunck sought to ensure that no other child would suffer the same public ridicule as him. This book is the culmination of that work.</td>
+</tr><tr>
+<td>Proper Methods of Dress, and Other Pressing Issues, Fourth Edition</td>
+<td>Etiquette guide</td>
+<td> This quaint text of Domoic origin goes into great detail on exactly how a gentleman or noblewoman of proper breeding should look, act, and think. Notably, more than fifty pages are dedicated to how many waistcoat buttons should be buttoned according to time of day. This edition begins with a blaring notice that, following the Petticoat Massacre, it is now considered an unforgivable faux pas to allow one's coattails to flap in the wind. A new sartorial device called a "Tail Stiffener" is essential for anyone wishing to make a good impression.</td>
+</tr><tr>
+<td>fanwen's funney joaks</td>
+<td>Satirical publication</td>
+<td> Local troublemaker Fanwen Grist has discovered a lucrative career peddling his crude humor to the lower classes, selling new collections of jokes, lewd stories, and new slang whenever his coffers run a bit low. While writing this issue, Fanwen seems to have become particularly amused by the upper crust's recent obsession with an accessory called a "Tail Stiffener."</td>
+</tr><tr>
+<td>Untitled Poems of the Kywirk Gurr</td>
+<td>Anthropological artifact</td>
+<td> The 14 goatskin pages of this oversized, fur-bound tome contain the only known example of Yeti poetry, from a highly socialized band on the leeward side of the Bittersnap Mountains. Its topics include seasonal shifts, territorial disputes among bands, and prime hunting grounds. The language is idiosyncratic and pictographic in nature.</td>
+</tr><tr>
+<td>Trimple, Primple, Prample and Zot</td>
+<td>Collected works of poetry</td>
+<td> This collection of works by Gilathil Greenleaf originally became madly popular exclusively among people who could not speak elvish, captivated by the poet's soothing rhymes, wondering what deep mysteries such beautiful language must contain. Those who know Elvish, of course, know that the poems are nothing more than meaningless gibberish, words made up exclusively for their aesthetic sound. The popularity of this book in human lands is yet another reason elves tend to look down upon "lesser peoples."</td>
+</tr><tr>
+<td>Great Musicians of the Modern Period</td>
+<td>An encyclopedia of famous bards</td>
+<td> This book is a veritable "who's who" of modern musicians, almost all of whom are still alive and trying to make a living today. Although thoroughly researched, the book suspiciously goes on at great length about one Aloysius Fernangeles Compodius VII, describing his musical style in flattering, flowery language. Also suspiciously, one of the most popular musicians in the region is consistently referred to as "The Drunk," and his musical style described as "crude fare for the masses."</td>
+</tr><tr>
+<td>Kalathraxas and the Basilisk's Eye</td>
+<td>Fourth in a series of popular action novels</td>
+<td> Kalathraxas, The Good Necromancer, has succeeded in defeating the evil Pelfanus, but now he faces his greatest enemy: himself. Can Kal overcome the geas cast upon him by a rival wizard and prevent the Basilisk's Eye from falling into the wrong hands?</td>
+</tr><tr>
+<td>The Fall of the Haloan Empire</td>
+<td>Historical text</td>
+<td> On the surface, this appears to merely be a recounting of the opulent Haloan Empire's fall from power centuries ago. Some claim, however, that careful analysis reveals it as a scathing commentary on the notoriously corrupt court of King Judicus, written in code to keep the author from harm.</td>
+</tr><tr>
+<td>Lelesh Voth</td>
+<td>A thick, bound book that is locked by magic</td>
+<td> This tome's title translates to Common as "The Power of Pacifism." Should one find a way to open the book's magical lock, they will find that the book's pages have been carved out to make room for a magically sharp dagger with a golden hilt.</td>
+</tr><tr>
+<td>Incomes & Expenditures, Council Treasury, vol. 343</td>
+<td>Financial record</td>
+<td> A relatively recent financial ledger, with hundreds of pages of densely-packed tables of numbers and brief descriptions. It would take weeks to comb through this information, even for someone with extensive knowledge of the Council's financial practices -- but surely there's no need to scrutinize things so closely.</td>
+</tr><tr>
+<td>101 Magical Tips for the Busy Housewife</td>
+<td>Cheaply printed pamphlet</td>
+<td> The content of this pamphlet largely consists of its overly long introduction, which tells the reader how to harness "mental magic" and wield "the ancient arts" to maintain a tidier home. Despite these promises, the pamphlet teaches absolutely nothing that's magical in nature; rather, the final six pages are merely a hastily written list of general (and mundane) housekeeping tips, such as "Sweep your entranceway daily, to keep dirt from getting tracked about the house." Several of the tips are duplicates, as well; the total number of unique tips is actually closer to eighty.</td>
+</tr><tr>
+<td>On the Anatomy of Goblinoid Bodies</td>
+<td>Medical text</td>
+<td> An exhaustive exploration of the bodies of goblins, hobgoblins, and bugbears, this is the life's work of Barber Stanwen Nolik. It appears highly reputable, but no other surgeon has ever been willing to replicate Nolik's work.</td>
+</tr><tr>
+<td>The 13 Habits of Highly Effective Necromancers</td>
+<td>Self-help Scroll</td>
+<td> In The 13 Habits of Highly Effective Necromancers, author Stephanus D. Coeuvry presents a holistic, integrated, power-centered approach for solving problems with necromancy and the black arts. With dark humor and a blatant disregard for morality, Coeuvry reveals a step-by-step plan for raising your own undead army, plus tried and tested methods for handling standard problems like finding fresh corpses and dealing with pitchfork-wielding peasants.</td>
+</tr><tr>
+<td>Leaves of Stone</td>
+<td>Bound stone slabs</td>
+<td> This "book" is really more of a door stop, though the author would likely priests it's use as such. Its stone pages are bound by think iron rings and engraved with the musings of the great dwarven poet Wilk Whetstone.</td>
+</tr><tr>
+<td>The Herbalists Guide to Tea</td>
+<td>A small illustrated book</td>
+<td> This guide was complied by Anthony Crispaen, the Earl of Grey, who was an enthusiastic herbalist and alchemist. He collected all his findings and those of the druidic circles of Grey in his writings, illustrated by an artist passing through town by chance. Unfortunately the artist accidentally confused Lady's Smock with Nightshade, and the Earl died shortly after tea time the day he published the book.</td>
+</tr><tr>
+<td>The Books of Fine...</td>
+<td>Sarcastic Non-Magical Books</td>
+<td> It all started with an Elven wit, who on a lark one day, took a book full of blank pages, and painted on the cover "The Book of Fine Dwarven Poetry", and displayed in on his mantle at home. A local bookseller was in the home one day and noticed the book, and thought that would be a fine way to sell some blank books to folks. A lot of elves loved the joke, and bought numerous copies to give to friends and family. Sure enough though, Dwarves visiting the city were not as happy with the book, and some decided to return the favor, and so they created their own blank paged book, called the "Book of Fine Elven Craftsmanship." The Elves got quite insulted, and came out with a new blank paged book called the "Book of Fine and Attractive Dwarven Women." Needless to say, other titles ensued in this war of blank paged books, with titles like "Book of Fine and Non-Effeminate Elven Men", "Book of Fine and Bathed Dwarven Men", "Book of Fine and Non-Sheep Buggering Elves", etc. After a few months, the war mercifully ground to an end, as both sides moved on to weightier issues. But, many of those blank paged tomes are still out there.</td>
+</tr><tr>
+<td>A Treatise on Tortoises</td>
+<td>Religious Text</td>
+<td> The first twenty pages or so of this thin folio feature a selection of drawings, essays, and descriptions on and of the large saltwater tortoises that were once proliferant around the subtropical islands of the south. The following pages, however, seem to be written by a different hand, and while at first they follow the same structure, cryptic notes in the margins begin to overtake the text and illustrations, until they make up the entirety of the pages near the end of the book. The meaning of the notes - which largely consist of long strings of seemingly nonsense words - has been rigorously debated within the scholarly community, but at least four disparate religions and cults have been founded based on various interpretations of the text. Notably, all agree that the last page - which is naught but a tangle of scribbled, barely legible mass of ink - depicts the same thing; the face of a long dead God.</td>
+</tr><tr>
+<td>Encyclopedia of the Anvil</td>
+<td>Book</td>
+<td> The Encyclopedia of the Anvil are a legendary collection of collected over the years by an unknown master Dwarven wizard. With typical Dwarven ingenuity and discipline, he applied himself to cataloging magic with the same intensity of focus that a master smith would bring to a life-long masterwork. Even to the untrained eye, this collection of 15 books (50 lbs total) appear to be of exceptional quality. Despite their antiquity, they are in exquisite condition. Each page is richly illuminated, with orderly black-on-white lettering interspersed with intricate geometric designs and diagrams.</td>
+</tr><tr>
+<td>The Compendium of Magical Treasures from the Thrid Kingdom of Lundor Compiled by Sir Davrick Ostagar</td>
+<td>Old book detailing long-forgotten magical relics</td>
+<td> Dozens of items are chronicled in this tome, ranging from the mundane to the fantastic. The description of a ring meant to imbue the element of fire to the wearer seems to stand out as the page has been dog-eared and seems worn. Another remarkable find is near the end of the book. It's a plain bone wand that is described as having "petty and amateurish effects of prestidigitation and minor illusions," but off to the side, written in what seems to be a hastily scrawled ink, is the phrase "death conquers all."</td>
+</tr><tr>
+<td>The Tome of Current Thought</td>
+<td>Magical book</td>
+<td> As a person reads this book, the pages fill with a running record of whatever the reader happens to be thinking at the moment. For those who are unaware of what they're reading, this can be a terrifying experience as they see their own private thoughts wrought on the page. For instance, should the reader happen to recall an embarrassing memory, that would instantly appear. Oh dear, any horrible memory? Including the time mother caught me alone in the stables? Wait, how does this book know about the time mother caught me alone in the stables? Is this some sort of joke? Who wrote this? How do I stop this?</td>
+</tr><tr>
+<td>Pop-up Book of Monster Summoning</td>
+<td>Magic Book of summoning spells</td>
+<td> This thick, crude book has a roughly painted picture of various monsters on it's front cover. But when one opens it's pages, one finds various pop-up depictions of various natural creatures of the world. On the pages with the pop-up are a poem about the creature featured on those pages. Reading that poem will act as a Monster Summoning spell, summoning that creature to the reader, and placing it under his/her control. The creature sticks around for the standard duration of a monster summoning spell, and if it's "killed" during battle, it will return to the book, but that creature will be unable to be summoned for a week afterwards.</td>
+</tr><tr>
+<td>The Sibylline Tomes Vol 4.</td>
+<td>????????</td>
+<td> A book of unknown contents. It is the first book offered to the Party by the Crone Sibyl who mysteriously appears in the players camp no matter where they are and offers it to them, for a price just a little higher than they can currently afford were they to pool all of their gold together. Refusing to talk about what is written within, or reveal anything about the other volumes. She will not allow them to bargain, or promise payment by other means or delayed payment. Should they be unable/unwilling to buy it, or try to seize it she will disappear. Sibyl will return in one weeks time offering the 3rd volume at twice the price she offered this volume for.</td>
+</tr><tr>
+<td>The Sibylline Tomes Vol 3.</td>
+<td>Collection of Past Events</td>
+<td> A book containing an extremely detailed description of the events the party has gone through in the past, filled with insights and facts that nobody but them could possibly know, and even ones they didn't. Feel free to poke fun at things they misinterpreted/failed to realise with your DM knowledge here. Also encourage your players to come up with things the Tomes say about them before they joined the party themselves. It is the second book offered to the Party by the Crone Sibyl who mysteriously appears in the players camp no matter where they are and offers it to them, for a price twice as high as the price she initially offered for the previous book. Refusing to talk about what is written within, or reveal anything about the other volumes. She will not allow them to bargain, or promise payment by other means or delayed payment. Should they refuse, or try to seize it she will disappear. Sibyl will return in one weeks time offering the 2nd volume at twice the price she offered this volume for.</td>
+</tr><tr>
+<td>The Sibylline Tomes Vol 2.</td>
+<td>Collection of Current Events</td>
+<td> A book containing an extremely detailed description of the events the party currently find themselves intertwined in, filled with insights and facts that nobody but them could possibly know, and even ones they didn't. Feel free to ruminate on the possible options and their pros and cons and what you think they might choose to do as a DM here. Also encourage your players to come up with things the Tomes say about their characters thoughts and feelings about current events that they haven't shared yet. It is the third book offered to the Party by the Crone Sibyl who mysteriously appears in the players camp no matter where they are and offers it to them, for a price twice as high as the price she initially offered for the previous book. Refusing to talk about what is written within, or reveal anything about the other volumes. She will not allow them to bargain, or promise payment by other means or delayed payment. Should they be unable/unwilling to buy it, or try to seize it she will disappear. Sibyl will return in one weeks time offering the 1st volume at twice the price she offered this volume for.</td>
+</tr><tr>
+<td>The Sibylline Tomes Vol 1.</td>
+<td>Collection of Future Prophecies</td>
+<td> A book containing a vast number of prophecies about future events that the party might find themselves in. Offering suggestions as to how they might overcome these events and insights into how they might be caused or avoided. Feel free to utilise a mix of things you as the DM have already prepared for and vague hints that could mean anything that you can link back to later after the fact. Also encourage your players to come up with things that the Tomes say about their future themselves. It is the last book offered to the Party by the Crone Sibyl who mysteriously appears in the players camp no matter where they are and offers it to them, for a price twice as high as the price she initially offered for the previous book. Refusing to talk about what is written within, or reveal anything about the other volumes. She will not allow them to bargain, or promise payment by other means or delayed payment. Should they be unable/unwilling to buy it, or try to seize it she will disappear. Sibyl will never return.</td>
+</tr><tr>
+<td>Necromantic Ethics by Gleebones Lemontwig</td>
+<td>Small manual on how to be a necromancer without doing horrible things to people</td>
+<td> A black tome containing the secrets of necromancy and how to use those without committing acts of great evil against others. Be it by pragmatism or waivers you too can learn how to raise the dead without damning yourself to the nine hells to be forever tortured by the souls of those you raised. Lacks the ceremonies considered evil by most such as how to become a Liche or raising an entire army of the undead.</td>
+</tr><tr>
+<td>Forging the End: Baron Stoneye's guide to creating your very own apocalypse</td>
+<td>A very thick tome containing every plan possible on how to end the world, magically updates when a new plan is formed</td>
+<td> Do you seek the end of the world but lack the creativity to do it on your own? Well then my friend seek out this tome, located in Bloodcrown's Books in the underbelly of the Underdark. Do you seek to raise the dread tarrasque from its slumber? Maybe you wish to know the rituals to summon hordes of outsiders ready to rend and tear this world apart. Seek out Bloodcrown's Books, find the tome and set free a plague of apocalypse level events the likes of which this world has never seen.</td>
+</tr><tr>
+<td>Wiki book of shared knowledge</td>
+<td>Magic book</td>
+<td> Few copies of this book exists and copies of it are mostly owned by most educated wizards and priests. When somebody writes something in this book, same text appears in all copies. They are used to share knowledge. Most of creatures and phenomena are described in it and owners are working hard to add new information. Because of that, book has been increasing in its size and weight, despite all the effort and shrinking spells.</td>
+</tr><tr>
+<td>Bloody scroll</td>
+<td>Bleeding scroll</td>
+<td> This scroll has mostly gibberish on it. But when read aloud, blood runs out of it.</td>
+</tr><tr>
+<td>Barbarian's cookbook</td>
+<td>Cooking book</td>
+<td> A book for illiterate cooks. Has lots of pictures and simple recipes, mostly meat.</td>
+</tr><tr>
+<td>Scroll of common nonsense</td>
+<td>scroll, full of useless information</td>
+<td> Anyone reading this scroll can almost understand it, but nobody really agrees what does it say.</td>
+</tr><tr>
+<td>Book of all Knowledge</td>
+<td>Magical Book</td>
+<td> Bubistai the mage, created this large book with the image of a face on the front cover. Normally, the face's eyes and mouth are closed, but when Bubistai commanded it, the eyes would open and the mouth would start reciting something. But, it can only recite things written within it's pages, so Bubistai planned to write many important and significant things within it. And indeed, he wrote magic thesises, spell research notes, and historical facts about his life within it's covers. But, unfortunately he died within a couple years of creating the book, and it fell into the hands of his apprentice, who quickly started filling the book with all sorts of nonsense, such as limericks, erotic poems, and the occasional shopping list. So, while it's called the Book of All Knowledge, buyer beware!</td>
+</tr><tr>
+<td>The Book of Night</td>
+<td>Artifact Grimoire</td>
+<td> Describing the Book of Night is difficult, in no small part because looking directly at the artifact is nearly impossible. Casual glances slide straight over the Book; it is somewhat possible to get an understanding of what it looks like merely through peripheral vision, but only a concerted effort of extreme willpower can overcome this particular attribute. Once the witness' will has been asserted, however, the Book's appearance truly manifests itself. The cover is unmarked and black, neither matte nor glossy; simply black. The surface is, furthermore, adorned with silver points of varying size. Should one attempt to move the Book, they will notice that these silver markings move--or, rather, remain fixed relative to the position of the Book. When they reach the edge of the cover, they vanish, and are replaced by others that appear on the opposite edge. A particularly astute observer will note that, when held aloft and compared to the night sky, the markings match the positions of visible stars.</td>
+</tr><tr>
+<td>The Oldest</td>
+<td>Inscribed bark tablets</td>
+<td> The Oldest, or, to use its most proper name, The Oldest Existing Writing On Record, is a series of rectangular tablets, seemingly fashioned from tree bark. The bark is from no tree that yet lives; druidic lore and wizardly knowledge alike fail when confronted by it. The one time a Dryad was consulted, she spent the remainder of the day with bowed head, murmuring something not unlike a prayer. The writing itself is shockingly refined and crisp, despite being so old. The lettering is simultaneously foreign and familiar, with elements of most known scripts found in it somewhere. So far, only select words and phrases have been translated, mostly due to their similarity to one or more extant languages, and the translations have been rudimentary at best. The actual vocalization of this language is completely unknown.</td>
+</tr><tr>
+<td>Aerlin's Heirloom</td>
+<td>A great, ornate tome in a locked case</td>
+<td> This case is an elaborate box guarded by a very complicated lock (DC 20) Through a window of unbreakable glass a huge tome can be seen, bound in leather and trimmed in gold and jewels with an elaborate crest on the cover. The first page of the book is an exquisite etched plate print of a very elderly looking elf nobleman with the name Tabarus Now'nathal scribed under it, and inside the cover is a simple inscription: From All of Us. The next plate is an etching of an elderly elf woman. Neanna Now'nathal, wife. Then three more plates of his two sons and his daughter. Then his seven grandchildren, and his 27 great grandchildren. The faces get younger as the book goes on and it goes for 689 pages until it ends on a picture of a baby elf girl titled Nelonna Artenala, sixth great granddaughter.</td>
+</tr><tr>
+<td>Grimoire of Spectral Critters</td>
+<td>Spellbook</td>
+<td> As you open the smoking, luminescent tome, you feel a rush of energy overcome you. The book turns to mist in your hands. If the reader of this book can cast at least one spell, he or she learns Spectral Critter (and can cast it 1/day). If the reader cannot cast a spell, the book is destroyed and nothing happens.</td>
+</tr><tr>
+<td>On the Hunting of Fauna and Fowl in the Baldred Mountains: Ed. II</td>
+<td>A guide to the natural inhabitants of the Baldred Mountains</td>
+<td> A plain text, sturdily made, with an embossed leather cover. It details the hunting, preparing and cooking of most animals to be found in the aforementioned mountains. The first edition was rather controversial, I fear, because the author included recipes that contained aarakocra and various forms of fey.</td>
+</tr><tr>
+<td>Syn Qutain's Hystories of the Middel-South; Edition the Fifth</td>
+<td>A history text and hidden flip-book</td>
+<td> The original manuscript of the much-reproduced text, its well-reputed author's final work. The chronicle itself passingly mentions a rumored treasure, artifact, or relic (commonly believed to be myth) as though its existence is fact. Upon closer inspection, the pages are lightly watermarked. When held up to light, terrains and landmarks appear, which anyone familiar with the region may recognize. As the pages are turned, the terrain appears to shift also, finally zooming in and settling on one particular spot, where on the final page the author seems to have accidentally dropped a bit of sealing wax.</td>
+</tr><tr>
+<td>Mincing Vellum</td>
+<td>A Scroll of Intimate Scrying</td>
+<td> The simple dusty scroll has no marking, seal nor text on it. By all appearances, it is a standard sheet of writing material that is bound by a single silver thread. When placed on another person's body, one who is skilled in magic can press their face into and through the surface of the peering directly into the persons soul much as one might peer into a body of water. In fact the caster cannot breath while using this scroll, so it is limited by how long the user can hold his or her breath, or by how long the person is willing to tolerate such an intrusion. When peering into another, you may see many thing: bitterness manifesting itself as an adder's bite, the true disposition of the soul that may even be a mystery to the person whom you are looking into, spirits that may be taking refuge within the person, or are perhaps there for more malign purposes. The scroll has had many names over the years, such as Ryon's Mirror, and Gorfellow's Embrace. Those who use it should be forewarned that looking directly into a person's soul in this manner could have dire effects on a person's sanity, and it has been noted that Arghul, a promising young mage drowned when he used it and found that he was looking into a truly beatific soul and lost all notion of time and perspective and even his need for air. A pity, really. So promising.</td>
+</tr><tr>
+<td>The Most Piteous Story of Garum Thornswallow</td>
+<td>Gray Leather-Bound Book</td>
+<td> This short history follow the life and exploits of Garum Thornswall, a mediocre sorcerer by all accounts who lived an average, but that came to a very dolorous end. Account however vary on the very last details of his life and how he in fact met his end. The book itself rarely agrees, telling a new story to every reader with the seeming intent to cause the greatest feelings sadness and pity that they may extract from the reader. Only the most cold-hearted readers of the tome have read it without it eliciting a tear, while others are haunted by the sadness for the rest of their days by the tale. It is unknown how a sorcerer of such middling talent could have wrought such a device, and it is also unknown how many, or if in fact any of the tales told within it are true. It is also impossible to to tell with any reasonable degree of certainty how Garum met his end. It is known, however, that this was the last and most notable of his bequeathed creations.</td>
+</tr><tr>
+<td>What prizes do these bilge rats carry?</td>
+<td>The tattered map leads you across the barren island to a lone palm, where a bit of flotsam nearly obscures a weatherbeaten chest...</td>
+<td> Last time, we found ourselves exploring some seedy undersides, which got me thinking about pirates, ships, and nautical ephemera. Today, let's write about things you might pillage from a galleon, or uncover while looting a sea baron's stronghold. Spoils await! The loot doesn't necessarily have to magical, but it should be interesting enough to appeal to some PCs—anything a PC might want to pick it up carry or purchase as an accessory to their equipment or wardrobe. These should be mostly mechanics free. I'll post a few examples.</td>
+</tr><tr>
+<td>Tiny Crystal Ship in a Bottle</td>
+<td>Misc (or is it?)</td>
+<td> A tiny sailing ship made of fine crystal inside a bottle with no clear way it got in there. It shimmers in the sunlight and radiates mysterious magic.</td>
+</tr><tr>
+<td>Roguish Tricorn Hat</td>
+<td>Mundane Hat</td>
+<td> What idiot stores nothing but a hat in a locked treasure chest?</td>
+</tr><tr>
+<td>Captains Plaque</td>
+<td>Decoration</td>
+<td> A well made paperweight cast from brass. It has a tiny illusion spell that suspends an image of the ship it was found on above it.</td>
+</tr><tr>
+<td>Exquisite China Tea Set</td>
+<td>Misc</td>
+<td> A delicate china tea set painted in motifs of far away lands. It's well wrapped in padded cloth and comes with its own matching box.</td>
+</tr><tr>
+<td>Ship's Cat</td>
+<td>Animal</td>
+<td> An unlikely survivor of the wreck.</td>
+</tr><tr>
+<td>Ship's Cat</td>
+<td>Boat</td>
+<td> A small ship's catboat washed up alongside the chest. The sail is in tatters, but the hull looks serviceable.</td>
+</tr><tr>
+<td>Ship's Cat</td>
+<td>Weapon</td>
+<td> A damaged catapult washed up on shore. It looks repairable.</td>
+</tr><tr>
+<td>Ship's Cat</td>
+<td>Misc</td>
+<td> The ships figurehead, washed up on shore. It's finely carved in the shape of a roaring lion head and would make an excellent decoration somewhere.</td>
+</tr><tr>
+<td>Ship's Cat</td>
+<td>NPC</td>
+<td> You find a very bedraggled Rakshasa lying on the beach. He was first mate on the sunken ship and knows valuable information about its cargo.</td>
+</tr><tr>
+<td>Ship's Cat</td>
+<td>Book</td>
+<td> A magical tome, geared toward Land Lubbers, which can identify the category, characteristics, and name of any ship within range.</td>
+</tr><tr>
+<td>Ship Cat's</td>
+<td>Magical shipping vendor</td>
+<td> If you need a cat shipped anywhere, you should see Vugmor in the market. He'll make sure that your cat gets where it's going. Probably in one piece. Most of the time.</td>
+</tr><tr>
+<td>Ship's Cat</td>
+<td>Companion</td>
+<td> Large tiger that was born at sea. Refuses to set foot on land. If you gain his trust he's loyal to the end.</td>
+</tr><tr>
+<td>Ship Cats</td>
+<td>Mundane book</td>
+<td> A journal one captain apparently wrote about fictionalized romances of the ship's cat and what he imagined the cat got up to on shore leave.</td>
+</tr><tr>
+<td>Catship</td>
+<td>Condiment</td>
+<td> A tomato-based sauce to put on food. Necessary for any maritime travel, to tolerate the cook's food.</td>
+</tr><tr>
+<td>Ship's Cat</td>
+<td>Tool</td>
+<td> A ship's lightly enchanted wildcat winch. This device is very useful for hauling chain or working block and tackle.</td>
+</tr><tr>
+<td>Ship Scat</td>
+<td>Jetsam</td>
+<td> It's just a bit of junk tossed overboard at some point during a voyage. This particular piece may have come from the ship's head.</td>
+</tr><tr>
+<td>Ship's Cats Hip</td>
+<td>Bones</td>
+<td> A perfectly cleaned, starch white cat pelvis left behind after the ship was lost in a doldrums. The crew was forced to eat the cat, but kept this pelvic girdle as a reminder of her sacrifice.</td>
+</tr><tr>
+<td>Stirgemeat's Sextant</td>
+<td>Magical Navigational Tool</td>
+<td> At first sight, it's unclear what the sextant is meant to be. Crafted from tarnished brass, badly tanned leather, crudely shaped driftwood and milky glass, it's a tool only a seasoned mariner could appreciate, much less love. And yet, over the years various sailors have added their own touches - a bundle of pigeon feathers tied with sinew to a thumbscrew, a rough etching of a stylized Kraken, an extra mirror. Its last owner (a burly gnomish privateer, the eponymous Stirgemeat) claimed to have enchanted it with the power to sight in on the Maiden's star even during the brightest day or stormiest night.</td>
+</tr><tr>
+<td>Mr. Mizzen's Mate's Candle</td>
+<td>Minor Magical Item</td>
+<td> Sold as part of the otherwise wildly successful 'Mr. Mizzen!' line of sailor's tools, the Mate's Candle was designed to serve as a replacement timepiece and light source for sailors that served the night's watch. If lit at dusk, the thin candles would burn until the next dawn, changing colors at the top of every hour as they did so. Unfortunately, the engineers at Mr. Mizzen didn't take the typical sailor's superstitious nature into account, and the candles failed to sell well, especially after stories of 'demon ships' bathed in red, orange and green lights began to circulate. A second batch of Mate's Candle was sold, marketed with 'sailor friendly' shades of white, yellow and gold, but the damage had been done. Still, many of the candles have been repurposed by cults looking for mood lighting, watchmen in coastal cities, and thrifty students.</td>
+</tr><tr>
+<td>Drowned Shot</td>
+<td>Ammunition</td>
+<td> The Slipscrew Rigs off the southern coast have been rumored to be the haunt of (in no particular order) Mergnomes, Mechoctopi, Mutamphibians, and/or Metanthopods, depending on what port you're hailing from, and how gullible you look. Regardless, most agree that the rigs' deep shale oil - shipped all along the coast in tight, cotton-wrapped bamboo casks to whoever can afford it - is some of the best on the market. Less well known is a byproduct of the drilling, flammable, dense stone known by mariners as Drowned Chull. When dried, it can be chipped, carved and shaped into pellets suitable for small cannon or flintlock longarms. While less durable than iron or lead shot, drowned shot has the advantage of being innately flammable, and has been used (with mixed effectiveness) to set sails, unwashed hair and powder stores alight.</td>
+</tr><tr>
+<td>Mr. Mizzen's Meticulous Mainsail</td>
+<td>Minor Magical Item</td>
+<td> Cut and sewn from blessed canvas, this sail repels water, dust, grime and dirt for up to (a guaranteed!) two years before the blessing fades, and the cloth becomes mundane (if perfectly serviceable). Often sold as part of a package, each sail is shipped in one of five set sizes, but can be custom altered for a nominal fee.</td>
+</tr><tr>
+<td>Orkish Cutlass</td>
+<td>Mundane weapon</td>
+<td> A thin, jagged sword favored by the orc reavers who terrorize the fishermen and traders of the northern coasts. Most orkish cutlasses don't last long, as the jagged edges and constant exposure to sea-spray cause the steel to rust. As such, many orc reavers carry two or three on raids.</td>
+</tr><tr>
+<td>Lucky Coin of Captain Cray</td>
+<td>Possibly wondrous item</td>
+<td> The legendary pirate Captain Cray was known for flipping a large gold coin to decide the fate of his captives. One side of the coin is shiny and reflective and the other dark and tarnished and black. If the shiny side came up, you got a piece of steel across your throat. If the dark side came up, you got some stones tied to your feet and were given to the sea. Rumors tell that the coin aided Captain Cray with his uncanny nose for finding fantastic treasure hoards, but no one is certain how that worked...</td>
+</tr><tr>
+<td>The Captain's 'Special' Rum Cocktail</td>
+<td>Booze</td>
+<td> A loose paper label on the glass flask marks this as the "Captain's 'Special' Rum Cocktail'. It smells and tastes like a mix of Rum, ginger and honey. Exactly what makes it special, is not clear.</td>
+</tr><tr>
+<td>Wooden Puzzle Box</td>
+<td>Storage/Magical Item</td>
+<td> This small box is the size of two fists, and covered with numerous tiny drawers. Only two of the drawers will open, but by manipulating those two drawers and sliding other cleverly hidden sections of wood, eventually you may figure out how to open all the drawers. But it may take some time. Each drawer holds it's own tiny treasure (rings, tiny notes, a gem, a living butterfly etc). The box cannot be damaged or forced in any way.</td>
+</tr><tr>
+<td>Ivory Mermaids</td>
+<td>Trinket</td>
+<td> A selection of ivory mermaids, crudely carved. Well, except for certain 'features' which have been carved with lavish detail.</td>
+</tr><tr>
+<td>Pirate Head Clay Pipe</td>
+<td>Utensil</td>
+<td> A very fine clay pipe, the bowl formed into the shape of a bearded man with a scarred face. The face is so detailed, you can even make out the arrow shaped earring - the mark of a well-known pirate gang.</td>
+</tr><tr>
+<td>Drowned Maiden Scrimshaw</td>
+<td>Trinket</td>
+<td> This large whale's tooth is finely carved, appearing to depict a young woman drowning at sea. Beneath is the name 'Celia' and a few badly worn sentences that might explain her fate, but the words are very hard to read.</td>
+</tr><tr>
+<td>Wooden Mug</td>
+<td>Utensil</td>
+<td> This is an ordinary wooden mug. Except for the hidden compartment at the bottom, which can be triggered by pressing part of the handle while squeezing the sides. Why would they put a hidden compartment inside the cup?</td>
+</tr><tr>
+<td>The Watchman's Friend</td>
+<td>Jewellery</td>
+<td> The metal torc looks rather severe, with several upward-facing spikes. It would be very difficult to nod off when wearing such a serious piece of jewellery.</td>
+</tr><tr>
+<td>Miskin's Stash</td>
+<td>?</td>
+<td> A tube of bamboo has been carefully sealed at both ends with wax. Scratched into the side are the words 'Miskin's Stash'. (The tube contains a pair of clean, dry socks and underwear).</td>
+</tr><tr>
+<td>Wooden Lion Mask</td>
+<td>Trinket</td>
+<td> This fierce looking tribal mask appears to be an exotic depiction of a lion with oversized teeth.</td>
+</tr><tr>
+<td>Jade Turtle</td>
+<td>Trinket</td>
+<td> This deep green jade has been carved into the shape of a leatherback turtle. The carving is good quality so it might have value.</td>
+</tr><tr>
+<td>Pearl Marbles</td>
+<td>Trinket</td>
+<td> A bag of milky white marbles with long swirls of pale pinks, reds, blues, greens, and purples decorating them. Though not made from real pearls, they reflect light in a vaguely enchanting manner. On the seas, sailors would trade marbles and similar trinkets as a form of currency, getting favors from one another or what not. Some captains even paid their mean in marbles and bead, though this often did not go over well once on land.</td>
+</tr><tr>
+<td>Jelly Roger's Marmelade</td>
+<td>Food</td>
+<td> Old jars containing orange and red fruit preserves. A rough and jolly swashbuckler is imprinted on the lid. Along the side is written "To prevent scurvy on the high seas!"</td>
+</tr><tr>
+<td>Seastone Chalice</td>
+<td>Magic Item</td>
+<td> This two-handled drinking cup is wrought from some sort of pale blue-green material and inlaid with gold. The outside is rimed with salt crystals which regenerate when brushed away, but these don't seem to affect the chalice itself. When water is placed into the cup, it is instantly rendered salty and undrinkable. In addition, the cup produces deafening sounds of surf until it is emptied. Non-water beverages, such as alcohol, milk, juice, etc. are unaffected.</td>
+</tr><tr>
+<td>Dread Corsair's Beard-Braids</td>
+<td>Magical item</td>
+<td> These bits of colored string are meant for use in braiding hair, usually of a beard, mustache, or ponytail. When used in this manner, they remain inert until the command word is spoken, usually "AVAST!" or something suitably piratey. Under these circumstances, the ends of the strings smolder and catch fire, creating a hellish glow over the wearer's face.</td>
+</tr><tr>
+<td>Affinity coin</td>
+<td>Magical coin</td>
+<td> This coin has an affinity for other coins, and will glow brighter and brighter as it gets closer to them. Useful for looking for hidden booty on a captured ship, or where someone might be hiding coins upon their person.</td>
+</tr><tr>
+<td>Ol' Carbunkle.</td>
+<td>Magical Figurehead</td>
+<td> An old ship's figurehead, carved from white wood and splintered at the base. It depicts an aged man leaning forward and cupping an ear, as if listening intently for threats. An old smuggler's tale is that if you find and attach Ol' Carbunkle to your ship, you'll never be bothered by pesky lawsmen as you slink in or out of port. Given that Ol' Carbunkle's is currently mounted above the door to the Naval Guardsman's Barracks, take the story with a pinch of salt.</td>
+</tr><tr>
+<td>Sahuagin Spear</td>
+<td>any</td>
+<td> These spears often drift ashore after the merlings and their ancient enemies have gotten good and riled enough to have a battle. Savvy grifters can re-sell them to lubbers as magical treasures of the sea.</td>
+</tr><tr>
+<td>Gold-eater's Shell</td>
+<td>Tiny Beast</td>
+<td> This small, ornate shell fits in the palm of your hand. The shell itself appears to be made of silver, with what appears to be streaks of various precious minerals streaking through it. At first glance, it appears to be empty and would likely fetch some decent coin. Inside the shell however, lies a very small hermit crab with very expensive tastes. When the crab feels safe, it will set off to find it's favourite meal: gold (coins or otherwise). The shell shifts steadily from silver to gold over time as it gorges itself on more riches.</td>
+</tr><tr>
+<td>Seahorse statuette</td>
+<td>Tiny Beast/Tiny Statue</td>
+<td> This small seahorse figurine appears to be made of solid gold, with brilliant sapphires for eyes. When removed from the water for extended periods of time, the gold begins to soften and liquefy as though melting off of the statuette. If the statuette is not returned to the water in time, the polished golden skin and sapphire eyes fade, leaving a normal (and live) seahorse in its place. Once returned to the water, the seahorse slowly crystallizes back to its statuette state but will rapidly try to escape its captors before it does so.</td>
+</tr><tr>
+<td>Dwarven Mastbreaker</td>
+<td>Magical item of sabotage</td>
+<td> Resembling a collar for giant animals, this particularly mischievous item is comprised of two large halves, hinged in the middle. It is masterfully sculpted out of gold and decorated with several Dwarven runes. When clasped around the mast of a ship, the runes glow orange and a soft humming sound can barely be heard as the device slowly spins around the outside of the mast. After about an hour, the device will have cut through any mast, and the mast will fall, possibly on the ship itself. Perfect for sabotage!</td>
+</tr><tr>
+<td>The Compass of Captain Bloodbeard</td>
+<td>Ornate compass crafted from Obsidian</td>
+<td> A small item but still large for a compass it is wrapped in a box made from Obsidian. Minor details adorn the outside of this volcanic glass and make it very visually appealing. There are rumours that it can lead to great treasure but it only seems to function as a normal compass.</td>
+</tr><tr>
+<td>Treasure of the Lost Deep</td>
+<td>Vast wealth with scattered magical items</td>
+<td> Ships sink all across the ocean, those carrying treasure are often scavenged with the help of mages but no treasure is ever found. Word around the ports is that it is gathered by some unknown entity who lives beneath the waves, if this is true the treasure horde would be vast enough to satisfy any dragon no matter how greedy.</td>
+</tr><tr>
+<td>The Forgotten Map</td>
+<td>Sea Chart</td>
+<td> Shows a detailed map of the current area, with certain phrases it can expand to a larger area. The map shows all lakes, rivers and any other methods with which a boat could feasibly cross into land.</td>
+</tr><tr>
+<td>The Sail of Procan</td>
+<td>A sail as light as air and as soft as silk</td>
+<td> The sail is done up with the symbols of the god Procan, a coral trident hovering over a cresting wave. It can fit any ship and will always ensure a safe voyage upon the oceans so long as an offering is made to Procan regularly during the voyage. Some say it always keeps the wind to your backs.</td>
+</tr><tr>
+<td>TriHorn Hat</td>
+<td>Magical Hat</td>
+<td> This Tricorn hat fits snugly onto it's wearer's head, and will stay on, despite wind, rain, strong tugging, or any other physical method attempted to remove it. The wearer can remove it anytime they want though. On command, the hat will sprout three horns, one on each corner, which the wearer can use for a goring attack, or due to the sharpness of the points, as a slashing attack. Standard non-proficiency penalties apply, but most users hide it's special power to use in a surprise attack sort of situation, thus mitigating the penalties with a surprise bonus.</td>
+</tr><tr>
+<td>TriBlade Hat</td>
+<td>Clockwork hat</td>
+<td> This Tricorn hat, made out of gears, springs and cogs, is heavier than your normal Tricorn hat, and has a thick leather strap that fastens around the wearers chin. The hat consists of two parts, a skullcap rests snuggly on the wearers head, while the bulk of the hat is attached to the skullcap. Upon command, a blade folds out from each of the corners of the hat, and the hat starts rotating around the skullcap, lifting the wearer aloft, so the user can slowly fly, changing direction/altitude by head movements. The hat uses oil as fuel, and can fly for about 10 minutes before running out of fuel.</td>
+</tr><tr>
+<td>Portable Cannon</td>
+<td>Magical Item</td>
+<td> It looks like any normal flintlock pistol, but instead of firing a small bullet, it fires a full sized cannonball.</td>
+</tr><tr>
+<td>Tentacle Pendant</td>
+<td>Jewelry</td>
+<td> A copper pendant which resembles the tentacles of an octopus. When submerged under the salty water of the ocean the tentacles spread apart and reveal a beautiful turquoise gem.</td>
+</tr><tr>
+<td>Spiked Hilt Cutlass</td>
+<td>Weapon</td>
+<td> A pirates cutlass with a handle larger than most, clearly used by something with bigger hands than a human. The hilt encases the hand with a crude shield with three barbed spikes, resembling tiny harpoons, sticking outwards.</td>
+</tr><tr>
+<td>Shivered Timber</td>
+<td>Magical Item</td>
+<td> This shard of wood from a ship's mast is tipped with frost. It enhances cold spells cast using it as a wand.</td>
+</tr><tr>
+<td>Cheater's Dice</td>
+<td>Mundane Item</td>
+<td> This small bag is filled with many-sided dice. Most of them are weighted to bring up high rolls frequently.</td>
+</tr><tr>
+<td>Trusted Lantern</td>
+<td>Minor Magical Item</td>
+<td> This lantern continues to burn while under water. Its light is not impeded by water, whether it be rain or sea.</td>
+</tr><tr>
+<td>"Specialty" Cards</td>
+<td>Mundane Item</td>
+<td> These cards feature intricate and often very sexually explicit drawings to indicate suit and number. They have women, men, elves, kobolds.... Hey man, don't judge.</td>
+</tr><tr>
+<td>Mr. Bones</td>
+<td>NPC</td>
+<td> Cursed with immortality and unabatable greed Mr.Bones locked himself with the treasure when the ship was sinking. Now, free at last and armed with 10,000 gp and a keen entrepreneurial mind, Mr. Bones is off to start his mercantile empire, but he will never forget the kindness the party has done him by opening the chest.</td>
+</tr><tr>
+<td>Flux Capacitor</td>
+<td>Technology</td>
+<td> Looks like nothing more than a cylinder with some pretty lights. A cheap bauble</td>
+</tr><tr>
+<td>Rod of Winds Seas</td>
+<td>Magic Item</td>
+<td> What at first looks like a piece of the mystical Rod of Winds reveals itself to be a crude replica made of flotsam by clumsy triton hands. Some tritons will pay a hefty sum for the piece. Most will just laugh in the party’s face</td>
+</tr><tr>
+<td>C&D</td>
+<td>Mundane item</td>
+<td> A letter from the local guard captain asking the pirate captain to cease and desist</td>
+</tr><tr>
+<td>Empty Chest</td>
+<td>Mundane item</td>
+<td> The chest is empty but is completely dry inside and proves to be completely water-tight</td>
+</tr><tr>
+<td>Pineapple Express</td>
+<td>Mundane Item</td>
+<td> A green leafy substance fills the chest. You can make out the words “Pineapple Express” embossed on the lid of the chest</td>
+</tr><tr>
+<td>Skull of Gravy Jones</td>
+<td>Magic Item</td>
+<td> Inside is the skull of the legendary ship’s cook Gravy Jones. It is said adding the skull to any tub of gravy will make it “the best gravy in the seven seas”</td>
+</tr><tr>
+<td>666 Gold Pieces</td>
+<td>Mundane item</td>
+<td> It’s just a number. You should be fine…</td>
+</tr><tr>
+<td>Bag of Winds</td>
+<td>Magic Item</td>
+<td> A leather satchel which can be opened to produce a directed gust of wind. Said to be how the Dread Pirate Bartholomew Jafferjabs could achieve such speed when he preyed upon merchant ships in the doldrums</td>
+</tr><tr>
+<td>Conch of Hearing</td>
+<td>Wondrous item (shell)</td>
+<td> Many legends speak of the Conch of Hearing, buried deep in the ocean floor. Other than the slight purple shimmer on the creamy surface of the shell, it appears as an ordinary shell. However, at a command word, it is said that one can hear through far distances if the conch is put to one's ear. There is nothing that one cannot hear with the Conch of Hearing.</td>
+</tr><tr>
+<td>Galdur's Globe of Geodesy</td>
+<td>Tool</td>
+<td> This metal globe appears at first glance to be nothing more than an apprentice cartographer's failed attempt, full of glaring inaccuracies. But once installed in a ship's helm, one need only envision a place and the globe rotates to highlight the shortest naval route route there, or as close to the location as the ship can sail. It also displays accurate oversea distances along the route, particularly useful for crews in poorly charted waters or with limited rations and supplies.</td>
+</tr><tr>
+<td>First Mate's Mug</td>
+<td>Misc</td>
+<td> This medium ceramic mug is an odd, almost organic looking shape, ostensibly fragile and unstable. Upon closer examination, the mug seems seems nigh indestructible, and when filled with liquid, stays perfectly upright on any surface, although it will move around.</td>
+</tr></tbody>
 </table>
 
 </div>
 </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
 	var $rows = $('#table tr');
 	var $randomRowTable = document.getElementById("randomTable");
@@ -1245,6 +1726,20 @@ function rollTable(tableId)
  var dataId = tableId + '_data';
  var tableDataElem = document.getElementById(dataId);
  tableDataElem.innerHTML = "<b>" + choice.textContent+"</b>";
+}
+</script>
+<script type="text/javascript">
+function resetTable()
+{
+hideRandomTable()
+document.getElementById('search').value=""
+}
+</script>
+<script type="text/javascript">
+function setSorter() {
+  $(document).ready(function() {
+    $("#table").tablesorter();
+  })
 }
 </script>
 </body>

@@ -1,11 +1,15 @@
 <html>
 <head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.4/js/jquery.tablesorter.js"></script>
+
 <meta name=viewport content="width=device-width, initial-scale=1">
 <title>10K Plot Hooks</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet">
+
 </head>
-<body>
+<body onload="setSorter()">
 <div class="container">
 <br/>
 <br/>
@@ -17,12 +21,13 @@
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Plot Hooks</h1>
 <p>This page is a compilation of the plot hooks from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4jwlfc/10k_plot_hooks_betrayals_and_doublecrosses/">/rDnDBehindTheScreen's 10K Plot Hooks thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 305/10000</h2><h3>Last updated: Sun Jun 05 19:51:43 CDT 2016</h3>
+<h2>Currently at 305/10000</h2><h3>Last updated: Sun Jun 26 19:28:04 CDT 2016</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
 <input type="text" id="search" placeholder="Type to search" />
 <label><input type="checkbox" id="casesensitive" onClick="checkFilter()" checked>Case Sensitive Search</label>
 <button type="button" onClick="randomRow()">Random Plot Hook</button>
+<button type="button" onClick="resetTable()">Reset</button>
 <div class="row">
 <div class="progress">
 <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="305" aria-valuemin="0" aria-valuemax="10000" style="width: 3.05%">
@@ -31,9 +36,11 @@
 </div>
 <div class="row">
 <div id="randomTable"></div>
-<table class="table table-striped" id="table">
+<table class="table table-striped tablesorter" id="table">
+<thead>
 <tr><th align="center">Plot Hook Name</th><th align="center">Description</th></tr>
-<tr>
+</thead>
+<tbody><tr>
 <td>The Lone Courier</td>
 <td> Your players while out on the road find an overturned a cart. The horse in the field nearby and the dead body on the ground imply that he was attacked by bandits who pillaged the aforementioned cart. Upon checking the cart they discover an important letter in need of delivery to a towns nearby mayor.</td>
 </tr><tr>
@@ -513,11 +520,11 @@
 <td>The Fire Princess</td>
 <td> A small humanoid fire elemental asks to be freed from a containing vessel. Once free she may give the party a reward (e.g. a fire ruby witch can be consumed to throw a Fireball or sold as jewelery). She them appears in random fires, such as torches in a dungeon, to talk to the party or give them a small, strange task. Once the players prove their value and her trust she asks them to help the fire kingdom in the elemental plane. The elemental convergence, an event that decides which element will prevail over the others in the material plane for the next 10 thousand years, is near and war is imminent. Plot twist: even though she keeps saying that an era of fire would bring life, light and warmth to the material plane the truth is that no element ever wins the convergence and this is what keeps the material plane balanced. If an element gets an edge over the others terrible things happens on the material plane (a fire era would more likely bring firestorms, heat the planet and start a vulcanic apocalypse).</td>
 </tr><tr>
-<td>The 3 Demons</td>
-<td> One of the party members is spoken to by a God while they were sleeping. They foretold that 3 great demons, Behemoth, Ziz, and Leviathan would soon awaken and ravage the lands if the party doesn't stop them.</td>
-</tr><tr>
 <td>Drow Underground Railroad</td>
 <td> The party encounters refugees that were helped out of the Underdark by a Drow. They want to save others that were left behind.</td>
+</tr><tr>
+<td>The 3 Demons</td>
+<td> One of the party members is spoken to by a God while they were sleeping. They foretold that 3 great demons, Behemoth, Ziz, and Leviathan would soon awaken and ravage the lands if the party doesn't stop them.</td>
 </tr><tr>
 <td>Hats (and Heads) Off</td>
 <td> The players arrive at a town where everyone is on edge following the discovery of headless townsfolk outside town. No one knows what's causing the rash of headlessness, and the town guard would really appreciate it if the adventurers were to figure out why it keeps happening. While investigating, the party finds a fancy hat that looks like the hat a lord or lady might wear. How it got outside of this poor farming town is a mystery. There are no signs of magic on it, and it looks and feels just like an ordinary hat. Unbeknownst to the party though, a clutch of young mimics live in the area, and have learned the neat trick of looking like a hat causes people to pick you up and put you on their heads so you can then proceed to bite their heads off. Is one of the party members HEADed for disaster and decides to put the hat on? Will they discard it and then wonder why townfolk's heads keep disappearing? What will they do when the clutch becomes brazen enough that a half dozen or so "hats" line the road?</td>
@@ -588,6 +595,18 @@
 <td>Godly Gaffe</td>
 <td> A priest or priestess had been tasked with guarding a special item until their deity's chosen one arrived to claim it. Well, the chosen one has finally arrived but the holy guardian has already given the item away, very recently! What could have caused the mix-up? Maybe the false prophet used trickery to gain the guardian's trust, maybe the guardian was confused/biased, or maybe there are multiple "chosen ones". This adventure could end with the party reclaiming the holy item or meeting and recruiting the additional chosen one.</td>
 </tr><tr>
+<td>Unfortunate hookup</td>
+<td> While slightly drunk, one of PC hooks up with some beautiful woman. Next day, he gets an invitation to duel at 7 am in front of the town.</td>
+</tr><tr>
+<td>Dancing troll</td>
+<td> Out of nowhere a wild and dangerous troll appears. But he is only dancing because magic shoes force him to do so.</td>
+</tr><tr>
+<td>Giant flood</td>
+<td> Out of nowhere, giant river springs in the middle of the city, destroying all of it. Local wise man claims only great magic or portal could create such river.</td>
+</tr><tr>
+<td>Ogre danger</td>
+<td> An extraordinary huge ogre destroyed a small village and some nearby farms. But he only wanted to play...</td>
+</tr><tr>
 <td>Feed the Beets</td>
 <td> While travelling, they hear a call for help from a nearby field of crops. There, a young farmer is being attacked by a Blight. After saving the farmer, she offers the party a visit to a local fairy spring in exchange for helping to find why her crops have gone mad and started biting. This sets up to a fight against a large Blight or evil Treant.</td>
 </tr><tr>
@@ -617,18 +636,6 @@
 </tr><tr>
 <td>An Eye For Trouble</td>
 <td> While entering town, the group is accosted by a one-eyed man who asks the adventurers to get his eye back from a wizard who stole it as a spell component for some new spell she was researching. The only problem is that she's traveling with a company of Mercs, who don't take kindly to someone troubling their company mage.</td>
-</tr><tr>
-<td>Unfortunate hookup</td>
-<td> While slightly drunk, one of PC hooks up with some beautiful woman. Next day, he gets an invitation to duel at 7 am in front of the town.</td>
-</tr><tr>
-<td>Dancing troll</td>
-<td> Out of nowhere a wild and dangerous troll appears. But he is only dancing because magic shoes force him to do so.</td>
-</tr><tr>
-<td>Giant flood</td>
-<td> Out of nowhere, giant river springs in the middle of the city, destroying all of it. Local wise man claims only great magic or portal could create such river.</td>
-</tr><tr>
-<td>Ogre danger</td>
-<td> An extraordinary huge ogre destroyed a small village and some nearby farms. But he only wanted to play...</td>
 </tr><tr>
 <td>Ribbit Season</td>
 <td> A local rare frog breeder has been deliberately poaching wild frogs so that he has a monopoly on the lucrative hallucinogen the frogs sacreet.</td>
@@ -1013,14 +1020,12 @@
 </tr><tr>
 <td>Fried Piper of Hamlin</td>
 <td> A bard shows up in a town pushing an Organ (or whatever large musical instrument suits your fancy). He attempts to solve the issue of hunger in the town by playing an extremely fire beat, which somehow magically produces food within the instrument itself that can be retrieved and consumed. However, this act of generosity raises the ire of F&B business owners, especially when paying customers start flocking to said bard for free, better-tasting food.</td>
-</tr>
+</tr></tbody>
 </table>
 
 </div>
 </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
 	var $rows = $('#table tr');
 	var $randomRowTable = document.getElementById("randomTable");
@@ -1121,6 +1126,20 @@ function rollTable(tableId)
  var dataId = tableId + '_data';
  var tableDataElem = document.getElementById(dataId);
  tableDataElem.innerHTML = "<b>" + choice.textContent+"</b>";
+}
+</script>
+<script type="text/javascript">
+function resetTable()
+{
+hideRandomTable()
+document.getElementById('search').value=""
+}
+</script>
+<script type="text/javascript">
+function setSorter() {
+  $(document).ready(function() {
+    $("#table").tablesorter();
+  })
 }
 </script>
 </body>

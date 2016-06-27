@@ -1,11 +1,15 @@
 <html>
 <head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.4/js/jquery.tablesorter.js"></script>
+
 <meta name=viewport content="width=device-width, initial-scale=1">
 <title>10K Locations</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet">
+
 </head>
-<body>
+<body onload="setSorter()">
 <div class="container">
 <br/>
 <br/>
@@ -16,24 +20,27 @@
 </div><!-- ./col-md-4 -->
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Locations</h1>
-<p>This page is a compilation of the locations from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4iuwym/10k_locations_hallowed_ground/">/rDnDBehindTheScreen's 10K Locations thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 136/10000</h2><h3>Last updated: Sun Jun 05 19:51:37 CDT 2016</h3>
+<p>This page is a compilation of the locations from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4ousc6/10k_locations_thieves_dens_and_pirates_coves/">/rDnDBehindTheScreen's 10K Locations thread</a>. Be sure to visit and contribute!</p>
+<h2>Currently at 201/10000</h2><h3>Last updated: Sun Jun 26 19:27:58 CDT 2016</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
 <input type="text" id="search" placeholder="Type to search" />
 <label><input type="checkbox" id="casesensitive" onClick="checkFilter()" checked>Case Sensitive Search</label>
 <button type="button" onClick="randomRow()">Random Location</button>
+<button type="button" onClick="resetTable()">Reset</button>
 <div class="row">
 <div class="progress">
-<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="136" aria-valuemin="0" aria-valuemax="10000" style="width: 1.36%">
-<span class="sr-only">1.36% Complete</span>
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="201" aria-valuemin="0" aria-valuemax="10000" style="width: 2.01%">
+<span class="sr-only">2.01% Complete</span>
 </div>
 </div>
 <div class="row">
 <div id="randomTable"></div>
-<table class="table table-striped" id="table">
+<table class="table table-striped tablesorter" id="table">
+<thead>
 <tr><th align="center">Name</th><th align="center">Type</th><th align="center">Description</th></tr>
-<tr>
+</thead>
+<tbody><tr>
 <td>The Common Inn</td>
 <td>Tavern</td>
 <td> Welcome to the Common Inn. Everything is quite ordinary, you see, there's nothing special about us. In fact, we make a point of it. If you speak anything but Common, we'll kick you out. But don't worry - that rarely happens. Come on in!</td>
@@ -577,14 +584,272 @@
 <td>The Creation Forge</td>
 <td>Eldritch Creation hidden somewhere hidden</td>
 <td> Long ago, the first Warforged were created here, wielding the powers of the Quori against the Giants. Constructs were imbued with life, sentience, and personality and were given the tools to assist those in need and those in the everlasting war against the Giants.</td>
-</tr>
+</tr><tr>
+<td>What about that shadowy place?</td>
+<td>A single, dingy lantern swings on a rusted iron lamppost just outside the alleyway. You approach, back turned to the howling of the wind, and slide a single gold coin into a slot in the rough metal. A voice whispers from over your shoulder: "So... What can the Thieves' Guild do for you tonight?"</td>
+<td> Last week we did some elevated thinking, so let's bring it back to the seedier elements of society, far from any ivory towers. A collective of smugglers hiding in an abandoned warehouse, or maybe a gang of pirates precariously perched upon a beached ship. Any wretched hive of scum and villainy is fair game, here. The locations themselves don't necessarily have to be developed thoroughly; we're looking for places that could be dropped into any campaign by any DM. I'll provide some examples. Now...</td>
+</tr><tr>
+<td>The Wretched Ketch</td>
+<td>Dockside bar</td>
+<td> Built from the half-smashed hulk of a sailing vessel propped up against the cliffside, the Wretched Ketch gives even the seediest of taverns a run for their money. A dirt floor, dim lighting, and terrible alcohol characterize this watering hole for the worst of society almost as much as the terrible fish-and-excrement smell. At the very least, it's cheap--and the bedbugs are free of charge.</td>
+</tr><tr>
+<td>Home Free</td>
+<td>Bolthole</td>
+<td> When one is in the business of liberating shiny objects from their rightful owners, sometimes it's necessary to go underground. Usually, one can get away with going to the next town over, or blending into a crowd. For the times when even those tried-and-true methods fail, you're Home Free. An otherwise unremarkable farmhouse in the middle of scenic nowhere conceals an underground vault, with preserved food, bedding, and healing supplies for three to four people. Just mention to the elderly couple above that you are "Home Free," and they'll provide you with the key to the passage under the barn.</td>
+</tr><tr>
+<td>Bitter Grin Cove</td>
+<td>Smugglers' Den</td>
+<td> Contrary to the name, Bitter Grin Cove is neither a cove, nor even on the sea at all. Instead, it's a series of abandoned dwarven warehouses, tunnels, and living quarters that a smuggling ring have repurposed for their own business ventures. Thousands of gold pieces' worth of ill-begotten goods pass through the Cove each week, and its low profile and misleading name help keep intrepid investigators off the trail.</td>
+</tr><tr>
+<td>Harvand's House of Cheese</td>
+<td>Fence</td>
+<td> Once a legitimate business, customers who visit Harvand's looking for fine cheese will now leave a little confused. The cheese behind the counter is hard and cracked, and the man behind the counter wears leather armor behind his apron. But if you are looking to offload something that has a dubious history of acquisition, 'Harvand' will be able to help. And if you are looking to purchase, just ask, and he may have something for you at discount prices.</td>
+</tr><tr>
+<td>Barrels Point</td>
+<td>Smuggler's Den</td>
+<td> Long ago a trading vessel foundered off the coast. Needing to offload weight, they dumped dozens of huge oak wine barrels into the sea. Now hoisted above the shoreline into the bushes, the remains of the barrels have been converted into a series of small buildings where smugglers may store goods and trade. They still smell pleasantly of aged oak.</td>
+</tr><tr>
+<td>The Keyhole</td>
+<td>Thieves Den</td>
+<td> Privacy is hard to come by in the treeless frozen wastes to the north, so any cave is sure to by occupied, but the Keyhole is far from ideal. The only entrances are a narrow squeeze barely wide enough for a man, and a long drop down a rope from a ceiling hole 60ft in the air. Despite this, the Keyhole is warm, and furnishings have been brought in part-by-part to make this a relatively accommodating refuge for thieves and ne'er-do-wells.</td>
+</tr><tr>
+<td>The Angry Squid Tavern and Rooming Company</td>
+<td>Riverside inn</td>
+<td> this innocent looking inn on the side of a river is really a front to a smuggling ring, the inside is well kept and well lit, but the men the barman knows by name are not your average fisherman...</td>
+</tr><tr>
+<td>The Lord's Bridge</td>
+<td>Bolthole</td>
+<td> It's best not to think too hard about the architectural choices that led to the gap in the abutment of the Lord's Bridge, because in a pinch it makes for a great place to hide. The space inside is small but dry, and the entrance so cleverly hidden under the bridge that it almost looks as though someone has vanished into thin air.</td>
+</tr><tr>
+<td>Deadfalls</td>
+<td>Thieves Den</td>
+<td> In the forest by this remote town lies a twisted tangle of fallen trees, bleached grey with age. The pile is impossible to climb over, but there is a way to pick a careful path under and through the logs and branches to the small hut beyond.</td>
+</tr><tr>
+<td>The Museum of Curiosities</td>
+<td>Fence</td>
+<td> Anyone can enter the Museum of Curiosities (for a small fee). Within the huge room is crammed with objects, piled on the floor, slotted into shelves or hanging from the ceiling. Many are strange and interesting (stuffed sharks, a bone chandelier, books on invented creatures), but a great number are completely mundane. The proprietor, Varvick, is always happy to make new acquisitions without asking too many questions and hints that the items on display can also be purchased for a price.</td>
+</tr><tr>
+<td>Summer Fair</td>
+<td>Black Market</td>
+<td> Despite it's name, the Summer Fair runs all year round. An eccentric noble loved the Fair so much, he invited it into the grounds of his Estate for free on the condition that it kept going permanently. Over the years, however, the purpose of the Fair has slowly changed and now besides the ordinary citizens buying snacks and enjoying performances, you can also find dubious stalls hawking even less legitimate goods.</td>
+</tr><tr>
+<td>Patigan's Restaurant</td>
+<td>Thieves Guild</td>
+<td> When the head of the Thieves Guild enjoys the finer life, you end up with a place like Patigan's. Here Thieves can dine openly while they undertake negotiations, as the tables are widely placed in the large, decadent room, and there are plenty of private rooms available for more discreet meetings. The food is also excellent, and provides a good source of clean gold for the proprietor.</td>
+</tr><tr>
+<td>The Blooded Leech</td>
+<td>Speakeasy?</td>
+<td> The bouncer is frighteningly well-armed, the bartender is aggressively indifferent to anything but cold silver, and the entire room seems to be built from nothing but moody back corners. But whisper the secret word into the ear of the right hooded stranger, and he'll lead you down a narrow corridor, out the back door, down a flight of stairs, and through the crumbling threshold of a derelict warehouse, where the man who sold you the password sharpens his long knife, waiting to relieve you of everything you own.</td>
+</tr><tr>
+<td>Falter's Crag</td>
+<td>Mountain Fortress</td>
+<td> Built, abandoned, reclaimed, taken by force, and abandoned again, the old castle has forever been a stepping stone to greater, more important things. With none of the elegance of the lowland keeps, and with few of the defenses of the all-important valley strongholds, Falter has always served as a sort of waypoint, a staging ground for the next leg of whatever campaign it's been pulled into. Recently, however, an enterprising group of former highwaymen (who prefer the terms 'mercenaries' or 'sellspears') have occupied the old outbuildings and walls of the fortress, doing their best to make it somewhat presentable again. They're friendly enough to outsiders, and seem on guarded but cordial terms with the goatherds and herb-gatherers that roam the steep hills above the keep. But when pressed about why they've taken up in the old fortress, or who employs them and pays for the growing supply of provisions and weapons, the mercenaries are carefully reticent.</td>
+</tr><tr>
+<td>The Fox and the Butcher</td>
+<td>Grey Market</td>
+<td> You can't step into the Fox without somehow discussing The Old Proprietor, a businessman of impeccable taste and acumen, or so they say. Gallant. Chivalrous. Stalwart. On the wall above the till, the cleaver he supposedly carried into battle hangs from a bent nail, and when the draft kicks up from the harbor, it creaks back and forth in a rusty arc. What's strange is that there doesn't seem to be a new proprietor; the old woman who slowly wraps headless fish in brown paper certainly isn't one, nor the acne-scarred youth who sweeps the floor. Most don't seem to care, though - you can get things at the Fox that you can't get elsewhere, and they're always willing to buy low-risk merchandise. In the rare case that the constabulary come sniffing, The Old Proprietor's reputation (and a few silver) is almost always enough to send their search elsewhere.</td>
+</tr><tr>
+<td>Grizzlegut's Boon</td>
+<td>Sellsword & Sailor Gathering Place</td>
+<td> Once the waterside home of Sea King Grizzlegut, this mansion now serves as a meeting place for mercenaries and their next line of work. Years of exploration and pillaging brought luxuries to the mansion, now decorated with exotic furniture, ornate artworks, and masses of intriguing texts. Sword and buyer alike can find respite in rooms built to house Grizzlegut's hefty crew.</td>
+</tr><tr>
+<td>Underskin Watch</td>
+<td>Thieves hideout</td>
+<td> Latched doors open to a workshop saturated with the pungent odor of toxins and decay. Numerous chemists work at specialized tables speckled around the room, concocting every poison ever used in the folly of men. The Watch's visitors keep constant vigilance of every entrance and exit in exchange for the right to purchase the poisons of their choosing.</td>
+</tr><tr>
+<td>Blackhall</td>
+<td>Regal Scumpit</td>
+<td> Each and every lord needs willing followers to do what he cannot, and so beneath every city lies a hall. A hall of black and cold, where loyal servants wait to carry out their next tasks. Separate from humanity, this hall houses secrets darker than the ones brought to it from the realm of men, secrets untold, but not forgotten.</td>
+</tr><tr>
+<td>Roy's</td>
+<td>Dive Bar</td>
+<td> Welcome to Roys! Everyone here is called Roy. Cept the Bartender, thats good ole Barry. But everyone is called Roy that goes in. No one cares for your name outside the bar.</td>
+</tr><tr>
+<td>Half Sunked</td>
+<td>Bar!</td>
+<td> Lord Bately ship, is just as stubbord as Lord Bately. On its last voyage, where it lost a part of its keel, and took on water. To only become irreparable once in sight of port. But it just got about half way.</td>
+</tr><tr>
+<td>The Blue Oyster Bar</td>
+<td>Dockside Tavern</td>
+<td> A small, rickety wooden structure at the end of the Mill Street Pier, the Blue Oyster Bar is known for its fresh oysters, skunky ale, stron rum, and tales of the sea. If you want to hire a sailor, you should head to the city, but if you want to connect with a ship's captain, this is the place. Most of the best merchant vessel captains can be found here, but so can the best and worst pirate captains.</td>
+</tr><tr>
+<td>The Plundering Dragon</td>
+<td>Dockside Inn and Tavern</td>
+<td> A half block up Mill Street from the waterfront is the Plundering Dragon, a warm place with a roaring fire and welcoming barmaids. The interior of this large inn and tavern is decorated with all manner of souvenirs brought back by sailors from the far reaches of the world. The girls are notorious for their wandering fingers, which easily find their way inside a man's purse. A joke goes that has it that every feather, dress, seashell, spearhead, knife, and totem hanging on the walls has been "twice-plundered"—once from its native land and again from the sailor who carried it back.</td>
+</tr><tr>
+<td>The Ox and Plowman</td>
+<td>Roadside Inn</td>
+<td> Travelers will find more welcome at the Ox and Plowman than from any in the nearby villages—filled with superstitious and fearful peasants. The two-story stone inn has a half-dozen rooms for rent and a cellar full of wine for drink. The owner and proprietor of the inn is a beautiful woman named Brynna who is rumored to be romantically involved with Jonan the Black Wolf, a notorious outlaw in the valley. Several ruffians who claim allegiance to the Black Wolf often come to eat, to drink, and to dice at the Ox and Plowman.</td>
+</tr><tr>
+<td>Wreckrife Straits</td>
+<td>Smugglers' Run</td>
+<td> Between Cape Flounder Island and the mainland are the Wreckrife Straits, a winding and narrow path of rough waters that only the bravest or the most foolish captains will dare to sail. Rocks, reefs, and howling winds make this a dangerous passage even for small craft piloted by seasoned captains. Running the Straits cuts at least three days off the journey around Cape Flounder, a risk some smugglers are willing to take to avoid naval battles and to outrun rivals.</td>
+</tr><tr>
+<td>Toad's Baitshop</td>
+<td>Riverside Storefront, Black Market Fence</td>
+<td> Toad's Baitshop isn't really the best place in town to go for live bait, fish line, and netting repairs, but you could do worse. However, if you're looking to unload something hot or to locate some stolen goods, Toad's is a good place to start. Old Toad is very discreet but stingy; he buys low and sells high. Ask him about his new "sticky nightcrawlers" if you want to see what's just come in.</td>
+</tr><tr>
+<td>Tymon's Cooperage</td>
+<td>Workshop, Black Market Fence</td>
+<td> Tymon is as good a cooper as you'll find. He often has only a single apprentice at a time whom he assures you can trust. Tymon's shop has a cellar full of "finished" barrels awaiting shipment. Tymon has an unsual numbering system for each barrel crafted in his shop, a secret code of sorts, and he uses it to providing a "holding service" for local thieves. He rarely sells the stuff that comes into his shop directly, but his services are worth what he charges to hold things while the heat after a heist cools off. For a considerably more, he'll even orchestrate a delivery of some "finished" barrels, allowing thieves to get their goods out of town without attracting attention from the constabulary.</td>
+</tr><tr>
+<td>Meats and Meads</td>
+<td>Butcher Shop and Brewery</td>
+<td> Tucked away in a small unlit alley lies a rather simple looking establishment, pungent with the smell of rotting roasts and stale ales. Their primary export is their signature wine that bears a telling deep crimson color and a heavy metallic taste; many of the meats come in rather small lean cuts, uncommon for larger game animals. On occasion, people dressed in dark colors are seen dragging heavy bundles of cloth and fabric into the back of the store in the dead of night, only to leave empty handed.</td>
+</tr><tr>
+<td>The Iron Maiden</td>
+<td>Armory</td>
+<td> A quick glance into the store would immediately leave you feeling cautious. Thorny sets of vicious looking armors stand on mannequins near the doorway, and a large selection of brutal weapons line the walls. You won't find any clubs or quarterstaves here, everything you see around you appears to be designed to draw blood, from notched whips, to morning stars, to vicious looking daggers. Various chains and shackles lie in bargain bins along the floor, and you may occasionally glance a bloodshot eye peering up from between the floorboards, or a muffled whimper from under your feet.</td>
+</tr><tr>
+<td>The Widowmaker</td>
+<td>Gathering Hall</td>
+<td> A place where the ale never runs dry and the patrons are always in a good mood. At first glance, everything seems a little too neat, a place perfect to attract adventurers and wanderers. A giant board covered in job postings lies directly inside the door, and you'll notice that each of them ends with "Please meet in the back for further details." Those who walk into that cellar never walk back out, and the job postings never seem to change, but otherwise it's a relatively safe place to eat, drink and be merry, though newcomers aren't recommended to frequent the establishment alone, just in case.</td>
+</tr><tr>
+<td>Alchemist's Fire</td>
+<td>Apothecary</td>
+<td> The potions sold by the owner of the store are known to be functional at best, and the sickly pallor and various chemical burns along his exposed skin may be a little more telling. He wears an intricately crafted full faced mask in the shape of a bird's head at all times, and a dirty leather coat that bulges and stretches in odd places. It is recommended you ask to see his "special selection", as this is where his work really shines. Countless Poisons, Acids and deadly chemical mixtures of all sorts hide under his thick jacket, and he's open to any questions you may have about delivering them.</td>
+</tr><tr>
+<td>The Kraken's Lunch</td>
+<td>Small seafood restaurant and bar near the docks.</td>
+<td> During normal hours they cater primarily to sailors and those that work the docks. Rumours abound however of shadier goings on once the lamps go off, however guards have never been able to prove anything.</td>
+</tr><tr>
+<td>The Lost Cove</td>
+<td>Smugglers Den</td>
+<td> Off the coast of the nearby city, far enough where no one could easily see boats coming in or out lies a cove not on any map. Riches lay there waiting to be taken into the city and sold on the markets, brought in by merchants looking to offload cargo they could not otherwise sell and through more shady means.</td>
+</tr><tr>
+<td>Emperors Jewels</td>
+<td>Thieves Guild</td>
+<td> Officially sanctioned, though never publicly mentioned, this guild sits behind a hidden door in the Imperial Gardens. They are led by The Faceless Man and given jobs by the emperor and other freelance contracts at their discretion.</td>
+</tr><tr>
+<td>Stallion's Canter</td>
+<td>Fence/Tavern</td>
+<td> This mild-mannered-appearing tavern is actually a well known fence in the underworld. Using the right phrases and figures of speech, those in the know bargain with the fence (the barman), while appearing to discuss prices of drinks, food, bedding, and other accommodations. The goods are always left on the bargainer's horse, to be taken into a cellar by a "stable hand" after the bargaining is complete. Those ignorant of the tavern's true nature can enjoy an evening here, albeit at a higher price than they can expect from its nearby competitors.</td>
+</tr><tr>
+<td>Dirty Meg's</td>
+<td>Chop Shop</td>
+<td> Dirty Meg is known for running a clean business, despite her dirty leanings. She gives fair deals and never cheats a customer, but knows when to ask questions and when to let things slide. She has an ironclad policy against squealing to the authorities on her clientele, but she's been known to dump a hot item at the customer's expense if the heat comes around.</td>
+</tr><tr>
+<td>The Gilded Leaf</td>
+<td>Forest Tavern</td>
+<td> Many consider the elves to be graceful, elegant creatures nigh incapable of crime, and a first glance at the Gilded Leaf would confirm this suspicion. Built into a living tree, the Gilded Leaf seems warm and friendly, with smooth wood floors; a crackling hearth that burns with magical flame; and the smoothest wine an elf could ask for. Whisper the password (which you must coax out of a nearby fey) to the barkeep, however, and he'll direct you to the secret entrances leading to a thieves den built around the roots of the tree.</td>
+</tr><tr>
+<td>Ectoplasm</td>
+<td>Sunken Ship Bar</td>
+<td> The treacherous waters of Baron's Reef has claimed many a merchant, navy, or pirate seeking a shortcut, leading to rumors of ghost ships and krakens pulling sailors to their doom. If you know the waters well, you can sail through the deadly rocks and half-submerged ships to Ectoplasm, a pirate hotspot built onto a massive partially sunken galleon. Whether you want exotic drink, thrilling gambling, or the finest (and only) wenches in the middle of the ocean, Ectoplasm has your vice.</td>
+</tr><tr>
+<td>Cliffkeep</td>
+<td>Cliffside Fortress</td>
+<td> Hidden amidst the maze of canyons in the Sea of Sands, Cliffkeep is a secretive sandstone fortress built to serve an ancient guild of assassins. From the canyon floor or ridge, you can only see a few walls, windows, and buildings that sit about 150 feet off the canyon floor. However, secret tunnels and narrow, hidden crevices lead from the surrounding desert into the fortress, leading guards, bounty hunters, and armies to claim that their quarry simply vanish into the canyon. Cliffkeep is now the home of a marauding gang of bandits and thieves, but remnants of the assassins remain in secret rooms and trapped passages and vaults.</td>
+</tr><tr>
+<td>Windún</td>
+<td>Mountain tavern</td>
+<td> Carved into the very rock itself, Windún is hidden from prying eyes and was once the proud place of rest for those who ventured toward the ancient dwarven empire of Yaar'tag. Since the kingdom fell into disarray and avarice many winters ago, so too did its nefarious end meet Windún and corrupt its jovial character. Now, the tavern is a thieves inn where the most prestigious thieves and their orders congregate and sell wares to fences and the ever expanding under-market. The heavy smell of sweat and malted beer fills the air and as you enter, you notice faces lined with experience and scarred with villainy.</td>
+</tr><tr>
+<td>The Pit</td>
+<td>Slave market</td>
+<td> Where winding, narrow alleys writhe gnarled through the city, here is that place where old wives scare children with tales of slavery and chattel. The Pit had always been a place of unrest and was first a gambling den. Over time, the stakes rose and the bets became higher. There are still games played today where the scum of the land laugh and drink whilst their property is beaten and shoved between new master and old. For the most part, clothed in rags and held by rusting chains, the slaves stand silently at the market, waiting to be bought and hoping to be freed.</td>
+</tr><tr>
+<td>Ganga ni Wana</td>
+<td>?</td>
+<td> Compared to most places, the Wana seems relatively tame, albeit remote and some several miles from the nearest settlement. Drinks flow and the rich smell of food wafts over the tables. There is drunkenness and lechery abound, that is true. Yet it is usually no worse than any other tavern or inn by its debauchery. There are rumours, however, on what happens past the twilight hours, when most have left for their homes. A few new patrons stay behind, lured by the drink and other inviting pleasures. And some wandering travellers have claimed that in the quiet, bloodcurdling screams pierce through the silence before fading into nothing once more.</td>
+</tr><tr>
+<td>Yduro</td>
+<td>Docklands</td>
+<td> Meandering walkways and streets that twist inward and crumble near the sea, the heady smell of fish lingering in the air and the shouts of fishmongers. Nobles, profligate and drunk, sprawled on the street and there is a metallic taste to the water around here. Yduro has steadily declined as multiple decrees have stifled its trade to other docks. Its good heavily monitored once they leave the area, the locals have turned upon each other, scrapping for every morsel of good food that now seldom comes through here. Poverty and starvation reign and they have engendered much sin of late.</td>
+</tr><tr>
+<td>Ofþrycca</td>
+<td>Nefarious chemist</td>
+<td> Run by the dubious apothecary Ranwyn Oltarn, the little shop nestled within the sprawling alleys of the city is known to many as Ofþrycca or Oftha to the commoners. At any time of day, a thick, coloured smog emanates from its doors and the overwhelming smell of strange herbs chokes the street. Oltarn is rumoured to experiment on his patients, concocting strange recipes that detractors have accused makes the 'victim' suffer from a deep depression and a wasting sickness. There are some, in the darker underbelly of society, who swear by Oltarn's brews, claiming it gives them heightened awareness and prowess, if only afflicting them with strange visions at times.</td>
+</tr><tr>
+<td>Dorgadoon</td>
+<td>Disused bell tower</td>
+<td> Currently inhabited by bandits and rouges, the Dorgadoon was once a majestic bell tower that called those within the Barony of Corval to prayer. A ruined church lies at the hard, stone base of Dorgadoon and every year, a lone pilgrim makes their march to the place, laying a single flower where the altar once stood. Who they are and why they do this is unknown and the Grasping Hand who inhabit the place now could not care less.</td>
+</tr><tr>
+<td>The Watch</td>
+<td>Cultist church</td>
+<td> The Watch has long been a font of rumours and farmer saws. Shrouded in mystery and perched atop a cliff overlooking the sea, its first inhabitant was said to be a necromancer who had died many winters ago. In reality, the cult that had formed around him keep his life permanently upon the edge of death; it is believed by the Watch that the greatest secrets of necromancy are learned in this way and thus, his sallow corpse wheezes with the final vestiges of life, desperate for death but unable to grasp at it.</td>
+</tr><tr>
+<td>Sangava</td>
+<td>Smuggler's stall</td>
+<td> Each week in the market square, a lone stall sets up and seems to sell almost nothing of worth. Some odd trinkets here and there and a few wrapped meats but, in all, unremarkable and this is precisely how the Sangavi like it. Carefully choosing their clients, the Sangavi have developed an extensive trade network formed through intense trust and brutal reprimands. And so, a few hours before the weekly market, a tunnel is dug beneath the stall's desired location and goods from strange and forbidden lands funnelled through. As silently as they arrived, the tunnel is sealed and the Sangavi merchant heads home once more.</td>
+</tr><tr>
+<td>Black Flagon</td>
+<td>Inn and tavern</td>
+<td> A tavern buried within the poor district, the place is almost always visited by those who live in the area. The gentry believe the place to be fairly unassuming and allow the Flagon to proceed unchecked, believing it provides some relief to the commoners. In reality, the Black Flagon is the home of Fayvel's Own, a band of vagabonds and rogues who steal from anyone and anything. Rough and rowdy, the tavern is in a state of disrepair and it doesn't look as if it will be improved any time soon. Sodden clothes, wet with sweat and mead and stale fish linger in the air. Originally reselling artefacts and wondrous items, Fayvel's gang have become increasingly adept at hiding in plain sight and blending in with the nobility, such that they now sell information too. Their most recent exploits have uncovered some troubling news.</td>
+</tr><tr>
+<td>Grog.</td>
+<td>Tavern</td>
+<td> The innkeeper of Grog is direct and to the point, as is perhaps evident from the name of his establishment. Heldar Tharynn is a stout dwarf who dislikes long conversation and is motivated by a certain sort of greed. Unable to competently fight any longer, Heldar pays good coin and provides free food and board to those who return with a sizable treasure from the elder dragon Y'ntaraj for reasons unknown. Inevitably, word of this has attracted a certain sort of customer and many patrons of Grog often discuss how to reach the lair of the beast and slip past unseen. As of yet, very few have returned alive.</td>
+</tr><tr>
+<td>Whispering Lady</td>
+<td>Information Source</td>
+<td> Nestled in the middle of the docks is an aging but clean building, once inside you are greeted in a small waiting room by a well dressed servent. If you have the coin you can go in and be seated at on of the many private tables, and booths in the building, or for a "small" fee the maitre d' will take you to one of the semi-permanent residents tables so you may buy, or sell information. Additionally this is the perfect place to meet informants, broker deals, or pass information, as the owner has made sure it is protected from all forms of divination and has standing agreements with both the City guard and the thieves guild for protection. Your Secrets are safe here.</td>
+</tr><tr>
+<td>Dancing Bear</td>
+<td>Hell(AKA dive bar)</td>
+<td> Clapboard coats the outside of the building, each piece seemly put there at different times, the windows have no glass but rather have waxed cloth coverings, the cloth itself torn and patched. Upon entering you find a single room makes up the entire building, the "kitchen" is a fire pit in one corner with smoke allowed to flow freely through the room and up out the sheltered hole that serves as a chimney. The bar lines the far wall, made from old barrels and topped by sweat polished wood that seems to have come from a neighboring building at one time. As the door closes behind you with the screech of ungreased hinges and the slap of wood many of the patrons glance up, and you feel the weighing stare of armed men considering robing you.</td>
+</tr><tr>
+<td>The Silken Veils</td>
+<td>Brothel</td>
+<td> Sitting alone with a small garden on each side, and a high iron fence all around the property, The Silken Veil does not even try to fit in with the squalor of it's surroundings. Fresh paint gleams on every inch exterior, and perfect glass sits in the two bay window frames in the front. Standing behind the glass are two Women coated head to toe in silk so sheer you swear you could see right through it if they were not wearing countless layers. As you walk in the front door you see several hulking men standing at their ease in corners, and if you listen closely you think you can hear the clinking of armor in the walls. A older women sits behind the front desk, and greet you warmly with a smile. Sitting infront of her is a large book with what appears to be drawings of women on each page.</td>
+</tr><tr>
+<td>Grandma Gertrude's Gardening Grove</td>
+<td>Thieves Guild</td>
+<td> Most people think of Grandma Gertrude as a kindly sweet old lady who runs a Gardening shop on the edge of the city with quaint little gardens growing around her shop. What most don't know is that she was one time known as Grim Gertie, and was one of the most ruthless thieves of the lands. Now, she has settled down and taken over control of the local thieves guild using her gardening shop as a cover. She has dug various tunnels under the city, and thanks to dwarven contractors, they are more than mere tunnels. An elaborate maze of tunnels, laid with all sorts of traps, which can only be bypassed if Gertrude gives you a special pin to wear for gardening prowess. Inside this tunnel network, are training grounds, a black market, a barrister's office, an inn, a flop room, and a well secured fence's caged office area, where multiple fences buy stolen goods, depending on their specialty. One fence will only buy art items, another jewelry, etc.</td>
+</tr><tr>
+<td>The Avaricium Arcane</td>
+<td>Thieves guild for those who mix magic with their larceny</td>
+<td> Near the docks stand a nondescript building with no windows, and only one door. The door is trapped with numerous magical traps that a rogue would have to bypass to open the door, but for those skilled enough to deactivate the magical traps and open the door, another ugly surprise awaits as all they will see is the wall. The real door is hidden under an illusion on another wall. Once they do manage to prove their skilled enough with magic to find the real door, they can enter inside where they find a small bar tended by unseen bar servants, a job listings board, and a fence or two buying and selling magic items, spellbooks, and other things a thieving mage might need.</td>
+</tr><tr>
+<td>The Canopy</td>
+<td>Pirate hideout</td>
+<td> Hidden in the highest treetops of an ancient jungle resides an elven tribe who hunt for great treasure rather than for small game. Ropes and pulley systems are strung throughout the branches making movement between the many platforms swift and simple. Only the most skilled of acrobats can navigate this maze of loose planks and vines without falling to the jungle floor far, far below.</td>
+</tr><tr>
+<td>Swan's Inn</td>
+<td>Town tavern & inn</td>
+<td> Built from the ground up during the town's earliest days, Swan's Inn perfectly balances the feeling of a seedy bar with the reputation of a respectable establishment. Despite being a well-known front for the local thieves' guild, it's the safest place to be in town--provided that you don't mind parting with your coin purse after a while.</td>
+</tr><tr>
+<td>Carpenter’s Guild</td>
+<td>Thieves’ Den</td>
+<td> Masquerading as construction contractors this thieves’ den already has detailed blueprints of every mark they’re going to hit. Every member always carries around hammer and nails and will use these to defend themselves when caught. The locals aren’t sure what’s the bigger robbery, the heists they pull or the prices they charge</td>
+</tr><tr>
+<td>Spitting Distance</td>
+<td>Tavern</td>
+<td> This tavern is a favorite spot for criminals and lowlifes in the city, situated just above town hall there is a large deck from which the patrons can show their appreciation of the local governments efforts. The place is crowded every night of the week and it is easy to find a fence—or three—on any given night. Some government officials have taken to going to the bar after work and spending their nights cheek by jowl with pirates and smugglers. No one can tell who is worse.</td>
+</tr><tr>
+<td>The Black Hand</td>
+<td>Thieve’s Den</td>
+<td> Located in Lars MegaDark’s mother’s basement, this thieves den demands that ACDC music plays all the time in their hideout. The members all wear only black and are forbidden to cut their hair. They are embroiled in a violent turf war with Queen’s Gambit (although no Queen’s Gambit member even recognizes the name “Black Hand”)</td>
+</tr><tr>
+<td>Neptune’s End</td>
+<td>Cultist Temple</td>
+<td> This warehouse has a ring of smugglers masquerading as a Cthulhu worshipping cult, protected under the cities freedom of religion laws. The dingy driftwood built temple and non-euclidean statues inside make a surprisingly good cover and some of the smugglers get really into the act.</td>
+</tr><tr>
+<td>Salty Pete’s Delivery Service</td>
+<td>Parcel Delivery</td>
+<td> Salty Pete is a charismatic and brash veteran of the seas who can literally smell gold and opportunity. Based out of a squat 1 story shack of an office, his ships will get you past the local customs alright but they’re made to outpace things much worse, and much faster, out on the open sea.</td>
+</tr><tr>
+<td>Third Eye Academy</td>
+<td>Psionic University</td>
+<td> Formally founded to advance the study of psionics, up to two thirds of the grant money given to the university is actually used to ground up the psionic crystals into a fine hallucinogenic powder which the “professors” sell on the side, pocketing the profit themselves.</td>
+</tr><tr>
+<td>The Mermaid’s Tit</td>
+<td>Pirate Sloop</td>
+<td> Formally used to run down merchant vessels on the open water, Captain Gruntheim realized the party circuit is a lot more lucrative and converted his ship into a booze cruise that sails nobles around the royal harbor all night. For a hefty fee, you can rent out the entire deck and convince the captain to sail the ship into international waters for the really wild parties.</td>
+</tr><tr>
+<td>The Drop</td>
+<td>Tavern</td>
+<td> This tavern makes quite the effort to attract adventurer and pirate alike and isn’t afraid to show off their own set of weapons and each bartender has enough war stories to fill a novel. This is all for good reason, since rumors fly that the local mob runs the especially big drops through this bar. In actuality, it isn’t a mob bar at all and they haven’t handled a single drop, but the tavern uses it as a marketing tactic, and the mob doesn’t want anyone talking about the real drop bars.</td>
+</tr><tr>
+<td>The tavern for incredibly heroic heroes on heroic quests</td>
+<td>Tavern</td>
+<td> A tavern run by a couple of con-men aimed at catering specifically to adventurers selling scrolls of fireball (fake) and potions of healing (sewer water) in addition to the usual lodgings, food, and alcohol</td>
+</tr></tbody>
 </table>
 
 </div>
 </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
 	var $rows = $('#table tr');
 	var $randomRowTable = document.getElementById("randomTable");
@@ -685,6 +950,20 @@ function rollTable(tableId)
  var dataId = tableId + '_data';
  var tableDataElem = document.getElementById(dataId);
  tableDataElem.innerHTML = "<b>" + choice.textContent+"</b>";
+}
+</script>
+<script type="text/javascript">
+function resetTable()
+{
+hideRandomTable()
+document.getElementById('search').value=""
+}
+</script>
+<script type="text/javascript">
+function setSorter() {
+  $(document).ready(function() {
+    $("#table").tablesorter();
+  })
 }
 </script>
 </body>

@@ -1,11 +1,15 @@
 <html>
 <head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.4/js/jquery.tablesorter.js"></script>
+
 <meta name=viewport content="width=device-width, initial-scale=1">
 <title>10K Mysteries</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet">
+
 </head>
-<body>
+<body onload="setSorter()">
 <div class="container">
 <br/>
 <br/>
@@ -16,24 +20,27 @@
 </div><!-- ./col-md-4 -->
 <div class="col-md-8 col-md-pull-4">
 <h1><a href="..">10K // </a> Mysteries</h1>
-<p>This page is a compilation of the mysteries from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4ijjbz/10k_mysteries_the_supernatural_and_the_strange/">/rDnDBehindTheScreen's 10K Mysteries thread</a>. Be sure to visit and contribute!</p>
-<h2>Currently at 259/10000</h2><h3>Last updated: Sun Jun 05 19:51:35 CDT 2016</h3>
+<p>This page is a compilation of the mysteries from <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4nws6u/10k_mysteries_the_ancient_and_the_arcane/">/rDnDBehindTheScreen's 10K Mysteries thread</a>. Be sure to visit and contribute!</p>
+<h2>Currently at 283/10000</h2><h3>Last updated: Sun Jun 26 19:27:57 CDT 2016</h3>
 </div><!-- ./col-md-8 -->
 </div><!-- ./row -->
 <input type="text" id="search" placeholder="Type to search" />
 <label><input type="checkbox" id="casesensitive" onClick="checkFilter()" checked>Case Sensitive Search</label>
 <button type="button" onClick="randomRow()">Random Mysterie</button>
+<button type="button" onClick="resetTable()">Reset</button>
 <div class="row">
 <div class="progress">
-<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="259" aria-valuemin="0" aria-valuemax="10000" style="width: 2.59%">
-<span class="sr-only">2.59% Complete</span>
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="283" aria-valuemin="0" aria-valuemax="10000" style="width: 2.83%">
+<span class="sr-only">2.83% Complete</span>
 </div>
 </div>
 <div class="row">
 <div id="randomTable"></div>
-<table class="table table-striped" id="table">
+<table class="table table-striped tablesorter" id="table">
+<thead>
 <tr><th align="center">Mystery Name</th><th align="center">Mystery Description</th></tr>
-<tr>
+</thead>
+<tbody><tr>
 <td>The case of the Baker</td>
 <td> Every morn' before the sun is risen. Fresh, warm bread appears in the village. This impoverished village has no baker, nor a proper oven. Too far from the city to maintain its warmth, the masterwork bread that appears... Only where none are looking.</td>
 </tr><tr>
@@ -810,14 +817,84 @@
 </tr><tr>
 <td>The Foresters' Plenty</td>
 <td> The town's loggers refuse to travel more than a league into the forest, but the lumber they return with is far too dense to be young growth, and it burns with an unusual ferocity. They've been following the same logging trails for as long as anyone can remember, and refuse to show them to outsiders.</td>
-</tr>
+</tr><tr>
+<td>The Circle of Feasting</td>
+<td> The party happens upon a fairy ring in the forest. Since there are no actual Fey around, it seems to be simply a curiosity. Should anyone attempt to eat or drink within the circle, however, they will find that their food and drink has become cuisine fit for the most decadent of banquets. Upon leaving the circle, however, the food leaves a bitter, ashen taste in their mouths.</td>
+</tr><tr>
+<td>The Hills of Jars</td>
+<td> Just under the rolling, grassy hills of Sucia Isle, a series of vast, labyrinthine warrens and warehouses waits. The stonework walls, ceilings, and floors appear to be ancient and caked with dust. Filling the tens and hundreds of rooms within the hills are large, earthenware jars, lined up by the thousands, their clay lids sealed with wax. The entrances and exits to these underground storehouses are warded with powerful glyphs, which have long since faded and gone dark with the ages.</td>
+</tr><tr>
+<td>Silence is Golden</td>
+<td> This object is peculiar, taking the shape of a rolled ring of some strange, silvery material. At first glance, there is no immediate way to unroll it, but with adequate investigation, the end can be found, and the substance unrolled from the rest. The silver strips can be torn away with little effort, and will adhere to most dry surfaces, though they have no other effect.</td>
+</tr><tr>
+<td>The Tree of Runes</td>
+<td> Deep beneath the earth, far removed from the most remote dwarven strongholds of the Shadowspire Mountains, there is a tree. Green and flourishing despite the lack of sun, the tree's roots reach deep and wide, breaking the cavern floor. Each of the tree's leaves bears a symbol that greatly resembles a rune in the Dwarven alphabet.</td>
+</tr><tr>
+<td>New Tricks</td>
+<td> While hunting in the deep forest, a Ranger's dire wolf companion has unearthed a fossilized femur bone of prodigious size that oozes dark red liquid when touched.</td>
+</tr><tr>
+<td>Treasure's Quandary</td>
+<td> A collector's prize relic has been publicly proved a forgery, but that hasn't stopped a zealous cleric from demanding it be 'returned' to the temple from which it was 'stolen'.</td>
+</tr><tr>
+<td>Ninety Lives</td>
+<td> The neighbor's patch-furred, scarred old tom enjoys bringing the ravaged bodies of mice, rabbits and the occasional mimic spawnling to the steps of the outhouse, where the likelihood of meeting a bare foot in the middle of the night is at it's greatest. Lately, however, his prizes have included documents in foreign languages, gaudy jewelry, and the signet ring of a long-dead duke.</td>
+</tr><tr>
+<td>Sideways Time</td>
+<td> A Wizard of some renown claims to have (re)discovered a new school of magic, but is unwilling to disclose any more until someone can prove that he isn't dead.</td>
+</tr><tr>
+<td>Serpent's Feather</td>
+<td> The snakes that nest in the barren cliffs that skirt the Northern edge of the great desert are renowned for the deadly potency of their venom, and have been milked for generations in semi-religious ceremonies by Kobold mystics, who then sell vials of the stuff to the highest bidder on the shadow market. Lately, however, various cells in the loose network of assassin's guilds have reported that the last shipment of venom isn't nearly as effective as it once was, and a few incredibly thorough practitioners of the murderous arts have been overheard suggesting that it might actually have restorative powers.</td>
+</tr><tr>
+<td>Love the Bomb</td>
+<td> In the quiet hamlet of Llywenshire, the well in the central square has served as the hub for the community for as long as anyone can remember. But after a sore-pocked and disease-ridden stranger clambered from its depths, shouting at anyone who would listen that 'SHE HAS AWOKEN' and 'THE END IS NIGH!', the villagers have begun to express concern.</td>
+</tr><tr>
+<td>The Bronze Candlestick</td>
+<td> There is an old bronze candlestick on the mantle in the Rose Room at the Freewind Mage's Academy. Without fail, every morning, the caretaker finds the burnt stub of a candle in the bronze candlestick, even when there have been no guests in the Rose Room, and it has been locked all night. The caretaker has attempted to dispose of the bronze candlestick, but somehow it finds its way back to the room.</td>
+</tr><tr>
+<td>The Hopping Raven</td>
+<td> Upon the gravestone of the beloved witch Lady Pinewall who succumbed to the blood plague, a raven hops up and down. When anyone approaches, the bird squawks "SPEARS!" and flies off, only to return once the coast is clear.</td>
+</tr><tr>
+<td>The Golden Cherry</td>
+<td> At the center of the Royal Gardens is an old cherry tree that produces wonderful, sweet red cherries. In the history of the tree, it has produced a golden cherry three times. The first time, the prince who picked and ate the cherry died in battle the following morning. The second time, the kitchen maid who picked and ate the cherry died of a bad belly. The third time, the stable boy who picked the cherry and fed it to the pigs fell to his death from a hay loft that very night.</td>
+</tr><tr>
+<td>The Pig in the Chimney</td>
+<td> At Garvil the Greenbeard's house, you'll hear an occasional squealing of a pig. The sound seems to be coming from his old stone chimney, but Garvil eats no meat and has never owned a pig. Sunny weather, stormy weather, crackling fire, or cold hearth, the squealing sound comes and goes as it pleases.</td>
+</tr><tr>
+<td>The Sun God's Feasthall</td>
+<td> Way out in the desert in the ruins of the ancient city of Haz Alaf, there is a large stone table with stone benches still in its place in the feasthall of the Sun God. At noon on the day of the summer solstice every year, the table in the feasthall is filled with a traditional feast—pears and dates, figs and lentils, roast fox, buzzard's soup, braised drake, camel's milk cheese, toasted crickets, fried scorpions, honeyed wine, and mild tea. Ever since the discovery of the miracle, hundreds of pilgrims make the dangerous journey to Haz Alaf every late spring to witness the miracle.</td>
+</tr><tr>
+<td>The Black Castle</td>
+<td> A black castle stands on the outskirts of a small town with strange customs regarding the dead, those that die are revered (think cattle in india). Word is the castle started out as nothing more than a pebble but has grown almost organically and they are willing to buy both the living and the dead for unknown reasons.</td>
+</tr><tr>
+<td>Circle of unhappiness</td>
+<td> A round clearing in the middle of a vast forest. Nothing lay within, no grass, no trees, nothing but a single flower. Those entering will be faced with extreme dread and unhappiness to the point where they feel life no longer holds meaning for them. Even animals instinctively stay away.</td>
+</tr><tr>
+<td>Jar of Many Faces</td>
+<td> A clay pot sits on the shelf, the visage inscribed on the jar stares back at you with an angry grimace. When next you glance in the pot's direction, you notice it's no longer frowning at you, but grinning.</td>
+</tr><tr>
+<td>Ring of Many Moods</td>
+<td> Embedded in this small golden band is a single gem. When unworn, the gem is a pearly white. When worn, the gem shifts to one of many colours, ranging from the palest blue to jet black.</td>
+</tr><tr>
+<td>The Unfound Door</td>
+<td> A door stands upright in the middle of a field, only visible from head-on. There is no frame or anything else to suggest it should be able to stand upright. When looked at from any other angle, it simply isn't there and may be passed through. The knob is locked and will not open for anyone.</td>
+</tr><tr>
+<td>Boiling Bog</td>
+<td> A large pool of water within a marsh is bubbling and boiling and steaming for no discernible reason. Strangely, the water is cool to the touch.</td>
+</tr><tr>
+<td>Well Of Black Water</td>
+<td> This strange well sits atop a hill. The water within is clear and inviting, but once a bucket is dipped into the well, the water within is turned black as tar and greasy, utterly undrinkable.</td>
+</tr><tr>
+<td>Icebrick Tower</td>
+<td> In the middle of the scorching wastelands stands a tower of shimmering clear ice carved into the form of bricks. No matter how hot it is out, the ice will never melt, even though it always seems to be shimmering with melt water.</td>
+</tr><tr>
+<td>A Clear Circlet</td>
+<td> In the Archbishop's parlor, on a mantle of dark wood, stands a circlet of beaten rose-gold. Across it stretches a translucent film similar to soapy water. Several of his guests have sworn they saw glimpses of strange lands, otherworldly places and in one case their own bedchamber inside it, but the Archbishop has never seen anything.</td>
+</tr></tbody>
 </table>
 
 </div>
 </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script type="text/javascript">
 	var $rows = $('#table tr');
 	var $randomRowTable = document.getElementById("randomTable");
@@ -918,6 +995,20 @@ function rollTable(tableId)
  var dataId = tableId + '_data';
  var tableDataElem = document.getElementById(dataId);
  tableDataElem.innerHTML = "<b>" + choice.textContent+"</b>";
+}
+</script>
+<script type="text/javascript">
+function resetTable()
+{
+hideRandomTable()
+document.getElementById('search').value=""
+}
+</script>
+<script type="text/javascript">
+function setSorter() {
+  $(document).ready(function() {
+    $("#table").tablesorter();
+  })
 }
 </script>
 </body>
