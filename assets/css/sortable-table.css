@@ -1,17 +1,17 @@
 table th.tablesorter-headerUnSorted {
-    background-image: url("../images/sortneutro-small.png");
+    background-image: url("../images/sortneutro-36x36.png");
     background-repeat: no-repeat; 
-    background-position: center left; 
+    background-position: center right; 
 }
 
 table th.tablesorter-headerAsc {
-    background-image: url("../images/sortup-small.png"); 
-    background-position: center left;
+    background-image: url("../images/sortup-36x36.png"); 
+    background-position: center right;
     background-repeat: no-repeat;
 }
 
 table th.tablesorter-headerDesc {
-    background-image: url("../images/sortdown-small.png"); 
+    background-image: url("../images/sortdown-36x36.png"); 
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position: center right;
 }
