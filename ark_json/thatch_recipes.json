@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Thatch Foundation",
+    "materials": {
+      "Thatch": "20",
+      "Wood": "6",
+      "Fiber": "15"
+    }
+  },
+  {
+    "name": "Thatch Doorframe",
+    "materials": {
+      "Thatch": "8",
+      "Wood": "6",
+      "Fiber": "6"
+    }
+  },
+  {
+    "name": "Thatch Wall",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "2",
+      "Fiber": "7"
+    }
+  },
+  {
+    "name": "Thatch Door",
+    "materials": {
+      "Thatch": "7",
+      "Fiber": "4"
+    }
+  },
+  {
+    "name": "Thatch Roof",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "4",
+      "Fiber": "10"
+    }
+  },
+  {
+    "name": "Sloped Thatch Wall Left",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "2",
+      "Fiber": "7"
+    }
+  },
+  {
+    "name": "Sloped Thatch Wall Right",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "2",
+      "Fiber": "7"
+    }
+  },
+  {
+    "name": "Sloped Thatch Roof",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "4",
+      "Fiber": "10"
+    }
+  }
+]

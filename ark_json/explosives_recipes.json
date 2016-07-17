@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Grenade",
+    "materials": {
+      "Hide": "5",
+      "Metal Ingot": "2",
+      "Oil": "4",
+      "Fiber": "15",
+      "Stone": "20",
+      "Gunpowder": "30"
+    }
+  },
+  {
+    "name": "Improvised Explosive Device",
+    "materials": {
+      "Hide": "5",
+      "Metal Ingot": "10",
+      "Wood": "1",
+      "Fiber": "35",
+      "Gunpowder": "50",
+      "Crystal": "10"
+    }
+  },
+  {
+    "name": "C4 Remote Detonator",
+    "materials": {
+      "Metal Ingot": "10",
+      "Electronics": "50",
+      "Polymer": "20",
+      "Cementing Paste": "15",
+      "Crystal": "10"
+    }
+  },
+  {
+    "name": "C4 Charge",
+    "materials": {
+      "Hide": "5",
+      "Fiber": "50",
+      "Electronics": "5",
+      "Polymer": "10",
+      "Cementing Paste": "5",
+      "Gunpowder": "75",
+      "Crystal": "25"
+    }
+  },
+  {
+    "name": "Rocket Propelled Grenade",
+    "materials": {
+      "Metal Ingot": "12",
+      "Polymer": "10",
+      "Cementing Paste": "20",
+      "Gunpowder": "40",
+      "Crystal": "10"
+    }
+  },
+  {
+    "name": "Rocket Launcher",
+    "materials": {
+      "Metal Ingot": "50",
+      "Polymer": "80",
+      "Cementing Paste": "60"
+    }
+  },
+  {
+    "name": "Homing Underwater Mine",
+    "materials": {
+      "Metal Ingot": "30",
+      "Oil": "15",
+      "Electronics": "150",
+      "Polymer": "45",
+      "Cementing Paste": "20",
+      "Gunpowder": "100",
+      "Crystal": "30"
+    }
+  }
+]

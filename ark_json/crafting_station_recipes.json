@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Campfire",
+    "materials": {
+      "Thatch": "12",
+      "Flint": "1",
+      "Wood": "2",
+      "Stone": "16"
+    }
+  },
+  {
+    "name": "Mortar And Pestle",
+    "materials": {
+      "Hide": "15",
+      "Stone": "65"
+    }
+  },
+  {
+    "name": "Cooking Pot",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "10",
+      "Flint": "5",
+      "Stone": "75"
+    }
+  },
+  {
+    "name": "Refining Forge",
+    "materials": {
+      "Hide": "65",
+      "Flint": "5",
+      "Wood": "20",
+      "Fiber": "40",
+      "Stone": "125"
+    }
+  },
+  {
+    "name": "Smithy",
+    "materials": {
+      "Hide": "20",
+      "Metal Ingot": "5",
+      "Wood": "30",
+      "Stone": "50"
+    }
+  },
+  {
+    "name": "Beer Barrel",
+    "materials": {
+      "Metal Ingot": "80",
+      "Wood": "500",
+      "Cementing Paste": "100"
+    }
+  },
+  {
+    "name": "Fabricator",
+    "materials": {
+      "Metal Ingot": "35",
+      "Oil": "10",
+      "Cementing Paste": "20",
+      "Sparkpowder": "50",
+      "Crystal": "15"
+    }
+  },
+  {
+    "name": "Industrial Grill",
+    "materials": {
+      "Metal Ingot": "200",
+      "Oil": "40",
+      "Cementing Paste": "40",
+      "Crystal": "30"
+    }
+  },
+  {
+    "name": "Industrial Cooker",
+    "materials": {
+      "Metal Ingot": "1800",
+      "Oil": "300",
+      "Polymer": "300",
+      "Cementing Paste": "450"
+    }
+  },
+  {
+    "name": "Industrial Forge",
+    "materials": {
+      "Metal Ingot": "2500",
+      "Oil": "400",
+      "Polymer": "400",
+      "Cementing Paste": "600",
+      "Crystal": "250"
+    }
+  },
+  {
+    "name": "Chemistry Table",
+    "materials": {
+      "Metal Ingot": "250",
+      "Electronics": "250",
+      "Polymer": "250",
+      "Cementing Paste": "250",
+      "Sparkpowder": "100",
+      "Crystal": "250"
+    }
+  },
+  {
+    "name": "Chemistry Bench",
+    "materials": {
+      "Metal Ingot": "250",
+      "Electronics": "250",
+      "Polymer": "250",
+      "Cementing Paste": "250",
+      "Sparkpowder": "100",
+      "Crystal": "250"
+    }
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Cloth Pants",
+    "materials": {
+      "Fiber": "50"
+    }
+  },
+  {
+    "name": "Cloth Shirt",
+    "materials": {
+      "Fiber": "40"
+    }
+  },
+  {
+    "name": "Cloth Armor",
+    "materials": {
+      "Hide": "40",
+      "Fiber": "10"
+    }
+  },
+  {
+    "name": "Cloth Gloves",
+    "materials": {
+      "Hide": "4",
+      "Fiber": "20"
+    }
+  },
+  {
+    "name": "Cloth Hat",
+    "materials": {
+      "Fiber": "10"
+    }
+  },
+  {
+    "name": "Cloth Boots",
+    "materials": {
+      "Hide": "6",
+      "Fiber": "25"
+    }
+  }
+]

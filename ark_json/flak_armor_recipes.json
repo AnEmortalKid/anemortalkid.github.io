@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Flak Chestpiece",
+    "materials": {
+      "Hide": "10",
+      "Metal Ingot": "13",
+      "Fiber": "4"
+    }
+  },
+  {
+    "name": "Flak Leggings",
+    "materials": {
+      "Hide": "12",
+      "Metal Ingot": "16",
+      "Fiber": "5"
+    }
+  },
+  {
+    "name": "Flak Boots",
+    "materials": {
+      "Hide": "6",
+      "Metal Ingot": "8",
+      "Fiber": "4"
+    }
+  },
+  {
+    "name": "Flak Helmet",
+    "materials": {
+      "Hide": "7",
+      "Metal Ingot": "10",
+      "Fiber": "3"
+    }
+  },
+  {
+    "name": "Flak Gauntlets",
+    "materials": {
+      "Hide": "5",
+      "Metal Ingot": "6",
+      "Fiber": "2"
+    }
+  }
+]

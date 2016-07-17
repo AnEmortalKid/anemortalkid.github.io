@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Ballista Turret",
+    "materials": {
+      "Hide": "100",
+      "Metal Ingot": "300",
+      "Thatch": "100",
+      "Wood": "500",
+      "Fiber": "200",
+      "Stone": "250"
+    }
+  },
+  {
+    "name": "Catapult Turret",
+    "materials": {
+      "Hide": "100",
+      "Metal Ingot": "300",
+      "Thatch": "100",
+      "Wood": "400",
+      "Stone": "390"
+    }
+  },
+  {
+    "name": "Primitive Cannon",
+    "materials": {
+      "Hide": "150",
+      "Metal Ingot": "950",
+      "Thatch": "120",
+      "Fiber": "200",
+      "Cementing Paste": "300"
+    }
+  },
+  {
+    "name": "Auto Turret",
+    "materials": {
+      "Metal Ingot": "140",
+      "Electronics": "70",
+      "Polymer": "20",
+      "Cementing Paste": "50"
+    }
+  },
+  {
+    "name": "Minigun Turret",
+    "materials": {
+      "Hide": "100",
+      "Metal Ingot": "500",
+      "Polymer": "150",
+      "Cementing Paste": "125"
+    }
+  },
+  {
+    "name": "Rocket Turret",
+    "materials": {
+      "Metal Ingot": "1100",
+      "Electronics": "500",
+      "Polymer": "400",
+      "Cementing Paste": "300"
+    }
+  }
+]

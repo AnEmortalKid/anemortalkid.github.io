@@ -1,0 +1,161 @@
+[
+  {
+    "name": "Stone Wall",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "20",
+      "Stone": "40"
+    }
+  },
+  {
+    "name": "Basic Gravestone",
+    "materials": {
+      "Cementing Paste": "8",
+      "Stone": "70"
+    }
+  },
+  {
+    "name": "Stone Fence Foundation",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "10",
+      "Stone": "15"
+    }
+  },
+  {
+    "name": "Stone Dinosaur Gateway",
+    "materials": {
+      "Thatch": "50",
+      "Wood": "70",
+      "Stone": "140"
+    }
+  },
+  {
+    "name": "Sloped Stone Roof",
+    "materials": {
+      "Thatch": "20",
+      "Wood": "30",
+      "Stone": "60"
+    }
+  },
+  {
+    "name": "Sloped Stone Wall Left",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "10",
+      "Stone": "20"
+    }
+  },
+  {
+    "name": "Reinforced Dinosaur Gate",
+    "materials": {
+      "Thatch": "20",
+      "Wood": "30",
+      "Stone": "60"
+    }
+  },
+  {
+    "name": "Sloped Stone Wall Right",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "10",
+      "Stone": "20"
+    }
+  },
+  {
+    "name": "Stone Foundation",
+    "materials": {
+      "Thatch": "30",
+      "Wood": "40",
+      "Stone": "80"
+    }
+  },
+  {
+    "name": "Reinforced Wooden Door",
+    "materials": {
+      "Thatch": "8",
+      "Wood": "14",
+      "Stone": "20"
+    }
+  },
+  {
+    "name": "Stone Ceiling",
+    "materials": {
+      "Thatch": "20",
+      "Wood": "30",
+      "Stone": "60"
+    }
+  },
+  {
+    "name": "Stone Railing",
+    "materials": {
+      "Thatch": "7",
+      "Wood": "10",
+      "Stone": "20"
+    }
+  },
+  {
+    "name": "Stone Doorframe",
+    "materials": {
+      "Thatch": "12",
+      "Wood": "16",
+      "Stone": "30"
+    }
+  },
+  {
+    "name": "Stone Hatchframe",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "25",
+      "Stone": "50"
+    }
+  },
+  {
+    "name": "Behemoth Reinforced Dinosaur Gate",
+    "materials": {
+      "Thatch": "450",
+      "Wood": "450",
+      "Stone": "450"
+    }
+  },
+  {
+    "name": "Stone Pillar",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "15",
+      "Stone": "30"
+    }
+  },
+  {
+    "name": "Stone Windowframe",
+    "materials": {
+      "Thatch": "12",
+      "Wood": "18",
+      "Stone": "35"
+    }
+  },
+  {
+    "name": "Behemoth Stone Dinosaur Gateway",
+    "materials": {
+      "Thatch": "450",
+      "Wood": "450",
+      "Stone": "450"
+    }
+  },
+  {
+    "name": "Reinforced Window",
+    "materials": {
+      "Thatch": "3",
+      "Wood": "4",
+      "Stone": "8"
+    }
+  },
+  {
+    "name": "Reinforced Trapdoor",
+    "materials": {
+      "Thatch": "8",
+      "Wood": "14",
+      "Stone": "20"
+    }
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Wooden Raft",
+    "materials": {
+      "Hide": "75",
+      "Wood": "250",
+      "Fiber": "125"
+    }
+  }
+]

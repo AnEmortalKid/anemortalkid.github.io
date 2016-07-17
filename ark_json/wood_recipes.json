@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Wooden Sign",
+    "materials": {
+      "Thatch": "3",
+      "Wood": "5",
+      "Fiber": "4"
+    }
+  },
+  {
+    "name": "Wooden Foundation",
+    "materials": {
+      "Thatch": "20",
+      "Wood": "80",
+      "Fiber": "15"
+    }
+  },
+  {
+    "name": "Wooden Wall",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "40",
+      "Fiber": "7"
+    }
+  },
+  {
+    "name": "Sloped Wood Wall Left",
+    "materials": {
+      "Thatch": "5",
+      "Wood": "20",
+      "Fiber": "5"
+    }
+  },
+  {
+    "name": "Sloped Wood Wall Right",
+    "materials": {
+      "Thatch": "5",
+      "Wood": "20",
+      "Fiber": "5"
+    }
+  },
+  {
+    "name": "Wooden Door",
+    "materials": {
+      "Thatch": "7",
+      "Wood": "20",
+      "Fiber": "4"
+    }
+  },
+  {
+    "name": "Wooden Ceiling",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "60",
+      "Fiber": "10"
+    }
+  },
+  {
+    "name": "Sloped Wooden Roof",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "60",
+      "Fiber": "10"
+    }
+  },
+  {
+    "name": "Wooden Chair",
+    "materials": {
+      "Thatch": "18",
+      "Wood": "30",
+      "Fiber": "14"
+    }
+  },
+  {
+    "name": "Wooden Doorframe",
+    "materials": {
+      "Thatch": "8",
+      "Wood": "30",
+      "Fiber": "6"
+    }
+  },
+  {
+    "name": "Wooden Wall Sign",
+    "materials": {
+      "Thatch": "2",
+      "Wood": "3",
+      "Fiber": "2"
+    }
+  },
+  {
+    "name": "Wooden Spike Wall",
+    "materials": {
+      "Hide": "10",
+      "Wood": "40",
+      "Fiber": "30"
+    }
+  },
+  {
+    "name": "Wooden Railing",
+    "materials": {
+      "Thatch": "5",
+      "Wood": "20",
+      "Fiber": "3"
+    }
+  },
+  {
+    "name": "Wooden Hatchframe",
+    "materials": {
+      "Thatch": "12",
+      "Wood": "50",
+      "Fiber": "8"
+    }
+  },
+  {
+    "name": "Wooden Ladder",
+    "materials": {
+      "Thatch": "7",
+      "Wood": "4",
+      "Fiber": "4"
+    }
+  },
+  {
+    "name": "Wooden Ramp",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "60",
+      "Fiber": "10"
+    }
+  },
+  {
+    "name": "Wooden Fence Foundation",
+    "materials": {
+      "Thatch": "3",
+      "Wood": "10",
+      "Fiber": "2"
+    }
+  },
+  {
+    "name": "Wooden Pillar",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "40",
+      "Fiber": "7"
+    }
+  },
+  {
+    "name": "Dinosaur Gateway",
+    "materials": {
+      "Thatch": "35",
+      "Wood": "140",
+      "Fiber": "25",
+      "Stone": "40"
+    }
+  },
+  {
+    "name": "Dinosaur Gate",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "60",
+      "Fiber": "10"
+    }
+  },
+  {
+    "name": "Wooden Bench",
+    "materials": {
+      "Thatch": "55",
+      "Wood": "120",
+      "Fiber": "45"
+    }
+  },
+  {
+    "name": "Wooden Billboard",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "60",
+      "Fiber": "10"
+    }
+  },
+  {
+    "name": "Wooden Table",
+    "materials": {
+      "Wood": "100",
+      "Metal": "12"
+    }
+  },
+  {
+    "name": "Wooden Catwalk",
+    "materials": {
+      "Thatch": "7",
+      "Wood": "20",
+      "Fiber": "4"
+    }
+  },
+  {
+    "name": "Wooden Trapdoor",
+    "materials": {
+      "Thatch": "7",
+      "Wood": "20",
+      "Fiber": "4"
+    }
+  },
+  {
+    "name": "Wooden Windowframe",
+    "materials": {
+      "Thatch": "9",
+      "Wood": "36",
+      "Fiber": "6"
+    }
+  },
+  {
+    "name": "Wooden Window",
+    "materials": {
+      "Thatch": "2",
+      "Wood": "8",
+      "Fiber": "1"
+    }
+  }
+]

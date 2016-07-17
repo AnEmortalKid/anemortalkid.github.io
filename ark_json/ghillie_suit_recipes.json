@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Ghillie Leggings",
+    "materials": {
+      "Hide": "12",
+      "Organic Polymer": "8",
+      "Fiber": "5"
+    }
+  },
+  {
+    "name": "Ghillie Mask",
+    "materials": {
+      "Hide": "7",
+      "Organic Polymer": "5",
+      "Fiber": "3"
+    }
+  },
+  {
+    "name": "Ghillie Armor",
+    "materials": {
+      "Hide": "6",
+      "Organic Polymer": "5",
+      "Fiber": "3"
+    }
+  },
+  {
+    "name": "Ghillie Chestpiece",
+    "materials": {
+      "Hide": "10",
+      "Organic Polymer": "6",
+      "Fiber": "4"
+    }
+  },
+  {
+    "name": "Ghillie Boots",
+    "materials": {
+      "Hide": "6",
+      "Organic Polymer": "4",
+      "Fiber": "4"
+    }
+  },
+  {
+    "name": "Ghillie Gauntlets",
+    "materials": {
+      "Hide": "5",
+      "Organic Polymer": "3",
+      "Fiber": "2"
+    }
+  }
+]

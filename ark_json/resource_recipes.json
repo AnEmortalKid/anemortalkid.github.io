@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Sparkpowder",
+    "materials": {
+      "Flint": "2",
+      "Stone": "1"
+    }
+  },
+  {
+    "name": "Gunpowder",
+    "materials": {
+      "Sparkpowder": "1",
+      "Charcoal": "1"
+    }
+  },
+  {
+    "name": "Cementing Paste",
+    "materials": {
+      "Chitin or Keratin": "4",
+      "Stone": "8"
+    }
+  },
+  {
+    "name": "Polymer",
+    "materials": {
+      "Obsidian": "2",
+      "Cementing Paste": "2"
+    }
+  },
+  {
+    "name": "Electronics",
+    "materials": {
+      "Metal Ingot": "1",
+      "Silica Pearls": "3"
+    }
+  },
+  {
+    "name": "Absorbent Substrate",
+    "materials": {
+      "Sap": "8",
+      "Oil": "8",
+      "Black Pearl": "8"
+    }
+  }
+]

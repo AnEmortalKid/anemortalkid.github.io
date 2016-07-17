@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Riot Leggings",
+    "materials": {
+      "Hide": "12",
+      "Fiber": "5",
+      "Polymer": "70",
+      "Silica Pearls": "40"
+    }
+  },
+  {
+    "name": "Riot Helmet",
+    "materials": {
+      "Hide": "7",
+      "Fiber": "3",
+      "Polymer": "50",
+      "Silica Pearls": "25",
+      "Crystal": "35"
+    }
+  },
+  {
+    "name": "Riot Armor",
+    "materials": {
+      "Hide": "25",
+      "Fiber": "30",
+      "Polymer": "50",
+      "Silica Pearls": "70",
+      "Crystal": "25"
+    }
+  },
+  {
+    "name": "Riot Boots",
+    "materials": {
+      "Hide": "6",
+      "Fiber": "4",
+      "Polymer": "30",
+      "Silica Pearls": "18"
+    }
+  },
+  {
+    "name": "Riot Gauntlets",
+    "materials": {
+      "Hide": "5",
+      "Fiber": "2",
+      "Polymer": "25",
+      "Silica Pearls": "15"
+    }
+  },
+  {
+    "name": "Riot Chestpiece",
+    "materials": {
+      "Hide": "10",
+      "Fiber": "4",
+      "Polymer": "70",
+      "Silica Pearls": "40"
+    }
+  }
+]

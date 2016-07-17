@@ -1,0 +1,133 @@
+[
+  {
+    "name": "Spear",
+    "materials": {
+      "Flint": "2",
+      "Wood": "8",
+      "Fiber": "12"
+    }
+  },
+  {
+    "name": "Slingshot",
+    "materials": {
+      "Hide": "1",
+      "Wood": "5",
+      "Fiber": "20"
+    }
+  },
+  {
+    "name": "Bola",
+    "materials": {
+      "Hide": "3",
+      "Thatch": "10",
+      "Fiber": "15",
+      "Stone": "3"
+    }
+  },
+  {
+    "name": "Flare Gun",
+    "materials": {
+      "Wood": "4",
+      "Fiber": "2",
+      "Gunpowder": "2",
+      "Sparkpowder": "10"
+    }
+  },
+  {
+    "name": "Bow",
+    "materials": {
+      "Wood": "15",
+      "Fiber": "50"
+    }
+  },
+  {
+    "name": "Crossbow",
+    "materials": {
+      "Metal Ingot": "7",
+      "Wood": "10",
+      "Fiber": "35"
+    }
+  },
+  {
+    "name": "Simple Pistol",
+    "materials": {
+      "Hide": "15",
+      "Metal Ingot": "60",
+      "Wood": "5"
+    }
+  },
+  {
+    "name": "Primitive Cannon",
+    "materials": {
+      "Hide": "150",
+      "Metal Ingot": "950",
+      "Thatch": "120",
+      "Fiber": "200",
+      "Cementing Paste": "300"
+    }
+  },
+  {
+    "name": "Longneck Rifle",
+    "materials": {
+      "Hide": "25",
+      "Metal Ingot": "95",
+      "Wood": "20"
+    }
+  },
+  {
+    "name": "Shotgun",
+    "materials": {
+      "Hide": "25",
+      "Metal Ingot": "80",
+      "Wood": "20"
+    }
+  },
+  {
+    "name": "Fabricated Pistol",
+    "materials": {
+      "Metal Ingot": "20",
+      "Polymer": "35",
+      "Cementing Paste": "30"
+    }
+  },
+  {
+    "name": "Pump-Action Shotgun",
+    "materials": {
+      "Metal Ingot": "30",
+      "Polymer": "55",
+      "Cementing Paste": "45"
+    }
+  },
+  {
+    "name": "Assault Rifle",
+    "materials": {
+      "Metal Ingot": "35",
+      "Polymer": "60",
+      "Cementing Paste": "50"
+    }
+  },
+  {
+    "name": "Rocket Launcher",
+    "materials": {
+      "Metal Ingot": "50",
+      "Polymer": "80",
+      "Cementing Paste": "60"
+    }
+  },
+  {
+    "name": "Compound Bow",
+    "materials": {
+      "Metal Ingot": "85",
+      "Polymer": "95",
+      "Cementing Paste": "75"
+    }
+  },
+  {
+    "name": "Fabricated Sniper Rifle",
+    "materials": {
+      "Metal Ingot": "80",
+      "Polymer": "115",
+      "Cementing Paste": "110"
+    }
+  }
+]

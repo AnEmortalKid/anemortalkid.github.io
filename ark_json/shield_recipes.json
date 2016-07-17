@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Wooden Shield",
+    "materials": {
+      "Hide": "12",
+      "Wood": "40",
+      "Fiber": "15"
+    }
+  },
+  {
+    "name": "Metal Shield",
+    "materials": {
+      "Hide": "15",
+      "Metal Ingot": "80",
+      "Cementing Paste": "20"
+    }
+  },
+  {
+    "name": "Riot Shield",
+    "materials": {
+      "Metal Ingot": "40",
+      "Polymer": "120",
+      "Crystal": "200",
+      "Silica Pearls": "120"
+    }
+  }
+]

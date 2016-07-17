@@ -1,0 +1,395 @@
+[
+  {
+    "name": "Phiomia Saddle",
+    "materials": {
+      "Hide": "20",
+      "Wood": "5",
+      "Fiber": "15"
+    }
+  },
+  {
+    "name": "Ichthyosaurus Saddle",
+    "materials": {
+      "Hide": "55",
+      "Wood": "20",
+      "Flint": "8",
+      "Fiber": "50",
+      "Metal": "10"
+    }
+  },
+  {
+    "name": "Parasaur Saddle",
+    "materials": {
+      "Hide": "80",
+      "Wood": "15",
+      "Fiber": "50"
+    }
+  },
+  {
+    "name": "Raptor Saddle",
+    "materials": {
+      "Hide": "110",
+      "Wood": "20",
+      "Fiber": "65"
+    }
+  },
+  {
+    "name": "Pachy Saddle",
+    "materials": {
+      "Hide": "110",
+      "Wood": "20",
+      "Fiber": "65"
+    }
+  },
+  {
+    "name": "Trike Saddle",
+    "materials": {
+      "Hide": "140",
+      "Wood": "25",
+      "Fiber": "80"
+    }
+  },
+  {
+    "name": "Manta Saddle",
+    "materials": {
+      "Hide": "100",
+      "Metal Ingot": "35",
+      "Wood": "25",
+      "Flint": "12",
+      "Fiber": "70"
+    }
+  },
+  {
+    "name": "Beelzebufo Saddle",
+    "materials": {
+      "Hide": "170",
+      "Wood": "30",
+      "Fiber": "95",
+      "Cementing Paste": "5"
+    }
+  },
+  {
+    "name": "Pulmonoscorpius Saddle",
+    "materials": {
+      "Hide": "170",
+      "Wood": "30",
+      "Fiber": "95"
+    }
+  },
+  {
+    "name": "Terror Bird Saddle",
+    "materials": {
+      "Hide": "110",
+      "Wood": "20",
+      "Fiber": "65"
+    }
+  },
+  {
+    "name": "Carbonemys Saddle",
+    "materials": {
+      "Hide": "170",
+      "Fiber": "95",
+      "Cementing Paste": "10"
+    }
+  },
+  {
+    "name": "Gallimimus Saddle",
+    "materials": {
+      "Hide": "240",
+      "Metal Ingot": "25",
+      "Wood": "120",
+      "Fiber": "160"
+    }
+  },
+  {
+    "name": "Stego Saddle",
+    "materials": {
+      "Hide": "200",
+      "Wood": "35",
+      "Fiber": "110"
+    }
+  },
+  {
+    "name": "Paracer Saddle",
+    "materials": {
+      "Hide": "200",
+      "Metal Ingot": "10",
+      "Fiber": "110"
+    }
+  },
+  {
+    "name": "Doedicurus Saddle",
+    "materials": {
+      "Hide": "200",
+      "Metal Ingot": "5",
+      "Fiber": "110",
+      "Stone": "15"
+    }
+  },
+  {
+    "name": "Megaloceros Saddle",
+    "materials": {
+      "Hide": "200",
+      "Metal Ingot": "5",
+      "Fiber": "110"
+    }
+  },
+  {
+    "name": "Direbear Saddle",
+    "materials": {
+      "Hide": "300",
+      "Fiber": "130",
+      "Cementing Paste": "100"
+    }
+  },
+  {
+    "name": "Sarco Saddle",
+    "materials": {
+      "Hide": "230",
+      "Fiber": "75",
+      "Cementing Paste": "20"
+    }
+  },
+  {
+    "name": "Diplodocus Saddle",
+    "materials": {
+      "Hide": "850",
+      "Metal Ingot": "200",
+      "Wood": "250",
+      "Fiber": "600"
+    }
+  },
+  {
+    "name": "Pteranodon Saddle",
+    "materials": {
+      "Hide": "230",
+      "Fiber": "125",
+      "Chitin or Keratin": "75"
+    }
+  },
+  {
+    "name": "Araneo Saddle",
+    "materials": {
+      "Hide": "260",
+      "Fiber": "140",
+      "Chitin or Keratin": "100"
+    }
+  },
+  {
+    "name": "Ankylo Saddle",
+    "materials": {
+      "Hide": "260",
+      "Metal Ingot": "10",
+      "Fiber": "140"
+    }
+  },
+  {
+    "name": "Dunkleosteus Saddle",
+    "materials": {
+      "Hide": "300",
+      "Metal Ingot": "80",
+      "Fiber": "180",
+      "Cementing Paste": "120"
+    }
+  },
+  {
+    "name": "Mammoth Saddle",
+    "materials": {
+      "Hide": "260",
+      "Metal Ingot": "10",
+      "Fiber": "140"
+    }
+  },
+  {
+    "name": "Paracer Platform Saddle",
+    "materials": {
+      "Hide": "320",
+      "Metal Ingot": "70",
+      "Fiber": "200",
+      "Cementing Paste": "25",
+      "Silica Pearls": "45"
+    }
+  },
+  {
+    "name": "Megalodon Saddle",
+    "materials": {
+      "Hide": "290",
+      "Fiber": "155",
+      "Cementing Paste": "30"
+    }
+  },
+  {
+    "name": "Woolly Rhino Saddle",
+    "materials": {
+      "Hide": "250",
+      "Metal Ingot": "60",
+      "Fiber": "130",
+      "Cementing Paste": "100"
+    }
+  },
+  {
+    "name": "Sabertooth Saddle",
+    "materials": {
+      "Hide": "290",
+      "Metal Ingot": "20",
+      "Fiber": "155"
+    }
+  },
+  {
+    "name": "Carno Saddle",
+    "materials": {
+      "Hide": "320",
+      "Metal Ingot": "30",
+      "Fiber": "170"
+    }
+  },
+  {
+    "name": "Arthropluera Saddle",
+    "materials": {
+      "Hide": "80",
+      "Metal Ingot": "30",
+      "Wood": "20",
+      "Flint": "8",
+      "Fiber": "50",
+      "Obsidian": "35",
+      "Cementing Paste": "15"
+    }
+  },
+  {
+    "name": "Procoptodon Saddle",
+    "materials": {
+      "Hide": "500",
+      "Metal Ingot": "70",
+      "Fiber": "200",
+      "Pelt": "150"
+    }
+  },
+  {
+    "name": "Bronto Saddle",
+    "materials": {
+      "Hide": "350",
+      "Metal Ingot": "40",
+      "Fiber": "185"
+    }
+  },
+  {
+    "name": "Castoroides Saddle",
+    "materials": {
+      "Hide": "290",
+      "Metal Ingot": "100",
+      "Thatch": "180",
+      "Fiber": "200",
+      "Cementing Paste": "140"
+    }
+  },
+  {
+    "name": "Argentavis Saddle",
+    "materials": {
+      "Hide": "350",
+      "Fiber": "185",
+      "Chitin or Keratin": "150"
+    }
+  },
+  {
+    "name": "Rex Saddle",
+    "materials": {
+      "Hide": "380",
+      "Metal Ingot": "50",
+      "Fiber": "200"
+    }
+  },
+  {
+    "name": "Spino Saddle",
+    "materials": {
+      "Hide": "380",
+      "Fiber": "200",
+      "Cementing Paste": "45",
+      "Silica Pearls": "25"
+    }
+  },
+  {
+    "name": "Quetz Saddle",
+    "materials": {
+      "Hide": "750",
+      "Fiber": "500",
+      "Cementing Paste": "100",
+      "Silica Pearls": "85"
+    }
+  },
+  {
+    "name": "Plesiosaur Saddle",
+    "materials": {
+      "Hide": "400",
+      "Fiber": "250",
+      "Cementing Paste": "65",
+      "Silica Pearls": "40"
+    }
+  },
+  {
+    "name": "Bronto Platform Saddle",
+    "materials": {
+      "Hide": "550",
+      "Metal Ingot": "90",
+      "Fiber": "325",
+      "Cementing Paste": "45",
+      "Silica Pearls": "125"
+    }
+  },
+  {
+    "name": "Mosasaurus Saddle",
+    "materials": {
+      "Hide": "800",
+      "Metal Ingot": "400",
+      "Fiber": "600",
+      "Cementing Paste": "140",
+      "Silica Pearls": "100"
+    }
+  },
+  {
+    "name": "Quetz Platform Saddle",
+    "materials": {
+      "Hide": "620",
+      "Metal Ingot": "180",
+      "Fiber": "400",
+      "Cementing Paste": "120",
+      "Silica Pearls": "220"
+    }
+  },
+  {
+    "name": "Plesiosaur Platform Saddle",
+    "materials": {
+      "Hide": "680",
+      "Metal Ingot": "112",
+      "Fiber": "405",
+      "Cementing Paste": "55",
+      "Silica Pearls": "155"
+    }
+  },
+  {
+    "name": "Giganotosaurus Saddle",
+    "materials": {
+      "Hide": "680",
+      "Metal Ingot": "120",
+      "Fiber": "350"
+    }
+  },
+  {
+    "name": "Mosasaurus Platform Saddle",
+    "materials": {
+      "Hide": "960",
+      "Metal Ingot": "1200",
+      "Fiber": "720",
+      "Cementing Paste": "180",
+      "Silica Pearls": "320"
+    }
+  },
+  {
+    "name": "Titanosaur Platform Saddle",
+    "materials": {
+      "Hide": "4000",
+      "Metal Ingot": "4000",
+      "Fiber": "2000",
+      "Cementing Paste": "1600"
+    }
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Stone Pick",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "1",
+      "Stone": "1"
+    }
+  },
+  {
+    "name": "Torch",
+    "materials": {
+      "Flint": "1",
+      "Wood": "1",
+      "Stone": "1"
+    }
+  },
+  {
+    "name": "Spear",
+    "materials": {
+      "Flint": "2",
+      "Wood": "8",
+      "Fiber": "12"
+    }
+  },
+  {
+    "name": "Stone Hatchet",
+    "materials": {
+      "Thatch": "10",
+      "Flint": "1",
+      "Wood": "1"
+    }
+  },
+  {
+    "name": "Wooden Club",
+    "materials": {
+      "Wood": "4",
+      "Fiber": "15"
+    }
+  },
+  {
+    "name": "Metal Pick",
+    "materials": {
+      "Hide": "10",
+      "Metal Ingot": "1",
+      "Wood": "1"
+    }
+  },
+  {
+    "name": "Pike",
+    "materials": {
+      "Hide": "20",
+      "Metal Ingot": "10",
+      "Wood": "10"
+    }
+  },
+  {
+    "name": "Metal Hatchet",
+    "materials": {
+      "Hide": "10",
+      "Metal Ingot": "8",
+      "Wood": "1"
+    }
+  },
+  {
+    "name": "Metal Sword",
+    "materials": {
+      "Hide": "15",
+      "Metal Ingot": "50",
+      "Wood": "1"
+    }
+  },
+  {
+    "name": "Metal Sickle",
+    "materials": {
+      "Hide": "16",
+      "Metal Ingot": "18",
+      "Wood": "4"
+    }
+  },
+  {
+    "name": "Electric Prod",
+    "materials": {
+      "Metal Ingot": "130",
+      "Electronics": "120",
+      "Polymer": "120",
+      "Angler Gel": "15",
+      "Cementing Paste": "70",
+      "Crystal": "120"
+    }
+  }
+]

@@ -1,0 +1,183 @@
+[
+  {
+    "name": "Metal Spike Wall",
+    "materials": {
+      "Hide": "20",
+      "Metal Ingot": "25",
+      "Fiber": "30"
+    }
+  },
+  {
+    "name": "Metal Sign",
+    "materials": {
+      "Metal Ingot": "5",
+      "Cementing Paste": "3"
+    }
+  },
+  {
+    "name": "Metal Doorframe",
+    "materials": {
+      "Metal Ingot": "20",
+      "Cementing Paste": "6"
+    }
+  },
+  {
+    "name": "Sloped Metal Wall Right",
+    "materials": {
+      "Metal Ingot": "15",
+      "Cementing Paste": "5"
+    }
+  },
+  {
+    "name": "Metal Railing",
+    "materials": {
+      "Metal Ingot": "12",
+      "Cementing Paste": "3"
+    }
+  },
+  {
+    "name": "Metal Foundation",
+    "materials": {
+      "Metal Ingot": "50",
+      "Cementing Paste": "15"
+    }
+  },
+  {
+    "name": "Metal Wall",
+    "materials": {
+      "Metal Ingot": "25",
+      "Cementing Paste": "7"
+    }
+  },
+  {
+    "name": "Metal Wall Sign",
+    "materials": {
+      "Metal Ingot": "5",
+      "Cementing Paste": "3"
+    }
+  },
+  {
+    "name": "Sloped Metal Wall Left",
+    "materials": {
+      "Metal Ingot": "15",
+      "Cementing Paste": "5"
+    }
+  },
+  {
+    "name": "Metal Door",
+    "materials": {
+      "Metal Ingot": "10",
+      "Cementing Paste": "4"
+    }
+  },
+  {
+    "name": "Metal Ramp",
+    "materials": {
+      "Metal Ingot": "35",
+      "Cementing Paste": "10"
+    }
+  },
+  {
+    "name": "Metal Pillar",
+    "materials": {
+      "Metal Ingot": "25",
+      "Cementing Paste": "7"
+    }
+  },
+  {
+    "name": "Metal Ceiling",
+    "materials": {
+      "Metal Ingot": "35",
+      "Cementing Paste": "10"
+    }
+  },
+  {
+    "name": "Sloped Metal Roof",
+    "materials": {
+      "Metal Ingot": "35",
+      "Cementing Paste": "10"
+    }
+  },
+  {
+    "name": "Metal Hatchframe",
+    "materials": {
+      "Metal Ingot": "30",
+      "Cementing Paste": "8"
+    }
+  },
+  {
+    "name": "Metal Fence Foundation",
+    "materials": {
+      "Metal Ingot": "5",
+      "Cementing Paste": "2"
+    }
+  },
+  {
+    "name": "Metal Trapdoor",
+    "materials": {
+      "Metal Ingot": "10",
+      "Cementing Paste": "4"
+    }
+  },
+  {
+    "name": "Metal Dinosaur Gateway",
+    "materials": {
+      "Metal Ingot": "85",
+      "Cementing Paste": "25"
+    }
+  },
+  {
+    "name": "Metal Dinosaur Gate",
+    "materials": {
+      "Metal Ingot": "35",
+      "Cementing Paste": "10"
+    }
+  },
+  {
+    "name": "Metal Ladder",
+    "materials": {
+      "Metal Ingot": "7"
+    }
+  },
+  {
+    "name": "Metal Windowframe",
+    "materials": {
+      "Metal Ingot": "20",
+      "Cementing Paste": "6"
+    }
+  },
+  {
+    "name": "Metal Billboard",
+    "materials": {
+      "Metal Ingot": "35",
+      "Cementing Paste": "10"
+    }
+  },
+  {
+    "name": "Metal Window",
+    "materials": {
+      "Metal Ingot": "7"
+    }
+  },
+  {
+    "name": "Metal Catwalk",
+    "materials": {
+      "Metal Ingot": "15"
+    }
+  },
+  {
+    "name": "Behemoth Gateway",
+    "materials": {
+      "Metal Ingot": "1500",
+      "Polymer": "100",
+      "Cementing Paste": "350"
+    }
+  },
+  {
+    "name": "Behemoth Gate",
+    "materials": {
+      "Metal Ingot": "1500",
+      "Cementing Paste": "350"
+    }
+  }
+]

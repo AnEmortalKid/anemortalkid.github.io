@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Torch",
+    "materials": {
+      "Flint": "1",
+      "Wood": "1",
+      "Stone": "1"
+    }
+  },
+  {
+    "name": "Stone Pick",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "1",
+      "Stone": "1"
+    }
+  },
+  {
+    "name": "Note",
+    "materials": {
+      "Thatch": "3",
+      "Fiber": "1"
+    }
+  },
+  {
+    "name": "Stone Hatchet",
+    "materials": {
+      "Thatch": "10",
+      "Flint": "1",
+      "Wood": "1"
+    }
+  },
+  {
+    "name": "Waterskin",
+    "materials": {
+      "Hide": "4",
+      "Fiber": "12"
+    }
+  },
+  {
+    "name": "Paintbrush",
+    "materials": {
+      "Hide": "3",
+      "Thatch": "10",
+      "Wood": "1"
+    }
+  },
+  {
+    "name": "Blood Extraction Syringe",
+    "materials": {
+      "Hide": "10",
+      "Chitin or Keratin": "1"
+    }
+  },
+  {
+    "name": "Compass",
+    "materials": {
+      "Flint": "5",
+      "Fiber": "30",
+      "Metal": "5"
+    }
+  },
+  {
+    "name": "Flare Gun",
+    "materials": {
+      "Wood": "4",
+      "Fiber": "2",
+      "Gunpowder": "2",
+      "Sparkpowder": "10"
+    }
+  },
+  {
+    "name": "Spyglass",
+    "materials": {
+      "Hide": "10",
+      "Wood": "5",
+      "Fiber": "10",
+      "Crystal": "2"
+    }
+  },
+  {
+    "name": "Magnifying Glass",
+    "materials": {
+      "Hide": "20",
+      "Metal Ingot": "8",
+      "Wood": "15",
+      "Fiber": "20",
+      "Obsidian": "15",
+      "Crystal": "30"
+    }
+  },
+  {
+    "name": "Radio",
+    "materials": {
+      "Metal Ingot": "40",
+      "Sparkpowder": "40",
+      "Crystal": "40"
+    }
+  },
+  {
+    "name": "Smoke Grenade",
+    "materials": {
+      "Hide": "6",
+      "Metal Ingot": "1",
+      "Thatch": "5",
+      "Wood": "2",
+      "Flint": "3",
+      "Fiber": "15",
+      "Sparkpowder": "5",
+      "Charcoal": "10"
+    }
+  },
+  {
+    "name": "Metal Pick",
+    "materials": {
+      "Hide": "10",
+      "Metal Ingot": "1",
+      "Wood": "1"
+    }
+  },
+  {
+    "name": "Metal Hatchet",
+    "materials": {
+      "Hide": "10",
+      "Metal Ingot": "8",
+      "Wood": "1"
+    }
+  },
+  {
+    "name": "Water Jar",
+    "materials": {
+      "Hide": "5",
+      "Cementing Paste": "7",
+      "Crystal": "2"
+    }
+  },
+  {
+    "name": "Metal Sickle",
+    "materials": {
+      "Hide": "16",
+      "Metal Ingot": "18",
+      "Wood": "4"
+    }
+  },
+  {
+    "name": "GPS",
+    "materials": {
+      "Electronics": "20",
+      "Polymer": "5"
+    }
+  },
+  {
+    "name": "Canteen",
+    "materials": {
+      "Hide": "2",
+      "Metal Ingot": "1",
+      "Polymer": "10",
+      "Cementing Paste": "4"
+    }
+  },
+  {
+    "name": "Spray Painter",
+    "materials": {
+      "Hide": "5",
+      "Metal Ingot": "50",
+      "Oil": "20",
+      "Polymer": "35",
+      "Cementing Paste": "60",
+      "Crystal": "40"
+    }
+  },
+  {
+    "name": "Transponder Tracker",
+    "materials": {
+      "Metal Ingot": "20",
+      "Electronics": "80",
+      "Polymer": "50",
+      "Cementing Paste": "30",
+      "Crystal": "25"
+    }
+  },
+  {
+    "name": "Transponder Node",
+    "materials": {
+      "Metal Ingot": "3",
+      "Electronics": "14",
+      "Polymer": "10",
+      "Cementing Paste": "12",
+      "Crystal": "12"
+    }
+  }
+]

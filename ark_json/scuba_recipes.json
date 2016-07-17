@@ -1,0 +1,49 @@
+[
+  {
+    "name": "SCUBA Armor",
+    "materials": {
+      "Hide": "15",
+      "File:Silica Pearls, Polymer, Cementing Paste.png": "12",
+      "Fiber": "20",
+      "File:Crystal, Metal Ingot, Chitin or Keratin.png": "40",
+      "Silica Pearls": "6"
+    }
+  },
+  {
+    "name": "SCUBA Flippers",
+    "materials": {
+      "Hide": "12",
+      "Fiber": "5",
+      "Chitin or Keratin": "12",
+      "Cementing Paste": "6",
+      "Silica Pearls": "4"
+    }
+  },
+  {
+    "name": "SCUBA Leggings",
+    "materials": {
+      "Hide": "40",
+      "Metal Ingot": "2",
+      "Fiber": "4",
+      "Polymer": "40"
+    }
+  },
+  {
+    "name": "SCUBA Mask",
+    "materials": {
+      "Hide": "15",
+      "Fiber": "6",
+      "Crystal": "10",
+      "Silica Pearls": "3"
+    }
+  },
+  {
+    "name": "SCUBA Tank",
+    "materials": {
+      "Hide": "20",
+      "Metal Ingot": "14",
+      "Fiber": "8",
+      "Polymer": "3"
+    }
+  }
+]

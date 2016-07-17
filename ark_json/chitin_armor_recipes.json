@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Chitin Leggings",
+    "materials": {
+      "Hide": "12",
+      "Fiber": "5",
+      "Chitin": "25"
+    }
+  },
+  {
+    "name": "Chitin Chestpiece",
+    "materials": {
+      "Hide": "10",
+      "Fiber": "4",
+      "Chitin": "20"
+    }
+  },
+  {
+    "name": "Chitin Armor",
+    "materials": {
+      "Hide": "20",
+      "Fiber": "10",
+      "Chitin": "15"
+    }
+  },
+  {
+    "name": "Chitin Helmet",
+    "materials": {
+      "Hide": "7",
+      "Fiber": "3",
+      "Chitin": "15"
+    }
+  },
+  {
+    "name": "Chitin Gauntlets",
+    "materials": {
+      "Hide": "5",
+      "Fiber": "2",
+      "Chitin": "10"
+    }
+  },
+  {
+    "name": "Chitin Boots",
+    "materials": {
+      "Hide": "6",
+      "Fiber": "4",
+      "Chitin": "12"
+    }
+  }
+]

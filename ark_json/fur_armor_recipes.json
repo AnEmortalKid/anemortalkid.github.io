@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Fur Gauntlets",
+    "materials": {
+      "Hide": "5",
+      "Metal Ingot": "6",
+      "Fiber": "2",
+      "Pelt": "40"
+    }
+  },
+  {
+    "name": "Fur Armor",
+    "materials": {
+      "Hide": "40",
+      "Metal Ingot": "80",
+      "Fiber": "96",
+      "Pelt": "56"
+    }
+  },
+  {
+    "name": "Fur Boots",
+    "materials": {
+      "Hide": "6",
+      "Metal Ingot": "8",
+      "Fiber": "4",
+      "Pelt": "48"
+    }
+  },
+  {
+    "name": "Fur Leggings",
+    "materials": {
+      "Hide": "12",
+      "Metal Ingot": "16",
+      "Fiber": "5",
+      "Pelt": "96"
+    }
+  },
+  {
+    "name": "Fur Cap",
+    "materials": {
+      "Hide": "7",
+      "Metal Ingot": "10",
+      "Fiber": "3",
+      "Pelt": "56"
+    }
+  },
+  {
+    "name": "Fur Chestpiece",
+    "materials": {
+      "Hide": "10",
+      "Metal Ingot": "13",
+      "Fiber": "4",
+      "Pelt": "80"
+    }
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Greenhouse Window",
+    "materials": {
+      "Metal Ingot": "1",
+      "Cementing Paste": "1",
+      "Crystal": "3"
+    }
+  },
+  {
+    "name": "Greenhouse Wall",
+    "materials": {
+      "Metal Ingot": "7",
+      "Cementing Paste": "7",
+      "Crystal": "25"
+    }
+  },
+  {
+    "name": "Greenhouse Doorframe",
+    "materials": {
+      "Metal Ingot": "5",
+      "Cementing Paste": "5",
+      "Crystal": "20"
+    }
+  },
+  {
+    "name": "Greenhouse Ceiling",
+    "materials": {
+      "Metal Ingot": "10",
+      "Cementing Paste": "10",
+      "Crystal": "35"
+    }
+  },
+  {
+    "name": "Greenhouse Door",
+    "materials": {
+      "Metal Ingot": "3",
+      "Cementing Paste": "4",
+      "Crystal": "10"
+    }
+  },
+  {
+    "name": "Sloped Greenhouse Wall Right",
+    "materials": {
+      "Metal Ingot": "4",
+      "Cementing Paste": "4",
+      "Crystal": "15"
+    }
+  },
+  {
+    "name": "Sloped Greenhouse Roof",
+    "materials": {
+      "Metal Ingot": "10",
+      "Cementing Paste": "10",
+      "Crystal": "35"
+    }
+  },
+  {
+    "name": "Sloped Greenhouse Wall Left",
+    "materials": {
+      "Metal Ingot": "4",
+      "Cementing Paste": "4",
+      "Crystal": "15"
+    }
+  }
+]

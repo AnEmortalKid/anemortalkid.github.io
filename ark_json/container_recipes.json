@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Storage Box",
+    "materials": {
+      "Thatch": "20",
+      "Wood": "25",
+      "Fiber": "10"
+    }
+  },
+  {
+    "name": "Feeding Trough",
+    "materials": {
+      "Thatch": "60",
+      "Wood": "120",
+      "Fiber": "40",
+      "Metal": "8"
+    }
+  },
+  {
+    "name": "Compost Bin",
+    "materials": {
+      "Thatch": "15",
+      "Wood": "50",
+      "Fiber": "12"
+    }
+  },
+  {
+    "name": "Large Storage Box",
+    "materials": {
+      "Thatch": "35",
+      "Wood": "50",
+      "Fiber": "25"
+    }
+  },
+  {
+    "name": "Preserving Bin",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "30",
+      "Fiber": "20",
+      "Stone": "30"
+    }
+  },
+  {
+    "name": "Bookshelf",
+    "materials": {
+      "Thatch": "45",
+      "Wood": "100",
+      "Fiber": "35"
+    }
+  },
+  {
+    "name": "Refrigerator",
+    "materials": {
+      "Metal Ingot": "120",
+      "Electronics": "10",
+      "Polymer": "15",
+      "Crystal": "25"
+    }
+  },
+  {
+    "name": "Vault",
+    "materials": {
+      "Metal Ingot": "300",
+      "Oil": "30",
+      "Polymer": "60",
+      "Cementing Paste": "60"
+    }
+  }
+]

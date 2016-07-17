@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Hide Shirt",
+    "materials": {
+      "Hide": "20",
+      "Fiber": "8"
+    }
+  },
+  {
+    "name": "Hide Pants",
+    "materials": {
+      "Hide": "25",
+      "Fiber": "10"
+    }
+  },
+  {
+    "name": "Hide Armor",
+    "materials": {
+      "Hide": "15",
+      "Fiber": "20"
+    }
+  },
+  {
+    "name": "Hide Boots",
+    "materials": {
+      "Hide": "12",
+      "Fiber": "5"
+    }
+  },
+  {
+    "name": "Hide Hat",
+    "materials": {
+      "Hide": "15",
+      "Fiber": "6"
+    }
+  },
+  {
+    "name": "Hide Gloves",
+    "materials": {
+      "Hide": "10",
+      "Fiber": "4"
+    }
+  }
+]

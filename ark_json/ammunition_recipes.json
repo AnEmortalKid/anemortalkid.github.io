@@ -1,0 +1,148 @@
+[
+  {
+    "name": "Stone Arrow",
+    "materials": {
+      "Thatch": "2",
+      "Flint": "1",
+      "Fiber": "2"
+    }
+  },
+  {
+    "name": "Tranquilizer Arrow",
+    "materials": {
+      "Narcotic": "1",
+      "Stone Arrow": "1"
+    }
+  },
+  {
+    "name": "Ballista Bolt",
+    "materials": {
+      "Metal Ingot": "14",
+      "Thatch": "20",
+      "Wood": "14",
+      "Flint": "5",
+      "Fiber": "20",
+      "Cementing Paste": "2"
+    }
+  },
+  {
+    "name": "Simple Bullet",
+    "materials": {
+      "Metal Ingot": "1",
+      "Gunpowder": "6"
+    }
+  },
+  {
+    "name": "Simple Rifle Ammo",
+    "materials": {
+      "Metal Ingot": "2",
+      "Gunpowder": "12"
+    }
+  },
+  {
+    "name": "Cannon Ball",
+    "materials": {
+      "Metal Ingot": "80",
+      "Obsidian": "4",
+      "Cementing Paste": "20",
+      "Gunpowder": "30"
+    }
+  },
+  {
+    "name": "Simple Shotgun Ammo",
+    "materials": {
+      "Metal Ingot": "1",
+      "Simple Bullet": "3",
+      "Gunpowder": "3"
+    }
+  },
+  {
+    "name": "Chain Bola",
+    "materials": {
+      "Metal Ingot": "65",
+      "Obsidian": "2",
+      "Cementing Paste": "10"
+    }
+  },
+  {
+    "name": "Grappling Hook",
+    "materials": {
+      "Metal Ingot": "9",
+      "Thatch": "2",
+      "Fiber": "35",
+      "Stone Arrow": "3",
+      "Cementing Paste": "1"
+    }
+  },
+  {
+    "name": "Advanced Bullet",
+    "materials": {
+      "Metal Ingot": "1",
+      "Gunpowder": "3"
+    }
+  },
+  {
+    "name": "Advanced Rifle Bullet",
+    "materials": {
+      "Metal Ingot": "1",
+      "Gunpowder": "9"
+    }
+  },
+  {
+    "name": "C4 Charge",
+    "materials": {
+      "Hide": "5",
+      "Fiber": "50",
+      "Electronics": "5",
+      "Polymer": "10",
+      "Cementing Paste": "5",
+      "Gunpowder": "75",
+      "Crystal": "25"
+    }
+  },
+  {
+    "name": "Rocket Propelled Grenade",
+    "materials": {
+      "Metal Ingot": "12",
+      "Polymer": "10",
+      "Cementing Paste": "20",
+      "Gunpowder": "40",
+      "Crystal": "10"
+    }
+  },
+  {
+    "name": "Transponder Node",
+    "materials": {
+      "Metal Ingot": "3",
+      "Electronics": "14",
+      "Polymer": "10",
+      "Cementing Paste": "12",
+      "Crystal": "12"
+    }
+  },
+  {
+    "name": "Tranquilizer Dart",
+    "materials": {
+      "Metal Ingot": "2",
+      "Narcotic": "3",
+      "Simple Rifle Ammo": "1"
+    }
+  },
+  {
+    "name": "Metal Arrow",
+    "materials": {
+      "Thatch": "3",
+      "Metal Ingot": "3",
+      "Fiber": "3",
+      "Polymer": "1",
+      "Cementing Paste": "1"
+    }
+  },
+  {
+    "name": "Advanced Sniper Bullet",
+    "materials": {
+      "Metal Ingot": "2",
+      "Gunpowder": "12"
+    }
+  }
+]

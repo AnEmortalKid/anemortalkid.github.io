@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Hide Sleeping Bag",
+    "materials": {
+      "Hide": "25",
+      "Fiber": "15"
+    }
+  },
+  {
+    "name": "Single Panel Flag",
+    "materials": {
+      "Hide": "20",
+      "Thatch": "30",
+      "Wood": "10",
+      "Fiber": "100"
+    }
+  },
+  {
+    "name": "Standing Torch",
+    "materials": {
+      "Thatch": "8",
+      "Flint": "1",
+      "Wood": "3",
+      "Stone": "1"
+    }
+  },
+  {
+    "name": "Multi-Panel Flag",
+    "materials": {
+      "Hide": "20",
+      "Thatch": "30",
+      "Wood": "10",
+      "Fiber": "100"
+    }
+  },
+  {
+    "name": "Simple Bed",
+    "materials": {
+      "Hide": "40",
+      "Thatch": "80",
+      "Wood": "15",
+      "Fiber": "30"
+    }
+  },
+  {
+    "name": "Wardrums",
+    "materials": {
+      "Hide": "220",
+      "Thatch": "200",
+      "Wood": "380",
+      "Fiber": "200"
+    }
+  },
+  {
+    "name": "Small Crop Plot",
+    "materials": {
+      "Thatch": "10",
+      "Wood": "20",
+      "Fiber": "15",
+      "Stone": "25"
+    }
+  },
+  {
+    "name": "Medium Crop Plot",
+    "materials": {
+      "Thatch": "20",
+      "Wood": "40",
+      "Fiber": "30",
+      "Stone": "50"
+    }
+  },
+  {
+    "name": "Stone Fireplace",
+    "materials": {
+      "Thatch": "80",
+      "Wood": "120",
+      "Flint": "20",
+      "Stone": "450"
+    }
+  },
+  {
+    "name": "Large Crop Plot",
+    "materials": {
+      "Thatch": "40",
+      "Wood": "80",
+      "Fiber": "60",
+      "Stone": "100"
+    }
+  },
+  {
+    "name": "Bunk Bed",
+    "materials": {
+      "Hide": "120",
+      "Metal Ingot": "320",
+      "Fiber": "280",
+      "Pelt": "200",
+      "Polymer": "80"
+    }
+  }
+]
