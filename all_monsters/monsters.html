@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+</head>
+
+<h1>A htmlified table based on <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/5nwqo9/complete_list_of_every_creature_in_the_monster/">A reddit post by /u/pinkknight42</a></h1>
+    
+<table id="monster_table" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Type</th>
+            <th>Tag</th>
+            <th>Alignment</th>
+            <th>CR</th>
+            <th>Source</th>
+            <th>Environments</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+                <th>Name</th>
+                <th>Size</th>
+                <th>Type</th>
+                <th>Tag</th>
+                <th>Alignment</th>
+                <th>CR</th>
+                <th>Source</th>
+                <th>Environments</th>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+                <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+                <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+                <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+                <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+                <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+                <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+                <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+                <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+                <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+                <tr>
+            <td>Name1</td>
+            <td>Size1</td>
+            <td>Type1</td>
+            <td>Tag1</td>
+            <td>Alignment1</td>
+            <td>Cr1</td>
+            <td>Source</td>
+            <td>Arctic Atlantic</td>
+        </tr>
+    </tbody>
+</table>
+    
+<script>
+$(document).ready(function() {
+    $('#monster_table').DataTable();
+} );
+
+$.getJSON("/data.json").done(function (data) {
+    $.each( console.log(item))
+});
+
+</script>
+</html>
