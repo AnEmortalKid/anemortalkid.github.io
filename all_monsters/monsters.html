@@ -33,128 +33,65 @@
                 <th>Environments</th>
         </tr>
     </tfoot>
-    <tbody>
-        <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
-                <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
-                <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
-                <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
-                <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
-                <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
-                <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
-                <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
-                <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
-                <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
-                <tr>
-            <td>Name1</td>
-            <td>Size1</td>
-            <td>Type1</td>
-            <td>Tag1</td>
-            <td>Alignment1</td>
-            <td>Cr1</td>
-            <td>Source</td>
-            <td>Arctic Atlantic</td>
-        </tr>
+    <tbody id="table_data">
     </tbody>
 </table>
     
 <script>
-$(document).ready(function() {
-    $('#monster_table').DataTable();
-} );
+var tableData = $('#table_data');
 
-$.getJSON("/data.json").done(function (data) {
-    $.each( console.log(item))
-});
+$.getJSON("http://anemortalkid.github.io/all_monsters/data.json", function(result){
+        $.each(result, function(i, field){            
+            var tableRow = $("<tr></tr>");
+            
+            var nameTD = $("<td></td>").text(field.name);
+            tableRow.append(nameTD);
+            
+            var sizeTD = $("<td></td>").text(field.size);
+            tableRow.append(sizeTD);
+            
+            var typeTD = $("<td></td>").text(field.type);
+            tableRow.append(typeTD);
+            
+            var tagTD = $("<td></td>").text(field.tag);
+            tableRow.append(tagTD);
+            
+            var alignment = $("<td></td>").text(field.alignment);
+            tableRow.append(alignment);
+            
+            var cr = $("<td></td>").text(field.challengeRating);
+            tableRow.append(cr);
+            
+            var book = $("<td></td>").text(field.bookSource);
+            tableRow.append(book);
+            
+            var environments = $("<td></td>");
+            var environmentText =""
+            if(field.environments.length > 0)
+            {
+                var environmentList = $("<ul></ul>");
+                for(i = 0; i < field.environments.length; i++)
+                {
+                    var environmentItem = $("<li></li>");
+                    environmentItem.text(field.environments[i]);
+                    environmentList.append(environmentItem);
+                }
+                environments.append(environmentList);
+            }
+            else
+            {
+                environments.text(environmentText);
+            }
+            tableRow.append(environments);
+            
+            
+            
+            tableData.append(tableRow);
+            
+        });
+
+    $('#monster_table').DataTable();         
+    });
 
 </script>
 </html>
