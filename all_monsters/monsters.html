@@ -38,6 +38,14 @@
 </table>
     
 <script>
+
+// just let javascript turn it into a fraction to sort
+$.fn.dataTable.ext.type.order['challenge-rating-pre'] = function ( d ) {
+	
+	var number = eval(d);
+	return number;
+};
+
 var tableData = $('#table_data');
 
 $.getJSON("http://anemortalkid.github.io/all_monsters/data.json", function(result){
@@ -89,9 +97,15 @@ $.getJSON("http://anemortalkid.github.io/all_monsters/data.json", function(resul
             tableData.append(tableRow);
             
         });
-
-    $('#monster_table').DataTable();         
-    });
+	
+	$('#monster_table').DataTable( {
+        "columnDefs": [ {
+            "type": "challenge-rating",
+            "targets": 5
+        } ]
+    } );
+		
+});
 
 </script>
 </html>
