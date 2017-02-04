@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Visionary Jewelers Inventory</title>
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/app.css">
+        
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/jq-2.2.4/dt-1.10.13/datatables.min.css"/>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/zf/jq-2.2.4/dt-1.10.13/datatables.min.js"></script>
+    </head>
+
+    <body>
+        <h1>Browse our Inventory</h1>
+
+        <div>
+            <div id="filters">
+                <div id="price_filter">
+                    <div class="row">
+                        <div class="small-2 columns">
+                            <label>Minimum Price: </label>
+                            <input id="price_min_input" type="number">
+                        </div>
+                        <div class="small-2 columns">                            
+                            <label>Maximum Price: </label>
+                            <input id="price_max_input" type="number" >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="price_slider" class="slider" data-slider>
+                              <span class="slider-fill" data-slider-fill></span>
+                              <span id="price_min" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="price_min_input"></span>
+                              <span id="price_max" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="price_max_input"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="expanded row">
+            <div class="large-offset-1 large-10 columns">
+                <div class="callout">
+                    <div id="inventory_table">
+                        <table id="inventory" class="display" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Shape</th>
+                                    <th>Carat</th>
+                                    <th>Color</th>
+                                    <th>Clarity</th>
+                                    <th>Lab</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Shape</th>
+                                    <th>Carat</th>
+                                    <th>Color</th>
+                                    <th>Clarity</th>
+                                    <th>Lab</th>
+                                    <th>Price</th>
+                                </tr>
+                            </tfoot> 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/inventory.js"></script>
+</html>
