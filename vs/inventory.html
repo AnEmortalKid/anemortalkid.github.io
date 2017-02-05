@@ -13,7 +13,7 @@
 
         <div>
             <div id="filters">
-                <div id="price_filter">
+                <div id="price_filter" class="row">
                     <div class="row">
                         <div class="small-2 columns">
                             <label>Minimum Price: </label>
@@ -32,6 +32,44 @@
                         </div>
                     </div>
                 </div>
+                <div id="carat_filter" class="row">
+                    <div class="row">
+                        <div class="small-2 columns">
+                            <label>Minimum Carat: </label>
+                            <input id="carat_min_input" type="number">
+                        </div>
+                        <div class="small-2 columns">                            
+                            <label>Maximum Carat: </label>
+                            <input id="carat_max_input" type="number" >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="carat_slider" class="slider" data-slider>
+                              <span class="slider-fill" data-slider-fill></span>
+                              <span id="carat_min" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="carat_min_input"></span>
+                              <span id="carat_max" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="carat_max_input"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="shape_filter" class="row">
+                        <label><input class="shapeFilter" type="checkbox" checked value="ASR">ASR</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="CUS">CUS</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="EC">EC</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="HS">HS</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="MQ">MQ</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="OCT">OCT</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="OM">OM</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="OV">OV</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="PR">PR</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="PS">PS</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="RAD">RAD</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="RB">RB</label>
+                        <label><input class="shapeFilter" type="checkbox" checked value="TR">TR</label>
+                    </ul>
+                
+                </div>
+                <div id="lab_filter" class="row">
+                </div>
             </div>
         </div>
         
@@ -47,6 +85,7 @@
                                     <th>Color</th>
                                     <th>Clarity</th>
                                     <th>Lab</th>
+                                    <th>Fluorescence</th>
                                     <th>Price</th>
                                 </tr>
                             </thead>
@@ -57,6 +96,7 @@
                                     <th>Color</th>
                                     <th>Clarity</th>
                                     <th>Lab</th>
+                                    <th>Fluorescence</th>
                                     <th>Price</th>
                                 </tr>
                             </tfoot> 
