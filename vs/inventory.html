@@ -2,7 +2,6 @@
     <head>
         <title>Visionary Jewelers Inventory</title>
         <link rel="stylesheet" href="css/foundation.css">
-        <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="css/inventory.css">
         
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/jq-2.2.4/dt-1.10.13/datatables.min.css"/>
@@ -85,181 +84,10 @@
                     </div>
                 </div>               
             </div>
-  
-  
-            <div id="filters">            
                 
-                <div class="row" hidden>
-                    <div class="small-1 columns border--blue">
-                        <p>1</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>2</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>3</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>4</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>5</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>6</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>7</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>8</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>9</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>10</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>11</p>
-                    </div>
-                    <div class="small-1 columns border--blue">
-                        <p>12</p>
-                    </div>
-                </div>
-                
-                <div id="checkbox_static">
-                    <div class="row">
-                        <div class="small-1 columns">
-                            <h5 class="underlined" align="center">Shape</h5>
-                        </div>
-                        <div class="small-1 small-offset-7 columns end">
-                            <h5 align="center" class="underlined">Lab</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Asscher">Asscher</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Octagon">Octagon</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Princess">Princess</label>
-                        </div>
-                        
-                        <div class="small-1 columns">
-                            <hr class="vertical">
-                        </div>
-                        
-                        <div class="small-2 small-offset-1 columns">
-                            <label><input type="checkbox" class="labFilter" checked value="AGS">AGS</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="labFilter" checked value="GIA">GIA</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Cushion">Cushion</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Old Miner">Old Miner</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Radiant">Radiant</label>
-                        </div>
-                        
-                        <div class="small-1 columns">
-                            <hr class="vertical">
-                        </div>
-                        
-                        <div class="small-2 small-offset-1 columns">
-                            <label><input type="checkbox" class="labFilter" checked value="EGLA">EGLA</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="labFilter" checked value="IGI">IGI</label>
-                        </div>
-                    </div>
-                     <div class="row">
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Emerald">Emerald</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Oval">Oval</label>
-                        </div> 
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Round">Round</label>
-                        </div>
-                        
-                        <div class="small-1 columns">
-                            <hr class="vertical">
-                        </div>
-                        
-                        <div class="small-2 small-offset-1 columns">
-                            <label><input type="checkbox" class="labFilter" checked value="EGLIS">EGLIS</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="labFilter" checked value="OWN">OWN</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Heart">Heart</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Pear">Pear</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Trillion">Trillion</label>
-                        </div>
-                        
-                        <div class="small-1 columns">
-                            <hr class="vertical">
-                        </div>
-                        
-                        <div class="small-2 small-offset-1 columns">
-                            <label><input type="checkbox" class="labFilter" checked value="EGLUS">EGLUS</label>
-                        </div>
-                        
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="labFilter" checked value="PGS">PGS</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="small-2 columns">
-                            <label><input type="checkbox" class="shapeFilter" checked value="Marquise">Marquise</label>
-                        </div>                      
-                        
-                        <div class="small-1 small-offset-4 columns end">
-                            <hr class="vertical">
-                        </div>
-                    </div>
-                </div>               
-                
-                <!-- TODO fix dynamic -->
-                <div class="row" hidden>
-                    <div id="shape_filter" class="secondary callout small-6 columns">
-                    </div>
-                    <div id="lab_filter" class="secondary callout small-6 columns">
-                    </div>
-                </div>
-                
-            </div>
+            <div id="checkbox_dynamic">
+            </div>                
         </div>
-        
-        
         
         <div class="expanded row">
             <div class="large-offset-1 large-10 columns">
@@ -298,6 +126,6 @@
     
     <script src="js/vendor/foundation.min.js"></script>
     <script src="js/vendor/what-input.js"></script>
-    <script src="js/app.js"></script>
     <script src="js/inventory.js"></script>
+    <script src="js/partitioner.js"></script>
 </html>

@@ -1,3 +1,6 @@
+$(document).foundation()
+
+
 var data_table;
 
 var priceRange;
@@ -14,7 +17,7 @@ function loadTrustarData()
 {
     // http://visionary-site.herokuapp.com/search/trustar
     // http://localhost:8080/search/trustar/
-    $.get("http://visionary-site.herokuapp.com/search/trustar", function(data){
+    $.get("http://localhost:8080/search/trustar/", function(data){
         
         // store it up higher so we can do some functions later
         var response=data;
@@ -35,12 +38,8 @@ function loadTrustarData()
         // initialize our slider combos
         initialize_price_slider(response);
         initialize_carat_slider(response);
-        initialize_static_filters(response);
-        
+        dynamic_click_filters(response);
         set_default_shapes(defaultShapes);
-        
-        //initialize_shape_filters(response);
-        //initialize_lab_filters(response);
         
         // push the filtering functions
         $.fn.dataTable.ext.search.push(
@@ -69,9 +68,8 @@ function set_default_shapes(shapesArray)
     }    
 }
 
-function initialize_static_filters(responseData)
+function dynamic_click_filters(responseData)
 {
-    
     var statistics = responseData.statistics;
     var dataRanges = statistics.dataRanges;
         
@@ -81,15 +79,121 @@ function initialize_static_filters(responseData)
     
     var shapeValues = shapes.values;
     
-    // create the elements
-    var shapeFilters = $('#shape_filter');
-    for(i=0; i < shapeValues.length; i++)
+    var labs = dataRanges.find(function(item) {
+        return item.dataRangeName==='lab';
+    });
+    
+    var labValues = labs.values;
+    
+    var shapePartitions = new Partitioner(shapeValues, 3);
+    var labPartitions = new Partitioner(labValues,2);
+    
+    var shapeIterator = shapePartitions.getIterator();
+    var labIterator = labPartitions.getIterator();
+    
+    var maxRows = Math.max(shapePartitions.getMaxPartitionSize(), labPartitions.getMaxPartitionSize());
+    
+    var dynamicDiv = $('#checkbox_dynamic');
+    var rowHeaders = create_checkbox_filter_headers();
+    dynamicDiv.append(rowHeaders);
+    
+    var columnCount = 6;
+    for(row = 0; row < maxRows; row++)
     {
-        var shapeValue = shapeValues[i];
-        shapesShown.add(shapeValue);
+        var pad = 0;
+        var rowElem = $('<div></div>');
+        rowElem.addClass('row');
+        dynamicDiv.append(rowElem);
+        for(currentColumn = 0; currentColumn < columnCount; currentColumn++)
+        {
+                // grab from shapes
+            if(currentColumn < 3)
+            {
+                var shape = shapeIterator.next();
+                if(shape)
+                {
+                    var shapeCheckbox = create_checkbox_filter('shapeFilter',shape);
+                    rowElem.append(shapeCheckbox);
+                    shapesShown.add(shape);
+                }
+                else{
+                    pad+=2;
+                }
+            }
+            if(currentColumn==3)
+            {
+                var verticalLine = $('<div></div>');
+                verticalLine.addClass('small-1 columns end');
+                
+                if(pad > 0)
+                {
+                    var offsetClass='small-offset-'+pad;
+                    verticalLine.addClass(offsetClass);
+                }
+                
+                var hr = $('<hr></hr>');
+                hr.addClass('vertical');
+                verticalLine.append(hr);
+                rowElem.append(verticalLine);
+                console.log('empty with pad:' + pad);
+            }
+            if(currentColumn > 3)
+            {
+                var lab = labIterator.next();
+                if(lab)
+                {
+                    var labCheckbox = create_checkbox_filter('labFilter',lab);
+                    
+                    // shift the first guy over one
+                    if(currentColumn == 4)
+                    {
+                        labCheckbox.addClass('small-offset-1');
+                    }
+                    rowElem.append(labCheckbox);
+                    labsShown.add(lab);
+                }             
+            }
+        }
     }
     
-    $('.shapeFilter').click(function() {
+    add_shapeFilter_click();
+    add_labFilter_click();    
+}
+
+function create_checkbox_filter_headers()
+{
+    var row = $('<div></div>');
+    row.addClass('row');
+    
+    var shapeHeaderWrapper = $('<div></div>');
+    shapeHeaderWrapper.addClass('small-1 columns');
+    
+    var shapeHeader=create_checkbox_header('Shape');
+    row.append(shapeHeader);
+    
+    var labHeader = create_checkbox_header('Lab');
+    labHeader.addClass('small-offset-7 end');
+    row.append(labHeader);
+    
+    return row;
+}
+
+function create_checkbox_header(headerText)
+{
+    var headerWrapper = $('<div></div>');
+    headerWrapper.addClass('small-1 columns');
+    
+    var header=$('<h5></h5>');
+    header.prop('align','center');
+    header.addClass('underlined');
+    header.text(headerText);
+    headerWrapper.append(header);
+    return headerWrapper;
+}
+
+function add_shapeFilter_click()
+{
+     $('.shapeFilter').click(function() {
         var checked = $(this).is(':checked');
         if(checked)
         {
@@ -101,22 +205,11 @@ function initialize_static_filters(responseData)
         
         data_table.draw();
     });
-    
-     var labs = dataRanges.find(function(item) {
-        return item.dataRangeName==='lab';
-    });
-    
-    var labValues = labs.values;
-    
-    // create the elements
-    var labFilters = $('#lab_filter');
-    for(i=0; i < labValues.length; i++)
-    {
-        var labValue = labValues[i];
-        labsShown.add(labValue);
-    }
-    
-    $('.labFilter').click(function() {
+}
+
+function add_labFilter_click()
+{
+     $('.labFilter').click(function() {
         var checked = $(this).is(':checked');
         if(checked)
         {
@@ -128,7 +221,6 @@ function initialize_static_filters(responseData)
         
         data_table.draw();
     });
-    
 }
 
 function initialize_price_slider(responseData)
@@ -211,69 +303,23 @@ function filter_carat(settings, data, dataIndex)
         return false;
 }
 
-function create_checkbox(clazz, value)
+function create_checkbox_filter(clazz, value)
 {
-    var checkboxWrapper = $('<label></label>');
-    var checkboxInput = $('<input class=\"'+clazz+'\" type=\"checkbox\" checked value=\"'+value+'\">');
-    checkboxWrapper.append(checkboxInput);
-    checkboxWrapper.append(value);
-    return checkboxWrapper;
-}
-
-function initialize_shape_filters(responseData)
-{
-    var statistics = responseData.statistics;
-    var dataRanges = statistics.dataRanges;
-        
-    var shapes = dataRanges.find(function(item) {
-        return item.dataRangeName==='shape';
-    });
+    var checkboxColumnWrapper = $('<div></div>');
+    checkboxColumnWrapper.addClass('small-2 columns');
     
-    var shapeValues = shapes.values;
+    var checkboxLabel = $('<label></label>');
     
-    // create the elements
-    var shapeFilters = $('#shape_filter');
-    for(i=0; i < shapeValues.length; i++)
-    {
-        var shapeValue = shapeValues[i];
-        shapesShown.add(shapeValue);
-        var checkbox = create_checkbox('shapeFilter', shapeValue);
-        shapeFilters.append(checkbox);        
-    }
+    var checkboxInput = $('<input></input>');
+    checkboxInput.addClass(clazz);
+    checkboxInput.prop('type','checkbox');
+    checkboxInput.prop('checked',true);
+    checkboxInput.prop('value', value);
+    checkboxLabel.append(checkboxInput);
+    checkboxLabel.append(value);
     
-    $('.shapeFilter').click(function() {
-        var checked = $(this).is(':checked');
-        if(checked)
-        {
-            shapesShown.add($(this).val())
-        }
-        else {
-            shapesShown.delete($(this).val());
-        }
-        
-        data_table.draw();
-    });
-}
-
-function create_clickable_filters(responseData)
-{
-    var statistics = responseData.statistics;
-    var dataRanges = statistics.dataRanges;
-        
-    var shapes = dataRanges.find(function(item) {
-        return item.dataRangeName==='shape';
-    });
-    
-    var shapeValues = shapes.values;
-    
-    var caratRange = dataRanges.find(function(item) {
-        return item.dataRangeName==='carat';
-    });
-    
-    var shapeOffset= Math.floor(shapeValues.length/3);
-    var shapeIndex = 0;
-    var shapesCounted = 0;
-    
+    checkboxColumnWrapper.append(checkboxLabel);
+    return checkboxColumnWrapper;
 }
 
 
@@ -285,42 +331,6 @@ function filter_shape(settings, data, dataIndex)
         return true;
     }
     return false;
-}
-
-
-function initialize_lab_filters(responseData)
-{
-    var statistics = responseData.statistics;
-    var dataRanges = statistics.dataRanges;
-        
-    var labs = dataRanges.find(function(item) {
-        return item.dataRangeName==='lab';
-    });
-    
-    var labValues = labs.values;
-    
-    // create the elements
-    var labFilters = $('#lab_filter');
-    for(i=0; i < labValues.length; i++)
-    {
-        var labValue = labValues[i];
-        labsShown.add(labValue);
-        var checkbox = create_checkbox('labFilter', labValue);
-        labFilters.append(checkbox);        
-    }
-    
-    $('.labFilter').click(function() {
-        var checked = $(this).is(':checked');
-        if(checked)
-        {
-            labsShown.add($(this).val())
-        }
-        else {
-            labsShown.delete($(this).val());
-        }
-        
-        data_table.draw();
-    });
 }
 
 function filter_lab(settings, data, dataIndex)
@@ -337,4 +347,3 @@ function filter_lab(settings, data, dataIndex)
 $(document).on('moved.zf.slider', function(){
     data_table.draw();
 });
-    
