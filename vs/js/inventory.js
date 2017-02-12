@@ -2,18 +2,19 @@ var data_table;
 
 var priceRange;
 
+var defaultShapes = ["Round"];
 var shapesShown = new Set();
 var labsShown = new Set();
 
 $(document).ready(function() {
-    loadTrustarData();
+    loadTrustarData();    
 });
 
 function loadTrustarData()
 {
     // http://visionary-site.herokuapp.com/search/trustar
     // http://localhost:8080/search/trustar/
-    $.get("https://visionary-site.herokuapp.com/search/trustar/", function(data){
+    $.get("http://visionary-site.herokuapp.com/search/trustar", function(data){
         
         // store it up higher so we can do some functions later
         var response=data;
@@ -35,6 +36,9 @@ function loadTrustarData()
         initialize_price_slider(response);
         initialize_carat_slider(response);
         initialize_static_filters(response);
+        
+        set_default_shapes(defaultShapes);
+        
         //initialize_shape_filters(response);
         //initialize_lab_filters(response);
         
@@ -45,10 +49,24 @@ function loadTrustarData()
             filter_shape,
             filter_lab
         );
-        
-        // call the sliders and let them reflow
-        $('#price_slider').show();
+
+        // hide the filter section now that it drew
+        $('#filters_content').foundation('toggle');
     });    
+}
+
+function set_default_shapes(shapesArray)
+{
+    // uncheck everything
+    $('.shapeFilter').prop('checked', false);
+    shapesShown.clear();
+    
+    for(shape in shapesArray)
+    {
+        var shapeName = shapesArray[shape];
+        $('input[value="'+shapeName+'"]').prop('checked',true);    
+        shapesShown.add(shapeName);
+    }    
 }
 
 function initialize_static_filters(responseData)
@@ -319,5 +337,4 @@ function filter_lab(settings, data, dataIndex)
 $(document).on('moved.zf.slider', function(){
     data_table.draw();
 });
-
     
