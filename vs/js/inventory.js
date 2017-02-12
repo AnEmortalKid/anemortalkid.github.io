@@ -50,7 +50,7 @@ function loadTrustarData()
             filter_lab
         );
 
-        // hide the filter section now that it drew
+        // hide the filter section now that it drew properly
         $('#filters_content').foundation('toggle');
     });    
 }

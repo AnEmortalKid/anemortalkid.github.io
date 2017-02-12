@@ -1,0 +1,10 @@
+hr.vertical {   
+    transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    width:60%;
+}
+.underlined{
+    border-bottom:1px solid gray;
+}
