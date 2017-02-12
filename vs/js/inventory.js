@@ -1,11 +1,9 @@
-var response;
 var data_table;
 
 var priceRange;
-var caratRange;
-var shapes;
 
 var shapesShown = new Set();
+var labsShown = new Set();
 
 $(document).ready(function() {
     loadTrustarData();
@@ -13,12 +11,12 @@ $(document).ready(function() {
 
 function loadTrustarData()
 {
-    // 
+    // http://visionary-site.herokuapp.com/search/trustar
     // http://localhost:8080/search/trustar/
-    $.get("http://visionary-site.herokuapp.com/search/trustar", function(data){
+    $.get("http://visionary-site.herokuapp.com/search/trustar/", function(data){
         
         // store it up higher so we can do some functions later
-        response=data;
+        var response=data;
         
         data_table = $('#inventory').DataTable( {
             "data": response.data,
@@ -36,15 +34,83 @@ function loadTrustarData()
         // initialize our slider combos
         initialize_price_slider(response);
         initialize_carat_slider(response);
-        initialize_shape_filters(response);
+        initialize_static_filters(response);
+        //initialize_shape_filters(response);
+        //initialize_lab_filters(response);
         
         // push the filtering functions
         $.fn.dataTable.ext.search.push(
             filter_price,
             filter_carat,
-            filter_shape
+            filter_shape,
+            filter_lab
         );
+        
+        // call the sliders and let them reflow
+        $('#price_slider').show();
     });    
+}
+
+function initialize_static_filters(responseData)
+{
+    
+    var statistics = responseData.statistics;
+    var dataRanges = statistics.dataRanges;
+        
+    var shapes = dataRanges.find(function(item) {
+        return item.dataRangeName==='shape';
+    });
+    
+    var shapeValues = shapes.values;
+    
+    // create the elements
+    var shapeFilters = $('#shape_filter');
+    for(i=0; i < shapeValues.length; i++)
+    {
+        var shapeValue = shapeValues[i];
+        shapesShown.add(shapeValue);
+    }
+    
+    $('.shapeFilter').click(function() {
+        var checked = $(this).is(':checked');
+        if(checked)
+        {
+            shapesShown.add($(this).val())
+        }
+        else {
+            shapesShown.delete($(this).val());
+        }
+        
+        data_table.draw();
+    });
+    
+     var labs = dataRanges.find(function(item) {
+        return item.dataRangeName==='lab';
+    });
+    
+    var labValues = labs.values;
+    
+    // create the elements
+    var labFilters = $('#lab_filter');
+    for(i=0; i < labValues.length; i++)
+    {
+        var labValue = labValues[i];
+        labsShown.add(labValue);
+    }
+    
+    $('.labFilter').click(function() {
+        var checked = $(this).is(':checked');
+        if(checked)
+        {
+            labsShown.add($(this).val())
+        }
+        else {
+            labsShown.delete($(this).val());
+        }
+        
+        data_table.draw();
+    });
+    
 }
 
 function initialize_price_slider(responseData)
@@ -92,7 +158,7 @@ function initialize_carat_slider(responseData)
     var statistics = responseData.statistics;
     var dataRanges = statistics.dataRanges;
         
-    caratRange = dataRanges.find(function(item) {
+    var caratRange = dataRanges.find(function(item) {
         return item.dataRangeName==='carat';
     });
     
@@ -127,21 +193,34 @@ function filter_carat(settings, data, dataIndex)
         return false;
 }
 
+function create_checkbox(clazz, value)
+{
+    var checkboxWrapper = $('<label></label>');
+    var checkboxInput = $('<input class=\"'+clazz+'\" type=\"checkbox\" checked value=\"'+value+'\">');
+    checkboxWrapper.append(checkboxInput);
+    checkboxWrapper.append(value);
+    return checkboxWrapper;
+}
+
 function initialize_shape_filters(responseData)
 {
     var statistics = responseData.statistics;
     var dataRanges = statistics.dataRanges;
         
-    shapes = dataRanges.find(function(item) {
+    var shapes = dataRanges.find(function(item) {
         return item.dataRangeName==='shape';
     });
     
     var shapeValues = shapes.values;
     
     // create the elements
+    var shapeFilters = $('#shape_filter');
     for(i=0; i < shapeValues.length; i++)
     {
-        shapesShown.add(shapeValues[i]);    
+        var shapeValue = shapeValues[i];
+        shapesShown.add(shapeValue);
+        var checkbox = create_checkbox('shapeFilter', shapeValue);
+        shapeFilters.append(checkbox);        
     }
     
     $('.shapeFilter').click(function() {
@@ -156,9 +235,29 @@ function initialize_shape_filters(responseData)
         
         data_table.draw();
     });
-    
-    console.log(shapesShown);    
 }
+
+function create_clickable_filters(responseData)
+{
+    var statistics = responseData.statistics;
+    var dataRanges = statistics.dataRanges;
+        
+    var shapes = dataRanges.find(function(item) {
+        return item.dataRangeName==='shape';
+    });
+    
+    var shapeValues = shapes.values;
+    
+    var caratRange = dataRanges.find(function(item) {
+        return item.dataRangeName==='carat';
+    });
+    
+    var shapeOffset= Math.floor(shapeValues.length/3);
+    var shapeIndex = 0;
+    var shapesCounted = 0;
+    
+}
+
 
 function filter_shape(settings, data, dataIndex)
 {
@@ -170,6 +269,51 @@ function filter_shape(settings, data, dataIndex)
     return false;
 }
 
+
+function initialize_lab_filters(responseData)
+{
+    var statistics = responseData.statistics;
+    var dataRanges = statistics.dataRanges;
+        
+    var labs = dataRanges.find(function(item) {
+        return item.dataRangeName==='lab';
+    });
+    
+    var labValues = labs.values;
+    
+    // create the elements
+    var labFilters = $('#lab_filter');
+    for(i=0; i < labValues.length; i++)
+    {
+        var labValue = labValues[i];
+        labsShown.add(labValue);
+        var checkbox = create_checkbox('labFilter', labValue);
+        labFilters.append(checkbox);        
+    }
+    
+    $('.labFilter').click(function() {
+        var checked = $(this).is(':checked');
+        if(checked)
+        {
+            labsShown.add($(this).val())
+        }
+        else {
+            labsShown.delete($(this).val());
+        }
+        
+        data_table.draw();
+    });
+}
+
+function filter_lab(settings, data, dataIndex)
+{
+    var lab = data[4];
+    if ( labsShown.has(lab) )
+    {
+        return true;
+    }
+    return false;
+}
 
 
 $(document).on('moved.zf.slider', function(){

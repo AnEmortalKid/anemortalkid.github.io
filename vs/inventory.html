@@ -7,71 +7,291 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/jq-2.2.4/dt-1.10.13/datatables.min.css"/>
         <script type="text/javascript" src="https://cdn.datatables.net/v/zf/jq-2.2.4/dt-1.10.13/datatables.min.js"></script>
     </head>
+    <style>
+    .separator-right {
+        border-right: 1px solid gray;
+    }
+    .separator-left {
+        border-left: 1px solid gray;
+    }
+    .hidden-text {
+        color:white;
+    }
+    hr.vertical {   
+        transform:rotate(90deg);
+        -o-transform:rotate(90deg);
+        -moz-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+        width:60%;
+    }
+    .underlined{
+        border-bottom:1px solid gray;
+    }
+    .border--red{
+        border:1px solid red;
+    }
+    .border--blue{
+        border:1px solid blue;
+    }
+    .border--yellow{
+        border:1px solid yellow;
+    }
+    .border--green{
+        border:1px solid green;
+    }
+    </style>
 
     <body>
-        <h1>Browse our Inventory</h1>
-
-        <div>
-            <div id="filters">
-                <div id="price_filter" class="row">
-                    <div class="row">
-                        <div class="small-2 columns">
-                            <label>Minimum Price: </label>
-                            <input id="price_min_input" type="number">
+        <div class="row">
+            <div class="small-6 small-offset-3 columns">
+                <h1 align="center">Browse our Inventory</h1>
+            </div>
+        </div>
+        
+        <div class="row">
+            <button class="button expanded filter_control" data-toggle="filters_content">Filters</button>
+        </div>      
+        
+        <div id="filters_content" class="is-hidden" data-toggler="is-hidden">
+            
+            <div class="row">
+                <!-- left 1/2 slider combo -->
+                <div class="small-6 columns callout">
+                    
+                    <section class="row">
+                        <div class="small-4 small-offset-4 columns">
+                            <h5 class="underlined" align="center">Price</h5>
                         </div>
-                        <div class="small-2 columns">                            
-                            <label>Maximum Price: </label>
-                            <input id="price_max_input" type="number" >
-                        </div>
-                    </div>
+                    </section>
+                    
                     <div class="row">
-                        <div id="price_slider" class="slider" data-slider>
-                              <span class="slider-fill" data-slider-fill></span>
-                              <span id="price_min" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="price_min_input"></span>
-                              <span id="price_max" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="price_max_input"></span>
+                        <div id="price_filter">
+                            <div class="small-3 columns">
+                                <div class="input-group">
+                                   <input id="price_min_input"  type="number" class="input-group-field">
+                                 </div>
+                            </div>
+                                   
+                            <div class="small-6 columns">
+                                <div id="price_slider" class="slider" data-slider>
+                                      <span class="slider-fill" data-slider-fill></span>
+                                      <span id="price_min" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="price_min_input"></span>
+                                      <span id="price_max" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="price_max_input"></span>
+                                </div>
+                            </div>                            
+                                        
+                            <div class="small-3 columns">
+                                <div class="input-group">
+                                    <input id="price_max_input" type="number" class="input-group-field">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="carat_filter" class="row">
+                                
+                <!-- left 1/2 slider combo -->
+                <div class="small-6 columns callout">
+                    <div id="carat_filter">
+                    
                     <div class="row">
-                        <div class="small-2 columns">
-                            <label>Minimum Carat: </label>
+                        <div class="small-4 small-offset-4 columns">
+                            <h5 class="underlined" align="center">Carat</h5>
+                        </div>
+                    </div>
+                    
+                        <div class="small-3 columns">
                             <input id="carat_min_input" type="number">
                         </div>
-                        <div class="small-2 columns">                            
-                            <label>Maximum Carat: </label>
+             
+                        <div class="small-6 columns">
+                            <div id="carat_slider" class="slider" data-slider>
+                                  <span class="slider-fill" data-slider-fill></span>
+                                  <span id="carat_min" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="carat_min_input"></span>
+                                  <span id="carat_max" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="carat_max_input"></span>
+                            </div>
+                        </div>
+                            
+                        <div class="small-3 columns">                            
                             <input id="carat_max_input" type="number" >
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="carat_slider" class="slider" data-slider>
-                              <span class="slider-fill" data-slider-fill></span>
-                              <span id="carat_min" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="carat_min_input"></span>
-                              <span id="carat_max" class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="carat_max_input"></span>
-                        </div>
+                </div>               
+            </div>
+  
+  
+            <div id="filters">            
+                
+                <div class="row" hidden>
+                    <div class="small-1 columns border--blue">
+                        <p>1</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>2</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>3</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>4</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>5</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>6</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>7</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>8</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>9</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>10</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>11</p>
+                    </div>
+                    <div class="small-1 columns border--blue">
+                        <p>12</p>
                     </div>
                 </div>
-                <div id="shape_filter" class="row">
-                        <label><input class="shapeFilter" type="checkbox" checked value="ASR">ASR</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="CUS">CUS</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="EC">EC</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="HS">HS</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="MQ">MQ</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="OCT">OCT</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="OM">OM</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="OV">OV</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="PR">PR</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="PS">PS</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="RAD">RAD</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="RB">RB</label>
-                        <label><input class="shapeFilter" type="checkbox" checked value="TR">TR</label>
-                    </ul>
                 
+                <div id="checkbox_static">
+                    <div class="row">
+                        <div class="small-1 columns">
+                            <h5 class="underlined" align="center">Shape</h5>
+                        </div>
+                        <div class="small-1 small-offset-7 columns end">
+                            <h5 align="center" class="underlined">Lab</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Aascher">Aascher</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Octagon">Octagon</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Princess">Princess</label>
+                        </div>
+                        
+                        <div class="small-1 columns">
+                            <hr class="vertical">
+                        </div>
+                        
+                        <div class="small-2 small-offset-1 columns">
+                            <label><input type="checkbox" class="labFilter" checked value="AGS">AGS</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="labFilter" checked value="GIA">GIA</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Cushion">Cushion</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Old Miner">Old Miner</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Radiant">Radiant</label>
+                        </div>
+                        
+                        <div class="small-1 columns">
+                            <hr class="vertical">
+                        </div>
+                        
+                        <div class="small-2 small-offset-1 columns">
+                            <label><input type="checkbox" class="labFilter" checked value="EGLA">EGLA</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="labFilter" checked value="IGI">IGI</label>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Emerald">Emerald</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Oval">Oval</label>
+                        </div> 
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Round">Round</label>
+                        </div>
+                        
+                        <div class="small-1 columns">
+                            <hr class="vertical">
+                        </div>
+                        
+                        <div class="small-2 small-offset-1 columns">
+                            <label><input type="checkbox" class="labFilter" checked value="EGLIS">EGLIS</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="labFilter" checked value="OWN">OWN</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Heart">Heart</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Pear">Pear</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Trillion">Trillion</label>
+                        </div>
+                        
+                        <div class="small-1 columns">
+                            <hr class="vertical">
+                        </div>
+                        
+                        <div class="small-2 small-offset-1 columns">
+                            <label><input type="checkbox" class="labFilter" checked value="EGLUS">EGLUS</label>
+                        </div>
+                        
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="labFilter" checked value="PGS">PGS</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-2 columns">
+                            <label><input type="checkbox" class="shapeFilter" checked value="Marquise">Marquise</label>
+                        </div>                      
+                        
+                        <div class="small-1 small-offset-4 columns end">
+                            <hr class="vertical">
+                        </div>
+                    </div>
+                </div>               
+                
+                <!-- TODO fix dynamic -->
+                <div class="row" hidden>
+                    <div id="shape_filter" class="secondary callout small-6 columns">
+                    </div>
+                    <div id="lab_filter" class="secondary callout small-6 columns">
+                    </div>
                 </div>
-                <div id="lab_filter" class="row">
-                </div>
+                
             </div>
         </div>
+        
+        
         
         <div class="expanded row">
             <div class="large-offset-1 large-10 columns">
@@ -105,6 +325,7 @@
                 </div>
             </div>
         </div>
+        
     </body>
     
     <script src="js/vendor/foundation.min.js"></script>
