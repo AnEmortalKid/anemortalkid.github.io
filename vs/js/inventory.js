@@ -13,7 +13,7 @@ function loadTrustarData()
 {
     // http://visionary-site.herokuapp.com/search/trustar
     // http://localhost:8080/search/trustar/
-    $.get("http://visionary-site.herokuapp.com/search/trustar/", function(data){
+    $.get("https://visionary-site.herokuapp.com/search/trustar/", function(data){
         
         // store it up higher so we can do some functions later
         var response=data;
