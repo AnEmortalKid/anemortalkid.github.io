@@ -48,6 +48,11 @@ function loadTrustarData()
             filter_shape,
             filter_lab
         );
+        
+        // hack to place the sort arrows closer to the text
+        data_table.columns().iterator( 'column', function (ctx, idx) {
+            $( data_table.column(idx).header() ).append('<span class="sort-icon"/>');
+        });
 
         // hide the filter section now that it drew properly
         $('#filters_content').foundation('toggle');
