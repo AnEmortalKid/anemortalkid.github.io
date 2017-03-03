@@ -10,16 +10,13 @@ var shapesShown = new Set();
 var labsShown = new Set();
 
 $(document).ready(function() {
-    loadTrustarData();    
+    loadTable();    
 });
 
-function loadTrustarData()
+function loadTable()
 {
-    // http://visionary-site.herokuapp.com/search/trustar
-    // http://localhost:8080/search/trustar/
-    $.get("http://visionary-site.herokuapp.com/search/trustar", function(data){
+    $.get("https://visionary-site.herokuapp.com/search/all", function(data){
         
-        // store it up higher so we can do some functions later
         var response=data;
         
         data_table = $('#inventory').DataTable( {
@@ -67,8 +64,9 @@ function set_default_shapes(shapesArray)
     
     for(shape in shapesArray)
     {
+        
         var shapeName = shapesArray[shape];
-        $('input[value="'+shapeName+'"]').prop('checked',true);    
+        $('input[value="' + shapeName + '"]').prop('checked',true);    
         shapesShown.add(shapeName);
     }    
 }
