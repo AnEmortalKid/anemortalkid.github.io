@@ -19,5 +19,5 @@ You can contribute by:
  * Donating via bitcoin at 1Kq9VTMEtDbPrDeCJR64vxeXBvEJit8ydi
 
 
-[//]: # (This may be the most platform independent comment)
-[//]: # (This may be the most platform independent comment)
+[bloggery:title]: # (This may be the most platform independent comment)
+
