@@ -1,0 +1,16 @@
+{
+  "name": "tagdogescript",
+  "version": "1.0.0",
+  "description": "a sample with dogescript running in script tags",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "dogescript": "^2.3.0",
+    "xhr": "^2.4.0"
+  }
+}
