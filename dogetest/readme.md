@@ -28,6 +28,17 @@ The following folders contain enough javascript/html to just load the sample in 
 
 The console will log the converted dogescript with a `"Compiled Dogescript:"` message.
 
+Every sample will include this snippet in the index.js:
+```
+// define a global function that can run text dogescript
+dogerunner = function(ds)
+{
+  eval(dogescript(ds));
+}
+```
+
+So you can have fun also calling dogescript from the chrome console. Caveat, I've only tried this out in chrome.
+
 ### Run string based dogescript
 
 `basedogescript`:
@@ -40,7 +51,7 @@ eval(dogescript("plz alert with 'have dogescript'"));
 * `bundle.js`: a generated bundle.js file with browserify:
 `browserify index.js > bunde.js`
 
-Required npm install:
+Required npm installs:
 - dogescript
 - browserify
 
@@ -54,10 +65,10 @@ Required npm install:
 * `bundle.js`: a generated bundle.js file with browserify
 `browserify -t brfs index.js > bundle.js`
 
-Required npm install:
+Required npm installs:
 - dogescript
 - browserify
-- brfs
+- brfs (for embedding the files as part of the browserify building)
 
 ### Run dogescript in script tag
 `tagdogescript`:
@@ -82,3 +93,24 @@ pary.textContent is 'changed with doge'
 <script src="dogeappend.djs" type="text/dogescript"></script>
 ```
 * `dogeappend.djs`: a file that will append a second paragraph to diverino with content "i am appended"
+```
+* `bundle.js`: everything bundled up (with the index.js modifications)
+`browserify index.js > bunde.js`
+
+Required npm installs:
+- dogescript
+- browserify
+- xhr (for loading files)
+
+### Run your own dogescript
+`rundogescript`:
+* `index.js`: contains `require('dogescript')`, and the bits from "run dogescript in script tag", as well as an exposed function `dogerunner` which will be available globally
+* `index.html`: a modified version of the dogescript [example](https://github.com/dogescript/dogescript/tree/master/example/WOWserify) with a panel for writing dogescript, a panel for showing the resulting javascript, and a button for modifying stuff. As well as our friendly `diverino` div for playing with
+* `bundle.js`: everything packed up and ready to go
+`browserify index.js > bunde.js`
+
+Required npm installs:
+- dogescript
+- browserify
+- xhr (for loading files)
+

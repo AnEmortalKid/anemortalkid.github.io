@@ -8,6 +8,17 @@ dogerunner = function(ds)
   eval(dogescript(ds));
 }
 
+
+var input  = document.getElementById('doge-input');
+var output = document.getElementById('js-output');
+
+input.addEventListener('keyup', function () {
+    output.value = dogescript(input.value, true);
+});
+
+output.value = dogescript(input.value, true);
+
+
 // try to process script tags with type=text/dogescript
 var xhr = require('xhr');
 if (typeof window !== 'undefined' && window !== null) {

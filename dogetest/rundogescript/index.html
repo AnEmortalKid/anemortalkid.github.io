@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title> such browser so html5 </title>
+        <style>
+            textarea {
+                width: 50%;
+                height: 600px;
+                font-family: monospace;
+                font-size: 16px;
+                -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                         box-sizing: border-box;
+            }
+            .dogescript {
+                float: left;
+            }
+            .javascript {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="diverino">
+        <p>This paragraph is in a div with id diverino if you wish to play with it!</p>
+        </div>
+        <a href="https://github.com/dogescript/dogescript/blob/master/LANGUAGE.md">Language Ref</a>
+        <a href="https://github.com/dogescript/dogescript/blob/master/example/example.djs">Some complex example</a>
+        <h1> dogescript in the WOWser </h1>
+        <span>
+        <p> type for great instant compile wow or press for great ran</p>
+    <textarea id="doge-input" class="dogescript">
+very paragraphs is document dose getElementsByTagName with 'p'
+very paraone is paragraphs[0]
+paraone.style is "color:blue"    
+    </textarea>
+
+    <textarea id="js-output" class="javascript"></textarea>
+    <button id="runit" class="runit" onclick="dogerunner(document.getElementById('doge-input').value)">doge.run()</button>
+        
+    </body>
+    
+    <!-- load at end so elements exist -->
+    <script src="bundle.js"></script>
+</html>
