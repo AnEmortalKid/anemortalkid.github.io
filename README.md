@@ -17,3 +17,7 @@ You can contribute by:
  we [harvest](https://www.reddit.com/r/DnDBehindTheScreen/comments/3evxgl/lets_make_10000_mysteries/) items 
  [from](https://www.reddit.com/r/DnDBehindTheScreen/comments/3f0lzl/lets_make_10_000_locations/)!
  * Donating via bitcoin at 1Kq9VTMEtDbPrDeCJR64vxeXBvEJit8ydi
+
+
+[bloggery:title]: # (This may be the most platform independent comment)
+
