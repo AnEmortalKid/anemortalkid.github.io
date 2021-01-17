@@ -1,0 +1,33 @@
+{
+  "name": "mining_tracker",
+  "version": "1.0.0",
+  "description": "a mining tracker for starcitizen",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "./node_modules/.bin/prettier --write src/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnEmortalKid/anemortalkid.github.io.git"
+  },
+  "author": "Jan Monterrubio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnEmortalKid/anemortalkid.github.io/issues"
+  },
+  "homepage": "https://github.com/AnEmortalKid/anemortalkid.github.io#readme",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "prettier": "^2.2.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
