@@ -7,8 +7,8 @@ export default class RunView {
     var tableBody = table.getElementsByTagName("tbody")[0];
 
     while (tableBody.firstChild) {
-      tableBody.firstChild.remove()
-   }
+      tableBody.firstChild.remove();
+    }
 
     runs.forEach((run) => {
       var row = document.createElement("tr");
@@ -38,14 +38,13 @@ export default class RunView {
 
       var status = document.createElement("td");
       var statusTag = document.createElement("span");
-      statusTag.classList = ['w3-tag'];
-      if(remainingSeconds > 1) {
-        statusTag.classList.add('w3-orange');
-        statusTag.textContent = 'In Progress';
-      }
-      else {
-        statusTag.classList.add('w3-green');
-        statusTag.textContent = 'Done';
+      statusTag.classList = ["w3-tag"];
+      if (remainingSeconds > 1) {
+        statusTag.classList.add("w3-orange");
+        statusTag.textContent = "In Progress";
+      } else {
+        statusTag.classList.add("w3-green");
+        statusTag.textContent = "Done";
       }
       status.appendChild(statusTag);
       row.appendChild(status);

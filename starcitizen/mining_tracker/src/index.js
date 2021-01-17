@@ -32,8 +32,7 @@ export function submitEntry() {
 export function startApp() {
   runView.layout(getController().fetch());
   // TODO make this configurable between having it auto update or not
-  window.setInterval(function(){
+  window.setInterval(function () {
     runView.layout(getController().fetch());
   }, 1000);
 }
-
