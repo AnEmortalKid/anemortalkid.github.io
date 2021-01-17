@@ -6,6 +6,10 @@ export default class RunView {
 
     var tableBody = table.getElementsByTagName("tbody")[0];
 
+    while (tableBody.firstChild) {
+      tableBody.firstChild.remove()
+   }
+
     runs.forEach((run) => {
       var row = document.createElement("tr");
 
@@ -25,13 +29,28 @@ export default class RunView {
       var remainingSeconds = run.durationSeconds - ellapsedSeconds;
 
       var timeRemaining = document.createElement("td");
-      // todo transform to string
       timeRemaining.textContent = toDurationString(remainingSeconds);
       row.appendChild(timeRemaining);
 
       var yieldData = document.createElement("td");
       yieldData.textContent = run.yieldAmount;
       row.appendChild(yieldData);
+
+      var status = document.createElement("td");
+      var statusTag = document.createElement("span");
+      statusTag.classList = ['w3-tag'];
+      if(remainingSeconds > 1) {
+        statusTag.classList.add('w3-orange');
+        statusTag.textContent = 'In Progress';
+      }
+      else {
+        statusTag.classList.add('w3-green');
+        statusTag.textContent = 'Done';
+      }
+      status.appendChild(statusTag);
+      row.appendChild(status);
+
+      // TODO actions
 
       tableBody.appendChild(row);
       console.log(run.uuid);

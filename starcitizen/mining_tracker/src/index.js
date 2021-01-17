@@ -6,6 +6,8 @@ import RunEntry from "./runEntry";
 
 import { get as getController } from "./runController";
 
+var runView = new RunView();
+
 export function submitEntry() {
   var form = document.getElementById("entry-form");
   var elements = form.elements;
@@ -28,6 +30,10 @@ export function submitEntry() {
 }
 
 export function startApp() {
-  var runView = new RunView();
   runView.layout(getController().fetch());
+  // TODO make this configurable between having it auto update or not
+  window.setInterval(function(){
+    runView.layout(getController().fetch());
+  }, 1000);
 }
+

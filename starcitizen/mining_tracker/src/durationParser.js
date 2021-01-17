@@ -27,6 +27,11 @@ function partToSeconds(part) {
 }
 
 export function toDurationString(seconds) {
+  if(seconds < 0)
+  {
+    return "";
+  }
+  
   var remaining = seconds;
 
   var days = Math.floor(remaining / secondsInDay);
