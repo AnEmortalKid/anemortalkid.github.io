@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+<header class="w3-container w3-teal">
+  <h1>Hello</h1>
+</header>
+
+
+<div class="w3-container">
+    <p>A car is a wheeled, self-powered motor vehicle used for transportation.
+    Most definitions of the term specify that cars are designed to run primarily on roads,
+    to have seating for one to eight people, to typically have four wheels. (Wikipedia)</p>      
+</div>
+
+<div class="w3-container" id="input-form-parent">
+  <div class="w3-container w3-teal">
+    <h2>Input Form</h2>
+  </div>
+  
+  <form class="w3-container" id="entry-form">
+    <label class="w3-text-teal"><b>Refinery Location</b></label>
+    <select class="w3-select" name="location">
+      <option value="" disabled selected>Choose Refinery</option>
+      <option value="ARC-L1">ARC-L1</option>
+      <option value="CRU-L1">CRU-L1</option>
+      <option value="HUR-L1">HUR-L1</option>
+      <option value="HUR-L2">HUR-L2</option>
+      <option value="MIC-L1">MIC-L1</option>
+    </select>
+  
+    <label class="w3-text-teal"><b>Expected Duration</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" name="duration">
+  
+    <label class="w3-text-teal"><b>Yield Amount</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="number" name="yieldAmount">
+
+    <button class="w3-btn w3-blue-grey" onclick="app.submitEntry()">Track</button>
+  </form>
+</div>
+
+<div class="w3-container">
+  <table id="runs-table" class="w3-table w3-bordered w3-striped">
+    <thead>
+      <!-- todo sortable -->
+      <tr class="w3-teal">
+        <th>Location</th>
+        <th>Duration</th>
+        <th>Time Remaining</th>
+        <th>Yield</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+  </thead>
+  <tbody></tbody>
+  </table>
+</div>
+
+</body>
+<script src="main.js"></script>
+<script>app.startApp()</script>
+
+</html>
