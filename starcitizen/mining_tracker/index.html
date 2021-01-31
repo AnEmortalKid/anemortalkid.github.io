@@ -4,191 +4,198 @@
 <head>
 </head>
 
-<script>
-  function openModal(modalId) {
-    document.getElementById(modalId).style.display = 'block';
-  }
-
-  function closeModal(modalId) {
-    document.getElementById(modalId).style.display = 'none'
-  }
-</script>
-
 <body>
-  <div id="header">
-    <header class="w3-container w3-blue-grey">
-      <h1>Star Citizen Refinery Tracker</h1>
-    </header>
-    <div id="button-bar" class="w3-display-topright">
-      <div class="w3-bar w3-padding">
-        <button id="user-settings-modal-btn" class="w3-btn w3-blue-grey w3-round-large w3-disabled" onclick="app.prepareSettingsModal()">
-          <i class="fa fa-cog fa-lg"></i>
-        </button>
-        <button class="w3-btn w3-blue-grey w3-round-large" onclick="location.href ='https://github.com/AnEmortalKid/sc-refinery-tracker'">
-          <i class="fa fa-github fa-lg"></i>
-        </button>
-        <button class="w3-btn w3-blue-grey w3-round-large" onclick="openModal('about-modal')">
-          <i class="fa fa-question fa-lg"></i>
-        </button>
-        <button class="w3-btn w3-blue-grey w3-round-large" onclick="openModal('tip-me-modal')">
-          <i class="fa fa-dollar"></i>/<i class="fa fa-coffee"></i>
-        </button>
-    </div>
-    </div>
-  </div>
-
-<div id="settings-modal" class="w3-modal">
-  <div class="w3-modal-content">
-    <header class="w3-container w3-blue-grey">
-      <span onclick="closeModal('settings-modal')" class="w3-button w3-display-topright">&times;</span>
-      <h2><i class="fa fa-cog"></i> <span id="user-settings-header-placeholder">User</span>'s Settings</h2>
-    </header>
-    
-    <form class="w3-container" id="settings-form">
-      <div class="w3-row w3-section">
-        <label class="w3-text"><b>Refresh Interval in Seconds</b></label>
-        <input class="w3-input w3-border w3-light-grey" type="number" name="refresh.interval" min="0">
-      </div>
-    </form>
-
-    <footer class="w3-container w3-padding">
-      <div class="w3-bar w3-center">
-        <button class="w3-btn w3-blue" onclick="app.applySettings()">Apply</button>
-        <button class="w3-button w3-gray" onclick="closeModal('settings-modal')">Close</button>
-      </div>
-    </footer>
-  </div>
-</div>
   
-<div id="about-modal" class="w3-modal">
-  <div class="w3-modal-content">
-    <header class="w3-container w3-blue-grey">
-      <span onclick="closeModal('about-modal')" class="w3-button w3-display-topright">&times;</span>
-      <h2><i class="fa fa-question"></i> About</h2>
-    </header>
-    <div class="w3-panel">
-      <p>The Refinery Tracker was built to remember refinery jobs. All data is preserved locally through the usage of your browser's local storage.</p>
-
-      <h2>Usage</h2>
-      <p>The Refinery Tracker keeps jobs for a particular user.</p>
-      <ul>
-        <li>Start by creating a user name to associate refinery jobs to</li>
-        <li>Select your User from the user selection box</li>
-        <li>Start adding Refinery Jobs</li>
-      </ul>
-
-      <h2>Issues</h2>
-      <ul>
-        <li>Feel free to log issues on <a href="https://github.com/AnEmortalKid/sc-refinery-tracker/issues/new">github</a></li>
-        <li><b>Version: </b> 1.0.1</li>
-      </ul>
+  <div id="header-view">
+    <div>
+<header class="w3-container w3-blue-grey">
+    <h1>Star Citizen Refinery Tracker</h1>
+</header>
+  <div id="button-bar" class="w3-display-topright">
+    <div class="w3-bar w3-padding">
+      <button id="user-settings-modal-btn" class="w3-btn w3-blue-grey w3-round-large w3-disabled">
+        <i class="fa fa-cog fa-lg"></i>
+      </button>
+      <button class="w3-btn w3-blue-grey w3-round-large" target="_blank" onclick="window.open('https://github.com/AnEmortalKid/sc-refinery-tracker', '_blank')">
+        <i class="fa fa-github fa-lg"></i>
+      </button>
+      <button class="w3-btn w3-blue-grey w3-round-large" onclick="app.controls.openModal('about-modal')">
+        <i class="fa fa-question fa-lg"></i>
+      </button>
+      <button class="w3-btn w3-blue-grey w3-round-large" onclick="app.controls.openModal('tip-me-modal')">
+        <i class="fa fa-dollar"></i>/<i class="fa fa-coffee"></i>
+      </button>
     </div>
-    
-    <footer class="w3-container w3-padding">
-      <div class="w3-bar w3-center">
-        <button class="w3-button w3-gray" onclick="closeModal('about-modal')">Close</button>
-      </div>
-    </footer>
   </div>
 </div>
-
-<div id="tip-me-modal" class="w3-modal">
-  <div class="w3-modal-content">
-    <header class="w3-container w3-blue-grey">
-      <span onclick="closeModal('tip-me-modal')" class="w3-button w3-display-topright">&times;</span>
-      <h2><i class="fa fa-dollar"></i>/<i class="fa fa-coffee"></i></i> Buy me a Coffee</h2>
-    </header>
-    <div class="w3-panel">
-      <p>Tips are appreciated but not required, if you feel like buying me a coffee, here's some easy ways to do that:</p>
-
-      <div class="w3-row">
-        <form action="https://www.paypal.com/donate" method="post" target="_top">
-          <input type="hidden" name="business" value="TLJKK5M72C8NS" />
-          <input type="hidden" name="item_name" value="sc-refinery-tracker" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-          <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-          </form>          
-      </div>
-    </div>
-    
-    <footer class="w3-container w3-padding">
-      <div class="w3-bar w3-center">
-        <button class="w3-button w3-gray" onclick="closeModal('tip-me-modal')">Close</button>
-      </div>
-    </footer>
   </div>
-</div>
 
-<div id="add-user-form-modal" class="w3-modal">
+  <div id="settings-modal" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-blue-grey">
+        <button id="settings-close-button" class="w3-button w3-blue-grey w3-round-large w3-display-topright">
+          <i class="fa fa-times fa-lg"></i>
+        </button>
+        <h2><i class="fa fa-cog"></i> User <span id="user-settings-header-placeholder"></span>'s Settings</h2>
+      </header>
+      
+      <form class="w3-container" id="settings-form">
+        <div class="w3-row w3-section">
+          <label class="w3-text"><b>Refresh Interval in Seconds</b></label>
+          <input class="w3-input w3-border w3-light-grey" type="number" name="refresh.interval" min="0">
+
+          <input type="submit" hidden>
+        </div>
+      </form>
+  
+      <footer class="w3-container w3-padding">
+        <div class="w3-bar w3-center">
+          <button id="settings-confirm-btn" class="w3-btn w3-blue w3-round-large">Apply</button>
+          <button  id="settings-cancel-btn" class="w3-button w3-gray w3-round-large">Close</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+  
+  <div id="about-modal" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-blue-grey">
+        <span onclick="app.controls.closeModal('about-modal')" class="w3-button w3-display-topright">&times;</span>
+        <h2><i class="fa fa-question"></i> About</h2>
+      </header>
+      <div class="w3-panel">
+        <p>The Refinery Tracker was built to remember refinery jobs. All data is preserved locally through the usage of your browser's local storage.</p>
+  
+        <h2>Usage</h2>
+        <p>The Refinery Tracker keeps jobs for a particular user.</p>
+        <ul>
+          <li>Start by creating a user name to associate refinery jobs to</li>
+          <li>Select your User from the user selection box</li>
+          <li>Start adding Refinery Jobs</li>
+        </ul>
+  
+        <h2>Issues</h2>
+        <ul>
+          <li>Feel free to log issues on <a href="https://github.com/AnEmortalKid/sc-refinery-tracker/issues/new">github</a></li>
+          <li><b>Version: </b> 1.1.0</li>
+        </ul>
+      </div>
+      
+      <footer class="w3-container w3-padding">
+        <div class="w3-bar w3-center">
+          <button class="w3-button w3-gray" onclick="app.controls.closeModal('about-modal')">Close</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div id="tip-me-modal" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-blue-grey">
+        <span onclick="app.controls.closeModal('tip-me-modal')" class="w3-button w3-display-topright">&times;</span>
+        <h2><i class="fa fa-dollar"></i>/<i class="fa fa-coffee"></i></i> Buy me a Coffee</h2>
+      </header>
+      <div class="w3-panel">
+        <p>Tips are appreciated but not required, if you feel like buying me a coffee, here's some easy ways to do that:</p>
+  
+        <div class="w3-row">
+          <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <input type="hidden" name="business" value="TLJKK5M72C8NS" />
+            <input type="hidden" name="item_name" value="sc-refinery-tracker" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            </form>          
+        </div>
+      </div>
+      
+      <footer class="w3-container w3-padding">
+        <div class="w3-bar w3-center">
+          <button class="w3-button w3-gray" onclick="app.controls.closeModal('tip-me-modal')">Close</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div id="add-user-form-modal" class="w3-modal">
   <div class="w3-modal-content" id="add-user-form-parent">
     <header class="w3-container w3-blue-gray">
-      <span onclick="closeModal('add-user-form-modal')"
-      class="w3-button w3-display-topright">&times;</span>
+      <button id="add-user-modal-close-button" class="w3-button w3-blue-grey w3-round-large w3-display-topright">
+        <i class="fa fa-times fa-lg"></i>
+      </button>
       <h2><i class="fa fa-user-plus"></i></i> Add User</h2>
     </header>
     
     <form class="w3-container" id="user-form">
       <div class="w3-row w3-section">
         <label class="w3-text"><b>Username</b></label>
-        <input class="w3-input w3-border w3-light-grey" type="text" name="username" placeholder="Name of the user">
+        <input id="user-form-username" class="w3-input w3-border w3-light-grey" type="text" name="username" placeholder="Name of the user">
+
+        <input type="submit" hidden>
       </div>
     </form>
 
     <footer class="w3-container w3-padding">
       <div class="w3-bar w3-center">
-        <button class="w3-btn w3-blue" onclick="app.addUser()">Confirm</button>
-        <button class="w3-button w3-gray" onclick="closeModal('add-user-form-modal')">Cancel</button>
+        <button id="add-user-form-confirm-btn" class="w3-btn w3-blue w3-round-large">Confirm</button>
+        <button id="add-user-form-cancel-btn" class="w3-button w3-gray w3-round-large">Cancel</button>
       </div>
     </footer>
   </div>
 </div>
 
-<div id="remove-user-form-modal" class="w3-modal">
-  <div class="w3-modal-content  w3-pale-red" id="remove-user-form-parent">
-    <header class="w3-container w3-red">
-      <span onclick="closeModal('remove-user-form-modal')" class="w3-button w3-display-topright">&times;</span>
-      <h2><i class="fa fa-user-times"></i> Remove <span id="remove-user-header-placeholder">User</span>?</h2>
-    </header>
-    <div class="w3-panel">
-      <p>Removing this user will remove all their runs. Are you sure?</p>
-    </div>
-    
-    <footer class="w3-container w3-padding">
-      <div class="w3-bar w3-center">
-        <button class="w3-button w3-red" onclick="app.confirmRemoveUser()">Confirm</button>
-        <button class="w3-button w3-gray" onclick="closeModal('remove-user-form-modal')">Cancel</button>
+  <div id="remove-user-form-modal" class="w3-modal">
+    <div class="w3-modal-content  w3-pale-red" id="remove-user-form-parent">
+      <header class="w3-container w3-red">
+        <button id="remove-user-modal-close-button" class="w3-button w3-red w3-round-large w3-display-topright">
+          <i class="fa fa-times fa-lg"></i>
+        </button>
+        <h2><i class="fa fa-user-times"></i> Remove <span id="remove-user-header-placeholder">User</span>?</h2>
+      </header>
+      <div class="w3-panel">
+        <p>Removing this user will remove all their runs. Are you sure?</p>
       </div>
-    </footer>
-  </div>
-</div>
-
-<div class="w3-container w3-padding w3-margin" id="user-view">
-  <div class="w3-center">
-    <h2>User</h2>
-  </div>
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <select id="user-selection" class="w3-select w3-border" name="user"  onchange="app.onUserChange()">
-        <option value="" disabled selected>No users available. Create a new User.</option>
-      </select>
+      
+      <footer class="w3-container w3-padding">
+        <div class="w3-bar w3-center">
+          <button id="remove-user-form-confirm-btn" class="w3-button w3-red w3-round-large">Confirm</button>
+          <button id="remove-user-form-cancel-btn" class="w3-button w3-gray w3-round-large">Cancel</button>
+        </div>
+      </footer>
     </div>
-    <div class="w3-half">
-      <div class="w3-bar">
-        <button class="w3-button w3-blue w3-round-large" onclick="openModal('add-user-form-modal')">Create User</button>
-        <button class="w3-button w3-red w3-round-large" id="remove-user-btn" onclick="app.prepareRemoveUser()">Remove User</button>
+  </div>
+  <div id="user-view">
+    <div class="w3-container w3-padding w3-margin">
+    <div class="w3-center">
+      <h2>User</h2>
+    </div>
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <select id="user-selection" class="w3-select w3-border">
+          <option value="" disabled selected>No users available. Create a new User.</option>
+        </select>
+      </div>
+      <div class="w3-half">
+        <div class="w3-bar">
+          <button id="add-user-btn" class="w3-button w3-blue w3-round-large">Create User</button>
+          <button id="remove-user-btn" class="w3-button w3-red w3-round-large">Remove User</button>
+        </div>
       </div>
     </div>
+  </div>  
   </div>
-</div>
 
-<div id="add-job-modal" class="w3-modal">
+  <div id="add-job-modal" class="w3-modal">
   
   <div class="w3-modal-content"  id="add-job-form-content">
-    <header class="w3-container w3-blue-gray">
-      <span onclick="closeModal('add-job-modal')"
-      class="w3-button w3-display-topright">&times;</span>
-      <h2><i class="fa fa-plus-square"></i></i> Add Refinery Job</h2>
+    <header id="add-job-header" class="w3-container w3-blue-gray">
+      <button id="add-job-modal-close-button" class="w3-button w3-blue-grey w3-round-large w3-display-topright">
+        <i class="fa fa-times fa-lg"></i>
+      </button>
+      <h2>
+        <i id="job-modal-header-icon" class="fa fa-plus-square"></i>
+        <span> </span>
+        <span id="job-modal-header-placeholder">Add Refinery Job</span>
+      </h2>
     </header>
     
   <div class="w3-panel">
@@ -201,7 +208,7 @@
 
       <div class="w3-row w3-section">
         <label class="w3-text"><b>Refinery Location</b></label>
-        <select id="add-job-select-location" class="w3-select w3-border w3-light-grey" name="location">
+        <select id="add-job-select-location" class="w3-select w3-border w3-light-grey w3-border-red" name="location">
           <option value="" disabled selected>Choose Refinery</option>
           <option value="ARC-L1">ARC-L1</option>
           <option value="CRU-L1">CRU-L1</option>
@@ -233,26 +240,43 @@
         </div>
       </div>
 
-      <div class="w3-row w3-section">
-        <label class="w3-text"><b>Expected Yield</b></label>
-        <input class="w3-input w3-border w3-light-grey" type="number" placeholder="0" min="0" name="yieldAmount">
-      </div>
+      <div id="entry-mode-parent">
+        <input id="add-job-form-entryMode" class="w3-check" type="checkbox" >
+        <label>Enter Materials</label>
+        
+        <div class="w3-row w3-section" id="yield-units">
+            <label class="w3-text"><b>Expected Yield Units</b></label>
+            <input class="w3-input w3-border w3-light-grey" type="number" min="0"  value="0" name="yieldAmount">
+        </div>
+        <div class="w3-row w3-section" id="material-units" hidden>
+            <label class="w3-text"><b>Materials</b></label>
+            <button id="add-job-form-add-material" class="w3-btn w3-blue-grey w3-round-large" type="button">
+                <i class="fa fa-plus fa-sm"></i>
+            </button>
+            <div id="materials-container" class="w3-row-padding">
+            </div>
+        </div>
+    </div>
+
+      <input type="submit" hidden>
     </form>
   </div>
 
   <footer class="w3-container w3-padding">
     <div class="w3-bar w3-center">
-      <button class="w3-button w3-blue" onclick="app.submitJobEntry()">Confirm</button>
-      <button class="w3-button w3-gray" onclick="closeModal('add-job-modal')">Cancel</button>
+      <button id="add-job-form-confirm-btn" class="w3-button w3-blue w3-disabled w3-round-large" disabled>Confirm</button>
+      <button id="add-job-form-cancel-btn" class="w3-button w3-gray w3-round-large">Cancel</button>
     </div>
   </footer>
   </div>
 </div>
 
-<div id="remove-all-jobs-modal" class="w3-modal">
+  <div id="remove-all-jobs-modal" class="w3-modal">
   <div class="w3-modal-content  w3-pale-red" id="remove-all-jobs-form-parent">
     <div class="w3-container w3-red">
-      <span onclick="closeModal('remove-all-jobs-modal')" class="w3-button w3-display-topright">&times;</span>
+      <button id="remove-all-jobs-modal-close-button" class="w3-button w3-red w3-round-large w3-display-topright">
+        <i class="fa fa-times fa-lg"></i>
+      </button>
       <h2><i class="fa fa-minus-square"></i> Remove All Jobs</span></h2>
     </div>
     <div class="w3-panel">
@@ -260,61 +284,78 @@
     </div>
     <footer class="w3-container w3-padding">
       <div class="w3-bar w3-center">
-        <button class="w3-button w3-red" onclick="app.confirmRemoveAllJobs()">Confirm</button>
-        <button class="w3-button w3-gray" onclick="closeModal('remove-all-jobs-modal')">Cancel</button>
+        <button id="remove-all-jobs-confirm-btn" class="w3-button w3-red w3-round-large">Confirm</button>
+        <button id="remove-all-jobs-cancel-btn" class="w3-button w3-gray w3-round-large">Cancel</button>
       </div>
     </footer>
   </div>
 </div>
-
-<div class="w3-container w3-padding w3-margin w3-border-blue-gray w3-border" id="refinery-tracker-container">
+  <div id="jobs-view">
+    <div class="w3-container w3-padding w3-margin w3-border-blue-gray w3-border" id="jobs-view-container">
   
-  <div class="w3-center">
-    <h2>Jobs</h2>
-  </div>
-
-  <div class="w3-margin-top w3-margin-bottom">
-    <button class="w3-button w3-blue w3-round-large"  onclick="openModal('add-job-modal')">Add Job</button>
-    <button id="remove-all-jobs-btn" class="w3-button w3-red w3-round-large" onclick="openModal('remove-all-jobs-modal')">Remove All</button>
-  </div>
-
-  <!-- todo make sortable -->
-  <table id="runs-table" class="w3-table w3-bordered w3-striped">
-    <thead>
+    <div class="w3-center">
+      <h2>Jobs</h2>
+    </div>
+  
+    <div class="w3-margin-top w3-margin-bottom">
+      <button id="add-job-btn" class="w3-button w3-blue w3-round-large">Add Job</button>
+      <button id="remove-all-jobs-btn" class="w3-button w3-red w3-round-large" disabled>Remove All</button>
+    </div>
+  
+    <!-- todo make sortable -->
+    <table id="jobs-table" class="w3-table w3-centered">
+      <thead class="w3-bottombar">
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Duration</th>
+          <th>Time Remaining</th>
+          <th>Yield Units</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="jobs-table-body">
+      <!-- placeholder -->
       <tr>
-        <th>Name</th>
-        <th>Location</th>
-        <th>Duration</th>
-        <th>Time Remaining</th>
-        <th>Yield</th>
-        <th>Status</th>
-        <th>Action</th>
+        <td>Borase/Laranite</td>
+        <td>CRU-L1</td>
+        <td>21d 43m</td>
+        <td>15h 22m 3s</td>
+        <td>1500</td>
+        <td>
+          <span class="w3-tag w3-padding-small w3-round w3-amber w3-center">In Progress</span>
+        </td>
+        <td>
+          <div class="w3-bar">
+            <button class="w3-btn w3-blue-grey w3-round-xlarge"><i class="fa fa-cube"></i></button>
+            <button class="w3-btn w3-blue w3-round-xlarge"><i class="fa fa-pencil-square-o fa-lg"></i></button>
+            <button class="w3-btn w3-red w3-round-xlarge"><i class="fa fa-trash fa-lg"></i></button>
+          </div>
+        </td>
       </tr>
-  </thead>
-  <tbody>
-    <!-- placeholder -->
-    <tr>
-      <td>Borase/Laranite</td>
-      <td>CRU-L1</td>
-      <td>21d 43m</td>
-      <td>15h 22m 3s</td>
-      <td>1500</td>
-      <td>
-        <span class="w3-tag w3-orange">In Progress</span>
-      </td>
-      <td>
-        <div class="w3-bar">
-          <button class="w3-btn w3-red w3-round-xlarge" onclick>
-            <i class="fa fa-trash fa-lg"></i>
-          </button>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-  </table>
+    </tbody>
+    <tfoot class="w3-topbar" id="jobs-table-footer">
+      <tr>
+       <td></td> 
+       <td></td>
+       <td></td> 
+       <td></td> 
+       <td id="jobs-table-footer-yield"></td> 
+       <td></td> 
+       <td></td> 
+      </tr>
+    </tfoot>
+    </table>
+  </div>
+  </div>
+
+  <div id="alert-container" class="w3-container w3-bar-block w3-top rf-horizontal-center" style="width:35%">
 </div>
 
+
 </body>
+
 <script src="main.js"></script>
 <script>app.startApp()</script>
 
