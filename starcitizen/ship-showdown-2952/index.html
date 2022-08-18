@@ -1,0 +1,593 @@
+<html>
+
+<head>
+  <title>Ship Showdown 2952 - Bracket Generator</title>
+</head>
+<script text="javascript">
+  var ships = [
+    "C2 Hercules",
+    "Caterpillar",
+    "Reclaimer",
+    "ARGO Mole",
+    "Carrack",
+    "Constellation Andromeda",
+    "MPUV Cargo",
+    "Freelancer Max",
+    "Cutlass Black",
+    "600i Explorer",
+    "Retaliator Bomber",
+    "Banu Defender",
+    "Mercury Star Runner",
+    "Razor",
+    "Gladius",
+    "Sabre",
+  ];
+</script>
+<script text="javascript">
+  function layout_round1() {
+    var round1Container = document.getElementById("round1-container");
+
+    var containerHTML = "";
+    for (var i = 0; i < ships.length; i += 2) {
+      containerHTML += `<div class="w3-container">`;
+      containerHTML += `<ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">`;
+      containerHTML += `<li class="w3-bar">`;
+      containerHTML += `<div class="w3-bar-item">`;
+      containerHTML += `<span>The <b>${ships[
+        i
+      ].toUpperCase()}</b></span><br>`;
+      containerHTML += `</div>`;
+      containerHTML += `</li>`;
+      containerHTML += `<li class="w3-bar">`;
+      containerHTML += `<div class="w3-bar-item">`;
+      containerHTML += `<span>The <b>${ships[
+        i + 1
+      ].toUpperCase()}</b></span>`;
+      containerHTML += `</div>`;
+      containerHTML += `</li>`;
+      containerHTML += `</ul>`;
+      containerHTML += `</div>`;
+      containerHTML += `<br>`;
+    }
+    round1Container.innerHTML = containerHTML;
+  }
+</script>
+
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <style>
+    .rsi-yellow {
+      color: #d28f2a;
+    }
+
+    .rsi-grey-bracket-bg {
+      background-color: #0a0b0c;
+    }
+
+    .rsi-grey-header-bg {
+      background-color: #161818;
+    }
+
+    .rsi-header-text {
+      font-family: countach, sans-serif;
+    }
+
+    .rsi-light-grey-bg {
+      background-color: #3d4557;
+    }
+
+    .rsi-bracket-text {
+      color: #fcfcfc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="bracket-container" class="w3-container w3-black">
+    <h2 class="w3-text-white w3-center">Fill out your bracket, press generate and copy the generated image!</h2>
+    <div class="w3-row rsi-grey-bracket-bg">
+      <div class="w3-col m2 w3-center w3-margin rsi-grey-bracket-bg">
+        <h2 class="rsi-yellow rsi-header-text rsi-grey-header-bg">Round 1</h2>
+      </div>
+      <div class="w3-col m2 w3-center w3-margin rsi-grey-bracket-bg">
+        <h2 class="rsi-yellow rsi-header-text rsi-grey-header-bg">Round 2</h2>
+      </div>
+      <div class="w3-col m2 w3-center w3-margin rsi-grey-bracket-bg">
+        <h2 class="rsi-yellow rsi-header-text rsi-grey-header-bg">
+          Semi-Finals
+        </h2>
+      </div>
+      <div class="w3-col m2 w3-center w3-margin rsi-grey-bracket-bg">
+        <h2 class="rsi-yellow rsi-header-text rsi-grey-header-bg">Finals</h2>
+      </div>
+      <div class="w3-col m2 w3-center w3-margin rsi-grey-bracket-bg">
+        <h2 class="rsi-yellow rsi-header-text rsi-grey-header-bg">
+          Champion
+        </h2>
+      </div>
+    </div>
+    <div class="w3-row rsi-grey-bracket-bg">
+      <div class="w3-col m2 w3-center w3-margin" id="round1-container"></div>
+      <div class="w3-col m2 w3-center w3-margin" id="round2-container">
+        <br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m0">
+                  <option value="0">C2 Hercules</option>
+                  <option value="1">Caterpillar</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m1">
+                  <option value="2"><b>Reclaimer</option>
+                  <option value="3">ARGO Mole</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m2">
+                  <option value="4">Carrack</option>
+                  <option value="5">Constellation Andromeda</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m3">
+                  <option value="6">MPUV Cargo</option>
+                  <option value="7">Freelancer Max</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m4">
+                  <option value="8">Cutlass Black</option>
+                  <option value="9">600i Explorer</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m5">
+                  <option value="10">Retaliator Bomber</option>
+                  <option value="11">Banu Defender</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m6">
+                  <option value="12">Mercury Star Runner</option>
+                  <option value="13">Razor</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m7">
+                  <option value="14">Gladius</option>
+                  <option value="15">Saber</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br />
+      </div>
+      <div class="w3-col m2 w3-center w3-margin" id="round3-container">
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r3-m0">
+                  <option value="0">C2 Hercules</option>
+                  <option value="1">Caterpillar</option>
+                  <option value="2">Reclaimer</option>
+                  <option value="3">ARGO Mole</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r3-m1">
+                  <option value="4">Carrack</option>
+                  <option value="5">Constellation Andromeda</option>
+                  <option value="6">MPUV Cargo</option>
+                  <option value="7">Freelancer Max</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r3-m2">
+                  <option value="8">Cutlass Black</option>
+                  <option value="9">600i Explorer</option>
+                  <option value="10">Retaliator Bomber</option>
+                  <option value="11">Banu Defender</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r3-m3">
+                  <option value="12">Mercury Star Runner</option>
+                  <option value="13">Razor</option>
+                  <option value="14">Gladius</option>
+                  <option value="15">Saber</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w3-col m2 w3-center w3-margin" id="round4-container">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /><br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r4-m0">
+                  <option value="0">C2 Hercules</option>
+                  <option value="1">Caterpillar</option>
+                  <option value="2">Reclaimer</option>
+                  <option value="3">ARGO Mole</option>
+                  <option value="4">Carrack</option>
+                  <option value="5">Constellation Andromeda</option>
+                  <option value="6">MPUV Cargo</option>
+                  <option value="7">Freelancer Max</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /><br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r4-m1">
+                  <option value="8">Cutlass Black</option>
+                  <option value="9">600i Explorer</option>
+                  <option value="10">Retaliator Bomber</option>
+                  <option value="11">Banu Defender</option>
+                  <option value="12">Mercury Star Runner</option>
+                  <option value="13">Razor</option>
+                  <option value="14">Gladius</option>
+                  <option value="15">Saber</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="w3-col m2 w3-center w3-margin" id="round5-container">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /><br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r5-m0">
+                  <option value="0">C2 Hercules</option>
+                  <option value="1">Caterpillar</option>
+                  <option value="2">Reclaimer</option>
+                  <option value="3">ARGO Mole</option>
+                  <option value="4">Carrack</option>
+                  <option value="5">Constellation Andromeda</option>
+                  <option value="6">MPUV Cargo</option>
+                  <option value="7">Freelancer Max</option>
+                  <option value="8">Cutlass Black</option>
+                  <option value="9">600i Explorer</option>
+                  <option value="10">Retaliator Bomber</option>
+                  <option value="11">Banu Defender</option>
+                  <option value="12">Mercury Star Runner</option>
+                  <option value="13">Razor</option>
+                  <option value="14">Gladius</option>
+                  <option value="15">Saber</option>
+                </select>
+              </div>
+            </li>
+            <li class="w3-bar">
+              <p><button class="w3-button w3-blue" onclick="draw()">Generate</button></p>
+        </div>
+        </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+<script text="javascript">
+  layout_round1();
+</script>
+
+<script text="javascript">
+  function resetOpts(target, s1, s2) {
+    target.selectedIndex = -1
+    for (var i = 0; i < target.options.length; i++) {
+      var option = target.options[i]
+      option.hidden = true
+      if (s1.selectedIndex != -1) {
+        if (option.value == s1.options[s1.selectedIndex].value) {
+          option.hidden = false
+        }
+      }
+      if (s2.selectedIndex != -1) {
+        if (option.value == s2.options[s2.selectedIndex].value) {
+          option.hidden = false
+        }
+      }
+    }
+  }
+
+  function setupBrackets(s1Id, s2Id, targetId) {
+    console.log(`${s1Id} - ${s2Id} - ${targetId}`)
+    var target = document.getElementById(targetId)
+    var s1 = document.getElementById(s1Id)
+    var s2 = document.getElementById(s2Id)
+
+    s1.addEventListener('change', (e) => {
+      resetOpts(target, s1, s2)
+    });
+    s2.addEventListener('change', (e) => {
+      resetOpts(target, s1, s2)
+    });
+  }
+
+  var selects = document.getElementsByTagName('select')
+  for (var i = 0; i < selects.length; i++) {
+    var select = selects[i]
+    select.selectedIndex = -1
+  }
+
+  // clear the next values
+  var unfilledIds = ['r3-m0', 'r3-m1', 'r3-m2', 'r3-m3', 'r4-m0', 'r4-m1', 'r5-m0']
+  for (var i = 0; i < unfilledIds.length; i++) {
+    var select = document.getElementById(unfilledIds[i])
+    for (var j = 0; j < select.options.length; j++) {
+      select.options[j].hidden = true
+    }
+  }
+
+  setupBrackets('r2-m0', 'r2-m1', 'r3-m0')
+  setupBrackets('r2-m2', 'r2-m3', 'r3-m1')
+  setupBrackets('r2-m4', 'r2-m5', 'r3-m2')
+  setupBrackets('r2-m6', 'r2-m7', 'r3-m3')
+
+  setupBrackets('r3-m0', 'r3-m1', 'r4-m0')
+  setupBrackets('r3-m2', 'r3-m3', 'r4-m1')
+
+  setupBrackets('r4-m0', 'r4-m1', 'r5-m0')
+</script>
+
+<div id="imgs-holder" hidden>
+  <img id="img-template" src="template.png">
+  <img id="img-0" src="c2_hercules.png">
+  <img id="img-1" src="caterpillar.png">
+  <img id="img-2" src="reclaimer.png">
+  <img id="img-3" src="argo_mole.png">
+  <img id="img-4" src="carrack.png">
+  <img id="img-5" src="constellation_andromeda.png">
+  <img id="img-6" src="mpuv_cargo.png">
+  <img id="img-7" src="freelancer_max.png">
+  <img id="img-8" src="cutlass_black.png">
+  <img id="img-9" src="600i_explorer.png">
+  <img id="img-10" src="retalliator_bomber.png">
+  <img id="img-11" src="banu_defender.png">
+  <img id="img-12" src="mercury_star_runner.png">
+  <img id="img-13" src="razor.png">
+  <img id="img-14" src="gladius.png">
+  <img id="img-15" src="sabre.png">
+</div>
+<div class="w3-panel w3-blue w3-center">
+  <p>Results</p>
+  <div class="w3-container" style="overflow: scroll;" id="img-container"></div>
+</div>
+
+
+
+<script text="javascript">
+  function drawImage(ctx, coordinateObj, imgId) {
+    var img = document.getElementById(imgId);
+    ctx.drawImage(img, coordinateObj.x, coordinateObj.y);
+  }
+
+  function drawResult(ctx, selectId, coordinateObj) {
+    var select = document.getElementById(selectId)
+    var choice = select.selectedIndex
+    if (choice != -1) {
+      var imgId = "img-" + select.options[choice].value
+      console.log(imgId)
+      drawImage(ctx, coordinateObj, imgId)
+    }
+  }
+
+  function draw() {
+    var coordinates = {
+      r0: { x: 400, y: 170 },
+      r1: { x: 400, y: 370 },
+      r2: { x: 400, y: 585 },
+      r3: { x: 400, y: 785 },
+      r4: { x: 400, y: 1000 },
+      r5: { x: 400, y: 1202 },
+      r6: { x: 400, y: 1418 },
+      r7: { x: 400, y: 1620 },
+      s0: { x: 760, y: 275 },
+      s1: { x: 760, y: 685 },
+      s2: { x: 760, y: 1105 },
+      s3: { x: 760, y: 1515 },
+      f0: { x: 1110, y: 482 },
+      f1: { x: 1110, y: 1306 },
+      w0: { x: 1470, y: 895 }
+    }
+
+    const canvas = document.createElement("canvas");
+    canvas.id = "canvas";
+    canvas.width = 1800;
+    canvas.height = 1825;
+    var imgHolder = document.getElementById('img-container')
+    while (imgHolder.firstChild) {
+      imgHolder.removeChild(imgHolder.firstChild);
+    }
+
+    imgHolder.appendChild(canvas);
+    const ctx = canvas.getContext("2d");
+
+    var template = document.getElementById("img-template");
+    ctx.drawImage(template, 0, 0);
+
+    // draw the results
+    drawResult(ctx, 'r2-m0', coordinates.r0);
+    drawResult(ctx, 'r2-m1', coordinates.r1);
+    drawResult(ctx, 'r2-m2', coordinates.r2);
+    drawResult(ctx, 'r2-m3', coordinates.r3);
+    drawResult(ctx, 'r2-m4', coordinates.r4);
+    drawResult(ctx, 'r2-m5', coordinates.r5);
+    drawResult(ctx, 'r2-m6', coordinates.r6);
+    drawResult(ctx, 'r2-m7', coordinates.r7);
+
+    drawResult(ctx, 'r3-m0', coordinates.s0);
+    drawResult(ctx, 'r3-m1', coordinates.s1);
+    drawResult(ctx, 'r3-m2', coordinates.s2);
+    drawResult(ctx, 'r3-m3', coordinates.s3);
+
+    drawResult(ctx, 'r4-m0', coordinates.f0);
+    drawResult(ctx, 'r4-m1', coordinates.f1);
+
+    drawResult(ctx, 'r5-m0', coordinates.w0);
+  }
+</script>
+
+</html>
