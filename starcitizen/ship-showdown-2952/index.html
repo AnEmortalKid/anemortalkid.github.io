@@ -493,7 +493,7 @@
 </script>
 
 <div id="imgs-holder" hidden>
-  <img id="img-template" src="template.png">
+  <img id="img-template" src="bracket_template_og_size.png">
   <img id="img-0" src="redeemer.png">
   <img id="img-1" src="gladius.png">
   <img id="img-2" src="scorpius.png">
@@ -536,27 +536,28 @@
 
   function draw() {
     var coordinates = {
-      r0: { x: 214, y: 104 },
-      r1: { x: 214, y: 209 },
-      r2: { x: 214, y: 320 },
-      r3: { x: 214, y: 430 },
-      r4: { x: 214, y: 540 },
-      r5: { x: 214, y: 644 },
-      r6: { x: 214, y: 756 },
-      r7: { x: 214, y: 862 },
-      s0: { x: 404, y: 158 },
-      s1: { x: 404, y: 374 },
-      s2: { x: 404, y: 594 },
-      s3: { x: 404, y: 808 },
-      f0: { x: 590, y: 266 },
-      f1: { x: 590, y: 700 },
-      w0: { x: 780, y: 482 }
+      r0: { x: 326, y: 160 },
+      r1: { x: 326, y: 320 },
+      r2: { x: 326, y: 490 },
+      r3: { x: 326, y: 650 },
+      r4: { x: 326, y: 825 },
+      r5: { x: 326, y: 985 },
+      r6: { x: 326, y: 1156 },
+      r7: { x: 326, y: 1318 },
+      s0: { x: 616, y: 242 },
+      s1: { x: 616, y: 570 },
+      s2: { x: 616, y: 906 },
+      s3: { x: 616, y: 1232 },
+      f0: { x: 902, y: 410 },
+      f1: { x: 902, y: 1068 },
+      w0: { x: 1190, y: 740 }
     }
 
     const canvas = document.createElement("canvas");
     canvas.id = "canvas";
-    canvas.width = 1800;
-    canvas.height = 1825;
+    // 1454 x 1492 og size
+    canvas.width = 1454;
+    canvas.height = 1492;
     var imgHolder = document.getElementById('img-container')
     while (imgHolder.firstChild) {
       imgHolder.removeChild(imgHolder.firstChild);
