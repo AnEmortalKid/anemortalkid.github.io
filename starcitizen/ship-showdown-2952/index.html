@@ -15,7 +15,7 @@
     "400i",
     "Cutlass Black",
     "Mercury Star Runner",
-    "Freelancer",
+    "Freelancer Max",
     "Raft",
     "Avenger Titan",
     "Eclipse",
@@ -187,7 +187,7 @@
               <div class="w3-bar-item">
                 <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
                   id="r2-m5">
-                  <option value="10">Freelancer</option>
+                  <option value="10">Freelancer Max</option>
                   <option value="11">Raft</option>
                 </select>
               </div>
@@ -278,7 +278,7 @@
                   id="r3-m2">
                   <option value="8">Cutlass Black</option>
                   <option value="9">Mercury Star Runner</option>
-                  <option value="10">Freelancer</option>
+                  <option value="10">Freelancer Max</option>
                   <option value="11">Raft</option>
                 </select>
               </div>
@@ -355,7 +355,7 @@
                   id="r4-m1">
                   <option value="8">Cutlass Black</option>
                   <option value="9">Mercury Star Runner</option>
-                  <option value="10">Freelancer</option>
+                  <option value="10">Freelancer Max</option>
                   <option value="11">Raft</option>
                   <option value="12">Avenger Titan</option>
                   <option value="13">Eclipse</option>
@@ -408,7 +408,7 @@
                   <option value="7">400i</option>
                   <option value="8">Cutlass Black</option>
                   <option value="9">Mercury Star Runner</option>
-                  <option value="10">Freelancer</option>
+                  <option value="10">Freelancer Max</option>
                   <option value="11">Raft</option>
                   <option value="12">Avenger Titan</option>
                   <option value="13">Eclipse</option>
@@ -493,7 +493,7 @@
 </script>
 
 <div id="imgs-holder" hidden>
-  <img id="img-template" src="bracket_template_og_size.png">
+  <img id="img-template" src="template.png">
   <img id="img-0" src="redeemer.png">
   <img id="img-1" src="gladius.png">
   <img id="img-2" src="scorpius.png">
@@ -504,7 +504,7 @@
   <img id="img-7" src="400i.png">
   <img id="img-8" src="cutlass_black.png">
   <img id="img-9" src="mercury.png">
-  <img id="img-10" src="freelancer.png">
+  <img id="img-10" src="freelancer_max.png">
   <img id="img-11" src="raft.png">
   <img id="img-12" src="avenger_titan.png">
   <img id="img-13" src="eclipse.png">
@@ -536,28 +536,28 @@
 
   function draw() {
     var coordinates = {
-      r0: { x: 326, y: 160 },
-      r1: { x: 326, y: 320 },
-      r2: { x: 326, y: 490 },
-      r3: { x: 326, y: 650 },
-      r4: { x: 326, y: 825 },
-      r5: { x: 326, y: 985 },
-      r6: { x: 326, y: 1156 },
-      r7: { x: 326, y: 1318 },
-      s0: { x: 616, y: 242 },
-      s1: { x: 616, y: 570 },
-      s2: { x: 616, y: 906 },
-      s3: { x: 616, y: 1232 },
-      f0: { x: 902, y: 410 },
-      f1: { x: 902, y: 1068 },
-      w0: { x: 1190, y: 740 }
+      r0: { x: 318, y: 136 },
+      r1: { x: 318, y: 297 },
+      r2: { x: 318, y: 468 },
+      r3: { x: 318, y: 629 },
+      r4: { x: 318, y: 801 },
+      r5: { x: 318, y: 962 },
+      r6: { x: 318, y: 1133 },
+      r7: { x: 318, y: 1294 },
+      s0: { x: 606, y: 219 },
+      s1: { x: 606, y: 546 },
+      s2: { x: 606, y: 884 },
+      s3: { x: 606, y: 1211 },
+      f0: { x: 894, y: 385 },
+      f1: { x: 894, y: 1045 },
+      w0: { x: 1182, y: 715 }
     }
 
     const canvas = document.createElement("canvas");
     canvas.id = "canvas";
     // 1454 x 1492 og size
-    canvas.width = 1454;
-    canvas.height = 1492;
+    canvas.width = 1440;
+    canvas.height = 1460;
     var imgHolder = document.getElementById('img-container')
     while (imgHolder.firstChild) {
       imgHolder.removeChild(imgHolder.firstChild);
