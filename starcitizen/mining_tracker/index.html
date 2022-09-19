@@ -77,7 +77,7 @@
         <h2>Issues</h2>
         <ul>
           <li>Feel free to log issues on <a href="https://github.com/AnEmortalKid/sc-refinery-tracker/issues/new">github</a></li>
-          <li><b>Version: </b> 1.1.1</li>
+          <li><b>Version: </b> 1.2.0</li>
         </ul>
       </div>
       
@@ -185,8 +185,8 @@
   </div>
 
   <div id="add-job-modal" class="w3-modal">
-  
-  <div class="w3-modal-content"  id="add-job-form-content">
+
+  <div class="w3-modal-content" id="add-job-form-content">
     <header id="add-job-header" class="w3-container w3-blue-gray">
       <button id="add-job-modal-close-button" class="w3-button w3-blue-grey w3-round-large w3-display-topright">
         <i class="fa fa-times fa-lg"></i>
@@ -197,80 +197,88 @@
         <span id="job-modal-header-placeholder">Add Refinery Job</span>
       </h2>
     </header>
-    
-  <div class="w3-panel">
-    <form class="w3-container" id="add-job-form">
 
-      <div class="w3-row w3-section">
-        <label class="w3-text"><b>Name</b></label>
-        <input class="w3-input w3-border w3-light-grey" type="text" name="name" placeholder="Something to remember this job by">
-      </div>
+    <div class="w3-panel">
+      <form class="w3-container" id="add-job-form">
 
-      <div class="w3-row w3-section">
-        <label class="w3-text"><b>Refinery Location</b></label>
-        <select id="add-job-select-location" class="w3-select w3-border w3-light-grey w3-border-red" name="location">
-          <option value="" disabled selected>Choose Refinery</option>
-          <option value="ARC-L1">ARC-L1</option>
-          <option value="CRU-L1">CRU-L1</option>
-          <option value="HUR-L1">HUR-L1</option>
-          <option value="HUR-L2">HUR-L2</option>
-          <option value="MIC-L1">MIC-L1</option>
-        </select>
-      </div>
-    
-      <div class="w3-row w3-section">
-        <label class="w3-text"><b>Expected Duration</b></label>
-        <div class="w3-row-padding">
-          <div class="w3-quarter">
-            <label>Days</label>
-            <input class="w3-input w3-border w3-light-grey" type="number" placeholder="0" min="0" name="duration.days">
-          </div>
-          <div class="w3-quarter">
-            <label>Hours</label>
-            <input class="w3-input w3-border w3-light-grey" type="number" placeholder="0" min="0"  name="duration.hours">
-          </div>
-          <div class="w3-quarter">
-            <label>Minutes</label>
-            <input class="w3-input w3-border w3-light-grey" type="number" placeholder="0"  min="0" name="duration.minutes">
-          </div>
-          <div class="w3-quarter">
-            <label>Seconds</label>
-            <input class="w3-input w3-border w3-light-grey" type="number" placeholder="0" min="0"  name="duration.seconds">
+        <div class="w3-row w3-section">
+          <label class="w3-text"><b>Name</b></label>
+          <input class="w3-input w3-border w3-light-grey" type="text" name="name"
+            placeholder="Something to remember this job by">
+        </div>
+
+        <div class="w3-row w3-section">
+          <label class="w3-text"><b>Refinery Location</b></label>
+          <select id="add-job-select-location" class="w3-select w3-border w3-light-grey w3-border-red" name="location">
+            <option value="" disabled selected>Choose Refinery</option>
+            <option value="ARC-L1">ARC-L1</option>
+            <option value="ARC-L2">ARC-L2</option>
+            <option value="ARC-L4">ARC-L4</option>
+            <option value="CRU-L1">CRU-L1</option>
+            <option value="HUR-L1">HUR-L1</option>
+            <option value="HUR-L2">HUR-L2</option>
+            <option value="MIC-L1">MIC-L1</option>
+            <option value="MIC-L2">MIC-L2</option>
+          </select>
+        </div>
+
+        <div class="w3-row w3-section">
+          <label class="w3-text"><b>Expected Duration</b></label>
+          <div class="w3-row-padding">
+            <div class="w3-quarter">
+              <label>Days</label>
+              <input class="w3-input w3-border w3-light-grey" type="number" placeholder="0" min="0"
+                name="duration.days">
+            </div>
+            <div class="w3-quarter">
+              <label>Hours</label>
+              <input class="w3-input w3-border w3-light-grey" type="number" placeholder="0" min="0"
+                name="duration.hours">
+            </div>
+            <div class="w3-quarter">
+              <label>Minutes</label>
+              <input class="w3-input w3-border w3-light-grey" type="number" placeholder="0" min="0"
+                name="duration.minutes">
+            </div>
+            <div class="w3-quarter">
+              <label>Seconds</label>
+              <input class="w3-input w3-border w3-light-grey" type="number" placeholder="0" min="0"
+                name="duration.seconds">
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="entry-mode-parent">
-        <input id="add-job-form-entryMode" class="w3-check" type="checkbox" >
-        <label>Enter Materials</label>
-        
-        <div class="w3-row w3-section" id="yield-units">
+        <div id="entry-mode-parent">
+          <input id="add-job-form-entryMode" class="w3-check" type="checkbox">
+          <label>Enter Materials</label>
+
+          <div class="w3-row w3-section" id="yield-units">
             <label class="w3-text"><b>Expected Yield Units</b></label>
-            <input class="w3-input w3-border w3-light-grey" type="number" min="0"  value="0" name="yieldAmount">
-        </div>
-        <div class="w3-row w3-section" id="material-units" hidden>
+            <input class="w3-input w3-border w3-light-grey" type="number" min="0" value="0" name="yieldAmount">
+          </div>
+          <div class="w3-row w3-section" id="material-units" hidden>
             <label class="w3-text"><b>Materials</b></label>
             <button id="add-job-form-add-material" class="w3-btn w3-blue-grey w3-round-large" type="button">
-                <i class="fa fa-plus fa-sm"></i>
+              <i class="fa fa-plus fa-sm"></i>
             </button>
             <div id="materials-container" class="w3-row-padding">
             </div>
+          </div>
         </div>
+
+        <input type="submit" hidden>
+      </form>
     </div>
 
-      <input type="submit" hidden>
-    </form>
-  </div>
-
-  <footer class="w3-container w3-padding">
-    <div class="w3-bar w3-center">
-      <button id="add-job-form-confirm-btn" class="w3-button w3-blue w3-disabled w3-round-large" disabled>Confirm</button>
-      <button id="add-job-form-cancel-btn" class="w3-button w3-gray w3-round-large">Cancel</button>
-    </div>
-  </footer>
+    <footer class="w3-container w3-padding">
+      <div class="w3-bar w3-center">
+        <button id="add-job-form-confirm-btn" class="w3-button w3-blue w3-disabled w3-round-large"
+          disabled>Confirm</button>
+        <button id="add-job-form-cancel-btn" class="w3-button w3-gray w3-round-large">Cancel</button>
+      </div>
+    </footer>
   </div>
 </div>
-
   <div id="remove-all-jobs-modal" class="w3-modal">
   <div class="w3-modal-content  w3-pale-red" id="remove-all-jobs-form-parent">
     <div class="w3-container w3-red">
@@ -292,28 +300,37 @@
 </div>
   <div id="jobs-view">
     <div class="w3-container w3-padding w3-margin w3-border-blue-gray w3-border" id="jobs-view-container">
-  
-    <div class="w3-center">
-      <h2>Jobs</h2>
-    </div>
-  
-    <div class="w3-margin-top w3-margin-bottom">
-      <button id="add-job-btn" class="w3-button w3-blue w3-round-large">Add Job</button>
-      <button id="remove-all-jobs-btn" class="w3-button w3-red w3-round-large" disabled>Remove All</button>
-    </div>
-  
-    <!-- todo make sortable -->
-    <table id="jobs-table" class="w3-table w3-centered">
-      <thead class="w3-bottombar">
-        <tr>
-          <th>Name</th>
-          <th>Location</th>
-          <th>Duration</th>
-          <th>Time Remaining</th>
-          <th>Yield Units</th>
-          <th>Status</th>
-          <th>Actions</th>
-        </tr>
+
+  <div class="w3-center">
+    <h2>Jobs</h2>
+  </div>
+
+  <div class="w3-margin-top w3-margin-bottom">
+    <button id="add-job-btn" class="w3-button w3-blue w3-round-large">Add Job</button>
+    <button id="remove-all-jobs-btn" class="w3-button w3-red w3-round-large" disabled>Remove All</button>
+  </div>
+
+  <table id="jobs-table" class="w3-table w3-centered">
+    <thead class="w3-bottombar">
+      <tr>
+        <th>
+          <span>
+            <i id="toggle-collapse-all" class="fa fa-angle-double-up w3-left w3-padding-small"></i></span>
+          Name
+        </th>
+        <th>Location <span><i id="toggle-sort-location" data-property="location"
+              class="fa fa-sort w3-right w3-padding-small"></i></span>
+        </th>
+        <th>Duration <span><i id="toggle-sort-duration" data-property="duration"
+              class="fa fa-sort w3-right w3-padding-small"></i></span></th>
+        <th>Time Remaining <span><i id="toggle-sort-timeRemaining" data-property="timeRemaining"
+              class="fa fa-sort w3-right w3-padding-small"></i></span></th>
+        <th>Yield Units <span><i id="toggle-sort-yield" data-property="yield"
+              class="fa fa-sort w3-right w3-padding-small"></i></span></th>
+        <th>Status <span><i id="toggle-sort-status" data-property="status"
+              class="fa fa-sort w3-right w3-padding-small"></i></span></th>
+        <th>Actions</th>
+      </tr>
     </thead>
     <tbody id="jobs-table-body">
       <!-- placeholder -->
@@ -337,17 +354,17 @@
     </tbody>
     <tfoot class="w3-topbar" id="jobs-table-footer">
       <tr>
-       <td></td> 
-       <td></td>
-       <td></td> 
-       <td></td> 
-       <td id="jobs-table-footer-yield"></td> 
-       <td></td> 
-       <td></td> 
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="jobs-table-footer-yield"></td>
+        <td></td>
+        <td></td>
       </tr>
     </tfoot>
-    </table>
-  </div>
+  </table>
+</div>
   </div>
 
   <div id="alert-container" class="w3-container w3-bar-block w3-top rf-horizontal-center" style="width:35%">
