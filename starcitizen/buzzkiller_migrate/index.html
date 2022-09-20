@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <style>
+    .textAreaColumn {
+      width: 100%;
+    }
+
+    .textAreaColumn div {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .textAreaColumn div span {
+      display: block;
+    }
+
+    .textAreaColumn div textarea {
+      box-sizing: border-box;
+      width: 100%
+    }
+
+    .container {
+      padding: 5;
+    }
+
+    .center {
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>BuzzzKiller Virpil Migrator</h1>
+  <h2>Copy paste your Alpha profile to migrate it to Prime</h2>
+
+  <div class="container">
+    <div class="center">
+      <button id="migrator">Migrate</button>
+    </div>
+  </div>
+
+  <div class="textAreaColumn">
+    <div>
+      <span>Old</span>
+      <textarea id="old" rows="30" placeholder="Copy Paste your Old XML"></textarea>
+    </div>
+    <div>
+      <span>New</span>
+      <textarea id="new" rows="30" placeholder="New XML Here"></textarea>
+    </div>
+  </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>
