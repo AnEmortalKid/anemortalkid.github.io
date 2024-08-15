@@ -5,43 +5,43 @@
 </head>
 <script text="javascript">
   var ships = [
-    "Fury",
-    "Arrow",
-    "Scorpius",
-    "Redeemer",
+    "C1 Spirit",
+    "Mercury",
+    "STV",
+    "Ursa Medivac",
+    "890 Jump",
+    "600i Explorer",
+    "Terrapin",
+    "Gladiator",
+    "Fury LX",
+    "M50",
     "Reclaimer",
     "Vulture",
-    "Terrapin",
-    "Carrack",
-    "Corsair",
-    "Mercury Star Runner",
-    "Constellation Andromeda",
-    "Cutlass Black",
-    "400i",
-    "600i Explorer",
-    "Cutter",
-    "890 Jump"
+    "Syulen",
+    "Defender",
+    "F8C Lightning",
+    "F7C Hornet MK II",
   ];
 </script>
 <!-- draw function uses these to source the image data -->
 <div id="imgs-holder" hidden>
   <img id="img-template" src="template_big.png">
-  <img id="img-0" src="fury.png">
-  <img id="img-1" src="arrow.png">
-  <img id="img-2" src="scorpius.png">
-  <img id="img-3" src="redeemer.png">
-  <img id="img-4" src="reclaimer.png">
-  <img id="img-5" src="vulture.png">
+  <img id="img-0" src="c1spirit.png">
+  <img id="img-1" src="mercury.png">
+  <img id="img-2" src="stv.png">
+  <img id="img-3" src="ursa_medivac.png">
+  <img id="img-4" src="890_jump.png">
+  <img id="img-5" src="600i_explorer.png">
   <img id="img-6" src="terrapin.png">
-  <img id="img-7" src="carrack.png">
-  <img id="img-8" src="corsair.png">
-  <img id="img-9" src="mercury.png">
-  <img id="img-10" src="constellation_andromeda.png">
-  <img id="img-11" src="cutlass_black.png">
-  <img id="img-12" src="400i.png">
-  <img id="img-13" src="600i_explorer.png">
-  <img id="img-14" src="cutter.png">
-  <img id="img-15" src="890_jump.png">
+  <img id="img-7" src="gladiator.png">
+  <img id="img-8" src="fury_lx.png">
+  <img id="img-9" src="m50.png">
+  <img id="img-10" src="reclaimer.png">
+  <img id="img-11" src="vulture.png">
+  <img id="img-12" src="syulen.png">
+  <img id="img-13" src="defender.png">
+  <img id="img-14" src="f8c.png">
+  <img id="img-15" src="f7c.png">
 </div>
 <script text="javascript">
   function layout_round1() {
@@ -563,31 +563,32 @@
   }
 
   function draw() {
-    // 318 - 354
-    // 136 - 166
+    // Next year it seems the coordinates are halfed up
+    // so we can probably compute these based on start and end
+    // like (r0.y + r1.y ) / 2 = s0.y
     var coordinates = {
-      r0: { x: 354, y: 166 },
-      r1: { x: 354, y: 332 },
-      r2: { x: 354, y: 503 },
-      r3: { x: 354, y: 670 },
-      r4: { x: 354, y: 836 },
-      r5: { x: 354, y: 1006 },
-      r6: { x: 354, y: 1174 },
-      r7: { x: 354, y: 1342 },
-      s0: { x: 620, y: 248 },
-      s1: { x: 620, y: 585 },
-      s2: { x: 620, y: 921 },
-      s3: { x: 620, y: 1257 },
-      f0: { x: 888, y: 417 },
-      f1: { x: 888, y: 1088 },
-      w0: { x: 1155, y: 753 }
+      r0: { x: 366, y: 144 },
+      r1: { x: 366, y: 336 },
+      r2: { x: 366, y: 528 },
+      r3: { x: 366, y: 720 },
+      r4: { x: 366, y: 912 },
+      r5: { x: 366, y: 1104 },
+      r6: { x: 366, y: 1296 },
+      r7: { x: 366, y: 1488 },
+      s0: { x: 648, y: 240 },
+      s1: { x: 648, y: 624 },
+      s2: { x: 644, y: 1008 },
+      s3: { x: 648, y: 1392 },
+      f0: { x: 918, y: 432 },
+      f1: { x: 918, y: 1200 },
+      w0: { x: 1194, y: 816 }
     }
 
     const canvas = document.createElement("canvas");
     canvas.id = "canvas";
-    // 1454 x 1492 og size
+    // set og size of big template here
     canvas.width = 1440;
-    canvas.height = 1460;
+    canvas.height = 1614;
     var imgHolder = document.getElementById('img-container')
     // remove previously generated images
     while (imgHolder.firstChild) {
@@ -619,6 +620,11 @@
     drawResult(ctx, 'r4-m1', coordinates.f1);
 
     drawResult(ctx, 'r5-m0', coordinates.w0);
+
+    ctx.font = "18px serif";
+    ctx.fillStyle = "white";
+    ctx.fillText("Generate yours at", 1190, 1560);
+    ctx.fillText("anemortalkid.github.io/showdown", 1190, 1580);
   }
 </script>
 
