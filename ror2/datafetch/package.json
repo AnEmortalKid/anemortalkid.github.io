@@ -4,7 +4,7 @@
   "type": "commonjs",
   "dependencies": {
     "archiver": "5.3.1",
-    "axios": "0.27.2",
+    "axios": "0.30.0",
     "cheerio": "1.0.0-rc.12",
     "p-limit": "3.1.0",
     "sharp": "^0.34.3"
