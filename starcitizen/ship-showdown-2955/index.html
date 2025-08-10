@@ -1,0 +1,636 @@
+<html>
+
+<head>
+  <title>Ship Showdown 2955 - Bracket Generator</title>
+</head>
+<script text="javascript">
+  var ships = [
+    "C1 Spirit",
+    "Mercury",
+    "STV",
+    "Ursa Medivac",
+    "890 Jump",
+    "600i Explorer",
+    "Terrapin",
+    "Gladiator",
+    "Fury LX",
+    "M50",
+    "Reclaimer",
+    "Vulture",
+    "Syulen",
+    "Defender",
+    "F8C Lightning",
+    "F7C Hornet MK II",
+  ];
+</script>
+<!-- draw function uses these to source the image data -->
+<div id="imgs-holder" hidden>
+  <img id="img-template" src="template_big.png">
+  <img id="img-0" src="c1spirit.png">
+  <img id="img-1" src="mercury.png">
+  <img id="img-2" src="stv.png">
+  <img id="img-3" src="ursa_medivac.png">
+  <img id="img-4" src="890_jump.png">
+  <img id="img-5" src="600i_explorer.png">
+  <img id="img-6" src="terrapin.png">
+  <img id="img-7" src="gladiator.png">
+  <img id="img-8" src="fury_lx.png">
+  <img id="img-9" src="m50.png">
+  <img id="img-10" src="reclaimer.png">
+  <img id="img-11" src="vulture.png">
+  <img id="img-12" src="syulen.png">
+  <img id="img-13" src="defender.png">
+  <img id="img-14" src="f8c.png">
+  <img id="img-15" src="f7c.png">
+</div>
+<script text="javascript">
+  function layout_round1() {
+    var round1Container = document.getElementById("round1-container");
+
+    //var containerHTML = "";
+
+    var ulContainer = document.createElement('ul');
+    ulContainer.classList.add('w3-ul', 'w3-large', 'w3-margin',);
+    round1Container.appendChild(ulContainer);
+
+    for (var i = 0; i < ships.length; i += 2) {
+
+      var roundListItem = document.createElement('li');
+      roundListItem.classList.add('w3-li', 'w3-card-2',
+        'w3-padding-medium', 'w3-margin', 'w3-border-0',
+        'rsi-light-grey-bg', 'rsi-bracket-text'
+      );
+
+      var roundContainer = document.createElement('div');
+      roundContainer.classList.add('w3-container', 'w3-padding-small');
+
+      var choicesBlock = document.createElement('div');
+      choicesBlock.classList = ['w3-bar-block'];
+
+      var choice1 = document.createElement('div');
+      choice1.classList.add('w3-bar-item', 'w3-border-bottom');
+
+      var choice1Span = document.createElement('span');
+      choice1Span.innerHTML = `The <b>${ships[i].toUpperCase()}</b>`;
+      choice1.appendChild(choice1Span);
+
+      var choice2 = document.createElement('div');
+      choice2.classList = ['w3-bar-item'];
+
+      var choice2Span = document.createElement('span');
+      choice2Span.innerHTML = `The <b>${ships[i + 1].toUpperCase()}`;
+      choice2.appendChild(choice2Span);
+
+      choicesBlock.appendChild(choice1);
+      choicesBlock.appendChild(choice2);
+      roundContainer.appendChild(choicesBlock);
+
+      roundListItem.appendChild(roundContainer);
+
+      ulContainer.append(roundListItem);
+
+
+      // containerHTML += `<div class="w3-container">`;
+      // containerHTML += `<ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">`;
+      // containerHTML += `<li class="w3-bar">`;
+      // containerHTML += `<div class="w3-bar-item">`;
+      // containerHTML += `<span>The <b>${ships[
+      //   i
+      // ].toUpperCase()}</b></span><br>`;
+      // containerHTML += `</div>`;
+      // containerHTML += `</li>`;
+      // containerHTML += `<li class="w3-bar">`;
+      // containerHTML += `<div class="w3-bar-item">`;
+      // containerHTML += `<span>The <b>${ships[
+      //   i + 1
+      // ].toUpperCase()}</b></span>`;
+      // containerHTML += `</div>`;
+      // containerHTML += `</li>`;
+      // containerHTML += `</ul>`;
+      // containerHTML += `</div>`;
+      // containerHTML += `<br>`;
+    }
+
+    // round1Container.innerHTML = containerHTML;
+  }
+</script>
+
+<script>
+  /**
+   * Creates the options available for a select with the given id
+   * using the set of ships from the provided indexes as the pool of total options.
+   *
+   * We layout all available options for that round since restOpts will hide ones
+   * based on what is picked previously. 
+   */
+  function create_round_choices(optionsId, optionsIndexes) {
+    var select = document.getElementById(optionsId);
+
+    for (optionIndex of optionsIndexes) {
+      var optElem = document.createElement('option');
+      optElem.value = optionIndex;
+      optElem.text = ships[optionIndex];
+      select.appendChild(optElem);
+    }
+  }
+</script>
+
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <style>
+    .rsi-yellow {
+      color: #d28f2a;
+    }
+
+    .rsi-grey-bracket-bg {
+      background-color: #0a0b0c;
+    }
+
+    .rsi-grey-header-bg {
+      background-color: #161818;
+    }
+
+    .rsi-header-text {
+      font-family: countach, sans-serif;
+    }
+
+    .rsi-light-grey-bg {
+      background-color: #3d4557;
+    }
+
+    .rsi-bracket-text {
+      color: #fcfcfc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="bracket-container" class="w3-container w3-black">
+    <h2 class="w3-text-white w3-center">Fill out your bracket, press generate and copy the generated image!</h2>
+    <div class="w3-row rsi-grey-bracket-bg">
+      <div class="w3-col m2 w3-center w3-margin rsi-grey-bracket-bg">
+        <h2 class="rsi-yellow rsi-header-text rsi-grey-header-bg">Round 1</h2>
+      </div>
+      <div class="w3-col m2 w3-center w3-margin rsi-grey-bracket-bg">
+        <h2 class="rsi-yellow rsi-header-text rsi-grey-header-bg">Round 2</h2>
+      </div>
+      <div class="w3-col m2 w3-center w3-margin rsi-grey-bracket-bg">
+        <h2 class="rsi-yellow rsi-header-text rsi-grey-header-bg">
+          Semi-Finals
+        </h2>
+      </div>
+      <div class="w3-col m2 w3-center w3-margin rsi-grey-bracket-bg">
+        <h2 class="rsi-yellow rsi-header-text rsi-grey-header-bg">Finals</h2>
+      </div>
+      <div class="w3-col m2 w3-center w3-margin rsi-grey-bracket-bg">
+        <h2 class="rsi-yellow rsi-header-text rsi-grey-header-bg">
+          Champion
+        </h2>
+      </div>
+    </div>
+    <div class="w3-row rsi-grey-bracket-bg">
+      <div class="w3-col m2 w3-center w3-margin" id="round1-container"></div>
+      <div class="w3-col m2 w3-center w3-margin" id="round2-container">
+        <br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m0">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m1">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m2">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m3">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m4">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m5">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m6">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r2-m7">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br /><br />
+      </div>
+      <div class="w3-col m2 w3-center w3-margin" id="round3-container">
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r3-m0">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r3-m1">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r3-m2">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r3-m3">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w3-col m2 w3-center w3-margin" id="round4-container">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /><br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r4-m0">
+
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /><br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r4-m1">
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="w3-col m2 w3-center w3-margin" id="round5-container">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /><br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="w3-container">
+          <ul class="w3-ul w3-card-4 rsi-light-grey-bg rsi-bracket-text">
+            <li class="w3-bar">
+              <div class="w3-bar-item">
+                <select class="w3-select w3-border rsi-light-grey-bg rsi-bracket-text w3-text-white" name="option"
+                  id="r5-m0">
+                </select>
+              </div>
+            </li>
+            <li class="w3-bar">
+              <p><button class="w3-button w3-blue" onclick="draw()">Generate</button></p>
+        </div>
+        </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+<script text="javascript">
+  layout_round1();
+
+  // theoretically i could do 2^rX-1 to pick the amount and then the starting chunks
+  // but that would get 2 magic
+
+  // round 2 
+  create_round_choices('r2-m0', [0, 1])
+  create_round_choices('r2-m1', [2, 3])
+  create_round_choices('r2-m2', [4, 5])
+  create_round_choices('r2-m3', [6, 7])
+  create_round_choices('r2-m4', [8, 9])
+  create_round_choices('r2-m5', [10, 11])
+  create_round_choices('r2-m6', [12, 13])
+  create_round_choices('r2-m7', [14, 15])
+
+  //round3
+  create_round_choices('r3-m0', [0, 1, 2, 3])
+  create_round_choices('r3-m1', [4, 5, 6, 7])
+  create_round_choices('r3-m2', [8, 9, 10, 11])
+  create_round_choices('r3-m3', [12, 13, 14, 15])
+
+  // round4
+  create_round_choices('r4-m0', [0, 1, 2, 3, 4, 5, 6, 7])
+  create_round_choices('r4-m1', [8, 9, 10, 11, 12, 13, 14, 15])
+
+  // round5
+  create_round_choices('r5-m0', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+</script>
+
+<script text="javascript">
+  /**
+   * Resets the available options from the set of options
+   * based on the selected values of prior rounds
+   */
+  function resetOpts(target, s1, s2) {
+    target.selectedIndex = -1
+    for (var i = 0; i < target.options.length; i++) {
+      var option = target.options[i]
+      option.hidden = true
+      if (s1.selectedIndex != -1) {
+        if (option.value == s1.options[s1.selectedIndex].value) {
+          option.hidden = false
+        }
+      }
+      if (s2.selectedIndex != -1) {
+        if (option.value == s2.options[s2.selectedIndex].value) {
+          option.hidden = false
+        }
+      }
+    }
+  }
+
+  function setupBrackets(s1Id, s2Id, targetId) {
+    console.log(`${s1Id} - ${s2Id} - ${targetId}`)
+    var target = document.getElementById(targetId)
+    var s1 = document.getElementById(s1Id)
+    var s2 = document.getElementById(s2Id)
+
+    s1.addEventListener('change', (e) => {
+      resetOpts(target, s1, s2)
+    });
+    s2.addEventListener('change', (e) => {
+      resetOpts(target, s1, s2)
+    });
+  }
+
+  var selects = document.getElementsByTagName('select')
+  for (var i = 0; i < selects.length; i++) {
+    var select = selects[i]
+    select.selectedIndex = -1
+  }
+
+  // clear the next values
+  var unfilledIds = ['r3-m0', 'r3-m1', 'r3-m2', 'r3-m3', 'r4-m0', 'r4-m1', 'r5-m0']
+  for (var i = 0; i < unfilledIds.length; i++) {
+    var select = document.getElementById(unfilledIds[i])
+    for (var j = 0; j < select.options.length; j++) {
+      select.options[j].hidden = true
+    }
+  }
+
+  setupBrackets('r2-m0', 'r2-m1', 'r3-m0')
+  setupBrackets('r2-m2', 'r2-m3', 'r3-m1')
+  setupBrackets('r2-m4', 'r2-m5', 'r3-m2')
+  setupBrackets('r2-m6', 'r2-m7', 'r3-m3')
+
+  setupBrackets('r3-m0', 'r3-m1', 'r4-m0')
+  setupBrackets('r3-m2', 'r3-m3', 'r4-m1')
+
+  setupBrackets('r4-m0', 'r4-m1', 'r5-m0')
+</script>
+
+<div class="w3-panel w3-blue w3-center">
+  <p>Results</p>
+  <div class="w3-container" style="overflow: scroll;" id="img-container"></div>
+</div>
+
+<script text="javascript">
+  function drawImage(ctx, coordinateObj, imgId) {
+    var img = document.getElementById(imgId);
+    ctx.drawImage(img, coordinateObj.x, coordinateObj.y);
+  }
+
+  function drawResult(ctx, selectId, coordinateObj) {
+    var select = document.getElementById(selectId)
+    var choice = select.selectedIndex
+    if (choice != -1) {
+      var imgId = "img-" + select.options[choice].value
+      console.log(imgId)
+      drawImage(ctx, coordinateObj, imgId)
+    }
+  }
+
+  function draw() {
+    // Next year it seems the coordinates are halfed up
+    // so we can probably compute these based on start and end
+    // like (r0.y + r1.y ) / 2 = s0.y
+    var coordinates = {
+      r0: { x: 366, y: 144 },
+      r1: { x: 366, y: 336 },
+      r2: { x: 366, y: 528 },
+      r3: { x: 366, y: 720 },
+      r4: { x: 366, y: 912 },
+      r5: { x: 366, y: 1104 },
+      r6: { x: 366, y: 1296 },
+      r7: { x: 366, y: 1488 },
+      s0: { x: 648, y: 240 },
+      s1: { x: 648, y: 624 },
+      s2: { x: 644, y: 1008 },
+      s3: { x: 648, y: 1392 },
+      f0: { x: 918, y: 432 },
+      f1: { x: 918, y: 1200 },
+      w0: { x: 1194, y: 816 }
+    }
+
+    const canvas = document.createElement("canvas");
+    canvas.id = "canvas";
+    // set og size of big template here
+    canvas.width = 1440;
+    canvas.height = 1614;
+    var imgHolder = document.getElementById('img-container')
+    // remove previously generated images
+    while (imgHolder.firstChild) {
+      imgHolder.removeChild(imgHolder.firstChild);
+    }
+
+    imgHolder.appendChild(canvas);
+    const ctx = canvas.getContext("2d");
+
+    var template = document.getElementById("img-template");
+    ctx.drawImage(template, 0, 0);
+
+    // draw the results
+    drawResult(ctx, 'r2-m0', coordinates.r0);
+    drawResult(ctx, 'r2-m1', coordinates.r1);
+    drawResult(ctx, 'r2-m2', coordinates.r2);
+    drawResult(ctx, 'r2-m3', coordinates.r3);
+    drawResult(ctx, 'r2-m4', coordinates.r4);
+    drawResult(ctx, 'r2-m5', coordinates.r5);
+    drawResult(ctx, 'r2-m6', coordinates.r6);
+    drawResult(ctx, 'r2-m7', coordinates.r7);
+
+    drawResult(ctx, 'r3-m0', coordinates.s0);
+    drawResult(ctx, 'r3-m1', coordinates.s1);
+    drawResult(ctx, 'r3-m2', coordinates.s2);
+    drawResult(ctx, 'r3-m3', coordinates.s3);
+
+    drawResult(ctx, 'r4-m0', coordinates.f0);
+    drawResult(ctx, 'r4-m1', coordinates.f1);
+
+    drawResult(ctx, 'r5-m0', coordinates.w0);
+
+    ctx.font = "18px sans-serif";
+    ctx.fillStyle = "white";
+    ctx.fillText("Generate yours at", 1190, 1560);
+    ctx.fillText("anemortalkid.github.io/showdown", 1190, 1580);
+
+
+    ctx.font = "28px sans-serif";
+    ctx.fillStyle = "white";
+    ctx.fillText("C1 SPIRIT", coordinates.r0.x+40, coordinates.r0.y+40);
+  }
+</script>
+
+</html>

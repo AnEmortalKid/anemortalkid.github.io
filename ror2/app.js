@@ -1,0 +1,572 @@
+/* app.js — Risk of Rain 2 Draft Builder
+   ---------------------------------------------------------
+   This script powers:
+   - Pool filtering by rarity + search
+   - Drag from pool → draft (copies), drag within draft → reorder
+   - Per-rarity limits (Requirements), editable in the UI and saved locally
+   - PNG export (html2canvas)
+   Assumptions:
+   - items.js defines a global ITEMS object grouped by buckets:
+       ITEMS.common, ITEMS.uncommon, ITEMS.legendary, ITEMS.boss, ITEMS.void
+   - Images are served from your site (same-origin) like: items/common/Warbanner.png
+   --------------------------------------------------------- */
+
+"use strict";
+
+/* ------------------------------- Constants ------------------------------- */
+
+// Map ITEMS buckets → canonical rarity keys used throughout the UI.
+const BUCKET_TO_RARITY = {
+  common: "white",
+  uncommon: "green",
+  legendary: "red",
+  boss: "yellow",
+  void: "purple",
+};
+
+// Order matters for counts, loops, and display.
+const RARITIES = ["white", "green", "red", "yellow", "purple"];
+
+// Defaults for the per-rarity max counts. These persist into localStorage.
+const REQUIREMENTS = { white: 7, green: 3, red: 3, yellow: 0, purple: 0 };
+const REQS_STORAGE_KEY = "ror2-draft-reqs-v1";
+
+/* --------------------------- DOM helper utilities ------------------------ */
+
+const q = (sel, root = document) => root.querySelector(sel);
+const qa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+/** createElement sugar with attributes, dataset, and children */
+function el(tag, attrs = {}, children = []) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "dataset") Object.assign(node.dataset, v);
+    else if (k.startsWith("on") && typeof v === "function") node.addEventListener(k.slice(2), v);
+    else if (v !== null && v !== undefined) node.setAttribute(k, v);
+  }
+  for (const child of [].concat(children)) {
+    node.append(child?.nodeType ? child : document.createTextNode(child));
+  }
+  return node;
+}
+
+/* ----------------------------- Data / Flatten ---------------------------- */
+
+/**
+ * Flatten ITEMS.* buckets into a single array and inject the canonical rarity.
+ * We do this once at boot so all filters are simple array operations afterward.
+ */
+function buildAllItems() {
+  if (typeof ITEMS !== "object" || !ITEMS) {
+    console.error("items.js is missing or ITEMS is not defined.");
+    return [];
+  }
+  const out = [];
+  for (const [bucket, list] of Object.entries(ITEMS)) {
+    const rarity = BUCKET_TO_RARITY[bucket];
+    if (!rarity || !Array.isArray(list)) continue;
+    for (const it of list) {
+      out.push({ ...it, rarity });
+    }
+  }
+  return out;
+}
+
+const ALL_ITEMS = buildAllItems();
+
+
+/* --------------------------------- State --------------------------------- */
+
+const state = {
+  rarity: "white",               // current pool tab
+  filter: "",                    // lowercase search term
+  poolEl: null,                  // #pool
+  dropzoneEl: null,              // #dropzone
+  counts: {                      // live counts in the draft
+    white: 0, green: 0, red: 0, yellow: 0, purple: 0
+  },
+  imagesCache: new Map(),        // id -> dataURL (helps export be CORS-clean),
+  // track what we have drafted
+  drafted: new Set()
+};
+
+
+/* --------------------------- Requirements (UI) --------------------------- */
+
+/** load saved limits, wire inputs, and sync the header counters */
+function setupRequirements() {
+  // 1) Load saved requirements from localStorage (if present)
+  try {
+    const saved = JSON.parse(localStorage.getItem(REQS_STORAGE_KEY) || "null");
+    if (saved && typeof saved === "object") Object.assign(REQUIREMENTS, saved);
+  } catch (_) { /* ignore parse errors */ }
+
+  // 2) Prefill inputs at the top “Requirements” panel
+  RARITIES.forEach(r => {
+    const input = q(`#req-${r}`);
+    if (!input) return;
+    input.value = REQUIREMENTS[r] ?? 0;
+  });
+
+  // 3) Save button → persist + refresh header targets
+  const saveBtn = q("#saveReqs");
+  if (saveBtn) {
+    saveBtn.addEventListener("click", () => {
+      RARITIES.forEach(r => {
+        const n = parseInt(q(`#req-${r}`)?.value ?? "0", 10);
+        REQUIREMENTS[r] = Number.isFinite(n) ? Math.max(0, n) : 0;
+      });
+      localStorage.setItem(REQS_STORAGE_KEY, JSON.stringify(REQUIREMENTS));
+      updateCounts();
+      // Tiny inline “Saved ✓” feedback
+      const tag = q("#reqSaved");
+      if (tag) {
+        tag.style.display = "inline";
+        setTimeout(() => (tag.style.display = "none"), 1000);
+      }
+    });
+  }
+
+  // 4) Initial header reflect
+  updateCounts();
+}
+
+/* ------------------------------- Rendering ------------------------------- */
+
+function updateCounts() {
+  // Update the live counts
+  q("#whiteCount").textContent  = state.counts.white;
+  q("#greenCount").textContent  = state.counts.green;
+  q("#redCount").textContent    = state.counts.red;
+  q("#yellowCount").textContent = state.counts.yellow;
+  q("#purpleCount").textContent = state.counts.purple;
+
+  // Update the targets (requirements)
+  q("#whiteReq").textContent  = REQUIREMENTS.white;
+  q("#greenReq").textContent  = REQUIREMENTS.green;
+  q("#redReq").textContent    = REQUIREMENTS.red;
+  q("#yellowReq").textContent = REQUIREMENTS.yellow;
+  q("#purpleReq").textContent = REQUIREMENTS.purple;
+}
+
+/** quick text filter + rarity tab filter */
+function matchesFilters(item) {
+  if (item.rarity !== state.rarity) return false;
+  if (!state.filter) return true;
+  return item.name.toLowerCase().includes(state.filter);
+}
+
+function isDrafted(id){ return state.drafted.has(id); }
+
+// After rendering the pool, call this to gray out & disable drafted ones
+function refreshPoolDisabled(){
+  qa('.pool .item').forEach(btn => {
+    const id = btn.dataset.id;
+    const drafted = isDrafted(id);
+    btn.classList.toggle('disabled', drafted);
+    btn.setAttribute('draggable', drafted ? 'false' : 'true');
+    btn.setAttribute('aria-disabled', drafted ? 'true' : 'false');
+  });
+}
+
+function renderPool() {
+  state.poolEl.innerHTML = '';
+  ALL_ITEMS.filter(matchesFilters).forEach(item => state.poolEl.append(renderPoolItem(item)));
+  refreshPoolDisabled();  // <-- keep pool in sync with drafted set
+}
+
+/** a tile in the pool (click → wiki, drag → copy into draft) */
+function renderPoolItem(item) {
+  const card  = el('button', { class:'item', draggable:'true', title:item.name, 'data-id': item.id });
+  const img   = el('img',    { alt:item.name });
+  const label = el('div',    { class:'label' }, item.name);
+
+  setItemImage(img, item);
+  card.append(img, label);
+
+  // Drag (copy) from pool — ignore if already drafted
+  card.addEventListener('dragstart', (e) => {
+    if (isDrafted(item.id)) { e.preventDefault(); return; }
+    e.dataTransfer.setData('text/plain', JSON.stringify({ from:'pool', id:item.id }));
+    e.dataTransfer.effectAllowed = 'copy';
+  });
+
+  // Click opens wiki unless disabled
+  card.addEventListener('click', () => {
+    if (isDrafted(item.id)) return;
+    window.open(item.wiki, '_blank', 'noopener');
+  });
+
+  return card;
+}
+
+
+/** a tile in the draft (right-click to remove, drag to reorder) */
+function renderDraftItem(item) {
+  const card = el("div", {
+    class: "item",
+    draggable: "true",
+    title: item.name,
+    "data-id": item.id,
+    "data-rarity": item.rarity
+  });
+  const img = el("img", { alt: item.name });
+  setItemImage(img, item);
+  const label = el("div", { class: "label" }, item.name);
+  card.append(img, label);
+
+  // Right-click remove
+  card.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+    removeDraftItem(card);
+  });
+
+  // Click → wiki (same as pool)
+  card.addEventListener("click", () => window.open(item.wiki, "_blank", "noopener"));
+
+  // Start a “move” drag from inside the draft
+  card.addEventListener("dragstart", (e) => {
+    const index = [...state.dropzoneEl.children].indexOf(card);
+    e.dataTransfer.setData("text/plain", JSON.stringify({ from: "draft", index }));
+    e.dataTransfer.effectAllowed = "move";
+  });
+
+  return card;
+}
+
+/* --------------------------- Draft add/remove ---------------------------- */
+
+function removeDraftItem(node) {
+  const rarity = node.dataset.rarity;
+  const id = node.dataset.id;
+  node.remove();
+  state.counts[rarity] = Math.max(0, (state.counts[rarity] || 0) - 1);
+  state.drafted.delete(id);        // <-- free it up again
+  updateCounts();
+  toggleEmptyHint();
+  refreshPoolDisabled();           // <-- un-gray in pool
+  sortDropzoneItems(state.dropzoneEl);
+}
+/** guard: only allow adding if we haven't hit the per-rarity cap */
+function canAdd(item) {
+  // no duplicates + respect per-rarity cap
+  if (isDrafted(item.id)) return false;
+  return (REQUIREMENTS[item.rarity] ?? 0) > (state.counts[item.rarity] ?? 0);
+}
+
+/** add a tile to the draft (optionally at a specific index) */
+function addToDraft(item, insertIndex = null) {
+  if (!canAdd(item)) return false;
+
+  const card = renderDraftItem(item);
+  const children = [...state.dropzoneEl.children];
+  if (insertIndex === null || insertIndex < 0 || insertIndex >= children.length)
+    state.dropzoneEl.append(card);
+  else
+    state.dropzoneEl.insertBefore(card, children[insertIndex]);
+
+  state.counts[item.rarity] = (state.counts[item.rarity] || 0) + 1;
+  state.drafted.add(item.id);      // <-- mark as used
+  updateCounts();
+  toggleEmptyHint();
+  refreshPoolDisabled();           // <-- gray out in pool
+  sortDropzoneItems(state.dropzoneEl);
+  return true;
+}
+
+function toggleEmptyHint() {
+  if (state.dropzoneEl.children.length === 0) state.dropzoneEl.classList.add("empty");
+  else state.dropzoneEl.classList.remove("empty");
+}
+
+/* ---------------------------- Drag & Drop grid --------------------------- */
+
+/**
+ * Draft grid DnD:
+ * - dragover: allow drop
+ * - drop: either copy from pool, or move inside draft
+ * - getDropIndex: find the insertion point based on pointer position
+ */
+function setupDnD() {
+  state.dropzoneEl.addEventListener("dragover", (e) => {
+    e.preventDefault();                 // required to receive drop events
+    e.dataTransfer.dropEffect = "copy"; // UX: shows copy icon from pool
+  });
+
+  state.dropzoneEl.addEventListener("drop", (e) => {
+    e.preventDefault();
+    const payload = JSON.parse(e.dataTransfer.getData("text/plain") || "{}");
+    const afterIndex = getDropIndex(e);
+    if (payload.from === "pool") {
+      const item = ALL_ITEMS.find((i) => i.id === payload.id);
+      if (item) addToDraft(item, afterIndex);
+    } else if (payload.from === "draft") {
+      // Reordering: move the dragged node to the drop index
+      const children = [...state.dropzoneEl.children];
+      const node = children[payload.index];
+      if (!node) return;
+      const ref = children[afterIndex];
+      if (!ref) state.dropzoneEl.append(node);
+      else state.dropzoneEl.insertBefore(node, ref);
+    }
+  });
+}
+
+/** compute the index where a drop should insert inside the draft grid */
+function getDropIndex(e) {
+  const children = [...state.dropzoneEl.children];
+  for (let i = 0; i < children.length; i++) {
+    const r = children[i].getBoundingClientRect();
+    if (e.clientY < r.top + r.height / 2) return i; // before halfway point
+  }
+  return children.length; // append at the end
+}
+
+/* ----------------------------- Image handling ---------------------------- */
+
+/**
+ * Load item image, cache as dataURL for clean export (avoids CORS taint).
+ * If conversion fails (e.g., file:// testing), we fall back to a direct src.
+ */
+async function setItemImage(imgEl, item) {
+  if (state.imagesCache.has(item.id)) {
+    imgEl.src = state.imagesCache.get(item.id);
+    return;
+  }
+  try {
+    const dataURL = await toDataURL(item.img);
+    state.imagesCache.set(item.id, dataURL);
+    imgEl.src = dataURL;
+  } catch {
+    imgEl.src = item.img; // fallback
+  }
+}
+
+/** fetch image → draw to canvas → get PNG dataURL */
+function toDataURL(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous"; // helpful when served over http://localhost
+    img.onload = () => {
+      try {
+        const c = document.createElement("canvas");
+        c.width = img.naturalWidth;
+        c.height = img.naturalHeight;
+        c.getContext("2d").drawImage(img, 0, 0);
+        resolve(c.toDataURL("image/png"));
+      } catch (e) { reject(e); }
+    };
+    img.onerror = reject;
+    // simple cache-bust query to avoid stale browser cache during dev
+    img.src = url + (url.includes("?") ? "&" : "?") + "cb=" + Date.now();
+  });
+}
+
+/* --------------------------------- Export -------------------------------- */
+
+/**
+ * Build a clean, image-only version of the draft grid and pass it to html2canvas,
+ * then show a preview dialog and allow the user to download the PNG.
+ */
+// helper: blob -> data URL (no canvas; no taint)
+function blobToDataURL(blob){
+  return new Promise((resolve) => {
+    const fr = new FileReader();
+    fr.onload = () => resolve(fr.result);
+    fr.readAsDataURL(blob);
+  });
+}
+
+// helper: get data URL for an image src using fetch (same-origin)
+async function urlToDataURL(src){
+  // if already a data URL, keep it
+  if (typeof src === 'string' && src.startsWith('data:')) return src;
+  // fetch same-origin asset; convert to data URL
+  const res = await fetch(src, { cache: 'no-store' });
+  const blob = await res.blob();
+  return blobToDataURL(blob);
+}
+
+async function exportPNG() {
+  // Warn early if running from file:// (browsers often block this scenario)
+  if (location.protocol === 'file:') {
+    console.warn('Export works best over http://localhost — file:// may taint canvases.');
+  }
+
+  // Clone the draft grid so we can style for export without touching the UI
+  const container = state.dropzoneEl.cloneNode(true);
+
+  // Match the on-screen width so the grid keeps its columns (no vertical stack)
+  const rect = state.dropzoneEl.getBoundingClientRect();
+  const px = (n)=> `${Math.max(0, Math.round(n))}px`;
+  Object.assign(container.style, {
+    width: px(rect.width),
+    maxWidth: px(rect.width),
+    boxSizing: 'border-box',
+    background: '#0b0e14',
+    padding: '16px',
+    border: '1px solid #1f2635',
+    borderRadius: '12px'
+  });
+
+  // Convert tiles to compact image-only cards and force all images to data URLs
+  const imgPromises = [];
+  container.querySelectorAll('.item').forEach((node) => {
+    const origImg = node.querySelector('img');
+    const mini = origImg.cloneNode(false);
+    node.innerHTML = '';
+    Object.assign(mini.style, { width:'96px', height:'96px' });
+    node.append(mini);
+
+    Object.assign(node.style, {
+      padding:'6px',
+      background:'#0e1117',
+      border:'1px solid #222b3d'
+    });
+
+    const id = node.getAttribute('data-id');
+    const cached = id && state.imagesCache.get(id);
+    if (cached && typeof cached === 'string' && cached.startsWith('data:')) {
+      mini.src = cached;
+    } else {
+      const src = origImg.currentSrc || origImg.src;
+      imgPromises.push(
+        urlToDataURL(src).then(dataURL => { mini.src = dataURL; })
+                         .catch(() => { mini.src = src; }) // last-resort
+      );
+    }
+  });
+
+  // Off-screen mount so html2canvas can measure layout correctly
+  const scratch = document.createElement('div');
+  Object.assign(scratch.style, {
+    position:'fixed', left:'-10000px', top:'-10000px',
+    pointerEvents:'none', opacity:'0', zIndex:'-1',
+    width: px(rect.width)
+  });
+  scratch.appendChild(container);
+  document.body.appendChild(scratch);
+
+  try {
+    // Wait for images to finish loading
+    await Promise.all(imgPromises);
+    const imgs = Array.from(container.querySelectorAll('img'));
+    await Promise.all(imgs.map(img => img.complete
+      ? Promise.resolve()
+      : new Promise(res => { img.onload = img.onerror = res; })
+    ));
+
+    // Render and download (no preview)
+    const canvas = await html2canvas(container, {
+      backgroundColor: null,
+      scale: 2,
+      useCORS: true,
+      allowTaint: false,
+      logging: false
+    });
+    const dataUrl = canvas.toDataURL('image/png');
+
+    const a = document.createElement('a');
+    a.href = dataUrl;
+    a.download = `ror2-draft-${Date.now()}.png`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  } finally {
+    scratch.remove();
+  }
+}
+
+
+/* -------------------------------- Actions -------------------------------- */
+
+/** Fill the draft randomly based on current requirements (duplicates allowed). */
+function randomize() {
+  clearDraft();
+  const byRarity = r => ALL_ITEMS.filter(i => i.rarity === r && !isDrafted(i.id));
+  Object.keys(REQUIREMENTS).forEach(r => {
+    const need = REQUIREMENTS[r] || 0;
+    if (need <= 0) return;
+    const pool = byRarity(r).slice();           // shallow copy
+    // pick without replacement up to "need"
+    for (let i = 0; i < need && pool.length; i++) {
+      const idx = Math.floor(Math.random() * pool.length);
+      const pick = pool.splice(idx, 1)[0];
+      addToDraft(pick);
+    }
+  });
+}
+
+/** Remove everything from the draft and reset counts. */
+function clearDraft() {
+  state.dropzoneEl.innerHTML = '';
+  state.counts = { white:0, green:0, red:0, yellow:0, purple:0 };
+  state.drafted.clear();           // <-- reset drafted IDs
+  updateCounts();
+  toggleEmptyHint();
+  refreshPoolDisabled();           // <-- re-enable pool items
+}
+
+function sortDropzoneItems(dropzoneEl) {
+  const rarityOrder = ['white', 'green', 'red', 'yellow', 'purple'];
+
+  const items = Array.from(dropzoneEl.querySelectorAll('.item'));
+  
+  items.sort((a, b) => {
+    const rarityA = a.getAttribute('data-rarity');
+    const rarityB = b.getAttribute('data-rarity');
+
+    const rarityDiff = rarityOrder.indexOf(rarityA) - rarityOrder.indexOf(rarityB);
+    if (rarityDiff !== 0) return rarityDiff;
+
+    const nameA = a.querySelector('.label')?.textContent.trim().toLowerCase() || '';
+    const nameB = b.querySelector('.label')?.textContent.trim().toLowerCase() || '';
+    return nameA.localeCompare(nameB);
+  });
+
+  // Clear and re-append sorted items
+  dropzoneEl.innerHTML = '';
+  items.forEach(item => dropzoneEl.appendChild(item));
+}
+
+
+/* ---------------------------------- Boot --------------------------------- */
+
+function init() {
+  state.poolEl = q("#pool");
+  state.dropzoneEl = q("#dropzone");
+
+  // Requirements UI (load saved, wire Save button)
+  setupRequirements();
+
+  // Tabs: switch current rarity and re-render pool
+  qa(".tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      qa(".tab").forEach((t) => (t.dataset.active = "false"));
+      tab.dataset.active = "true";
+      state.rarity = tab.dataset.rarity;
+      renderPool();
+    });
+  });
+
+  // Live search
+  q("#filter").addEventListener("input", (e) => {
+    state.filter = e.target.value.trim().toLowerCase();
+    renderPool();
+  });
+
+  // Top buttons
+  q("#exportBtn").addEventListener("click", exportPNG);
+  q("#randomBtn").addEventListener("click", randomize);
+  q("#clearBtn").addEventListener("click", clearDraft);
+
+  // Draft drag/drop
+  setupDnD();
+
+  // First render
+  renderPool();
+  refreshPoolDisabled();
+}
+
+// Ensure the DOM is ready (items.js must load before this file)
+document.addEventListener("DOMContentLoaded", init);

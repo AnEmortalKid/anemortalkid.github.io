@@ -1,0 +1,496 @@
+    :root {
+        --bg: #0e1117;
+        --panel: #11141a;
+        --panel-2: #0b0e14;
+        --text: #e6edf3;
+        --muted: #97a3b6;
+        --border: #232a3a;
+        --accent: #6aa5ff;
+        --white: #cfd6e6;
+        --green: #9cff9c;
+        --red: #ff9b9b;
+        --yellow: #ffd769;
+        --purple: #caa1ff;
+    }
+
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        margin: 0;
+        background: radial-gradient(1200px 800px at 10% -10%, #1a2130 0%, rgba(26, 33, 48, 0) 60%), linear-gradient(#0c0f14, #0e1117 30%);
+        color: var(--text);
+        font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial
+    }
+
+    a {
+        color: inherit
+    }
+
+    .app {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        min-height: 100vh
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        background: rgba(9, 12, 18, .7);
+        backdrop-filter: blur(8px)
+    }
+
+    h1 {
+        font-size: 18px;
+        margin: 0
+    }
+
+    .controls {
+        display: flex;
+        gap: 8px;
+        align-items: center
+    }
+
+    .btn {
+        appearance: none;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        color: var(--text);
+        padding: 8px 12px;
+        border-radius: 12px;
+        cursor: pointer
+    }
+
+    .btn:hover {
+        filter: brightness(1.08)
+    }
+
+    .btn.primary {
+        background: linear-gradient(180deg, #2c6cff, #1b4fe0);
+        border-color: #365ff1
+    }
+
+    .btn.ghost {
+        background: transparent
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 12px;
+        padding: 12px
+    }
+
+    .panel {
+        background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, 0));
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .35)
+    }
+
+    /* Pool */
+    .pool {
+        display: flex;
+        flex-direction: column;
+        min-height: 0
+    }
+
+    /* let the pool header wrap so Purple can drop to a new line if needed */
+    .pool header {
+        flex-wrap: wrap;
+        /* NEW */
+        align-items: flex-start;
+        /* keeps multi-line layout tidy */
+        gap: 8px;
+    }
+
+    /* Force pool grids to reserve enough height for ~20 items */
+.pool .grid {
+  min-height: calc((72px + 8px) * 7); /* item height + padding × rows you want */
+  overflow-y: auto;
+  scrollbar-gutter: stable; /* modern browsers */
+}
+
+@supports not (scrollbar-gutter: stable) {
+  .pool .grid {
+    overflow-y: scroll; /* fallback to always showing scrollbar */
+  }
+}
+
+    /* tabs can wrap, but each tab keeps its own size */
+    .tabs {
+        flex: 1 1 auto;
+        /* allow it to grow/shrink */
+        flex-wrap: wrap;
+        /* NEW: permit wrapping */
+        max-width: 100%;
+    }
+
+
+    /* optional: slightly tighter tab padding to buy space */
+    .tab {
+        padding: 5px 9px;
+        /* was 6px 10px */
+        white-space: nowrap;
+        /* keep each label on one line */
+    }
+
+    .tab[data-active="true"] {
+        outline: 2px solid var(--accent)
+    }
+
+    .tab[data-rarity="white"] {
+        color: var(--white)
+    }
+
+    .tab[data-rarity="green"] {
+        color: var(--green)
+    }
+
+    .tab[data-rarity="red"] {
+        color: var(--red)
+    }
+
+    .tab[data-rarity="yellow"] {
+        color: var(--yellow)
+    }
+
+    .tab[data-rarity="purple"] {
+        color: var(--purple)
+    }
+
+    /* search can move to the next line when space is tight */
+    .search {
+        flex: 1 1 260px;
+        /* allow wrap, give it a base width */
+        min-width: 200px;
+    }
+
+    .search input {
+        all: unset;
+        flex: 1
+    }
+
+    .grid {
+        padding: 12px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        overflow: auto;
+        min-height: 240px
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+        background: var(--panel-2);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 8px;
+        user-select: none;
+        cursor: grab
+    }
+
+    .item:active {
+        cursor: grabbing
+    }
+
+    .item img {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+        border-radius: 8px;
+        background: #090c12
+    }
+
+    .item .label {
+        font-size: 11px;
+        color: var(--muted);
+        text-align: center
+    }
+
+    /* Draft board */
+    .board {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        min-height: 0
+    }
+
+    .board header {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border)
+    }
+
+    .reqs {
+        display: flex;
+        gap: 12px
+    }
+
+    .req {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        font-weight: 700
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%
+    }
+
+    .dot.white {
+        background: var(--white)
+    }
+
+    .dot.green {
+        background: var(--green)
+    }
+
+    .dot.red {
+        background: var(--red)
+    }
+
+    .dot.yellow {
+        background: var(--yellow)
+    }
+
+    .dot.purple {
+        background: var(--purple)
+    }
+
+    .dropzone {
+        position: relative;
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+        gap: 10px;
+        padding: 12px;
+        overflow: auto
+    }
+
+    .dropzone.empty::after {
+        content: "Drag items here";
+        display: grid;
+        place-items: center;
+        color: #6d7a92;
+        border: 1px dashed #323b50;
+        border-radius: 12px;
+        min-height: 100px
+    }
+
+    .slot {
+        display: grid;
+        place-items: center;
+        background: rgba(255, 255, 255, .02);
+        border: 1px dashed #323b50;
+        border-radius: 12px;
+        height: 96px
+    }
+
+    .floating {
+        position: absolute;
+        pointer-events: none;
+        opacity: .8;
+        transform: scale(.98)
+    }
+
+    .hint {
+        padding: 8px 12px;
+        color: #8c98ad;
+        font-size: 12px
+    }
+
+    /* Export preview modal */
+    dialog {
+        padding: 0;
+        border: 0;
+        background: transparent
+    }
+
+    .modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, .6);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px
+    }
+
+    .modal[open] {
+        display: flex
+    }
+
+    .card {
+        max-width: 920px;
+        width: 100%;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 30px 50px rgba(0, 0, 0, .5)
+    }
+
+    .card header {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--border)
+    }
+
+    .card .body {
+        padding: 12px 14px
+    }
+
+    .preview {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: #0b0e14
+    }
+
+    @media (max-width: 980px) {
+        .row {
+            grid-template-columns: 1fr
+        }
+
+        .grid {
+            grid-template-columns: repeat(4, 1fr)
+        }
+    }
+
+    /* --- Restore slick pill background on tabs --- */
+    .tab {
+        appearance: none;
+        /* kill default button styles */
+        background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, .06),
+            /* subtle top sheen */
+            0 1px 2px rgba(0, 0, 0, .25);
+        /* soft outer lift */
+        transition: filter .15s ease, box-shadow .15s ease, background .15s ease;
+        white-space: nowrap;
+        /* keep label on one line */
+    }
+
+    .tab:hover {
+        filter: brightness(1.08);
+        background: linear-gradient(180deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .03));
+    }
+
+    .tab:active {
+        filter: brightness(0.98);
+        box-shadow:
+            inset 0 1px 2px rgba(0, 0, 0, .35),
+            0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    .tab[data-active="true"] {
+        outline: 2px solid var(--accent);
+        outline-offset: 1px;
+    }
+
+    /* Keep the tabs wrapping nicely without losing the look */
+    .pool header {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .tabs {
+        display: flex;
+        gap: 6px;
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    
+
+    /* Draft tiles: square cards with an overlaid label */
+.board .dropzone .item{
+  position: relative;
+  aspect-ratio: 1 / 1;      /* <-- forces perfect squares */
+  padding: 8px;
+  display: grid;            /* center the image nicely */
+  place-items: center;
+}
+
+.board .dropzone .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;      /* keep the icon proportions */
+  background: #090c12;
+  border-radius: 8px;
+}
+
+/* Put the name on top of the image, small and readable */
+.board .dropzone .item .label{
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  color: #c9d3e3;
+  padding: 2px 4px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(9,12,18,.65), rgba(9,12,18,.35));
+  backdrop-filter: blur(2px);
+  pointer-events: none;     /* clicks still hit the card for right-click remove */
+}
+
+/* Ensure the draft grid never stretches rows weirdly */
+.dropzone{
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); /* you already had this */
+  grid-auto-rows: 1fr;   /* play nice with aspect-ratio-based items */
+}
+
+/* Pool: items already drafted are visually disabled and not draggable */
+.pool .item.disabled{
+  opacity: .35;
+  filter: grayscale(1);
+  cursor: not-allowed;
+}
+.pool .item.disabled .label{
+  text-decoration: line-through;
+  opacity: .9;
+}
+
+/* Pack draft rows tightly (no extra vertical spacing between rows) */
+.board .dropzone{
+  align-content: start;     /* keep rows at the top; don't distribute free space */
+  grid-auto-rows: auto;     /* ensure each row is only as tall as its items */
+  grid-auto-flow: row dense;/* compact placement if something leaves small holes */
+}
+
+/* (keep the square tiles) */
+.board .dropzone .item{
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+}
