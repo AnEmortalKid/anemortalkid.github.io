@@ -103,9 +103,11 @@ const ITEMS = {
   ],
   boss: [
     { id: 'artifact-key', name: "Artifact Key", wiki: "https://riskofrain2.fandom.com/wiki/Artifact_Key", img: "items/boss/Artifact_Key.png" },
+    { id: 'charged-perforator', name: "Charged Perforator", wiki: "https://riskofrain2.fandom.com/wiki/Charged_Perforator", img: "items/boss/Charged_Perforator.png"},
     { id: 'genesis-loop', name: "Genesis Loop", wiki: "https://riskofrain2.fandom.com/wiki/Genesis_Loop", img: "items/boss/Genesis_Loop.png" },
     { id: 'little-disciple', name: "Little Disciple", wiki: "https://riskofrain2.fandom.com/wiki/Little_Disciple", img: "items/boss/Little_Disciple.png" },
     { id: 'mired-urn', name: "Mired Urn", wiki: "https://riskofrain2.fandom.com/wiki/Mired_Urn", img: "items/boss/Mired_Urn.png" },
+    { id: 'molten-perforator', name: "Molten Perforator", wiki: "https://riskofrain2.fandom.com/wiki/Molten_Perforator", img: "items/boss/Molten_Perforator.png"},
     { id: 'planula', name: "Planula", wiki: "https://riskofrain2.fandom.com/wiki/Planula", img: "items/boss/Planula.png" },
     { id: 'queens-gland', name: "Queen's Gland", wiki: "https://riskofrain2.fandom.com/wiki/Queen%27s_Gland", img: "items/boss/Queens_Gland.png" },
     { id: 'shatterspleen', name: "Shatterspleen", wiki: "https://riskofrain2.fandom.com/wiki/Shatterspleen", img: "items/boss/Shatterspleen.png" },
