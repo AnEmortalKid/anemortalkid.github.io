@@ -387,16 +387,18 @@ async function urlToDataURL(src){
   return blobToDataURL(blob);
 }
 
-async function exportPNG() {
-  // Warn early if running from file:// (browsers often block this scenario)
-  if (location.protocol === 'file:') {
-    console.warn('Export works best over http://localhost — file:// may taint canvases.');
-  }
-
-  // Clone the draft grid so we can style for export without touching the UI
+/**
+ * Build a clean, export-ready clone of the draft grid.
+ * Returns { container, scratch, cleanup } where:
+ *  - container: the styled clone we’ll snapshot
+ *  - scratch: off-screen mount
+ *  - cleanup(): removes scratch from the DOM
+ */
+async function buildExportClone(){
+  // Clone the visible dropzone so we don’t touch the UI
   const container = state.dropzoneEl.cloneNode(true);
 
-  // Match the on-screen width so the grid keeps its columns (no vertical stack)
+  // Lock width to on-screen size so CSS grid doesn’t collapse to one column
   const rect = state.dropzoneEl.getBoundingClientRect();
   const px = (n)=> `${Math.max(0, Math.round(n))}px`;
   Object.assign(container.style, {
@@ -409,7 +411,7 @@ async function exportPNG() {
     borderRadius: '12px'
   });
 
-  // Convert tiles to compact image-only cards and force all images to data URLs
+  // Convert each tile to compact, image-only blocks and force <img> to data URLs
   const imgPromises = [];
   container.querySelectorAll('.item').forEach((node) => {
     const origImg = node.querySelector('img');
@@ -424,6 +426,7 @@ async function exportPNG() {
       border:'1px solid #222b3d'
     });
 
+    // Prefer cached data URLs, otherwise fetch+convert
     const id = node.getAttribute('data-id');
     const cached = id && state.imagesCache.get(id);
     if (cached && typeof cached === 'string' && cached.startsWith('data:')) {
@@ -432,31 +435,74 @@ async function exportPNG() {
       const src = origImg.currentSrc || origImg.src;
       imgPromises.push(
         urlToDataURL(src).then(dataURL => { mini.src = dataURL; })
-                         .catch(() => { mini.src = src; }) // last-resort
+                         .catch(() => { mini.src = src; }) // last resort
       );
     }
   });
 
-  // Off-screen mount so html2canvas can measure layout correctly
+  // Off-screen mount: gives predictable layout/measurements for html2canvas
   const scratch = document.createElement('div');
   Object.assign(scratch.style, {
     position:'fixed', left:'-10000px', top:'-10000px',
     pointerEvents:'none', opacity:'0', zIndex:'-1',
-    width: px(rect.width)
+    width: container.style.width
   });
   scratch.appendChild(container);
   document.body.appendChild(scratch);
 
-  try {
-    // Wait for images to finish loading
-    await Promise.all(imgPromises);
-    const imgs = Array.from(container.querySelectorAll('img'));
-    await Promise.all(imgs.map(img => img.complete
-      ? Promise.resolve()
-      : new Promise(res => { img.onload = img.onerror = res; })
-    ));
+  // Wait until all images in the clone are loaded
+  await Promise.all(imgPromises);
+  const imgs = Array.from(container.querySelectorAll('img'));
+  await Promise.all(imgs.map(img => img.complete
+    ? Promise.resolve()
+    : new Promise(res => { img.onload = img.onerror = res; })
+  ));
 
-    // Render and download (no preview)
+  return {
+    container,
+    scratch,
+    cleanup(){ scratch.remove(); }
+  };
+}
+
+
+// --- new: Copy PNG to clipboard (no preview dialog) ---
+async function copyPNG(){
+  // Clipboard image write requires secure context (https or http://localhost) and a user gesture
+  if (!('clipboard' in navigator) || typeof ClipboardItem === 'undefined') {
+    alert('Clipboard images not supported in this browser. Try Export PNG instead.');
+    return;
+  }
+
+  const { container, cleanup } = await buildExportClone();
+
+  try {
+    // Render the clone to a canvas (2x for crispness)
+    const canvas = await html2canvas(container, {
+      backgroundColor: null,
+      scale: 2,
+      useCORS: true,
+      allowTaint: false,
+      logging: false
+    });
+
+    // Canvas -> Blob -> ClipboardItem
+    const blob = await new Promise((res) => canvas.toBlob(res, 'image/png'));
+    if (!blob) throw new Error('Failed to create PNG blob');
+
+    await navigator.clipboard.write([ new ClipboardItem({ 'image/png': blob }) ]);
+
+    // Optional: tiny toast
+    console.log('Draft image copied to clipboard ✔');
+  } finally {
+    cleanup();
+  }
+}
+
+// (optional) keep your existing exportPNG but reuse the same clone helper
+async function exportPNG(){
+  const { container, cleanup } = await buildExportClone();
+  try{
     const canvas = await html2canvas(container, {
       backgroundColor: null,
       scale: 2,
@@ -465,7 +511,6 @@ async function exportPNG() {
       logging: false
     });
     const dataUrl = canvas.toDataURL('image/png');
-
     const a = document.createElement('a');
     a.href = dataUrl;
     a.download = `ror2-draft-${Date.now()}.png`;
@@ -473,10 +518,9 @@ async function exportPNG() {
     a.click();
     a.remove();
   } finally {
-    scratch.remove();
+    cleanup();
   }
 }
-
 
 /* -------------------------------- Actions -------------------------------- */
 
@@ -559,6 +603,7 @@ function init() {
   q("#exportBtn").addEventListener("click", exportPNG);
   q("#randomBtn").addEventListener("click", randomize);
   q("#clearBtn").addEventListener("click", clearDraft);
+  q("#copyBtn").addEventListener("click", copyPNG);
 
   // Draft drag/drop
   setupDnD();
