@@ -5,43 +5,43 @@
 </head>
 <script text="javascript">
   var ships = [
-    "C1 Spirit",
-    "Mercury",
-    "STV",
+    "Raft",
+    "Asgard",
     "Ursa Medivac",
-    "890 Jump",
-    "600i Explorer",
-    "Terrapin",
-    "Gladiator",
-    "Fury LX",
+    "MTC",
     "M50",
-    "Reclaimer",
+    "Razor",
+    "Gladiator",
+    "85x",
+    "Zeus MK II ES",
+    "Corsair",
     "Vulture",
-    "Syulen",
-    "Defender",
-    "F8C Lightning",
-    "F7C Hornet MK II",
+    "Mole",
+    "Prowler Utility",
+    "Talon",
+    "Polaris",
+    "Starlancer TAC",
   ];
 </script>
 <!-- draw function uses these to source the image data -->
 <div id="imgs-holder" hidden>
   <img id="img-template" src="template_big.png">
-  <img id="img-0" src="c1spirit.png">
-  <img id="img-1" src="mercury.png">
-  <img id="img-2" src="stv.png">
-  <img id="img-3" src="ursa_medivac.png">
-  <img id="img-4" src="890_jump.png">
-  <img id="img-5" src="600i_explorer.png">
-  <img id="img-6" src="terrapin.png">
-  <img id="img-7" src="gladiator.png">
-  <img id="img-8" src="fury_lx.png">
-  <img id="img-9" src="m50.png">
-  <img id="img-10" src="reclaimer.png">
-  <img id="img-11" src="vulture.png">
-  <img id="img-12" src="syulen.png">
-  <img id="img-13" src="defender.png">
-  <img id="img-14" src="f8c.png">
-  <img id="img-15" src="f7c.png">
+  <img id="img-0" src="raft.png">
+  <img id="img-1" src="asgard.png">
+  <img id="img-2" src="ursa_medivac.png">
+  <img id="img-3" src="mtc.png">
+  <img id="img-4" src="m50.png">
+  <img id="img-5" src="razor.png">
+  <img id="img-6" src="gladiator.png">
+  <img id="img-7" src="85x.png">
+  <img id="img-8" src="zeus_mk2_es.png">
+  <img id="img-9" src="corsair.png">
+  <img id="img-10" src="vulture.png">
+  <img id="img-11" src="mole.png">
+  <img id="img-12" src="prowler_utility.png">
+  <img id="img-13" src="talon.png">
+  <img id="img-14" src="polaris.png">
+  <img id="img-15" src="starlancer_tack.png">
 </div>
 <script text="javascript">
   function layout_round1() {
@@ -567,22 +567,30 @@
     // so we can probably compute these based on start and end
     // like (r0.y + r1.y ) / 2 = s0.y
     var coordinates = {
-      r0: { x: 366, y: 144 },
-      r1: { x: 366, y: 336 },
-      r2: { x: 366, y: 528 },
-      r3: { x: 366, y: 720 },
-      r4: { x: 366, y: 912 },
-      r5: { x: 366, y: 1104 },
-      r6: { x: 366, y: 1296 },
-      r7: { x: 366, y: 1488 },
-      s0: { x: 648, y: 240 },
-      s1: { x: 648, y: 624 },
-      s2: { x: 644, y: 1008 },
-      s3: { x: 648, y: 1392 },
-      f0: { x: 918, y: 432 },
-      f1: { x: 918, y: 1200 },
-      w0: { x: 1194, y: 816 }
-    }
+      r0: { x: 360, y: 164 },
+      r1: { x: 360, y: 334 },
+      r2: { x: 360, y: 500 },
+      r3: { x: 360, y: 670 },
+      r4: { x: 360, y: 838 },
+      r5: { x: 360, y: 1004 },
+      r6: { x: 360, y: 1174 },
+      r7: { x: 360, y: 1340 },
+      s0: { x: 628, y: 260 },
+      s1: { x: 628, y: 644 },
+      s2: { x: 628, y: 1028 },
+      s3: { x: 628, y: 1412 },
+
+      f0: { x: 892, y: 416 },
+      f1: { x: 892, y: 1090 },
+
+      w0: { x: 1160, y: 754 }
+    };
+    // compute so its easier
+    coordinates.s0.y = (coordinates.r0.y + coordinates.r1.y) / 2;
+    coordinates.s1.y = (coordinates.r2.y + coordinates.r3.y) / 2;
+    coordinates.s2.y = (coordinates.r4.y + coordinates.r5.y) / 2;
+    coordinates.s3.y = (coordinates.r6.y + coordinates.r7.y) / 2;
+
 
     const canvas = document.createElement("canvas");
     canvas.id = "canvas";
@@ -621,15 +629,12 @@
 
     drawResult(ctx, 'r5-m0', coordinates.w0);
 
-    ctx.font = "18px sans-serif";
+    ctx.font = "16px sans-serif";
     ctx.fillStyle = "white";
-    ctx.fillText("Generate yours at", 1190, 1560);
-    ctx.fillText("anemortalkid.github.io/showdown", 1190, 1580);
-
-
-    ctx.font = "28px sans-serif";
-    ctx.fillStyle = "white";
-    ctx.fillText("C1 SPIRIT", coordinates.r0.x+40, coordinates.r0.y+40);
+    const bottomCoordX = coordinates.w0.x-10;
+    const bottomCoordY = 1400;
+    ctx.fillText("Generate yours at", bottomCoordX, bottomCoordY);
+    ctx.fillText("anemortalkid.github.io/showdown", bottomCoordX, bottomCoordY+20);
   }
 </script>
 
