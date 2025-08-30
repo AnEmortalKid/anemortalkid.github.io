@@ -1,0 +1,14 @@
+{
+  "armor-piercing-rounds": {
+    "Title": "Armor-Piercing Rounds",
+    "Caption": "Deal extra damage to bosses.",
+    "Description": "Deal an additional 20% damage (+20% per stack) to bosses.",
+    "Rarity": "Common",
+    "Category": "DamageAIBlacklist",
+    "Unlock": "Advancement",
+    "Damage": "20% Linear +20%",
+    "Name": "BossDamageBonus",
+    "Image": "https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/5/54/BgCommon.png/revision/latest/scale-to-width-down/28?cb=20200415011527",
+    "Wiki": "https://riskofrain2.fandom.com/wiki/Armor-Piercing_Rounds"
+  }
+}

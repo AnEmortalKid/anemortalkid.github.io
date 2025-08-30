@@ -1,0 +1,285 @@
+const fs = require('fs');
+const fsp = fs.promises;
+const path = require('path');
+const fetch = require('node-fetch');   // v2 (ok with require)
+const cheerio = require('cheerio');
+
+const UA = { 'user-agent': 'RoR2-Infobox-Scraper/1.0 (Node14)' };
+
+// Items list – or import from your items.js
+const ITEMS = [
+    // { id: 'soldiers-syringe', wiki: 'https://riskofrain2.fandom.com/wiki/Soldier%27s_Syringe' },
+    // { id: 'backup-magazine', name: "Backup Magazine", wiki: "https://riskofrain2.fandom.com/wiki/Backup_Magazine", img: "items/common/Backup_Magazine.png" },
+    // { id: 'bison-steak', name: "Bison Steak", wiki: "https://riskofrain2.fandom.com/wiki/Bison_Steak", img: "items/common/Bison_Steak.png" },
+    // { id: 'bolstering-lantern', name: "Bolstering Lantern", wiki: "https://riskofrain2.fandom.com/wiki/Bolstering_Lantern", img: "items/common/Bolstering_Lantern.png" },
+    // { id: 'bundle-of-fireworks', name: "Bundle of Fireworks", wiki: "https://riskofrain2.fandom.com/wiki/Bundle_of_Fireworks", img: "items/common/Bundle_of_Fireworks.png" },
+    // { id: 'bustling-fungus', name: "Bustling Fungus", wiki: "https://riskofrain2.fandom.com/wiki/Bustling_Fungus", img: "items/common/Bustling_Fungus.png" },
+    // { id: 'cautious-slug', name: "Cautious Slug", wiki: "https://riskofrain2.fandom.com/wiki/Cautious_Slug", img: "items/common/Cautious_Slug.png" },
+    // { id: 'chronic-expansion', name: "Chronic Expansion", wiki: "https://riskofrain2.fandom.com/wiki/Chronic_Expansion", img: "items/common/Chronic_Expansion.png" },
+    // { id: 'crowbar', name: "Crowbar", wiki: "https://riskofrain2.fandom.com/wiki/Crowbar", img: "items/common/Crowbar.png" },
+    // { id: 'delicate-watch', name: "Delicate Watch", wiki: "https://riskofrain2.fandom.com/wiki/Delicate_Watch", img: "items/common/Delicate_Watch.png" },
+    // { id: 'elusive-antlers', name: "Elusive Antlers", wiki: "https://riskofrain2.fandom.com/wiki/Elusive_Antlers", img: "items/common/Elusive_Antlers.png" },
+    // { id: 'energy-drink', name: "Energy Drink", wiki: "https://riskofrain2.fandom.com/wiki/Energy_Drink", img: "items/common/Energy_Drink.png" },
+    // { id: 'focus-crystal', name: "Focus Crystal", wiki: "https://riskofrain2.fandom.com/wiki/Focus_Crystal", img: "items/common/Focus_Crystal.png" },
+    // { id: 'gasoline', name: "Gasoline", wiki: "https://riskofrain2.fandom.com/wiki/Gasoline", img: "items/common/Gasoline.png" },
+    // { id: 'lens-makers-glasses', name: "Lens-Maker's Glasses", wiki: "https://riskofrain2.fandom.com/wiki/Lens-Maker%27s_Glasses", img: "items/common/Lens-Makers_Glasses.png" },
+    // { id: 'medkit', name: "Medkit", wiki: "https://riskofrain2.fandom.com/wiki/Medkit", img: "items/common/Medkit.png" },
+    // { id: 'mocha', name: "Mocha", wiki: "https://riskofrain2.fandom.com/wiki/Mocha", img: "items/common/Mocha.png" },
+    // { id: 'monster-tooth', name: "Monster Tooth", wiki: "https://riskofrain2.fandom.com/wiki/Monster_Tooth", img: "items/common/Monster_Tooth.png" },
+    // { id: 'oddly-shaped-opal', name: "Oddly-shaped Opal", wiki: "https://riskofrain2.fandom.com/wiki/Oddly-shaped_Opal", img: "items/common/Oddly-shaped_Opal.png" },
+    // { id: 'pauls-goat-hoof', name: "Paul's Goat Hoof", wiki: "https://riskofrain2.fandom.com/wiki/Paul%27s_Goat_Hoof", img: "items/common/Pauls_Goat_Hoof.png" },
+    // { id: 'personal-shield-generator', name: "Personal Shield Generator", wiki: "https://riskofrain2.fandom.com/wiki/Personal_Shield_Generator", img: "items/common/Personal_Shield_Generator.png" },
+    // { id: 'power-elixir', name: "Power Elixir", wiki: "https://riskofrain2.fandom.com/wiki/Power_Elixir", img: "items/common/Power_Elixir.png" },
+    // { id: 'repulsion-armor-plate', name: "Repulsion Armor Plate", wiki: "https://riskofrain2.fandom.com/wiki/Repulsion_Armor_Plate", img: "items/common/Repulsion_Armor_Plate.png" },
+    // { id: 'roll-of-pennies', name: "Roll of Pennies", wiki: "https://riskofrain2.fandom.com/wiki/Roll_of_Pennies", img: "items/common/Roll_of_Pennies.png" },
+    // { id: 'soldiers-syringe', name: "Soldier's Syringe", wiki: "https://riskofrain2.fandom.com/wiki/Soldier%27s_Syringe", img: "items/common/Soldiers_Syringe.png" },
+    // { id: 'sticky-bomb', name: "Sticky Bomb", wiki: "https://riskofrain2.fandom.com/wiki/Sticky_Bomb", img: "items/common/Sticky_Bomb.png" },
+    // { id: 'stun-grenade', name: "Stun Grenade", wiki: "https://riskofrain2.fandom.com/wiki/Stun_Grenade", img: "items/common/Stun_Grenade.png" },
+    // { id: 'topaz-brooch', name: "Topaz Brooch", wiki: "https://riskofrain2.fandom.com/wiki/Topaz_Brooch", img: "items/common/Topaz_Brooch.png" },
+    // { id: 'tougher-times', name: "Tougher Times", wiki: "https://riskofrain2.fandom.com/wiki/Tougher_Times", img: "items/common/Tougher_Times.png" },
+    // { id: 'tri-tip-dagger', name: "Tri-Tip Dagger", wiki: "https://riskofrain2.fandom.com/wiki/Tri-Tip_Dagger", img: "items/common/Tri-Tip_Dagger.png" },
+    // { id: 'warbanner', name: "Warbanner", wiki: "https://riskofrain2.fandom.com/wiki/Warbanner", img: "items/common/Warbanner.png" },
+    // { id: 'warped-echo', name: "Warped Echo", wiki: "https://riskofrain2.fandom.com/wiki/Warped_Echo", img: "items/common/Warped_Echo.png" },
+    // { id: 'atg-missile-mk1', name: "AtG Missile Mk. 1", wiki: "https://riskofrain2.fandom.com/wiki/AtG_Missile_Mk._1", img: "items/uncommon/AtG_Missile_Mk._1.png" },
+    // { id: 'bandolier', name: "Bandolier", wiki: "https://riskofrain2.fandom.com/wiki/Bandolier", img: "items/uncommon/Bandolier.png" },
+    // { id: 'berzerkers-pauldron', name: "Berzerker's Pauldron", wiki: "https://riskofrain2.fandom.com/wiki/Berzerker%27s_Pauldron", img: "items/uncommon/Berzerkers_Pauldron.png" },
+    // { id: 'breaching-fin', name: "Breaching Fin", wiki: "https://riskofrain2.fandom.com/wiki/Breaching_Fin", img: "items/uncommon/Breaching_Fin.png" },
+    // { id: 'chance-doll', name: "Chance Doll", wiki: "https://riskofrain2.fandom.com/wiki/Chance_Doll", img: "items/uncommon/Chance_Doll.png" },
+    // { id: 'chronobauble', name: "Chronobauble", wiki: "https://riskofrain2.fandom.com/wiki/Chronobauble", img: "items/uncommon/Chronobauble.png" },
+    // { id: 'death-mark', name: "Death Mark", wiki: "https://riskofrain2.fandom.com/wiki/Death_Mark", img: "items/uncommon/Death_Mark.png" },
+    // { id: 'fuel-cell', name: "Fuel Cell", wiki: "https://riskofrain2.fandom.com/wiki/Fuel_Cell", img: "items/uncommon/Fuel_Cell.png" },
+    // { id: 'ghors-tome', name: "Ghor's Tome", wiki: "https://riskofrain2.fandom.com/wiki/Ghor%27s_Tome", img: "items/uncommon/Ghors_Tome.png" },
+    // { id: 'harvesters-scythe', name: "Harvester's Scythe", wiki: "https://riskofrain2.fandom.com/wiki/Harvester%27s_Scythe", img: "items/uncommon/Harvesters_Scythe.png" },
+    // { id: 'hopoo-feather', name: "Hopoo Feather", wiki: "https://riskofrain2.fandom.com/wiki/Hopoo_Feather", img: "items/uncommon/Hopoo_Feather.png" },
+    // { id: 'hunters-harpoon', name: "Hunter's Harpoon", wiki: "https://riskofrain2.fandom.com/wiki/Hunter%27s_Harpoon", img: "items/uncommon/Hunters_Harpoon.png" },
+    // { id: 'ignition-tank', name: "Ignition Tank", wiki: "https://riskofrain2.fandom.com/wiki/Ignition_Tank", img: "items/uncommon/Ignition_Tank.png" },
+    // { id: 'infusion', name: "Infusion", wiki: "https://riskofrain2.fandom.com/wiki/Infusion", img: "items/uncommon/Infusion.png" },
+    // { id: 'kjaros-band', name: "Kjaro's Band", wiki: "https://riskofrain2.fandom.com/wiki/Kjaro%27s_Band", img: "items/uncommon/Kjaros_Band.png" },
+    // { id: 'leeching-seed', name: "Leeching Seed", wiki: "https://riskofrain2.fandom.com/wiki/Leeching_Seed", img: "items/uncommon/Leeching_Seed.png" },
+    // { id: 'lepton-daisy', name: "Lepton Daisy", wiki: "https://riskofrain2.fandom.com/wiki/Lepton_Daisy", img: "items/uncommon/Lepton_Daisy.png" },
+    // { id: 'luminous-shot', name: "Luminous Shot", wiki: "https://riskofrain2.fandom.com/wiki/Luminous_Shot", img: "items/uncommon/Luminous_Shot.png" },
+    // { id: 'noxious-thorn', name: "Noxious Thorn", wiki: "https://riskofrain2.fandom.com/wiki/Noxious_Thorn", img: "items/uncommon/Noxious_Thorn.png" },
+    // { id: 'old-guillotine', name: "Old Guillotine", wiki: "https://riskofrain2.fandom.com/wiki/Old_Guillotine", img: "items/uncommon/Old_Guillotine.png" },
+    // { id: 'old-war-stealthkit', name: "Old War Stealthkit", wiki: "https://riskofrain2.fandom.com/wiki/Old_War_Stealthkit", img: "items/uncommon/Old_War_Stealthkit.png" },
+    // { id: 'prayer-beads', name: "Prayer Beads", wiki: "https://riskofrain2.fandom.com/wiki/Prayer_Beads", img: "items/uncommon/Prayer_Beads.png" },
+    // { id: 'predatory-instincts', name: "Predatory Instincts", wiki: "https://riskofrain2.fandom.com/wiki/Predatory_Instincts", img: "items/uncommon/Predatory_Instincts.png" },
+    // { id: 'razorwire', name: "Razorwire", wiki: "https://riskofrain2.fandom.com/wiki/Razorwire", img: "items/uncommon/Razorwire.png" },
+    // { id: 'red-whip', name: "Red Whip", wiki: "https://riskofrain2.fandom.com/wiki/Red_Whip", img: "items/uncommon/Red_Whip.png" },
+    // { id: 'regenerating-scrap', name: "Regenerating Scrap", wiki: "https://riskofrain2.fandom.com/wiki/Regenerating_Scrap", img: "items/uncommon/Regenerating_Scrap.png" },
+    // { id: 'rose-buckler', name: "Rose Buckler", wiki: "https://riskofrain2.fandom.com/wiki/Rose_Buckler", img: "items/uncommon/Rose_Buckler.png" },
+    // { id: 'runalds-band', name: "Runald's Band", wiki: "https://riskofrain2.fandom.com/wiki/Runald%27s_Band", img: "items/uncommon/Runalds_Band.png" },
+    // { id: 'sale-star', name: "Sale Star", wiki: "https://riskofrain2.fandom.com/wiki/Sale_Star", img: "items/uncommon/Sale_Star.png" },
+    // { id: 'shipping-request-form', name: "Shipping Request Form", wiki: "https://riskofrain2.fandom.com/wiki/Shipping_Request_Form", img: "items/uncommon/Shipping_Request_Form.png" },
+    // { id: 'shuriken', name: "Shuriken", wiki: "https://riskofrain2.fandom.com/wiki/Shuriken", img: "items/uncommon/Shuriken.png" },
+    // { id: 'squid-polyp', name: "Squid Polyp", wiki: "https://riskofrain2.fandom.com/wiki/Squid_Polyp", img: "items/uncommon/Squid_Polyp.png" },
+    // { id: 'ukulele', name: "Ukulele", wiki: "https://riskofrain2.fandom.com/wiki/Ukulele", img: "items/uncommon/Ukulele.png" },
+    // { id: 'unstable-transmitter', name: "Unstable Transmitter", wiki: "https://riskofrain2.fandom.com/wiki/Unstable_Transmitter", img: "items/uncommon/Unstable_Transmitter.png" },
+    // { id: 'war-horn', name: "War Horn", wiki: "https://riskofrain2.fandom.com/wiki/War_Horn", img: "items/uncommon/War_Horn.png" },
+    // { id: 'wax-quail', name: "Wax Quail", wiki: "https://riskofrain2.fandom.com/wiki/Wax_Quail", img: "items/uncommon/Wax_Quail.png" },
+    // { id: 'will-o-the-wisp', name: "Will-o'-the-wisp", wiki: "https://riskofrain2.fandom.com/wiki/Will-o%27-the-wisp", img: "items/uncommon/Will-o-the-wisp.png" },
+    // { id: '57-leaf-clover', name: "57 Leaf Clover", wiki: "https://riskofrain2.fandom.com/wiki/57_Leaf_Clover", img: "items/legendary/57_Leaf_Clover.png" },
+    // { id: 'aegis', name: "Aegis", wiki: "https://riskofrain2.fandom.com/wiki/Aegis", img: "items/legendary/Aegis.png" },
+    // { id: 'alien-head', name: "Alien Head", wiki: "https://riskofrain2.fandom.com/wiki/Alien_Head", img: "items/legendary/Alien_Head.png" },
+    // { id: 'bens-raincoat', name: "Ben's Raincoat", wiki: "https://riskofrain2.fandom.com/wiki/Ben%27s_Raincoat", img: "items/legendary/Bens_Raincoat.png" },
+    // { id: 'brainstalks', name: "Brainstalks", wiki: "https://riskofrain2.fandom.com/wiki/Brainstalks", img: "items/legendary/Brainstalks.png" },
+    // { id: 'brilliant-behemoth', name: "Brilliant Behemoth", wiki: "https://riskofrain2.fandom.com/wiki/Brilliant_Behemoth", img: "items/legendary/Brilliant_Behemoth.png" },
+    // { id: 'ceremonial-dagger', name: "Ceremonial Dagger", wiki: "https://riskofrain2.fandom.com/wiki/Ceremonial_Dagger", img: "items/legendary/Ceremonial_Dagger.png" },
+    // { id: 'defensive-microbots', name: "Defensive Microbots", wiki: "https://riskofrain2.fandom.com/wiki/Defensive_Microbots", img: "items/legendary/Defensive_Microbots.png" },
+    // { id: 'dios-best-friend', name: "Dio's Best Friend", wiki: "https://riskofrain2.fandom.com/wiki/Dio%27s_Best_Friend", img: "items/legendary/Dios_Best_Friend.png" },
+    // { id: 'frost-relic', name: "Frost Relic", wiki: "https://riskofrain2.fandom.com/wiki/Frost_Relic", img: "items/legendary/Frost_Relic.png" },
+    // { id: 'growth-nectar', name: "Growth Nectar", wiki: "https://riskofrain2.fandom.com/wiki/Growth_Nectar", img: "items/legendary/Growth_Nectar.png" },
+    // { id: 'h3ad-5t-v2', name: "H3AD-5T v2", wiki: "https://riskofrain2.fandom.com/wiki/H3AD-5T_v2", img: "items/legendary/H3AD-5T_v2.png" },
+    // { id: 'happiest-mask', name: "Happiest Mask", wiki: "https://riskofrain2.fandom.com/wiki/Happiest_Mask", img: "items/legendary/Happiest_Mask.png" },
+    // { id: 'laser-scope', name: "Laser Scope", wiki: "https://riskofrain2.fandom.com/wiki/Laser_Scope", img: "items/legendary/Laser_Scope.png" },
+    // { id: 'nkuhanas-opinion', name: "N'kuhana's Opinion", wiki: "https://riskofrain2.fandom.com/wiki/N%27kuhana%27s_Opinion", img: "items/legendary/Nkuhanas_Opinion.png" },
+    // { id: 'pocket-icbm', name: "Pocket I.C.B.M.", wiki: "https://riskofrain2.fandom.com/wiki/Pocket_I.C.B.M.", img: "items/legendary/Pocket_I.C.B.M..png" },
+    // { id: 'rejuvenation-rack', name: "Rejuvenation Rack", wiki: "https://riskofrain2.fandom.com/wiki/Rejuvenation_Rack", img: "items/legendary/Rejuvenation_Rack.png" },
+    // { id: 'resonance-disc', name: "Resonance Disc", wiki: "https://riskofrain2.fandom.com/wiki/Resonance_Disc", img: "items/legendary/Resonance_Disc.png" },
+    // { id: 'runic-lens', name: "Runic Lens", wiki: "https://riskofrain2.fandom.com/wiki/Runic_Lens", img: "items/legendary/Runic_Lens.png" },
+    // { id: 'sentient-meat-hook', name: "Sentient Meat Hook", wiki: "https://riskofrain2.fandom.com/wiki/Sentient_Meat_Hook", img: "items/legendary/Sentient_Meat_Hook.png" },
+    // { id: 'shattering-justice', name: "Shattering Justice", wiki: "https://riskofrain2.fandom.com/wiki/Shattering_Justice", img: "items/legendary/Shattering_Justice.png" },
+    // { id: 'sonorous-whispers', name: "Sonorous Whispers", wiki: "https://riskofrain2.fandom.com/wiki/Sonorous_Whispers", img: "items/legendary/Sonorous_Whispers.png" },
+    // { id: 'spare-drone-parts', name: "Spare Drone Parts", wiki: "https://riskofrain2.fandom.com/wiki/Spare_Drone_Parts", img: "items/legendary/Spare_Drone_Parts.png" },
+    // { id: 'symbiotic-scorpion', name: "Symbiotic Scorpion", wiki: "https://riskofrain2.fandom.com/wiki/Symbiotic_Scorpion", img: "items/legendary/Symbiotic_Scorpion.png" },
+    // { id: 'wake-of-vultures', name: "Wake of Vultures", wiki: "https://riskofrain2.fandom.com/wiki/Wake_of_Vultures", img: "items/legendary/Wake_of_Vultures.png" },
+    // { id: 'war-bonds', name: "War Bonds", wiki: "https://riskofrain2.fandom.com/wiki/War_Bonds", img: "items/legendary/War_Bonds.png" },
+    // { id: 'charged-perforator', name: "Charged Perforator", wiki: "https://riskofrain2.fandom.com/wiki/Charged_Perforator", img: "items/boss/Charged_Perforator.png" },
+    // { id: 'genesis-loop', name: "Genesis Loop", wiki: "https://riskofrain2.fandom.com/wiki/Genesis_Loop", img: "items/boss/Genesis_Loop.png" },
+    // { id: 'little-disciple', name: "Little Disciple", wiki: "https://riskofrain2.fandom.com/wiki/Little_Disciple", img: "items/boss/Little_Disciple.png" },
+    // { id: 'mired-urn', name: "Mired Urn", wiki: "https://riskofrain2.fandom.com/wiki/Mired_Urn", img: "items/boss/Mired_Urn.png" },
+    // { id: 'molten-perforator', name: "Molten Perforator", wiki: "https://riskofrain2.fandom.com/wiki/Molten_Perforator", img: "items/boss/Molten_Perforator.png" },
+    // { id: 'planula', name: "Planula", wiki: "https://riskofrain2.fandom.com/wiki/Planula", img: "items/boss/Planula.png" },
+    // { id: 'queens-gland', name: "Queen's Gland", wiki: "https://riskofrain2.fandom.com/wiki/Queen%27s_Gland", img: "items/boss/Queens_Gland.png" },
+    // { id: 'shatterspleen', name: "Shatterspleen", wiki: "https://riskofrain2.fandom.com/wiki/Shatterspleen", img: "items/boss/Shatterspleen.png" },
+    // { id: 'titanic-knurl', name: "Titanic Knurl", wiki: "https://riskofrain2.fandom.com/wiki/Titanic_Knurl", img: "items/boss/Titanic_Knurl.png" },
+    // { id: 'benthic-bloom', name: "Benthic Bloom", wiki: "https://riskofrain2.fandom.com/wiki/Benthic_Bloom", img: "items/void/Benthic_Bloom.png" },
+    // { id: 'lysate-cell', name: "Lysate Cell", wiki: "https://riskofrain2.fandom.com/wiki/Lysate_Cell", img: "items/void/Lysate_Cell.png" },
+    // { id: 'needletick', name: "Needletick", wiki: "https://riskofrain2.fandom.com/wiki/Needletick", img: "items/void/Needletick.png" },
+    // { id: 'plasma-shrimp', name: "Plasma Shrimp", wiki: "https://riskofrain2.fandom.com/wiki/Plasma_Shrimp", img: "items/void/Plasma_Shrimp.png" },
+    // { id: 'polylute', name: "Polylute", wiki: "https://riskofrain2.fandom.com/wiki/Polylute", img: "items/void/Polylute.png" },
+    // { id: 'safer-spaces', name: "Safer Spaces", wiki: "https://riskofrain2.fandom.com/wiki/Safer_Spaces", img: "items/void/Safer_Spaces.png" },
+    // { id: 'singularity-band', name: "Singularity Band", wiki: "https://riskofrain2.fandom.com/wiki/Singularity_Band", img: "items/void/Singularity_Band.png" },
+    // { id: 'tentabauble', name: "Tentabauble", wiki: "https://riskofrain2.fandom.com/wiki/Tentabauble", img: "items/void/Tentabauble.png" },
+    // { id: 'voidsent-flame', name: "Voidsent Flame", wiki: "https://riskofrain2.fandom.com/wiki/Voidsent_Flame", img: "items/void/Voidsent_Flame.png" },
+    // { id: 'weeping-fungus', name: "Weeping Fungus", wiki: "https://riskofrain2.fandom.com/wiki/Weeping_Fungus", img: "items/void/Weeping_Fungus.png" }
+      {
+      id: "armor-piercing-rounds",
+      name: "Armor-Piercing Rounds",
+      wiki: "https://riskofrain2.fandom.com/wiki/Armor-Piercing_Rounds",
+      img: "items/common/Armor-Piercing_Rounds.png"
+    },
+];
+
+const OUT = path.resolve('data/infobox.json');
+
+function clean(t) {
+    return String(t || '')
+        .replace(/<br\s*\/?>/gi, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+/** Description only (flatten all nested spans) */
+function extractDescription(html) {
+    const $ = cheerio.load(html);
+    const $desc = $('table.infoboxtable td.infoboxdesc').first();
+    if (!$desc.length) return null;
+
+    // Flatten text nodes in order (spans/italics/etc. are fine)
+    const text = $desc
+        .contents()
+        .map((_, el) => $(el).text())
+        .get()
+        .join(' ');
+
+    return clean(text);
+}
+
+/** Parse the classic infobox table for Title/Caption/Desc and key/value rows */
+function extractInfobox(html) {
+    const $ = cheerio.load(html);
+    const $box = $('table.infoboxtable').first();
+    if (!$box.length) return null;
+
+    const data = {};
+
+    // Title (first header row with class infoboxname)
+    const title = $box.find('tr > th.infoboxname').first().text();
+    if (title) data.Title = clean(title);
+
+    // Caption and Description rows
+    const caption = $box.find('td.infoboxcaption').first().text();
+    if (caption) data.Caption = clean(caption);
+
+    const desc = $box.find('td.infoboxdesc').first().text();
+    if (desc) data.Description = clean(desc);
+
+    // Key/value rows
+    $box.find('tr').each((_, tr) => {
+        const $tr = $(tr);
+        const $ths = $tr.find('th');
+        const $tds = $tr.find('td');
+
+        // skip section headers (like "Stats")
+        if ($ths.length === 1 && $ths.attr('colspan')) return;
+
+        // Case A: <th>Label</th><td>Value</td>
+        if ($ths.length && $tds.length) {
+            const key = clean($ths.first().text());
+            const val = clean($tds.first().text());
+            if (key && val) data[key] = val;
+            return;
+        }
+
+        // Case B: <td>Key</td><td colspan=...>Value</td> (common on Fandom)
+        if ($tds.length >= 2 && $ths.length === 0) {
+            const cells = $tds
+                .toArray()
+                .map(td => clean($(td).text()))
+                .filter(Boolean);
+            if (cells.length >= 2) {
+                const key = cells[0];
+                const val = cells.slice(1).join(' ');
+                if (key && val) data[key] = val;
+            }
+        }
+    });
+
+    // Optional: first image
+    const img = $box.find('img').first().attr('src');
+    if (img) data.Image = img;
+
+    return Object.keys(data).length ? data : null;
+}
+
+async function fetchHtmlWithFallback(url) {
+    // Try the light-weight article render first (no chrome/consent shell)
+    const urlRender = url.includes('?') ? url + '&action=render' : url + '?action=render';
+
+    const headers = {
+        ...UA,
+        accept: 'text/html,application/xhtml+xml',
+        'accept-language': 'en-US,en;q=0.9',
+    };
+
+    // Prefer ?action=render, then fall back to the full page if needed
+    let res = await fetch(urlRender, { headers });
+    if (!res.ok || (res.headers.get('content-type') || '').includes('json')) {
+        res = await fetch(url, { headers });
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+    return await res.text();
+}
+
+async function fetchDescription(url) {
+    const res = await fetch(url, { headers: UA });
+    if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+    const html = await res.text();
+    const desc = extractDescription(html);
+    if (!desc) throw new Error('infobox description not found');
+    return desc;
+}
+
+async function fetchInfobox(url) {
+    const html = await fetchHtmlWithFallback(url);
+    const info = extractInfobox(html);
+
+    // Debug: if we failed, dump the HTML so we can see what was delivered
+    if (!info) {
+        const fn = path.resolve(
+            'data',
+            'debug',
+            (new URL(url)).pathname.replace(/[\/:%?&=]+/g, '_') + '.html'
+        );
+        await fsp.mkdir(path.dirname(fn), { recursive: true });
+        await fsp.writeFile(fn, html, 'utf8');
+        throw new Error('infobox not found (saved fetched HTML for inspection)');
+    }
+    return info;
+}
+
+(async () => {
+    const out = {};
+    for (const it of ITEMS) {
+        try {
+            // Grab description directly (from full page)
+            const desc = await fetchDescription(it.wiki);
+
+            // Parse full infobox (from action=render/full)
+            const info = await fetchInfobox(it.wiki);
+
+            // Merge; prefer the cleaned cheerio text for Description
+            out[it.id] = { ...info, Description: info.Description || desc, Wiki: it.wiki };
+
+            console.log('[ok]', it.id);
+            await new Promise(r => setTimeout(r, 300));
+        } catch (e) {
+            console.warn('[fail]', it.id, e.message);
+            out[it.id] = { Wiki: it.wiki };
+        }
+    }
+
+    await fsp.mkdir(path.dirname(OUT), { recursive: true });
+    await fsp.writeFile(OUT, JSON.stringify(out, null, 2), 'utf8');
+    console.log('Saved ->', OUT);
+})();

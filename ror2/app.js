@@ -74,6 +74,13 @@ function buildAllItems() {
 
 const ALL_ITEMS = buildAllItems();
 
+// Build a quick lookup by id (for tooltip name fallback, etc.)
+const itemsById = {};
+ALL_ITEMS.forEach(it => { itemsById[it.id] = it; });
+
+// export it so usable
+window.ITEM_INFO = itemsById;
+
 
 /* --------------------------------- State --------------------------------- */
 
@@ -173,11 +180,13 @@ function renderPool() {
   state.poolEl.innerHTML = '';
   ALL_ITEMS.filter(matchesFilters).forEach(item => state.poolEl.append(renderPoolItem(item)));
   refreshPoolDisabled();  // <-- keep pool in sync with drafted set
+   refreshTooltips();       
 }
 
 /** a tile in the pool (click → wiki, drag → copy into draft) */
 function renderPoolItem(item) {
-  const card  = el('button', { class:'item', draggable:'true', title:item.name, 'data-id': item.id });
+  // remove default tooltip
+   const card  = el('button', { class:'item', draggable:'true', 'data-id': item.id, 'aria-label': item.name });
   const img   = el('img',    { alt:item.name });
   const label = el('div',    { class:'label' }, item.name);
 
@@ -206,9 +215,11 @@ function renderDraftItem(item) {
   const card = el("div", {
     class: "item",
     draggable: "true",
-    title: item.name,
     "data-id": item.id,
-    "data-rarity": item.rarity
+    "data-rarity": item.rarity,
+    "aria-label": item.name,
+    role: "button",         // helps SRs; div behaves like a button in your UI
+    tabIndex: 0             // keyboard focusable
   });
   const img = el("img", { alt: item.name });
   setItemImage(img, item);
@@ -246,6 +257,7 @@ function removeDraftItem(node) {
   toggleEmptyHint();
   refreshPoolDisabled();           // <-- un-gray in pool
   sortDropzoneItems(state.dropzoneEl);
+  refreshTooltips();
 }
 /** guard: only allow adding if we haven't hit the per-rarity cap */
 function canAdd(item) {
@@ -271,6 +283,7 @@ function addToDraft(item, insertIndex = null) {
   toggleEmptyHint();
   refreshPoolDisabled();           // <-- gray out in pool
   sortDropzoneItems(state.dropzoneEl);
+  refreshTooltips();             
   return true;
 }
 
@@ -465,6 +478,23 @@ async function buildExportClone(){
   };
 }
 
+let _tooltipCtl = null;
+
+// Re-attach tooltip listeners to current .item nodes.
+// (Pool and Draft re-render dynamically, so we call this after each render/change.)
+function refreshTooltips() {
+  if (typeof window.enableItemHoverPopups !== 'function') return;
+  if (_tooltipCtl && _tooltipCtl.destroy) _tooltipCtl.destroy();
+
+  _tooltipCtl = window.enableItemHoverPopups({
+     container: document.querySelector('section.panel.board'), // ⬅️ limit scope
+    selector: '.item[data-id]',         // both pool buttons and draft tiles
+    getId: el => el.dataset.id,         // we already set data-id everywhere
+    infoById: window.ITEM_INFO,         // your action/description map
+    itemsById                           // fallback for name from ITEMS
+  });
+}
+
 
 // --- new: Copy PNG to clipboard (no preview dialog) ---
 async function copyPNG(){
@@ -611,7 +641,9 @@ function init() {
   // First render
   renderPool();
   refreshPoolDisabled();
+  refreshTooltips();   
 }
+
 
 // Ensure the DOM is ready (items.js must load before this file)
 document.addEventListener("DOMContentLoaded", init);

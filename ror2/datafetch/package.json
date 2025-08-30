@@ -5,7 +5,9 @@
   "dependencies": {
     "archiver": "5.3.1",
     "axios": "0.27.2",
-    "cheerio": "1.0.0-rc.12",
+    "cheerio": "^1.0.0-rc.12",
+    "fetch": "^1.1.0",
+    "node-fetch": "^2.7.0",
     "p-limit": "3.1.0",
     "sharp": "^0.34.3"
   }

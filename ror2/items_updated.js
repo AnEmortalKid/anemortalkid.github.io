@@ -5,9 +5,7 @@ const ITEMS = {
       id: "armor-piercing-rounds",
       name: "Armor-Piercing Rounds",
       wiki: "https://riskofrain2.fandom.com/wiki/Armor-Piercing_Rounds",
-      img: "items/common/Armor-Piercing_Rounds.png",
-      caption: "Deal extra damage to bosses.",
-      description: "Deal an additional 20% damage (+20% per stack) to bosses.",
+      img: "items/common/Armor-Piercing_Rounds.png"
     },
     {
       id: "backup-magazine",
@@ -923,3 +921,7 @@ const ITEMS = {
     }
   ]
 };
+
+if (typeof module !== 'undefined') {
+  module.exports = { ITEMS };
+}
