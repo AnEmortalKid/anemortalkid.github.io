@@ -654,6 +654,14 @@ const ITEMS = {
       description: "Increase jump height. Creates a 5m-100m radius kinetic explosion on hitting the ground, dealing 1000%-10000% base damage that scales up with fall distance. Recharges in 10 (-50% per stack) seconds."
     },
     {
+      id: "hardlight-afterburner",
+      name: "Hardlight Afterburner",
+      wiki: "https://riskofrain2.fandom.com/wiki/Hardlight_Afterburner",
+      img: "items/legendary/Hardlight_Afterburner.png",
+      caption: "Add 2 extra charges of your Utility skill. Reduce Utility skill cooldown.",
+      description: "Add +2 (+2 per stack) charges of your Utility skill. Reduces Utility skill cooldown by 33%."
+    },
+    {
       id: "happiest-mask",
       name: "Happiest Mask",
       wiki: "https://riskofrain2.fandom.com/wiki/Happiest_Mask",
