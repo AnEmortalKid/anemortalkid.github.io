@@ -4,7 +4,7 @@
   "type": "commonjs",
   "dependencies": {
     "archiver": "5.3.1",
-    "axios": "0.27.2",
+    "axios": "1.12.0",
     "cheerio": "^1.0.0-rc.12",
     "fetch": "^1.1.0",
     "node-fetch": "^2.7.0",
