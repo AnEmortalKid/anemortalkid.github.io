@@ -478,21 +478,39 @@ async function buildExportClone(){
   };
 }
 
-let _tooltipCtl = null;
+let _tooltipPoolCtl = null;
+let _tipDraftCtl = null;
 
 // Re-attach tooltip listeners to current .item nodes.
 // (Pool and Draft re-render dynamically, so we call this after each render/change.)
 function refreshTooltips() {
   if (typeof window.enableItemHoverPopups !== 'function') return;
-  if (_tooltipCtl && _tooltipCtl.destroy) _tooltipCtl.destroy();
+  if (_tooltipPoolCtl && _tooltipPoolCtl.destroy) _tooltipPoolCtl.destroy();
+  if (_tipDraftCtl && _tipDraftCtl.destroy) _tipDraftCtl.destroy();
 
-  _tooltipCtl = window.enableItemHoverPopups({
-     container: document.querySelector('section.panel.board'), // ⬅️ limit scope
-    selector: '.item[data-id]',         // both pool buttons and draft tiles
-    getId: el => el.dataset.id,         // we already set data-id everywhere
-    infoById: window.ITEM_INFO,         // your action/description map
-    itemsById                           // fallback for name from ITEMS
-  });
+const pool = document.querySelector("section.panel.pool");
+if (pool && window.enableItemHoverPopups) {
+    _tooltipPoolCtl = window.enableItemHoverPopups({
+      container: pool,
+      selector: '.item[data-id]',
+      getId: el => el.dataset.id,
+      infoById: window.ITEM_INFO,
+      itemsById,
+      showDelayMs: 1000   // 
+    });
+  }
+
+const draftArea = document.querySelector('section.panel.board');
+ if (draftArea && window.enableItemHoverPopups) {
+    _tipDraftCtl = window.enableItemHoverPopups({
+      container: dropzone,
+      selector: '.item[data-id]',
+      getId: el => el.dataset.id,
+      infoById: window.ITEM_INFO,
+      itemsById,
+      showDelayMs: 0      // ← immediate here
+    });
+  }
 }
 
 
