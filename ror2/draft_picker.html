@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Risk of Rain 2 – Draft Builder</title>
   <link rel="stylesheet" href="style.css">
-  
+
 </head>
+
 <body>
   <div class="app">
     <header>
@@ -20,15 +22,25 @@
     </header>
 
     <!-- Requirements editor -->
-    <section class="panel" style="margin:12px; padding:10px 12px; display:flex; align-items:center; gap:12px; flex-wrap:wrap">
+    <section class="panel"
+      style="margin:12px; padding:10px 12px; display:flex; align-items:center; gap:12px; flex-wrap:wrap">
       <strong style="color:#b6c0d4">Requirements</strong>
-      <label style="display:flex;align-items:center;gap:6px"><span class="dot white"></span><input type="number" id="req-white" min="0" max="30" step="1" style="width:64px"/></label>
-      <label style="display:flex;align-items:center;gap:6px"><span class="dot green"></span><input type="number" id="req-green" min="0" max="30" step="1" style="width:64px"/></label>
-      <label style="display:flex;align-items:center;gap:6px"><span class="dot red"></span><input type="number" id="req-red" min="0" max="30" step="1" style="width:64px"/></label>
-      <label style="display:flex;align-items:center;gap:6px"><span class="dot yellow"></span><input type="number" id="req-yellow" min="0" max="30" step="1" style="width:64px"/></label>
-      <label style="display:flex;align-items:center;gap:6px"><span class="dot purple"></span><input type="number" id="req-purple" min="0" max="30" step="1" style="width:64px"/></label>
+      <label style="display:flex;align-items:center;gap:6px"><span class="dot white"></span><input type="number"
+          id="req-white" min="0" max="30" step="1" style="width:64px" /></label>
+      <label style="display:flex;align-items:center;gap:6px"><span class="dot green"></span><input type="number"
+          id="req-green" min="0" max="30" step="1" style="width:64px" /></label>
+      <label style="display:flex;align-items:center;gap:6px"><span class="dot red"></span><input type="number"
+          id="req-red" min="0" max="30" step="1" style="width:64px" /></label>
+      <label style="display:flex;align-items:center;gap:6px"><span class="dot yellow"></span><input type="number"
+          id="req-yellow" min="0" max="30" step="1" style="width:64px" /></label>
+      <label style="display:flex;align-items:center;gap:6px"><span class="dot purple"></span><input type="number"
+          id="req-purple" min="0" max="30" step="1" style="width:64px" /></label>
       <button class="btn" id="saveReqs">Save</button>
       <span id="reqSaved" style="font-size:12px;color:#8c98ad;display:none">Saved ✓</span>
+      <label id="rerollToggleWrap" style="margin-left:16px; display:inline-flex; gap:6px; align-items:center;">
+        <input type="checkbox" id="toggleReroll" />
+        <span>Reroll corrupted items (keep void version)</span>
+      </label>
     </section>
 
     <div class="row">
@@ -43,12 +55,16 @@
             <button class="tab" data-rarity="purple" role="tab">Purple</button>
           </div>
           <label class="search" title="Search items by name">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="1.6"/><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6" />
+            </svg>
             <input id="filter" placeholder="Search items…" />
           </label>
         </header>
         <div id="pool" class="grid" aria-describedby="pool-heading"></div>
-        <div class="hint">Tip: Click an item to open its wiki. Drag items into the draft area on the right. Items in the pool are infinite (dragging creates a copy).</div>
+        <div class="hint">Tip: Click an item to open its wiki. Drag items into the draft area on the right. Items in the
+          pool are infinite (dragging creates a copy).</div>
       </section>
 
       <!-- DRAFT BOARD -->
@@ -56,11 +72,16 @@
         <header>
           <h2 id="board-heading" style="margin:0;font-size:14px;color:#b6c0d4">Draft</h2>
           <div class="reqs">
-            <div class="req"><span class="dot white"></span> <span>White: <strong id="whiteCount">0</strong>/<span id="whiteReq">7</span></span></div>
-            <div class="req"><span class="dot green"></span> <span>Green: <strong id="greenCount">0</strong>/<span id="greenReq">3</span></span></div>
-            <div class="req"><span class="dot red"></span> <span>Red: <strong id="redCount">0</strong>/<span id="redReq">3</span></span></div>
-            <div class="req"><span class="dot yellow"></span> <span>Yellow: <strong id="yellowCount">0</strong>/<span id="yellowReq">0</span></span></div>
-            <div class="req"><span class="dot purple"></span> <span>Purple: <strong id="purpleCount">0</strong>/<span id="purpleReq">0</span></span></div>
+            <div class="req"><span class="dot white"></span> <span>White: <strong id="whiteCount">0</strong>/<span
+                  id="whiteReq">7</span></span></div>
+            <div class="req"><span class="dot green"></span> <span>Green: <strong id="greenCount">0</strong>/<span
+                  id="greenReq">3</span></span></div>
+            <div class="req"><span class="dot red"></span> <span>Red: <strong id="redCount">0</strong>/<span
+                  id="redReq">3</span></span></div>
+            <div class="req"><span class="dot yellow"></span> <span>Yellow: <strong id="yellowCount">0</strong>/<span
+                  id="yellowReq">0</span></span></div>
+            <div class="req"><span class="dot purple"></span> <span>Purple: <strong id="purpleCount">0</strong>/<span
+                  id="purpleReq">0</span></span></div>
           </div>
         </header>
         <div id="dropzone" class="dropzone empty" aria-label="Draft dropzone"></div>
@@ -75,4 +96,5 @@
   <script src="item-tooltips.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>

@@ -858,6 +858,14 @@ const ITEMS = {
       description: "Upgrades 3 (+3 per stack) random items to items of the next higher rarity at the start of each stage. Corrupts all 57 Leaf Clovers."
     },
     {
+      id: "lost-seers-lenses",
+      name: "Lost Seer's Lenses",
+      wiki: "https://riskofrain2.fandom.com/wiki/Lost_Seer%27s_Lenses",
+      img: "items/void/Lost_Seers_Lenses.png",
+      caption: "Gain a 0.5% chance to instantly kill a non-boss enemy. Corrupts all Lens-Maker's Glasses.",
+      description: "Your attacks have a 0.5% (+0.5% per stack) chance to instantly kill a non-Boss enemy. Corrupts all Lens-Maker's Glasses."
+    },
+    {
       id: "lysate-cell",
       name: "Lysate Cell",
       wiki: "https://riskofrain2.fandom.com/wiki/Lysate_Cell",

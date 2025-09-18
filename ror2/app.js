@@ -31,6 +31,25 @@ const RARITIES = ["white", "green", "red", "yellow", "purple"];
 const REQUIREMENTS = { white: 7, green: 3, red: 3, yellow: 0, purple: 0 };
 const REQS_STORAGE_KEY = "ror2-draft-reqs-v1";
 
+const SETTINGS = { rerollCorrupted: false };
+const SETTINGS_STORAGE_KEY = "ror2-draft-settings-v1";
+
+
+// From void to items it corrupts
+const VOID_CORRUPTS = {
+  "lost-seers-lenses": ["lens-makers-glasses"],
+  "lysate-cell": ["fuel-cell"],
+  "needletick": ["tri-tip-dagger"],
+  "plasma-shrimp": ["atg-missile-mk1"],
+  "polylute": ["ukelele"],
+  "safer-spaces": ["tougher-times"],
+  "singularity-band": ["runalds-band", "kjaros-band"],
+  "weeping-fungus": ["bustling-fungi"],
+  "tentabauble": ["chronobauble"],
+  "voidsent-flame": ["will-o-the-wisp"],
+  "benthic-bloom": ["57-leaf-clover"]
+};
+
 /* --------------------------- DOM helper utilities ------------------------ */
 
 const q = (sel, root = document) => root.querySelector(sel);
@@ -99,6 +118,32 @@ const state = {
 
 
 /* --------------------------- Requirements (UI) --------------------------- */
+function loadSettings() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(SETTINGS_STORAGE_KEY) || "null");
+    if (saved && typeof saved === "object") Object.assign(SETTINGS, saved);
+  } catch (_) { /* ignore */ }
+}
+
+function saveSettings() {
+  localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(SETTINGS));
+}
+
+function setupRerollToggle() {
+  loadSettings(); // load once here (or in init() before UI wiring)
+
+  const cb = q("#toggleReroll");
+  if (!cb) return;
+
+  // reflect saved state
+  cb.checked = !!SETTINGS.rerollCorrupted;
+
+  // keep state + storage in sync
+  cb.addEventListener("change", () => {
+    SETTINGS.rerollCorrupted = cb.checked;
+    saveSettings();
+  });
+}
 
 /** load saved limits, wire inputs, and sync the header counters */
 function setupRequirements() {
@@ -142,16 +187,16 @@ function setupRequirements() {
 
 function updateCounts() {
   // Update the live counts
-  q("#whiteCount").textContent  = state.counts.white;
-  q("#greenCount").textContent  = state.counts.green;
-  q("#redCount").textContent    = state.counts.red;
+  q("#whiteCount").textContent = state.counts.white;
+  q("#greenCount").textContent = state.counts.green;
+  q("#redCount").textContent = state.counts.red;
   q("#yellowCount").textContent = state.counts.yellow;
   q("#purpleCount").textContent = state.counts.purple;
 
   // Update the targets (requirements)
-  q("#whiteReq").textContent  = REQUIREMENTS.white;
-  q("#greenReq").textContent  = REQUIREMENTS.green;
-  q("#redReq").textContent    = REQUIREMENTS.red;
+  q("#whiteReq").textContent = REQUIREMENTS.white;
+  q("#greenReq").textContent = REQUIREMENTS.green;
+  q("#redReq").textContent = REQUIREMENTS.red;
   q("#yellowReq").textContent = REQUIREMENTS.yellow;
   q("#purpleReq").textContent = REQUIREMENTS.purple;
 }
@@ -163,10 +208,10 @@ function matchesFilters(item) {
   return item.name.toLowerCase().includes(state.filter);
 }
 
-function isDrafted(id){ return state.drafted.has(id); }
+function isDrafted(id) { return state.drafted.has(id); }
 
 // After rendering the pool, call this to gray out & disable drafted ones
-function refreshPoolDisabled(){
+function refreshPoolDisabled() {
   qa('.pool .item').forEach(btn => {
     const id = btn.dataset.id;
     const drafted = isDrafted(id);
@@ -180,15 +225,15 @@ function renderPool() {
   state.poolEl.innerHTML = '';
   ALL_ITEMS.filter(matchesFilters).forEach(item => state.poolEl.append(renderPoolItem(item)));
   refreshPoolDisabled();  // <-- keep pool in sync with drafted set
-   refreshTooltips();       
+  refreshTooltips();
 }
 
 /** a tile in the pool (click → wiki, drag → copy into draft) */
 function renderPoolItem(item) {
   // remove default tooltip
-   const card  = el('button', { class:'item', draggable:'true', 'data-id': item.id, 'aria-label': item.name });
-  const img   = el('img',    { alt:item.name });
-  const label = el('div',    { class:'label' }, item.name);
+  const card = el('button', { class: 'item', draggable: 'true', 'data-id': item.id, 'aria-label': item.name });
+  const img = el('img', { alt: item.name });
+  const label = el('div', { class: 'label' }, item.name);
 
   setItemImage(img, item);
   card.append(img, label);
@@ -196,7 +241,7 @@ function renderPoolItem(item) {
   // Drag (copy) from pool — ignore if already drafted
   card.addEventListener('dragstart', (e) => {
     if (isDrafted(item.id)) { e.preventDefault(); return; }
-    e.dataTransfer.setData('text/plain', JSON.stringify({ from:'pool', id:item.id }));
+    e.dataTransfer.setData('text/plain', JSON.stringify({ from: 'pool', id: item.id }));
     e.dataTransfer.effectAllowed = 'copy';
   });
 
@@ -283,13 +328,33 @@ function addToDraft(item, insertIndex = null) {
   toggleEmptyHint();
   refreshPoolDisabled();           // <-- gray out in pool
   sortDropzoneItems(state.dropzoneEl);
-  refreshTooltips();             
+  refreshTooltips();
   return true;
 }
 
 function toggleEmptyHint() {
   if (state.dropzoneEl.children.length === 0) state.dropzoneEl.classList.add("empty");
   else state.dropzoneEl.classList.remove("empty");
+}
+
+function getDraftedItems() {
+  // Map DOM -> item objects (using itemsById you already build)
+  return [...state.dropzoneEl.children]
+    .map(el => itemsById[el.dataset.id])
+    .filter(Boolean);
+}
+
+function removeDraftItemAt(index) {
+  const node = [...state.dropzoneEl.children][index];
+  if (!node) return false;
+  removeDraftItem(node);
+  return true;
+}
+
+function replaceDraftItemAt(index, newItem) {
+  // Remove first so canAdd() won't be blocked by duplicate guard
+  if (!removeDraftItemAt(index)) return false;
+  return addToDraft(newItem, index);
 }
 
 /* ---------------------------- Drag & Drop grid --------------------------- */
@@ -382,7 +447,7 @@ function toDataURL(url) {
  * then show a preview dialog and allow the user to download the PNG.
  */
 // helper: blob -> data URL (no canvas; no taint)
-function blobToDataURL(blob){
+function blobToDataURL(blob) {
   return new Promise((resolve) => {
     const fr = new FileReader();
     fr.onload = () => resolve(fr.result);
@@ -391,7 +456,7 @@ function blobToDataURL(blob){
 }
 
 // helper: get data URL for an image src using fetch (same-origin)
-async function urlToDataURL(src){
+async function urlToDataURL(src) {
   // if already a data URL, keep it
   if (typeof src === 'string' && src.startsWith('data:')) return src;
   // fetch same-origin asset; convert to data URL
@@ -407,13 +472,13 @@ async function urlToDataURL(src){
  *  - scratch: off-screen mount
  *  - cleanup(): removes scratch from the DOM
  */
-async function buildExportClone(){
+async function buildExportClone() {
   // Clone the visible dropzone so we don’t touch the UI
   const container = state.dropzoneEl.cloneNode(true);
 
   // Lock width to on-screen size so CSS grid doesn’t collapse to one column
   const rect = state.dropzoneEl.getBoundingClientRect();
-  const px = (n)=> `${Math.max(0, Math.round(n))}px`;
+  const px = (n) => `${Math.max(0, Math.round(n))}px`;
   Object.assign(container.style, {
     width: px(rect.width),
     maxWidth: px(rect.width),
@@ -430,13 +495,13 @@ async function buildExportClone(){
     const origImg = node.querySelector('img');
     const mini = origImg.cloneNode(false);
     node.innerHTML = '';
-    Object.assign(mini.style, { width:'96px', height:'96px' });
+    Object.assign(mini.style, { width: '96px', height: '96px' });
     node.append(mini);
 
     Object.assign(node.style, {
-      padding:'6px',
-      background:'#0e1117',
-      border:'1px solid #222b3d'
+      padding: '6px',
+      background: '#0e1117',
+      border: '1px solid #222b3d'
     });
 
     // Prefer cached data URLs, otherwise fetch+convert
@@ -448,7 +513,7 @@ async function buildExportClone(){
       const src = origImg.currentSrc || origImg.src;
       imgPromises.push(
         urlToDataURL(src).then(dataURL => { mini.src = dataURL; })
-                         .catch(() => { mini.src = src; }) // last resort
+          .catch(() => { mini.src = src; }) // last resort
       );
     }
   });
@@ -456,8 +521,8 @@ async function buildExportClone(){
   // Off-screen mount: gives predictable layout/measurements for html2canvas
   const scratch = document.createElement('div');
   Object.assign(scratch.style, {
-    position:'fixed', left:'-10000px', top:'-10000px',
-    pointerEvents:'none', opacity:'0', zIndex:'-1',
+    position: 'fixed', left: '-10000px', top: '-10000px',
+    pointerEvents: 'none', opacity: '0', zIndex: '-1',
     width: container.style.width
   });
   scratch.appendChild(container);
@@ -474,7 +539,7 @@ async function buildExportClone(){
   return {
     container,
     scratch,
-    cleanup(){ scratch.remove(); }
+    cleanup() { scratch.remove(); }
   };
 }
 
@@ -488,8 +553,8 @@ function refreshTooltips() {
   if (_tooltipPoolCtl && _tooltipPoolCtl.destroy) _tooltipPoolCtl.destroy();
   if (_tipDraftCtl && _tipDraftCtl.destroy) _tipDraftCtl.destroy();
 
-const pool = document.querySelector("section.panel.pool");
-if (pool && window.enableItemHoverPopups) {
+  const pool = document.querySelector("section.panel.pool");
+  if (pool && window.enableItemHoverPopups) {
     _tooltipPoolCtl = window.enableItemHoverPopups({
       container: pool,
       selector: '.item[data-id]',
@@ -500,8 +565,8 @@ if (pool && window.enableItemHoverPopups) {
     });
   }
 
-const draftArea = document.querySelector('section.panel.board');
- if (draftArea && window.enableItemHoverPopups) {
+  const draftArea = document.querySelector('section.panel.board');
+  if (draftArea && window.enableItemHoverPopups) {
     _tipDraftCtl = window.enableItemHoverPopups({
       container: dropzone,
       selector: '.item[data-id]',
@@ -515,7 +580,7 @@ const draftArea = document.querySelector('section.panel.board');
 
 
 // --- new: Copy PNG to clipboard (no preview dialog) ---
-async function copyPNG(){
+async function copyPNG() {
   // Clipboard image write requires secure context (https or http://localhost) and a user gesture
   if (!('clipboard' in navigator) || typeof ClipboardItem === 'undefined') {
     alert('Clipboard images not supported in this browser. Try Export PNG instead.');
@@ -538,7 +603,7 @@ async function copyPNG(){
     const blob = await new Promise((res) => canvas.toBlob(res, 'image/png'));
     if (!blob) throw new Error('Failed to create PNG blob');
 
-    await navigator.clipboard.write([ new ClipboardItem({ 'image/png': blob }) ]);
+    await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
 
     // Optional: tiny toast
     console.log('Draft image copied to clipboard ✔');
@@ -548,9 +613,9 @@ async function copyPNG(){
 }
 
 // (optional) keep your existing exportPNG but reuse the same clone helper
-async function exportPNG(){
+async function exportPNG() {
   const { container, cleanup } = await buildExportClone();
-  try{
+  try {
     const canvas = await html2canvas(container, {
       backgroundColor: null,
       scale: 2,
@@ -572,6 +637,17 @@ async function exportPNG(){
 
 /* -------------------------------- Actions -------------------------------- */
 
+function isBlockedByOwnedVoid(candidate, ownedVoidIds) {
+  if (candidate.rarity !== "white" && candidate.rarity !== "green") return false;
+
+  for (const voidId of ownedVoidIds) {
+    const normals = VOID_CORRUPTS[voidId] || [];
+    if (normals.includes(candidate.id)) return true;
+  }
+
+  return false;
+}
+
 /** Fill the draft randomly based on current requirements (duplicates allowed). */
 function randomize() {
   clearDraft();
@@ -587,12 +663,54 @@ function randomize() {
       addToDraft(pick);
     }
   });
+
+  if (SETTINGS.rerollCorrupted) {
+    rerollCorruptedPicks(10);
+  }
+}
+
+function rerollCorruptedPicks(maxPasses = 10) {
+  // What void items do we already own in the draft?
+  const ownedVoidIds = new Set(
+    getDraftedItems()
+      .filter(i => i.rarity === 'purple') // your "void" rarity key
+      .map(i => i.id)
+  );
+
+  for (let pass = 0; pass < maxPasses; pass++) {
+    let changed = false;
+
+    // Snapshot indices so DOM mutations won't break our iteration
+    const draftedNow = getDraftedItems();
+    draftedNow.forEach((item, idx) => {
+      // Only whites/greens are blocked; isBlocked… already encodes that
+      if (isBlockedByOwnedVoid(item, ownedVoidIds)) {
+        console.log('Rerolling', item);
+        // Find a same-rarity candidate that isn't drafted and isn't blocked
+        const candidatePool = ALL_ITEMS.filter(i =>
+          i.rarity === item.rarity &&
+          !isDrafted(i.id) &&
+          !isBlockedByOwnedVoid(i, ownedVoidIds)
+        );
+
+        if (candidatePool.length > 0) {
+          const replacement = candidatePool[Math.floor(Math.random() * candidatePool.length)];
+          console.log('rerolled to', replacement);
+          if (replaceDraftItemAt(idx, replacement)) {
+            changed = true;
+          }
+        }
+      }
+    });
+
+    if (!changed) break; // done early if nothing to fix this pass
+  }
 }
 
 /** Remove everything from the draft and reset counts. */
 function clearDraft() {
   state.dropzoneEl.innerHTML = '';
-  state.counts = { white:0, green:0, red:0, yellow:0, purple:0 };
+  state.counts = { white: 0, green: 0, red: 0, yellow: 0, purple: 0 };
   state.drafted.clear();           // <-- reset drafted IDs
   updateCounts();
   toggleEmptyHint();
@@ -603,7 +721,7 @@ function sortDropzoneItems(dropzoneEl) {
   const rarityOrder = ['white', 'green', 'red', 'yellow', 'purple'];
 
   const items = Array.from(dropzoneEl.querySelectorAll('.item'));
-  
+
   items.sort((a, b) => {
     const rarityA = a.getAttribute('data-rarity');
     const rarityB = b.getAttribute('data-rarity');
@@ -630,6 +748,7 @@ function init() {
 
   // Requirements UI (load saved, wire Save button)
   setupRequirements();
+  setupRerollToggle();
 
   // Tabs: switch current rarity and re-render pool
   qa(".tab").forEach((tab) => {
@@ -659,7 +778,7 @@ function init() {
   // First render
   renderPool();
   refreshPoolDisabled();
-  refreshTooltips();   
+  refreshTooltips();
 }
 
 
