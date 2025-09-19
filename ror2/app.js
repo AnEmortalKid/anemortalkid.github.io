@@ -13,6 +13,26 @@
 
 "use strict";
 
+
+/**
+ * @typedef {Object} Item
+ * @property {string} id - Machine-friendly identifier (e.g. "benthic-bloom").
+ * @property {string} name - Display name of the item (e.g. "Benthic Bloom").
+ * @property {string} wiki - URL to the wiki page.
+ * @property {string} img - Relative or absolute path to the item image.
+ * @property {string} caption - Short caption for quick info / tooltip.
+ * @property {string} description - Full description of the item’s effect.
+ */
+
+/**
+ * Defines an item that is rendered with just the minimal set of info attached to a node
+ * @typedef {Object} RenderedItem
+ * @property {string} id - Machine-friendly identifier (e.g. "benthic-bloom").
+ * @property {string} rarity - Rarity for the item (white,green,uprple,red,yellow).
+ * @property {string} name - Display name of the item (e.g. "Benthic Bloom").
+ */
+
+
 /* ------------------------------- Constants ------------------------------- */
 
 // Map ITEMS buckets → canonical rarity keys used throughout the UI.
@@ -142,6 +162,8 @@ function setupRerollToggle() {
   cb.addEventListener("change", () => {
     SETTINGS.rerollCorrupted = cb.checked;
     saveSettings();
+    // recolor disabled
+    refreshPoolDisabled();
   });
 }
 
@@ -212,12 +234,29 @@ function isDrafted(id) { return state.drafted.has(id); }
 
 // After rendering the pool, call this to gray out & disable drafted ones
 function refreshPoolDisabled() {
+
+  const ownedVoidIds = getOwnedVoids();
+
   qa('.pool .item').forEach(btn => {
     const id = btn.dataset.id;
     const drafted = isDrafted(id);
     btn.classList.toggle('disabled', drafted);
     btn.setAttribute('draggable', drafted ? 'false' : 'true');
     btn.setAttribute('aria-disabled', drafted ? 'true' : 'false');
+    // clean up
+    btn.classList.remove('corrupted-item');
+
+    const itemCheck = {
+      id: btn.dataset.id,
+      rarity: btn.dataset.rarity
+    }
+
+    if(SETTINGS.rerollCorrupted) {
+      if(isBlockedByOwnedVoid(itemCheck, ownedVoidIds))
+      {
+        btn.classList.toggle('corrupted-item');
+      }
+    }
   });
 }
 
@@ -231,7 +270,7 @@ function renderPool() {
 /** a tile in the pool (click → wiki, drag → copy into draft) */
 function renderPoolItem(item) {
   // remove default tooltip
-  const card = el('button', { class: 'item', draggable: 'true', 'data-id': item.id, 'aria-label': item.name });
+  const card = el('button', { class: 'item', draggable: 'true', 'data-id': item.id, 'data-rarity':item.rarity, 'data-name':item.name,'aria-label': item.name });
   const img = el('img', { alt: item.name });
   const label = el('div', { class: 'label' }, item.name);
 
@@ -307,7 +346,15 @@ function removeDraftItem(node) {
 /** guard: only allow adding if we haven't hit the per-rarity cap */
 function canAdd(item) {
   // no duplicates + respect per-rarity cap
-  if (isDrafted(item.id)) return false;
+  if (isDrafted(item.id)) { return false; }
+
+  // prevent adding white/green already porped up
+  if (SETTINGS.rerollCorrupted) {
+    if (isBlockedByOwnedVoid(item, getOwnedVoids())) {
+      return false;
+    }
+  }
+
   return (REQUIREMENTS[item.rarity] ?? 0) > (state.counts[item.rarity] ?? 0);
 }
 
@@ -344,6 +391,18 @@ function getDraftedItems() {
     .filter(Boolean);
 }
 
+/**
+ * 
+ * @returns {Item[]}
+ */
+function getOwnedVoids() {
+  return new Set(
+    getDraftedItems()
+      .filter(i => i.rarity === 'purple') // your "void" rarity key
+      .map(i => i.id)
+  );
+}
+
 function removeDraftItemAt(index) {
   const node = [...state.dropzoneEl.children][index];
   if (!node) return false;
@@ -353,7 +412,10 @@ function removeDraftItemAt(index) {
 
 function replaceDraftItemAt(index, newItem) {
   // Remove first so canAdd() won't be blocked by duplicate guard
-  if (!removeDraftItemAt(index)) return false;
+  if (!removeDraftItemAt(index)) {
+    return false;
+  }
+
   return addToDraft(newItem, index);
 }
 
@@ -637,6 +699,12 @@ async function exportPNG() {
 
 /* -------------------------------- Actions -------------------------------- */
 
+/**
+ * 
+ * @param {RenderedItem} candidate
+ * @param {Item[]} ownedVoidIds 
+ * @returns 
+ */
 function isBlockedByOwnedVoid(candidate, ownedVoidIds) {
   if (candidate.rarity !== "white" && candidate.rarity !== "green") return false;
 

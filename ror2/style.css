@@ -11,6 +11,7 @@
         --red: #ff9b9b;
         --yellow: #ffd769;
         --purple: #caa1ff;
+        --blocked-corrupted: #c20db3;
     }
 
     * {
@@ -221,6 +222,10 @@
         font-size: 11px;
         color: var(--muted);
         text-align: center
+    }
+
+    .corrupted-item {
+         border: 1px solid var(--blocked-corrupted);
     }
 
     /* Draft board */
