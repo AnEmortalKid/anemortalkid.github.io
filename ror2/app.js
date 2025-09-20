@@ -64,7 +64,7 @@ const VOID_CORRUPTS = {
   "polylute": ["ukelele"],
   "safer-spaces": ["tougher-times"],
   "singularity-band": ["runalds-band", "kjaros-band"],
-  "weeping-fungus": ["bustling-fungi"],
+  "weeping-fungus": ["bustling-fungus"],
   "tentabauble": ["chronobauble"],
   "voidsent-flame": ["will-o-the-wisp"],
   "benthic-bloom": ["57-leaf-clover"]
