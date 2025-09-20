@@ -427,14 +427,15 @@ const ITEMS = {
       caption: "Turn invisible at low health.",
       description: "Falling below 25% health causes you to gain 40% movement speed and invisibility for 5s. Recharges every 30 seconds (-50% per stack)."
     },
-    {
-      id: "prayer-beads",
-      name: "Prayer Beads",
-      wiki: "https://riskofrain2.fandom.com/wiki/Prayer_Beads",
-      img: "items/uncommon/Prayer_Beads.png",
-      caption: "Gains experience alongside you. Upon removal, grants bonus stats.",
-      description: "Grows by gaining experience, storing 20% (+5% per item stack) bonus stats (health, regeneration, and damage). On removal, gain all stored stats."
-    },
+    // BAD DO NOT USE
+    // {
+    //   id: "prayer-beads",
+    //   name: "Prayer Beads",
+    //   wiki: "https://riskofrain2.fandom.com/wiki/Prayer_Beads",
+    //   img: "items/uncommon/Prayer_Beads.png",
+    //   caption: "Gains experience alongside you. Upon removal, grants bonus stats.",
+    //   description: "Grows by gaining experience, storing 20% (+5% per item stack) bonus stats (health, regeneration, and damage). On removal, gain all stored stats."
+    // },
     {
       id: "predatory-instincts",
       name: "Predatory Instincts",
@@ -613,14 +614,15 @@ const ITEMS = {
       caption: "Killing an enemy releases homing daggers.",
       description: "Killing an enemy fires out 3 homing daggers that deal 150% (+150% per stack) base damage."
     },
-    {
-      id: "defensive-microbots",
-      name: "Defensive Microbots",
-      wiki: "https://riskofrain2.fandom.com/wiki/Defensive_Microbots",
-      img: "items/legendary/Defensive_Microbots.png",
-      caption: "Shoot down nearby projectiles. Recharge rate scales with attack speed.",
-      description: "Shoot down 1 (+1 per stack) projectiles within 20m every 0.5 seconds. Recharge rate scales with attack speed."
-    },
+    // NOT REAL
+    // {
+    //   id: "defensive-microbots",
+    //   name: "Defensive Microbots",
+    //   wiki: "https://riskofrain2.fandom.com/wiki/Defensive_Microbots",
+    //   img: "items/legendary/Defensive_Microbots.png",
+    //   caption: "Shoot down nearby projectiles. Recharge rate scales with attack speed.",
+    //   description: "Shoot down 1 (+1 per stack) projectiles within 20m every 0.5 seconds. Recharge rate scales with attack speed."
+    // },
     {
       id: "dios-best-friend",
       name: "Dio's Best Friend",
