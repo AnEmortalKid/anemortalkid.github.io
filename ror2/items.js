@@ -672,6 +672,14 @@ const ITEMS = {
       description: "Killing enemies has a 7% chance to spawn a ghost of the killed enemy with 1500% damage. Lasts 30s (+30s per stack)."
     },
     {
+      id: "interstellar-desk-plant",
+      name: "Interstellar Desk Plant",
+      wiki: "https://riskofrain2.fandom.com/wiki/Interstellar_Desk_Plant",
+      img: "items/legendary/Interstellar_Desk_Plant.png",
+      caption: "n kill, plant a healing fruit seed that grows into a plant after 5 seconds.",
+      description: "The plant heals for 5% of maximum health every 0.5 second to all allies within 10m (+5.0m per stack). Lasts 10 seconds."
+    },
+    {
       id: "laser-scope",
       name: "Laser Scope",
       wiki: "https://riskofrain2.fandom.com/wiki/Laser_Scope",
